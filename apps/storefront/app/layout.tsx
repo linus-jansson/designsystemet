@@ -4,7 +4,7 @@ import '@digdir/designsystemet-theme';
 import '@digdir/designsystemet-css';
 
 import { Header } from '@repo/components';
-
+import { Footer } from "@components";
 
 export const metadata: Metadata = {
     title: {
@@ -28,6 +28,10 @@ const menuItems = [
     },
 ];
 
+const FooterItems = [
+
+]
+
 export default function RootLayout({
     children,
 }: Readonly<{
@@ -39,6 +43,7 @@ export default function RootLayout({
                 <div className='root'>
                     <Header menu={menuItems}></Header>
                     {children}
+                    <Footer />
                 </div>
             </body>
         </html>

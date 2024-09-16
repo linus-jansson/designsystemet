@@ -1,6 +1,6 @@
 type UaLogoProps = React.SVGProps<SVGSVGElement>;
 
-export const UaLogo = ({ ...props }: DsLogoProps) => {
+export const UaLogo = ({ ...props }: UaLogoProps) => {
     return (
         <svg width="373" height="135" viewBox="0 0 373 135" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
             <g clipPath="url(#clip0_12698_46107)">

@@ -1,5 +1,3 @@
-import { Paragraph } from "@digdir/designsystemet-react";
-
 export default function RootLayout({
     children,
 }: Readonly<{

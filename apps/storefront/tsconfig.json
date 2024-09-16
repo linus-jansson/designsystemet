@@ -4,6 +4,7 @@
       "paths": {
         "@components": ["components"],
         "@layouts": ["layouts"],
+        "@utils": ["utils"],
       },
       "lib": ["dom", "dom.iterable", "esnext"],
       "allowJs": true,
