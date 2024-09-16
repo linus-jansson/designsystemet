@@ -24,7 +24,7 @@ const Header = ({ menu, betaTag }: HeaderProps) => {
 
     return (
         <>
-            <SkipLink href='#main'>Hopp til hovedinnhold</SkipLink>
+            <SkipLink href='#main'>Hoppa till sidans huvudinnehåll</SkipLink>
             <header className={classes.header}>
                 <div className={classes.container}>
                     <div className={classes.logoContainer}>

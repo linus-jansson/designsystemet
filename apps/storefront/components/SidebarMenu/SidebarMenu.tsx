@@ -46,7 +46,7 @@ const SidebarMenu = ({ routerPath }: SidebarMenuProps) => {
                         onClick={() => setShowMenu(!showMenu)}
                         aria-expanded={showMenu}
                     >
-                        {showMenu ? 'Skjul' : 'Vis'} sidemeny
+                        {showMenu ? 'Göm' : 'visa'} sidmeny
                     </Button>
 
                     <div className={cl(classes.menu, showMenu && classes.activeMenu)}>

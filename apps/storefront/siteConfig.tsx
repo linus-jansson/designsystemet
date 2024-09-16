@@ -2,7 +2,7 @@ export const SiteConfig = {
     menu: [
         {
             name: 'För utvecklare',
-            url: 'components',
+            url: 'for-developers',
             children: [
                 {
                     name: 'Introduktion',
@@ -15,6 +15,32 @@ export const SiteConfig = {
                     ],
                 },
             ]
-        }
+        },
+        {
+            name: 'För designers',
+            url: 'for-designers',
+            children: [
+                {
+                    name: 'Introduktion',
+                    url: 'intro',
+                    children: [
+                        {
+                            name: 'Kom igång',
+                            url: 'intro/get-started',
+                        },
+                    ],
+                },
+            ]
+        },
+        {
+            name: 'Komponenter',
+            url: 'components',
+            children: [
+                {
+                    name: 'Paragraf',
+                    url: 'components/paragraph',
+                }
+            ]
+        },
     ],
 };
