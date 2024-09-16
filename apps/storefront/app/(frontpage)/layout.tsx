@@ -28,7 +28,23 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                             <NavigationCard
                                 title='Komponenter'
                                 description='Se översikten över UI-komponenterna som är gjorda i React.'
-                                color='red'
+                                color='yellow'
+                                url='/komponenter'
+                                icon={<ComponentIcon fontSize={34} />}
+                                level={2}
+                            ></NavigationCard>
+                            <NavigationCard
+                                title='Komponenter'
+                                description='Se översikten över UI-komponenterna som är gjorda i React.'
+                                color='yellow'
+                                url='/komponenter'
+                                icon={<ComponentIcon fontSize={34} />}
+                                level={2}
+                            ></NavigationCard>
+                            <NavigationCard
+                                title='Komponenter'
+                                description='Se översikten över UI-komponenterna som är gjorda i React.'
+                                color='yellow'
                                 url='/komponenter'
                                 icon={<ComponentIcon fontSize={34} />}
                                 level={2}
