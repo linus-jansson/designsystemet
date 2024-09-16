@@ -1,9 +1,10 @@
-import { Heading, Link, Paragraph } from '@digdir/designsystemet-react';
+import { UaLogo } from '@repo/components/src/Header/logos/ua-logo';
 import { Container } from '@repo/components';
+
+import { Heading, Link, Paragraph } from '@digdir/designsystemet-react';
+
 import type { Metadata } from 'next';
-import Image from 'next/image';
 import NextLink from 'next/link';
-import type * as React from 'react';
 
 import classes from './not-found.module.css';
 
@@ -16,21 +17,15 @@ const NotFound = ({ children }: { children: React.ReactNode }) => {
         <div className={classes.content}>
             <Container className={classes.container}>
                 <div className={classes.imgContainer}>
-                    <Image
-                        className={classes.img}
-                        src='/img/man-binoculars.svg'
-                        alt='Mann med kikkert'
-                        height={205}
-                        width={290}
-                    />
+                    <UaLogo className={classes.img} />
                 </div>
                 <div className={classes.textContainer}>
                     <Heading spacing size='md'>
                         Denna sida finns inte
                     </Heading>
                     <Paragraph spacing>
-                        Beklager, vi finner ikke siden du ba om. Siden kan være flyttet
-                        eller slettet.
+                        Ursäkta, vi kan inte hitta sidan du begärde.
+                        Sidan kan ha flyttats eller raderats.
                     </Paragraph>
                     <Link asChild>
                         <NextLink href='/' prefetch={false}>
@@ -40,7 +35,6 @@ const NotFound = ({ children }: { children: React.ReactNode }) => {
                 </div>
                 {children}
             </Container>
-            ;
         </div>
     );
 };

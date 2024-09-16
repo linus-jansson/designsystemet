@@ -3,5 +3,5 @@
 import { Paragraph } from '@digdir/designsystemet-react';
 
 export default function error() {
-    return <Paragraph>En feil har oppstått</Paragraph>;
+    return <Paragraph>Ett fel har inträffat.</Paragraph>;
 }

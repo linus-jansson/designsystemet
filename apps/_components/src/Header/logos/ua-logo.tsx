@@ -29,6 +29,5 @@ export const UaLogo = ({ ...props }: DsLogoProps) => {
                 </clipPath>
             </defs>
         </svg>
-
     );
 };
