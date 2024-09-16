@@ -6,8 +6,7 @@ import cn from 'clsx/lite';
 import { usePathname } from 'next/navigation';
 import type * as React from 'react';
 
-// import { GithubLink, MdxContent, SidebarMenu } from '../../components';
-import { MdxContent, SidebarMenu } from '@components';
+import { MdxContent, SidebarMenu, GithubLink } from '@components';
 // import {
 //     Banner,
 //     BannerHeading,
@@ -76,7 +75,7 @@ const MenuPageLayout = ({ content, data, banner }: PageLayoutProps) => {
 
                     <div className={classes.content} id='content'>
                         <MdxContent>{content}</MdxContent>
-                        {/* <GithubLink className={classes.githubLink} /> */}
+                        <GithubLink className={classes.githubLink} />
                     </div>
                 </main>
             </Container>

@@ -61,7 +61,14 @@ const Footer = ({ }) => {
                         </Heading>
                         {LinkList(rightLinks)}
                     </div>
-                    <div></div>
+                    <div>
+                        <Image
+                            src={'/img/logos/uppsala-logo-yellow.svg'}
+                            alt='Uppsala kommun logotyp'
+                            width={300}
+                            height={100}
+                        />
+                    </div>
                 </Container>
             </div>
         </footer>
