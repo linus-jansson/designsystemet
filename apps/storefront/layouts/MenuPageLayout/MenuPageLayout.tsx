@@ -7,7 +7,7 @@ import { usePathname } from 'next/navigation';
 import type * as React from 'react';
 
 // import { GithubLink, MdxContent, SidebarMenu } from '../../components';
-import { MdxContent } from '@components';
+import { MdxContent, SidebarMenu } from '@components';
 // import {
 //     Banner,
 //     BannerHeading,
@@ -48,9 +48,9 @@ const MenuPageLayout = ({ content, data, banner }: PageLayoutProps) => {
                 </Banner>
             )} */}
             <Container className={classes.page}>
-                {/* <div className={classes.left}>
+                <div className={classes.left}>
                     <SidebarMenu routerPath={pathname} />
-                </div> */}
+                </div>
                 <main id='main' className={classes.right}>
                     {data && (
                         <div className={classes.header}>
