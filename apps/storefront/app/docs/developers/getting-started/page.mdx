@@ -1,0 +1,63 @@
+import { CodeIcon } from '@navikt/aksel-icons';
+import { CodeSnippet } from '@repo/components';
+import { MenuPageLayout } from '@layouts';
+
+export const metadata = { 
+    title: 'Kom igång som utvecklare',
+    description: 'All information du behöver för att komma igång som utvecklare.'
+};
+
+export default ({ children }) => ( 
+    <MenuPageLayout
+        content={children}
+        data={{ 
+            title: '🚀 Kom igång som utvecklare',
+            date: '16 sep 2024', 
+            icon: <CodeIcon />,
+            color: 'blue', 
+        }}
+    /> 
+);
+
+Följ dessa steg för att komma igång med React-komponenterna.
+
+## Installera paketen
+`npm i @digdir/designsystemet-react @digdir/designsystemet-theme @digdir/designsystemet-css`
+
+## Typsnitt (friviligt)
+För att följa Uppsala kommuns varumärkes riktlinjer använder du typsnittet [Source Sans 3](https://fonts.google.com/specimen/Source+Sans+3).
+Du kan självklart använda vilken font som helst vid användning av designsystemet själv.
+
+HTML: 
+<CodeSnippet language='html'>
+{`
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+</style>
+`}
+</CodeSnippet>
+
+CSS:
+<CodeSnippet language='css'>
+{`
+body {
+    font-family: 'Source Sans 3', sans-serif;
+}
+`}
+</CodeSnippet>
+
+## Använd react komponenterna
+<CodeSnippet language='ts'>
+{`
+// App.jsx
+import '@digdir/designsystemet-theme';
+import '@digdir/designsystemet-css';
+
+import { Button } from '@digdir/designsystemet-react';
+
+<Button variant='secondary'>Jag är en knapp!</Button>;
+`}
+</CodeSnippet>
+
+
+`@digdir/designsystemet-theme` och `@digdir/designsystemet-css` behöver bara importeras en gång.

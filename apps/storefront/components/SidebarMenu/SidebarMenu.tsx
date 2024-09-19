@@ -23,6 +23,7 @@ const SidebarMenu = ({ routerPath }: SidebarMenuProps) => {
 
     useEffect(() => {
         findAndSetActiveIndex(routerPath);
+        console.log(routerPath)
     }, [routerPath]);
 
     /** Find at what index in the menu tree */
@@ -54,7 +55,7 @@ const SidebarMenu = ({ routerPath }: SidebarMenuProps) => {
                             {SiteConfig.menu[activeIndex].name}
                         </h3>
                         <ul className={classes.list}>
-                            {SiteConfig.menu[activeIndex].children.map(
+                            {SiteConfig.menu[activeIndex]?.children?.map(
                                 (item: PageMenuItemType, index) => (
                                     <li
                                         key={index}

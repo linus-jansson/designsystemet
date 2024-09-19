@@ -20,11 +20,11 @@ export const metadata: Metadata = {
 const menuItems = [
     {
         name: 'För Designers',
-        href: '/for-designers',
+        href: '/docs/designers',
     },
     {
         name: 'För utvecklare',
-        href: '/for-developers',
+        href: '/docs/developers/getting-started',
     },
     {
         name: 'Komponenter',
