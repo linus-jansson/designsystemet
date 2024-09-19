@@ -23,13 +23,28 @@ const SidebarMenu = ({ routerPath }: SidebarMenuProps) => {
 
     useEffect(() => {
         findAndSetActiveIndex(routerPath);
-        console.log(routerPath)
     }, [routerPath]);
 
     /** Find at what index in the menu tree */
     const findAndSetActiveIndex = (path: string) => {
+        console.log("Path", path);
+
+        // Split the path into segments
+        let pathArray = path.split('/');
+
+        // Remove the last segment if the array has more than one element
+        if (pathArray.length > 1) {
+            pathArray.pop(); // Removes the last segment
+        }
+
+        // Join the remaining segments into a string
+        let remainingPath = pathArray.join('/');
+
+        // Loop through the menu items and find a match
         for (let i = 0; i < SiteConfig.menu.length; i++) {
-            if (SiteConfig.menu[i].url === path.split('/')[1]) {
+            console.log(SiteConfig.menu[i].url, remainingPath);
+            if (SiteConfig.menu[i].url === remainingPath) {
+                console.log("Active Index:", i);
                 setActiveIndex(i);
             }
         }
@@ -55,7 +70,7 @@ const SidebarMenu = ({ routerPath }: SidebarMenuProps) => {
                             {SiteConfig.menu[activeIndex].name}
                         </h3>
                         <ul className={classes.list}>
-                            {SiteConfig.menu[activeIndex]?.children?.map(
+                            {SiteConfig.menu[activeIndex].children?.map(
                                 (item: PageMenuItemType, index) => (
                                     <li
                                         key={index}
