@@ -1,0 +1,69 @@
+import { BranchingIcon } from '@navikt/aksel-icons';
+import { MenuPageLayout } from '@layouts';
+
+export const metadata = { 
+    title: 'Bidra till designsystemet',
+    description: 'All information du behöver om du vill bidra till designsystemet.'
+};
+
+export default ({ children }) => ( 
+    <MenuPageLayout
+        content={children}
+        data={{ 
+            title: 'Bidra till designsystemet',
+            date: '19 sep 2024',
+            icon: <BranchingIcon />,
+            color: 'yellow', 
+        }}
+    /> 
+);
+
+
+Det är rekommenderat att ha lite förkunskap om design-tokens.
+Vill du föreslå ny design eller förbättringar kan denna information vara användbar.
+
+För att bidra till designsystemet, följ dessa steg:
+
+## Installera NVM och sätt upp för Node 20+
+
+Installera [NVM (Node Version Manager)](https://github.com/nvm-sh/nvm?tab=readme-ov-file#installing-and-updating) för att hantera olika versioner av Node.js.
+
+### Installera NVM (Linux/macOS)
+
+Kör sedan:
+`source ~/.nvm/nvm.sh`
+
+### Installera NVM (Windows)
+
+För Windows-användare kan du använda [nvm-windows](https://github.com/coreybutler/nvm-windows).
+Installera och använd Node 20+
+
+När NVM är installerat, använd följande kommandon för att installera och ställa in Node.js version 20+:
+
+`nvm install 20`
+
+`nvm use 20`
+
+## Klona projektet
+
+Klona projektet från GitHub:
+
+`git clone https://github.com/linus-jansson/designsystemet.git`
+
+`cd <projekt>`
+
+## Installera och bygg beroenden med Yarn
+Installera sedan alla beroenden:
+
+`yarn install`
+
+Bygg projektets beroenden:
+
+`yarn build:all`
+
+## Köra en del av projektet (monorepo)
+
+Navigera till den del av projektet du vill köra:
+
+Kör sedan: `yarn <app>` Till exempel `yarn storefront` för att köra denna site.
+Detta kommer att starta delen lokalt. 
