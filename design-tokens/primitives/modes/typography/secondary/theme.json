@@ -2,7 +2,7 @@
   "theme": {
     "main": {
       "$type": "fontFamilies",
-      "$value": "IBM Plex Mono"
+      "$value": "Source Sans 3"
     },
     "bold": {
       "$extensions": {
