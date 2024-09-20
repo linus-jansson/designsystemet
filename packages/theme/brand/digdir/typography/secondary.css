@@ -4,7 +4,7 @@
 
 @layer ds.theme.typography.secondary {
 [data-ds-typography="secondary"] {
-  --ds-font-family: IBM Plex Mono;
+  --ds-font-family: Source Sans 3;
   --ds-font-weight-medium: 500;
   --ds-font-weight-semibold: 600;
   --ds-font-weight-regular: 400;

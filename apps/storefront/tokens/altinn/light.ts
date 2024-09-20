@@ -3080,7 +3080,7 @@ export const  opacity = [
 export const  dimension = [
   {
     $type: "dimension",
-    $value: "0.125rem",
+    $value: "0",
     filePath: "../../design-tokens/semantic/style.json",
     isSource: false,
     original: {
@@ -3096,7 +3096,7 @@ export const  dimension = [
   },
   {
     $type: "dimension",
-    $value: "0.25rem",
+    $value: "0",
     filePath: "../../design-tokens/semantic/style.json",
     isSource: false,
     original: {
@@ -3112,7 +3112,7 @@ export const  dimension = [
   },
   {
     $type: "dimension",
-    $value: "0.5rem",
+    $value: "0",
     filePath: "../../design-tokens/semantic/style.json",
     isSource: false,
     original: {
@@ -3128,7 +3128,7 @@ export const  dimension = [
   },
   {
     $type: "dimension",
-    $value: "0.75rem",
+    $value: "0",
     filePath: "../../design-tokens/semantic/style.json",
     isSource: false,
     original: {
@@ -3144,7 +3144,7 @@ export const  dimension = [
   },
   {
     $type: "dimension",
-    $value: "1rem",
+    $value: "0",
     filePath: "../../design-tokens/semantic/style.json",
     isSource: false,
     original: {
@@ -3160,7 +3160,7 @@ export const  dimension = [
   },
   {
     $type: "dimension",
-    $value: "1.5rem",
+    $value: "0",
     filePath: "../../design-tokens/semantic/style.json",
     isSource: false,
     original: {
@@ -3176,7 +3176,7 @@ export const  dimension = [
   },
   {
     $type: "dimension",
-    $value: "2rem",
+    $value: "0",
     filePath: "../../design-tokens/semantic/style.json",
     isSource: false,
     original: {

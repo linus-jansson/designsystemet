@@ -44,7 +44,7 @@
   --ds-border-radius-3xl: calc(var(--ds-border-radius-base)*6);
   --ds-border-radius-4xl: calc(var(--ds-border-radius-base)*8);
   --ds-border-radius-full: 624.9375rem;
-  --ds-border-radius-base: 0.25rem;
+  --ds-border-radius-base: 0;
   --ds-spacing-0: calc(var(--ds-spacing-base)*0);
   --ds-spacing-1: calc(var(--ds-spacing-base)*1);
   --ds-spacing-2: calc(var(--ds-spacing-base)*2);
