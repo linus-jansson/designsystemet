@@ -137,7 +137,7 @@
   "border-radius": {
     "base": {
       "$type": "borderRadius",
-      "$value": "4"
+      "$value": "0"
     }
   },
   "opacity": {
