@@ -127,6 +127,10 @@
       },
       "$type": "fontSizes",
       "$value": "48"
+    },
+    "14": {
+      "$type": "fontSizes",
+      "$value": "80"
     }
   },
   "letter-spacing": {
