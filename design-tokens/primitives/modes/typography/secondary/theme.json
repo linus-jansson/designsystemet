@@ -5,22 +5,12 @@
       "$value": "Source Sans 3"
     },
     "bold": {
-      "$extensions": {
-        "studio.tokens": {
-          "modify": {}
-        }
-      },
-      "$type": "fontWeights",
-      "$value": "Medium"
-    },
-    "extra-bold": {
-      "$extensions": {
-        "studio.tokens": {
-          "modify": {}
-        }
-      },
       "$type": "fontWeights",
       "$value": "SemiBold"
+    },
+    "extra-bold": {
+      "$type": "fontWeights",
+      "$value": "Bold"
     },
     "regular": {
       "$type": "fontWeights",
