@@ -2,25 +2,15 @@
   "theme4": {
     "main": {
       "$type": "fontFamilies",
-      "$value": "Inter"
+      "$value": "Source Sans 3"
     },
     "bold": {
-      "$extensions": {
-        "studio.tokens": {
-          "modify": {}
-        }
-      },
       "$type": "fontWeights",
-      "$value": "Medium"
+      "$value": "SemiBold"
     },
     "extra-bold": {
-      "$extensions": {
-        "studio.tokens": {
-          "modify": {}
-        }
-      },
       "$type": "fontWeights",
-      "$value": "Semi bold"
+      "$value": "Bold"
     },
     "regular": {
       "$type": "fontWeights",
