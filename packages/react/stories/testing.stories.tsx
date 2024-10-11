@@ -14,19 +14,20 @@ import {
 
 export default {
   title: 'Testing',
-  decorators: [
-    (Story) => (
-      <div
-        style={{
-          padding: 'var(--ds-spacing-4)',
-          background: 'var(--ds-color-neutral-background-default)',
-          borderRadius: 'var(--ds-border-radius-md)',
-        }}
-      >
-        <Story />
-      </div>
-    ),
-  ],
+  parameters: {
+    a11y: {
+      /*
+      These stories only exist to test sizing/alignment, so we don't want to
+      do the work to add correct aria attributes.
+      */
+      disable: true,
+    },
+    customStyles: {
+      padding: 'var(--ds-spacing-4)',
+      background: 'var(--ds-color-neutral-background-default)',
+      borderRadius: 'var(--ds-border-radius-md)',
+    },
+  },
 } as Meta;
 
 export const MediumRow: StoryFn<{
@@ -52,9 +53,9 @@ export const MediumRow: StoryFn<{
         />
 
         <Select size={size}>
-          <option>opt1</option>
-          <option>opt2</option>
-          <option>opt3</option>
+          <Select.Option>opt1</Select.Option>
+          <Select.Option>opt2</Select.Option>
+          <Select.Option>opt3</Select.Option>
         </Select>
         <Button size={size}>Knapp</Button>
         <Combobox size={size}>
@@ -74,7 +75,7 @@ export const MediumRow: StoryFn<{
       >
         <Switch size={size}>Switch</Switch>
         <Switch size={size} aria-label='no label switch'></Switch>
-        <Chip.Toggle>Toggle</Chip.Toggle>
+        <Chip.Checkbox>Toggle</Chip.Checkbox>
         <Chip.Removable>Removable</Chip.Removable>
         <Tag size={size}>Tag</Tag>
 

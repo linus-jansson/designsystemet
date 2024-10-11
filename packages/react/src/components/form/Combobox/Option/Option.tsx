@@ -1,9 +1,9 @@
 import cl from 'clsx/lite';
-import { forwardRef, memo, useContext, useId } from 'react';
-import type { ButtonHTMLAttributes } from 'react';
+import { forwardRef, isValidElement, memo, useContext, useId } from 'react';
+import type { ButtonHTMLAttributes, ReactElement, ReactNode } from 'react';
 
-import { omit } from '../../../../utilities';
-import { Label } from '../../../Typography';
+import { omit } from '../../../../utilities/omit/omit';
+import { Label } from '../../../Label';
 import { ComboboxContext } from '../ComboboxContext';
 
 import ComboboxOptionDescription from './Description';
@@ -50,6 +50,7 @@ const ComboboxOption = memo(
           <button
             ref={ref}
             id={id}
+            // biome-ignore lint/a11y/useSemanticElements: biome wants me to use the <option> element
             role='option'
             type='button'
             aria-selected={!!selected}
@@ -95,3 +96,9 @@ const ComboboxOption = memo(
 ComboboxOption.displayName = 'ComboboxOption';
 
 export { ComboboxOption };
+
+export function isComboboxOption(
+  child: ReactNode,
+): child is ReactElement<ComboboxOptionProps> {
+  return isValidElement(child) && child.type === ComboboxOption;
+}

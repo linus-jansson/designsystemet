@@ -4,7 +4,9 @@ import { forwardRef } from 'react';
 import type { ForwardedRef, ReactNode, SelectHTMLAttributes } from 'react';
 
 import { omit } from '../../../utilities';
-import { ErrorMessage, Label, Paragraph } from '../../Typography';
+import { Label } from '../../Label';
+import { Paragraph } from '../../Paragraph';
+import { ValidationMessage } from '../../ValidationMessage';
 
 import { useSelect } from './useSelect';
 
@@ -38,7 +40,7 @@ export type SelectProps = {
    * @default 0
    */
   htmlSize?: number;
-} & Omit<SelectHTMLAttributes<HTMLSelectElement>, 'size'>;
+} & Omit<SelectHTMLAttributes<HTMLSelectElement>, 'size' | 'multiple'>;
 
 export const Select = forwardRef<HTMLSelectElement, SelectProps>(
   function Select(props, ref: ForwardedRef<HTMLSelectElement>) {
@@ -126,7 +128,7 @@ export const Select = forwardRef<HTMLSelectElement, SelectProps>(
               aria-live='polite'
               aria-relevant='additions removals'
             >
-              <ErrorMessage size={size}>{error}</ErrorMessage>
+              <ValidationMessage size={size}>{error}</ValidationMessage>
             </div>
           )}
         </div>
