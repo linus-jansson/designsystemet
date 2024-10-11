@@ -1,146 +1,138 @@
 export const SiteConfig = {
   menu: [
     {
-      name: 'Grunnleggende',
-      url: 'grunnleggende',
+      name: 'Grundläggande',
+      url: 'docs/grunnleggende',
       children: [
         {
-          name: 'Introduksjon',
-          url: 'grunnleggende/introduksjon',
+          name: 'Introduktion',
+          url: 'docs/grunnleggende/introduksjon',
           children: [
             {
               name: 'Om designsystemet',
-              url: 'grunnleggende/introduksjon/om-designsystemet',
+              url: 'docs/grunnleggende/introduksjon/om-designsystemet',
             },
             {
-              name: 'Verdier',
-              url: 'grunnleggende/introduksjon/verdier',
+              name: 'Designprinciper',
+              url: 'docs/grunnleggende/introduksjon/designprinsipper',
             },
             {
-              name: 'Designprinsipper',
-              url: 'grunnleggende/introduksjon/designprinsipper',
-            },
-            {
-              name: 'Tilgjengelighet',
-              url: 'grunnleggende/introduksjon/tilgjengelighet',
-            },
-            {
-              name: 'Slack',
-              url: 'grunnleggende/introduksjon/slack',
-            },
+              name: 'Tillgänglighet',
+              url: 'docs/grunnleggende/introduksjon/tilgjengelighet',
+            }
           ],
         },
         {
           name: 'Designelementer',
-          url: 'grunnleggende/designelementer',
+          url: 'docs/grunnleggende/designelementer',
           children: [
             {
               name: 'Design tokens',
-              url: 'grunnleggende/designelementer/design-tokens',
+              url: 'docs/grunnleggende/designelementer/design-tokens',
             },
             {
-              name: 'Farger',
-              url: 'grunnleggende/designelementer/farger',
+              name: 'Färger',
+              url: 'docs/grunnleggende/designelementer/farger',
             },
             {
               name: 'Ikoner',
-              url: 'grunnleggende/designelementer/ikoner',
+              url: 'docs/grunnleggende/designelementer/ikoner',
             },
             {
-              name: 'Skygger',
-              url: 'grunnleggende/designelementer/skygger',
+              name: 'Skuggor',
+              url: 'docs/grunnleggende/designelementer/skygger',
             },
             {
               name: 'Typografi',
-              url: 'grunnleggende/designelementer/typografi',
+              url: 'docs/grunnleggende/designelementer/typografi',
             },
             {
-              name: 'Størrelser og avstander',
-              url: 'grunnleggende/designelementer/storrelser-og-avstander',
+              name: 'Margins och paddings',
+              url: 'docs/grunnleggende/designelementer/storrelser-og-avstander',
             },
           ],
         },
         {
-          name: 'For designere',
-          url: 'grunnleggende/for-designere',
+          name: 'For designers',
+          url: 'docs/grunnleggende/for-designere',
           children: [
             {
-              name: 'Kom i gang',
-              url: 'grunnleggende/for-designere/kom-i-gang',
+              name: 'Kom i gång',
+              url: 'docs/grunnleggende/for-designere/kom-i-gang',
             },
             {
               name: 'Eget tema',
-              url: 'grunnleggende/for-designere/eget-tema',
+              url: 'docs/grunnleggende/for-designere/eget-tema',
             },
             {
-              name: 'Fargesystem',
-              url: 'grunnleggende/for-designere/fargesystem',
+              name: 'Färgsystem',
+              url: 'docs/grunnleggende/for-designere/fargesystem',
             },
             {
               name: 'Hent oppdateringer',
-              url: 'grunnleggende/for-designere/hent-oppdateringer',
+              url: 'docs/grunnleggende/for-designere/hent-oppdateringer',
             },
             {
               name: 'Bidra med design',
-              url: 'grunnleggende/for-designere/bidra-i-figma',
+              url: 'docs/grunnleggende/for-designere/bidra-i-figma',
             },
           ],
         },
         {
-          name: 'For utviklere',
-          url: 'grunnleggende/for-utviklere',
+          name: 'För utvecklare',
+          url: 'docs/grunnleggende/for-utviklere',
           children: [
             {
-              name: 'Kom i gang',
-              url: 'grunnleggende/for-utviklere/kom-i-gang',
+              name: 'Kom i gång',
+              url: 'docs/grunnleggende/for-utviklere/kom-i-gang',
             },
             {
-              name: 'Komposisjon',
-              url: 'grunnleggende/for-utviklere/komposisjon',
+              name: 'Komposition',
+              url: 'docs/grunnleggende/for-utviklere/komposisjon',
             },
           ],
         },
       ],
     },
     {
-      name: 'God praksis',
-      url: 'god-praksis',
+      name: 'Bästa praksis',
+      url: 'docs/god-praksis',
       children: [
         {
           name: 'Brukerinnsikt',
-          url: 'god-praksis/brukerinnsikt',
+          url: 'docs/god-praksis/brukerinnsikt',
           children: [
             {
               name: 'Felles innsiktsbibliotek',
-              url: 'god-praksis/brukerinnsikt/felles-innsiktsbase',
+              url: 'docs/god-praksis/brukerinnsikt/felles-innsiktsbase',
             },
           ],
         },
         {
           name: 'Tilgjengelighet',
-          url: 'god-praksis/tilgjengelighet',
+          url: 'docs/god-praksis/tilgjengelighet',
           children: [
             {
               name: 'Forstå synsnedsettelse',
-              url: 'god-praksis/tilgjengelighet/forsta-synsnedsettelse',
+              url: 'docs/god-praksis/tilgjengelighet/forsta-synsnedsettelse',
             },
             {
               name: 'Kontrast',
-              url: 'god-praksis/tilgjengelighet/kontrast',
+              url: 'docs/god-praksis/tilgjengelighet/kontrast',
             },
           ],
         },
         {
           name: 'Innhold',
-          url: 'god-praksis/innholdsarbeid',
+          url: 'docs/god-praksis/innholdsarbeid',
           children: [
             {
               name: 'Skriveråd',
-              url: 'god-praksis/innholdsarbeid/skriverad',
+              url: 'docs/god-praksis/innholdsarbeid/skriverad',
             },
             {
               name: 'Skumlesing',
-              url: 'god-praksis/innholdsarbeid/skumlesing',
+              url: 'docs/god-praksis/innholdsarbeid/skumlesing',
             },
           ],
         },
@@ -148,45 +140,45 @@ export const SiteConfig = {
     },
     {
       name: 'Mønstre',
-      url: 'monstre',
+      url: 'docs/monstre',
       children: [
         {
           name: 'Ferdig',
-          url: 'monstre/brukeroppgaver',
+          url: 'docs/monstre/brukeroppgaver',
           children: [
             {
               name: 'Obligatoriske felt *',
-              url: 'monstre/obligatoriske-og-valgfrie-felt',
+              url: 'docs/monstre/obligatoriske-og-valgfrie-felt',
             },
             {
               name: 'Feilmeldinger *',
-              url: 'monstre/feilmeldinger',
+              url: 'docs/monstre/feilmeldinger',
             },
           ],
         },
         {
           name: 'Kommende',
-          url: 'monstre/skjema',
+          url: 'docs/monstre/skjema',
           children: [
             {
               name: 'Systemvarsler *',
-              url: 'monstre/systemvarsler',
+              url: 'docs/monstre/systemvarsler',
             },
             {
               name: 'Dato',
-              url: 'monstre/dato',
+              url: 'docs/monstre/dato',
             },
             {
               name: 'Innlogging',
-              url: 'monstre/innlogging',
+              url: 'docs/monstre/innlogging',
             },
             {
               name: 'Navigering',
-              url: 'monstre/navigering',
+              url: 'docs/monstre/navigering',
             },
             {
               name: 'Ofte brukte handlinger',
-              url: 'monstre/handlinger',
+              url: 'docs/monstre/handlinger',
             },
           ],
         },
