@@ -1,0 +1,30 @@
+trigger:
+  branches:
+    include:
+      - main
+      - release/*
+  paths:
+    include:
+      - EventService.Frontend/*
+      - azure-pipelines-frontend.yml
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+variables:
+  containerName: 'designsystem.storefront'
+
+resources:
+  repositories:
+    - repository: templates
+      type: git
+      name: pipeline.templates
+
+stages:
+  - stage: build
+    displayName: Build, test and push container
+    jobs:
+      - template: docker/build-and-publish-container.yml@templates
+        parameters:
+          containerName: $(containerName)
+          dockerfilePath: apps/storefront/Dockerfile

@@ -1,0 +1,97 @@
+FROM node:20.5.0-alpine AS base
+
+# Install dependencies only when needed
+FROM base AS deps
+# Check https://github.com/nodejs/docker-node/tree/b4117f9333da4138b03a546ec926ef50a31506c3#nodealpine to understand why libc6-compat might be needed.
+RUN apk add --no-cache libc6-compat
+WORKDIR /app
+
+# NEW enable yarn 4.0.2 version and copy yarnrc.yml
+RUN corepack enable
+COPY .yarn ./.yarn
+COPY .yarnrc.yml ./.yarnrc.yml
+
+# Install dependencies based on the preferred package manager
+COPY package.json yarn.lock* package-lock.json* pnpm-lock.yaml* ./
+
+COPY apps/storefront/package.json apps/storefront/package.json
+COPY apps/theme/package.json apps/theme/package.json
+COPY apps/_components/package.json apps/_components/package.json
+
+COPY packages/cli/package.json packages/cli/package.json
+COPY packages/css/package.json packages/css/package.json
+COPY packages/react/package.json packages/react/package.json
+COPY packages/theme/package.json packages/theme/package.json
+COPY packages/create-tokens/package.json packages/create-tokens/package.json
+
+RUN \
+  if [ -f yarn.lock ]; then yarn; \
+  else echo "Lockfile not found." && exit 1; \
+  fi
+
+# Generate .npmrc file with Personal Access Token
+# ENV NPMRC_FILEPATH=.npmrc
+# ARG PERSONAL_ACCESS_TOKEN
+# RUN echo legacy-peer-deps=true > ${NPMRC_FILEPATH} && \
+#     echo registry=https://pkgs.dev.azure.com/uppsalakommun/Webteam/_packaging/uppsala-npm/npm/registry/ >> ${NPMRC_FILEPATH} && \
+#     echo always-auth=true >> ${NPMRC_FILEPATH} && \
+#     echo '\; begin auth token' >> ${NPMRC_FILEPATH} && \
+#     echo //pkgs.dev.azure.com/uppsalakommun/Webteam/_packaging/uppsala-npm/npm/registry/:username=orgname >> ${NPMRC_FILEPATH} && \ 
+#     echo //pkgs.dev.azure.com/uppsalakommun/Webteam/_packaging/uppsala-npm/npm/registry/:_password=$(echo -n "${PERSONAL_ACCESS_TOKEN}" | base64)  >> ${NPMRC_FILEPATH} && \
+#     echo //pkgs.dev.azure.com/uppsalakommun/Webteam/_packaging/uppsala-npm/npm/registry/:email=npm requires email to be set but doesnt use the value >> ${NPMRC_FILEPATH} && \
+#     echo //pkgs.dev.azure.com/uppsalakommun/Webteam/uppsala-npm/npm/:username=orgname >> ${NPMRC_FILEPATH} && \
+#     echo //pkgs.dev.azure.com/uppsalakommun/Webteam/uppsala-npm/npm/:_password=$(echo -n "${PERSONAL_ACCESS_TOKEN}" | base64) >> ${NPMRC_FILEPATH} && \
+#     echo //pkgs.dev.azure.com/uppsalakommun/Webteam/uppsala-npm/npm/:email=npm requires email to be set but doesnt use the value >> ${NPMRC_FILEPATH} && \
+#     echo '\; end auth token' >> ${NPMRC_FILEPATH} 
+# COPY . .
+# COPY --parents *package.json ./
+
+
+# Rebuild the source code only when needed
+FROM base AS builder
+WORKDIR /app
+COPY --from=deps /app/node_modules ./node_modules
+COPY . .
+
+ENV NEXT_PRIVATE_STANDALONE true
+ENV NEXT_TELEMETRY_DISABLED 1
+
+RUN yarn build
+RUN yarn build:storefront
+
+# Production image, copy all the files and run next
+FROM base AS runner
+WORKDIR /app
+
+ENV NEXT_PRIVATE_STANDALONE true
+ENV NODE_ENV production
+ENV NEXT_TELEMETRY_DISABLED 1
+
+RUN addgroup --system --gid 1001 nodejs
+RUN adduser --system --uid 1001 nextjs
+
+COPY --from=builder /app/apps/storefront/public ./public
+
+# Set the correct permission for prerender cache
+RUN mkdir .next logs
+RUN chown nextjs:nodejs .next
+RUN chown nextjs:nodejs logs
+
+# Automatically leverage output traces to reduce image size
+# https://nextjs.org/docs/advanced-features/output-file-tracing
+COPY --from=builder --chown=nextjs:nodejs /app/apps/storefront/.next/standalone/ ./
+COPY --from=builder --chown=nextjs:nodejs /app/apps/storefront/.next/static ./.next/static
+# IMPORTANT
+RUN mv ./apps/storefront/server.js ./
+RUN cp -r ./apps/storefront/.next/ ./
+
+USER nextjs
+
+EXPOSE 3000
+
+ENV PORT 3000
+# set hostname to localhost
+ENV HOSTNAME "0.0.0.0"
+RUN pwd
+RUN ls -al
+CMD ["node", "server.js"]
