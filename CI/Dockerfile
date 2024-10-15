@@ -6,12 +6,9 @@ WORKDIR /app
 ARG APP_NAME
 
 FROM base AS turbo
-# RUN npm install -g turbo
 COPY . .
 
 RUN corepack enable
-# COPY .yarn ./.yarn
-# COPY .yarnrc.yml ./.yarnrc.yml
 
 RUN yarn dlx turbo prune --scope=@apps/${APP_NAME} --docker
 
@@ -24,9 +21,6 @@ COPY --from=turbo /app/out/json/ .
 COPY --from=turbo /app/out/yarn.lock ./yarn.lock
 # First install only production deps and cache them, then install all deps
 RUN --mount=type=cache,target=/var/cache/yarn yarn workspaces focus --production && cp -R node_modules node_modules_production && yarn workspaces focus -A
-
-# # Ensure rimraf is installed
-# RUN yarn add rimraf
 
 # Then copy over the application files (change often, no longer cached from this step on)
 COPY --from=turbo /app/out/full/ .
