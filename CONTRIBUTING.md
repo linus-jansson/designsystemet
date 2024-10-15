@@ -95,6 +95,12 @@ Run the commands from the root of your project. Make sure you clone the `next` b
 
 You can now start developing for storybook and the storefront.
 
+#### Building using docker
+
+`docker build -t designsystemet/<app> -f CI/Dockerfile.<app> .`
+
+`docker run -p <PORT>:3000 designsystemet/<app>@latest`
+
 ### Pull requests
 
 When creating a pull request for the design system, there are a few things to keep in mind:
