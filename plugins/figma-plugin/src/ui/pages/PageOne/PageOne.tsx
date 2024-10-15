@@ -1,10 +1,12 @@
 import {
   Button,
   Heading,
+  Label,
   Link,
   Paragraph,
   Textarea,
   ToggleGroup,
+  ValidationMessage,
 } from '@digdir/designsystemet-react';
 import { useState } from 'react';
 
@@ -99,29 +101,29 @@ function PageOne() {
           i feltet under.
         </Paragraph>
 
-        <ToggleGroup.Root
+        <ToggleGroup
           className='modes'
           defaultValue='light'
           name='toggle-group-nuts'
           size='sm'
-          onChange={(e) => setMode(e)}
+          onChange={(e: string) => setMode(e)}
         >
           <ToggleGroup.Item value='light'>Light Mode</ToggleGroup.Item>
           <ToggleGroup.Item value='dark'>Dark Mode</ToggleGroup.Item>
           {/* <ToggleGroup.Item value='contrast'>Contrast</ToggleGroup.Item> */}
-        </ToggleGroup.Root>
+        </ToggleGroup>
+        <Label htmlFor='paste-json'>JSON</Label>
         <Textarea
+          id='paste-json'
           className='textarea'
           cols={40}
           rows={7}
           placeholder='Lim inn JSON her'
-          description=''
-          error={errorText}
-          label='JSON'
           size='sm'
           value={jsonText}
           onChange={(e) => setJsonText(e.target.value)}
         />
+        <ValidationMessage>{errorText}</ValidationMessage>
         <Button onClick={() => onSubmit()} size='sm' className='button'>
           Oppdater variabler
         </Button>

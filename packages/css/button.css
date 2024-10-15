@@ -9,7 +9,8 @@
   --dsc-button-padding-inline: var(--ds-spacing-4);
   --dsc-button-size: var(--ds-sizing-12);
 
-  @composes ds-focus from './utilities.css';
+  @composes ds-body-text--short-md from './base/base.css';
+  @composes ds-focus from './base/base.css';
 
   align-items: center;
   background: var(--dsc-button-background);
@@ -27,6 +28,16 @@
   padding: var(--dsc-button-padding-block) var(--dsc-button-padding-inline);
   text-align: inherit;
   text-decoration: none;
+  font-weight: var(--ds-font-weight-medium);
+
+  & svg,
+  & img {
+    flex-shrink: 0;
+  }
+
+  &:focus-visible {
+    position: relative; /* Place focusring on top */
+  }
 
   &:not([hidden]) {
     display: flex;
@@ -37,12 +48,18 @@
     --dsc-button-padding-block: var(--ds-spacing-2);
     --dsc-button-padding-inline: var(--ds-spacing-3);
     --dsc-button-size: var(--ds-sizing-10);
+
+    @composes ds-body-text--short-sm from './base/base.css';
+    font-weight: var(--ds-font-weight-medium);
   }
 
   &[data-size='lg'] {
     --dsc-button-padding-block: var(--ds-spacing-3);
     --dsc-button-padding-inline: var(--ds-spacing-5);
     --dsc-button-size: var(--ds-sizing-14);
+
+    @composes ds-body-text--short-lg from './base/base.css';
+    font-weight: var(--ds-font-weight-medium);
   }
 
   &[data-icon] {
@@ -55,8 +72,8 @@
   }
 
   /**
-    * Variants
-    */
+   * Variants
+   */
   &[data-variant='secondary'] {
     --dsc-button-background--active: var(--ds-color-accent-surface-hover);
     --dsc-button-background--hover: var(--ds-color-accent-surface-default);
@@ -78,8 +95,8 @@
   }
 
   /**
-    * Colors
-    */
+   * Colors
+   */
   &[data-color='neutral'] {
     --dsc-button-background--active: var(--ds-color-neutral-base-active);
     --dsc-button-background--hover: var(--ds-color-neutral-base-hover);
@@ -133,12 +150,12 @@
   }
 
   /**
-    * States
-    */
+   * States
+   */
 
   @media (hover: hover) and (pointer: fine) {
-    /* Only use hover for non-touch devices to prevent sticky-hovering */
-    &:not(:disabled, [aria-disabled='true'], [aria-busy='true']):hover {
+    /* Only use hover for non-touch devices to prevent sticky-hovering, using :where to prevent adding specificity */
+    &:where(:not(:disabled, [aria-disabled='true'], [aria-busy='true'])):hover {
       background: var(--dsc-button-background--hover);
     }
   }
@@ -152,7 +169,8 @@
     opacity: var(--ds-disabled-opacity);
   }
 
-  &:not(:disabled, [aria-disabled='true'], [aria-busy='true']):active {
+  /* Using :where to prevent adding specificity */
+  &:where(:not(:disabled, [aria-disabled='true'], [aria-busy='true'])):active {
     background-color: var(--dsc-button-background--active);
   }
 }

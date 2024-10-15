@@ -1,6 +1,6 @@
 'use client';
 import {
-  DropdownMenu,
+  Dropdown,
   Heading,
   Link,
   Paragraph,
@@ -207,7 +207,7 @@ const TokenList = ({
 
   return (
     <div className={classes.tokens}>
-      <div className={classes.package}>
+      <div className={classes.package} data-unstyled>
         <Link href='https://www.npmjs.com/package/@digdir/designsystemet-theme'>
           <img
             src='https://img.shields.io/npm/v/@digdir/designsystemet-theme?label=latest%20release&color=0051be'
@@ -220,68 +220,71 @@ const TokenList = ({
       {(showThemePicker || showModeSwitcher) && (
         <div className={classes.toggleGroup}>
           {showThemePicker && (
-            <DropdownMenu.Root>
-              <DropdownMenu.Trigger variant='secondary'>
+            <Dropdown.Context>
+              <Dropdown.Trigger variant='secondary'>
                 Brand: {capitalizeString(brand)}
-              </DropdownMenu.Trigger>
-              <DropdownMenu.Content>
-                <DropdownMenu.Item onClick={() => setBrand('digdir')}>
-                  Digdir
-                </DropdownMenu.Item>
-                <DropdownMenu.Item onClick={() => setBrand('altinn')}>
-                  Altinn
-                </DropdownMenu.Item>
-                <DropdownMenu.Item onClick={() => setBrand('tilsynet')}>
-                  Tilsynet
-                </DropdownMenu.Item>
-                <DropdownMenu.Item onClick={() => setBrand('portal')}>
-                  Brreg
-                </DropdownMenu.Item>
-              </DropdownMenu.Content>
-            </DropdownMenu.Root>
+              </Dropdown.Trigger>
+              <Dropdown>
+                <Dropdown.List>
+                  <Dropdown.Item onClick={() => setBrand('digdir')}>
+                    Digdir
+                  </Dropdown.Item>
+                  <Dropdown.Item onClick={() => setBrand('altinn')}>
+                    Altinn
+                  </Dropdown.Item>
+                  <Dropdown.Item onClick={() => setBrand('tilsynet')}>
+                    Tilsynet
+                  </Dropdown.Item>
+                  <Dropdown.Item onClick={() => setBrand('portal')}>
+                    Brreg
+                  </Dropdown.Item>
+                </Dropdown.List>
+              </Dropdown>
+            </Dropdown.Context>
           )}
           {showModeSwitcher && (
-            <DropdownMenu.Root>
-              <DropdownMenu.Trigger variant='secondary'>
+            <Dropdown.Context>
+              <Dropdown.Trigger variant='secondary'>
                 Mode: {capitalizeString(mode)}
-              </DropdownMenu.Trigger>
-              <DropdownMenu.Content>
-                <DropdownMenu.Item onClick={() => setMode('light')}>
-                  Light
-                </DropdownMenu.Item>
-                <DropdownMenu.Item onClick={() => setMode('dark')}>
-                  Dark
-                </DropdownMenu.Item>
-              </DropdownMenu.Content>
-            </DropdownMenu.Root>
+              </Dropdown.Trigger>
+              <Dropdown>
+                <Dropdown.List>
+                  <Dropdown.Item onClick={() => setMode('light')}>
+                    Light
+                  </Dropdown.Item>
+                  <Dropdown.Item onClick={() => setMode('dark')}>
+                    Dark
+                  </Dropdown.Item>
+                </Dropdown.List>
+              </Dropdown>
+            </Dropdown.Context>
           )}
         </div>
       )}
-      <>
-        {sectionedTokens.map(([section, tokens]) => {
-          const tokens_ = tokens as [string, Token[]][];
-          const List = () => {
-            if (type === 'dimension') {
-              return <TokensTable tokens={tokens_} />;
-            }
 
-            return (
-              <TokenCards
-                type={type}
-                cols={cardColumns}
-                tokens={tokens_}
-                hideValue={hideValue}
-              />
-            );
-          };
+      {sectionedTokens.map(([section, tokens]) => {
+        const tokens_ = tokens as [string, Token[]][];
+        const List = () => {
+          if (type === 'dimension') {
+            return <TokensTable tokens={tokens_} />;
+          }
+
           return (
-            <div key={section as string} className={classes.section}>
-              <h3>{capitalizeString(section as string)}</h3>
-              <List />
-            </div>
+            <TokenCards
+              type={type}
+              cols={cardColumns}
+              tokens={tokens_}
+              hideValue={hideValue}
+            />
           );
-        })}
-      </>
+        };
+        return (
+          <div key={section as string} className={classes.section}>
+            <h3>{capitalizeString(section as string)}</h3>
+            <List />
+          </div>
+        );
+      })}
     </div>
   );
 };

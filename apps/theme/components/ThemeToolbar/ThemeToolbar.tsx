@@ -1,5 +1,5 @@
 import type { CssColor } from '@adobe/leonardo-contrast-colors';
-import { Button, Select, Tooltip } from '@digdir/designsystemet-react';
+import { Button, Label, Select, Tooltip } from '@digdir/designsystemet-react';
 import type {
   ColorError,
   ContrastMode,
@@ -106,9 +106,10 @@ export const ThemeToolbar = ({
           }}
         />
 
-        <div className={classes.dropdown}>
+        <div className={classes.select}>
+          <Label htmlFor='select-contrast'>Kontrastnivå</Label>
           <Select
-            label='Kontrastnivå'
+            id='select-contrast'
             size='md'
             className={classes.contrastSelect}
             value={contrastMode}
@@ -116,15 +117,15 @@ export const ThemeToolbar = ({
               onContrastModeChanged(e.target.value as 'aa' | 'aaa');
             }}
           >
-            <option value='aa'>AA</option>
-            <option value='aaa'>AAA (WIP)</option>
+            <Select.Option value='aa'>AA</Select.Option>
+            <Select.Option value='aaa'>AAA (WIP)</Select.Option>
           </Select>
         </div>
-        <div className={classes.borderRadii}>
+        <div className={classes.select}>
+          <Label htmlFor='select-border-radius'>Border radius</Label>
           <Select
-            label='Border radius'
+            id='select-border-radius'
             size='md'
-            className={classes.borderRadiiSelect}
             value={borderRadius}
             onChange={(e) => onBorderRadiusChanged(e.target.value)}
             style={{
@@ -132,7 +133,7 @@ export const ThemeToolbar = ({
             }}
           >
             {Object.entries(borderRadii).map(([key, value]) => (
-              <option
+              <Select.Option
                 key={key}
                 value={value}
                 style={{
@@ -140,7 +141,7 @@ export const ThemeToolbar = ({
                 }}
               >
                 {key}
-              </option>
+              </Select.Option>
             ))}
           </Select>
         </div>

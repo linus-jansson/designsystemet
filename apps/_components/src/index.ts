@@ -7,3 +7,6 @@ export { BlogCard } from './Card/BlogCard';
 export { Contributors } from './Contributors/Contributors';
 export { PostLayout } from './PostLayout/PostLayout';
 export { Figures } from './Figures';
+export { Figma } from './logos/Figma';
+export { Github } from './logos/Github';
+export { Slack } from './logos/Slack';

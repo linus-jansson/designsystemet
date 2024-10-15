@@ -3,10 +3,11 @@ import '@digdir/designsystemet-css';
 import '@digdir/designsystemet-theme';
 
 import { Header } from '@repo/components';
-import { Analytics } from '@vercel/analytics/react';
 import type { Metadata } from 'next';
 
 import { VersionBanner } from '@components';
+import { SkipLink } from '@digdir/designsystemet-react';
+import Script from 'next/script';
 import { Footer } from '../components/Footer/Footer';
 
 export const metadata: Metadata = {
@@ -45,6 +46,10 @@ const menu = [
     name: 'Komponenter',
     href: '/docs/komponenter',
   },
+  /* {
+    name: 'Temabygger',
+    href: 'https://next.theme.designsystemet.no',
+  }, */
 ];
 
 export default function RootLayout({
@@ -58,11 +63,14 @@ export default function RootLayout({
     <html lang='en'>
       <body>
         <div className='root'>
+          <SkipLink href='#main'>Hopp til hovedinnhold</SkipLink>
           <VersionBanner />
-          <Header menu={menu} />
+          <Header menu={menu} skipLink={false} />
           {children}
           <Footer />
-          <Analytics />
+          {process.env.VERCEL_ENV === 'production' && (
+            <Script src='https://siteimproveanalytics.com/js/siteanalyze_6255470.js' />
+          )}
         </div>
       </body>
     </html>

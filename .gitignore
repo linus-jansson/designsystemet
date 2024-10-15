@@ -38,3 +38,5 @@ coverage/
 next-env.d.ts
 
 .turbo
+# jest/vitest test reports
+test-report.xml

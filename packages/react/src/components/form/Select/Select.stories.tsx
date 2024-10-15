@@ -1,6 +1,7 @@
 import type { Meta, StoryFn } from '@storybook/react';
 
-import { Select } from './Select';
+import { Label } from '../../Label';
+import { Select } from './';
 
 export default {
   title: 'Komponenter/Select',
@@ -8,81 +9,110 @@ export default {
   parameters: {
     layout: 'padded',
   },
+  decorators: [
+    (Story) => (
+      <div
+        style={{
+          display: 'flex',
+          gap: 'var(--ds-spacing-2)',
+          flexDirection: 'column',
+        }}
+      >
+        <Story />
+      </div>
+    ),
+  ],
 } as Meta;
 
 export const Preview: StoryFn<typeof Select> = (args) => (
-  <Select {...args}>
-    <option value='blank'>Velg &hellip;</option>
-    <option value='everest'>Mount Everest</option>
-    <option value='aconcagua'>Aconcagua</option>
-    <option value='denali'>Denali</option>
-    <option value='kilimanjaro'>Kilimanjaro</option>
-    <option value='elbrus'>Elbrus</option>
-    <option value='vinson'>Mount Vinson</option>
-    <option value='puncakjaya'>Puncak Jaya</option>
-    <option value='kosciuszko'>Mount Kosciuszko</option>
-  </Select>
+  <>
+    <Label htmlFor={args.id}>Velg et fjell</Label>
+    <Select {...args}>
+      <Select.Option value='blank'>Velg &hellip;</Select.Option>
+      <Select.Option value='everest'>Mount Everest</Select.Option>
+      <Select.Option value='aconcagua'>Aconcagua</Select.Option>
+      <Select.Option value='denali'>Denali</Select.Option>
+      <Select.Option value='kilimanjaro'>Kilimanjaro</Select.Option>
+      <Select.Option value='elbrus'>Elbrus</Select.Option>
+      <Select.Option value='vinson'>Mount Vinson</Select.Option>
+      <Select.Option value='puncakjaya'>Puncak Jaya</Select.Option>
+      <Select.Option value='kosciuszko'>Mount Kosciuszko</Select.Option>
+    </Select>
+  </>
 );
 
 Preview.args = {
-  label: 'Velg et fjell',
+  'aria-invalid': false,
   size: 'md',
   disabled: false,
   readOnly: false,
+  id: 'my-select',
 };
 
 export const Disabled: StoryFn<typeof Select> = (args) => (
-  <Select {...args}>
-    <option value='blank'>Velg &hellip;</option>
-    <option value='everest'>Mount Everest</option>
-    <option value='aconcagua'>Aconcagua</option>
-    <option value='denali'>Denali</option>
-    <option value='kilimanjaro'>Kilimanjaro</option>
-    <option value='elbrus'>Elbrus</option>
-    <option value='vinson'>Mount Vinson</option>
-    <option value='puncakjaya'>Puncak Jaya</option>
-    <option value='kosciuszko'>Mount Kosciuszko</option>
-  </Select>
+  <>
+    <Label htmlFor={args.id}>Velg et fjell</Label>
+    <Select {...args}>
+      <Select.Option value='blank'>Velg &hellip;</Select.Option>
+      <Select.Option value='everest'>Mount Everest</Select.Option>
+      <Select.Option value='aconcagua'>Aconcagua</Select.Option>
+      <Select.Option value='denali'>Denali</Select.Option>
+      <Select.Option value='kilimanjaro'>Kilimanjaro</Select.Option>
+      <Select.Option value='elbrus'>Elbrus</Select.Option>
+      <Select.Option value='vinson'>Mount Vinson</Select.Option>
+      <Select.Option value='puncakjaya'>Puncak Jaya</Select.Option>
+      <Select.Option value='kosciuszko'>Mount Kosciuszko</Select.Option>
+    </Select>
+  </>
 );
 
 Disabled.args = {
-  label: 'Velg et fjell',
   disabled: true,
+  id: 'my-select',
 };
 
 export const WithError: StoryFn<typeof Select> = (args) => (
-  <Select {...args}>
-    <option value='blank'>Velg &hellip;</option>
-    <option value='everest'>Mount Everest</option>
-    <option value='aconcagua'>Aconcagua</option>
-    <option value='denali'>Denali</option>
-    <option value='kilimanjaro'>Kilimanjaro</option>
-    <option value='elbrus'>Elbrus</option>
-    <option value='vinson'>Mount Vinson</option>
-    <option value='puncakjaya'>Puncak Jaya</option>
-    <option value='kosciuszko'>Mount Kosciuszko</option>
-  </Select>
+  <>
+    <Label htmlFor={args.id}>Velg et fjell</Label>
+    <Select {...args}>
+      <Select.Option value='blank'>Velg &hellip;</Select.Option>
+      <Select.Option value='everest'>Mount Everest</Select.Option>
+      <Select.Option value='aconcagua'>Aconcagua</Select.Option>
+      <Select.Option value='denali'>Denali</Select.Option>
+      <Select.Option value='kilimanjaro'>Kilimanjaro</Select.Option>
+      <Select.Option value='elbrus'>Elbrus</Select.Option>
+      <Select.Option value='vinson'>Mount Vinson</Select.Option>
+      <Select.Option value='puncakjaya'>Puncak Jaya</Select.Option>
+      <Select.Option value='kosciuszko'>Mount Kosciuszko</Select.Option>
+    </Select>
+  </>
 );
 
 WithError.args = {
-  label: 'Velg et fjell',
-  error: 'Du må velge et fjell',
+  'aria-invalid': true,
+  id: 'my-select',
 };
 
-export const Multiple: StoryFn<typeof Select> = (args) => (
-  <Select {...args}>
-    <option value='everest'>Mount Everest</option>
-    <option value='aconcagua'>Aconcagua</option>
-    <option value='denali'>Denali</option>
-    <option value='kilimanjaro'>Kilimanjaro</option>
-    <option value='elbrus'>Elbrus</option>
-    <option value='vinson'>Mount Vinson</option>
-    <option value='puncakjaya'>Puncak Jaya</option>
-    <option value='kosciuszko'>Mount Kosciuszko</option>
-  </Select>
+export const WithOptgroup: StoryFn<typeof Select> = (args) => (
+  <>
+    <Label htmlFor={args.id}>Velg et fjell</Label>
+    <Select {...args}>
+      <Select.Optgroup label='Gruppe 1'>
+        <Select.Option value='everest'>Mount Everest</Select.Option>
+        <Select.Option value='aconcagua'>Aconcagua</Select.Option>
+        <Select.Option value='denali'>Denali</Select.Option>
+        <Select.Option value='kilimanjaro'>Kilimanjaro</Select.Option>
+      </Select.Optgroup>
+      <Select.Optgroup label='Gruppe 2'>
+        <Select.Option value='elbrus'>Elbrus</Select.Option>
+        <Select.Option value='vinson'>Mount Vinson</Select.Option>
+        <Select.Option value='puncakjaya'>Puncak Jaya</Select.Option>
+        <Select.Option value='kosciuszko'>Mount Kosciuszko</Select.Option>
+      </Select.Optgroup>
+    </Select>
+  </>
 );
 
-Multiple.args = {
-  label: 'Velg fjell',
-  multiple: true,
+WithOptgroup.args = {
+  id: 'my-select',
 };

@@ -1,8 +1,0 @@
-{
-  "extends": "@ua-designsystem/typescript-config/tsconfig.packages.json",
-  "compilerOptions": {
-    "composite": false
-  },
-  "rootDir": "./src",
-  "include": ["src"]
-}

@@ -1,7 +1,6 @@
-import { Heading, Link, Paragraph } from '@digdir/designsystemet-react';
+import { Button, Heading, Link, Paragraph } from '@digdir/designsystemet-react';
 import { EnvelopeClosedIcon } from '@navikt/aksel-icons';
-import { Container } from '@repo/components';
-import cl from 'clsx/lite';
+import { Container, Figma, Github, Slack } from '@repo/components';
 import Image from 'next/image';
 import NextLink from 'next/link';
 import type { ReactNode } from 'react';
@@ -28,14 +27,7 @@ const rightLinks = [
   {
     text: 'Github',
     url: 'https://github.com/digdir/designsystemet',
-    prefix: (
-      <Image
-        height={20}
-        width={20}
-        alt=''
-        src='/img/logos/github-negative.png'
-      />
-    ),
+    prefix: <Github />,
   },
 ];
 

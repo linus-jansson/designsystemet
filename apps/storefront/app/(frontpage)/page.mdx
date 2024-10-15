@@ -20,7 +20,6 @@ export const metadata = {
   imgSrc='/img/Toolbox.svg'
   headingLevel='h2'
   imgWidth={1195}
-  imgHeight={270}
   link={{
       text: 'Läs mer om designsystemet',
       href: '/grundlaggande/introduktion/om-designsystemet',
@@ -34,7 +33,6 @@ export const metadata = {
   imgPosition='right'
   headingLevel='h2'
   imgWidth={1195}
-  imgHeight={270}
   fallbackImgSrc='/img/reduced-motion/Page.png'
   fallbackImgAlt='Designskiss av en mobiltelefon som har komponenter från designsystemet i sig.'
 />
@@ -45,7 +43,6 @@ export const metadata = {
   videoSrc='/animations/Theme'
   headingLevel='h2'
   imgWidth={1195}
-  imgHeight={270}
   fallbackImgSrc='/img/reduced-motion/Theme.png'
   fallbackImgAlt='Designskiss av en webbsida som visar hur designsystemet kan anpassas till olika identiteter.'
 />
@@ -54,6 +51,10 @@ export const metadata = {
   {`
 header:first-of-type {
   background-color: transparent;
+}
+
+.ds-logo-image img {
+  width: 85%;
 }
 `}
 </style>
