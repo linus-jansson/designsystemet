@@ -2,7 +2,7 @@
  * These files are generated from design tokens defind using Token Studio
  */
 
-export const color = [
+export const  color = [
   {
     $type: "color",
     $value: "#001c36",
@@ -2332,9 +2332,9 @@ export const color = [
       "outer"
     ]
   }
-]
+] 
 
-export const typography = [
+export const  typography = [
   {
     $type: "typography",
     $value: {
@@ -2540,7 +2540,13 @@ export const typography = [
   },
   {
     $type: "typography",
-    $value: "400 1.5rem/1.5 'Inter'",
+    $value: {
+      fontFamily: "Inter",
+      fontWeight: 400,
+      lineHeight: "1.5",
+      fontSize: "1.5rem",
+      letterSpacing: "0.5%"
+    },
     filePath: "../../design-tokens/semantic/style.json",
     isSource: false,
     original: {
@@ -2553,19 +2559,23 @@ export const typography = [
         letterSpacing: "{letter-spacing.8}"
       }
     },
-    name: "--ds-typography-body-xl",
+    name: "--ds-body-xl",
     attributes: {},
     path: [
       "typography",
-      "body",
-      "xl"
       "body",
       "xl"
     ]
   },
   {
     $type: "typography",
-    $value: "400 1.3125rem/1.5 'Inter'",
+    $value: {
+      fontFamily: "Inter",
+      fontWeight: 400,
+      lineHeight: "1.5",
+      fontSize: "1.3125rem",
+      letterSpacing: "0.5%"
+    },
     filePath: "../../design-tokens/semantic/style.json",
     isSource: false,
     original: {
@@ -2573,26 +2583,28 @@ export const typography = [
       $value: {
         fontFamily: "{font.family}",
         fontWeight: "{font-weight.regular}",
-        lineHeight: "{line-height.md}",
         lineHeight: "{line-height.md}",
         fontSize: "{font-size.6}",
         letterSpacing: "{letter-spacing.8}"
-        letterSpacing: "{letter-spacing.8}"
       }
     },
-    name: "--ds-typography-body-lg",
+    name: "--ds-body-lg",
     attributes: {},
     path: [
       "typography",
-      "body",
-      "lg"
       "body",
       "lg"
     ]
   },
   {
     $type: "typography",
-    $value: "400 1.125rem/1.5 'Inter'",
+    $value: {
+      fontFamily: "Inter",
+      fontWeight: 400,
+      lineHeight: "1.5",
+      fontSize: "1.125rem",
+      letterSpacing: "0.5%"
+    },
     filePath: "../../design-tokens/semantic/style.json",
     isSource: false,
     original: {
@@ -2602,23 +2614,26 @@ export const typography = [
         fontWeight: "{font-weight.regular}",
         lineHeight: "{line-height.md}",
         fontSize: "{font-size.5}",
-        fontSize: "{font-size.5}",
         letterSpacing: "{letter-spacing.8}"
       }
     },
-    name: "--ds-typography-body-md",
+    name: "--ds-body-md",
     attributes: {},
     path: [
       "typography",
-      "body",
-      "md"
       "body",
       "md"
     ]
   },
   {
     $type: "typography",
-    $value: "400 1rem/1.5 'Inter'",
+    $value: {
+      fontFamily: "Inter",
+      fontWeight: 400,
+      lineHeight: "1.5",
+      fontSize: "1rem",
+      letterSpacing: "0.25%"
+    },
     filePath: "../../design-tokens/semantic/style.json",
     isSource: false,
     original: {
@@ -2629,23 +2644,25 @@ export const typography = [
         lineHeight: "{line-height.md}",
         fontSize: "{font-size.4}",
         letterSpacing: "{letter-spacing.7}"
-        fontSize: "{font-size.4}",
-        letterSpacing: "{letter-spacing.7}"
       }
     },
-    name: "--ds-typography-body-sm",
+    name: "--ds-body-sm",
     attributes: {},
     path: [
       "typography",
-      "body",
-      "sm"
       "body",
       "sm"
     ]
   },
   {
     $type: "typography",
-    $value: "400 0.875rem/1.5 'Inter'",
+    $value: {
+      fontFamily: "Inter",
+      fontWeight: 400,
+      lineHeight: "1.5",
+      fontSize: "0.875rem",
+      letterSpacing: "0.15%"
+    },
     filePath: "../../design-tokens/semantic/style.json",
     isSource: false,
     original: {
@@ -2656,23 +2673,25 @@ export const typography = [
         lineHeight: "{line-height.md}",
         fontSize: "{font-size.3}",
         letterSpacing: "{letter-spacing.6}"
-        fontSize: "{font-size.3}",
-        letterSpacing: "{letter-spacing.6}"
       }
     },
-    name: "--ds-typography-body-xs",
+    name: "--ds-body-xs",
     attributes: {},
     path: [
       "typography",
-      "body",
-      "xs"
       "body",
       "xs"
     ]
   },
   {
     $type: "typography",
-    $value: "400 1.5rem/1.3 'Inter'",
+    $value: {
+      fontFamily: "Inter",
+      fontWeight: 400,
+      lineHeight: "1.3",
+      fontSize: "1.5rem",
+      letterSpacing: "0.5%"
+    },
     filePath: "../../design-tokens/semantic/style.json",
     isSource: false,
     original: {
@@ -2683,18 +2702,12 @@ export const typography = [
         lineHeight: "{line-height.sm}",
         fontSize: "{font-size.7}",
         letterSpacing: "{letter-spacing.8}"
-        lineHeight: "{line-height.sm}",
-        fontSize: "{font-size.7}",
-        letterSpacing: "{letter-spacing.8}"
       }
     },
-    name: "--ds-typography-body-short-xl",
+    name: "--ds-body-short-xl",
     attributes: {},
     path: [
       "typography",
-      "body",
-      "short",
-      "xl"
       "body",
       "short",
       "xl"
@@ -2721,11 +2734,10 @@ export const typography = [
         letterSpacing: "{letter-spacing.8}"
       }
     },
-    name: "--ds-typography-body-short-lg",
+    name: "--ds-body-short-lg",
     attributes: {},
     path: [
       "typography",
-      "body",
       "body",
       "short",
       "lg"
@@ -2752,11 +2764,10 @@ export const typography = [
         letterSpacing: "{letter-spacing.8}"
       }
     },
-    name: "--ds-typography-body-short-md",
+    name: "--ds-body-short-md",
     attributes: {},
     path: [
       "typography",
-      "body",
       "body",
       "short",
       "md"
@@ -2783,11 +2794,10 @@ export const typography = [
         letterSpacing: "{letter-spacing.7}"
       }
     },
-    name: "--ds-typography-body-short-sm",
+    name: "--ds-body-short-sm",
     attributes: {},
     path: [
       "typography",
-      "body",
       "body",
       "short",
       "sm"
@@ -2814,11 +2824,10 @@ export const typography = [
         letterSpacing: "{letter-spacing.6}"
       }
     },
-    name: "--ds-typography-body-short-xs",
+    name: "--ds-body-short-xs",
     attributes: {},
     path: [
       "typography",
-      "body",
       "body",
       "short",
       "xs"
@@ -2826,7 +2835,13 @@ export const typography = [
   },
   {
     $type: "typography",
-    $value: "400 1.5rem/1.7 'Inter'",
+    $value: {
+      fontFamily: "Inter",
+      fontWeight: 400,
+      lineHeight: "1.7",
+      fontSize: "1.5rem",
+      letterSpacing: "0.5%"
+    },
     filePath: "../../design-tokens/semantic/style.json",
     isSource: false,
     original: {
@@ -2839,7 +2854,7 @@ export const typography = [
         letterSpacing: "{letter-spacing.8}"
       }
     },
-    name: "--ds-typography-body-long-xl",
+    name: "--ds-body-long-xl",
     attributes: {},
     path: [
       "typography",
@@ -2850,7 +2865,13 @@ export const typography = [
   },
   {
     $type: "typography",
-    $value: "400 1.3125rem/1.7 'Inter'",
+    $value: {
+      fontFamily: "Inter",
+      fontWeight: 400,
+      lineHeight: "1.7",
+      fontSize: "1.3125rem",
+      letterSpacing: "0.5%"
+    },
     filePath: "../../design-tokens/semantic/style.json",
     isSource: false,
     original: {
@@ -2863,11 +2884,10 @@ export const typography = [
         letterSpacing: "{letter-spacing.8}"
       }
     },
-    name: "--ds-typography-body-long-lg",
+    name: "--ds-body-long-lg",
     attributes: {},
     path: [
       "typography",
-      "body",
       "body",
       "long",
       "lg"
@@ -2894,11 +2914,10 @@ export const typography = [
         letterSpacing: "{letter-spacing.8}"
       }
     },
-    name: "--ds-typography-body-long-md",
+    name: "--ds-body-long-md",
     attributes: {},
     path: [
       "typography",
-      "body",
       "body",
       "long",
       "md"
@@ -2925,11 +2944,10 @@ export const typography = [
         letterSpacing: "{letter-spacing.7}"
       }
     },
-    name: "--ds-typography-body-long-sm",
+    name: "--ds-body-long-sm",
     attributes: {},
     path: [
       "typography",
-      "body",
       "body",
       "long",
       "sm"
@@ -2956,11 +2974,10 @@ export const typography = [
         letterSpacing: "{letter-spacing.6}"
       }
     },
-    name: "--ds-typography-body-long-xs",
+    name: "--ds-body-long-xs",
     attributes: {},
     path: [
       "typography",
-      "body",
       "body",
       "long",
       "xs"
@@ -3198,9 +3215,9 @@ export const typography = [
       "xs"
     ]
   }
-]
+] 
 
-export const opacity = [
+export const  opacity = [
   {
     $type: "opacity",
     $value: "30%",
@@ -3217,9 +3234,9 @@ export const opacity = [
       "opacity"
     ]
   }
-]
+] 
 
-export const dimension = [
+export const  dimension = [
   {
     $type: "dimension",
     $value: "0.125rem",
@@ -3988,9 +4005,9 @@ export const dimension = [
       "30"
     ]
   }
-]
+] 
 
-export const shadow = [
+export const  shadow = [
   {
     $type: "shadow",
     $value: "0 0 1px 0 rgba(0,0,0,0.16), 0 1px 2px 0 rgba(0,0,0,0.12)",
