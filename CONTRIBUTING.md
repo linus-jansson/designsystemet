@@ -87,19 +87,20 @@ Follow these steps to get up and running with Storybook or Storefront (designsys
 Run the commands from the root of your project. Make sure you clone the `next` branch, this is where we do development.
 
 `yarn`
-`yarn build`
+
+`yarn dlx turbo run build --filter="./packages/*"`
 
 #### 4. Start local development servers
 
-`yarn storybook | storefront`
+`yarn dlx turbo dev --filter=@apps/storefront --filter=@apps/storybook`
 
-You can now start developing for storybook and the storefront.
+This will start the storefront and storybook in parallel. You can now start developing for storybook and the storefront. Change the filter to the appropriate app you want to run.
 
 #### Building using docker
 
 `docker build -t <app> -f .\CI\Dockerfile --build-arg APP_NAME=<app> .`
 
-`docker run -p <PORT>:3000 designsystemet/<app>@latest`
+`docker run -p <PORT>:<IMAGE_PORT> <app>`
 
 ### Pull requests
 
