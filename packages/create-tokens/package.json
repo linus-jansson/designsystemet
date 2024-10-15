@@ -23,5 +23,9 @@
     "@commander-js/extra-typings": "^12.1.0",
     "commander": "^12.1.0",
     "tsx": "^4.16.5"
+  },
+  "devDependencies": {
+    "@ua-designsystem/typescript-config": "workspace:^",
+    "typescript": "^5.6.3"
   }
 }
