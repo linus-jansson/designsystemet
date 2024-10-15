@@ -22,10 +22,10 @@ const nextConfig = {
     defaultLocale: 'sv',
   },
   output: "standalone",
-  experimental: {
-    // this includes files from the monorepo base two directories up
-    outputFileTracingRoot: path.join(__dirname, '../../'),
-  },
+  // experimental: {
+  //   // this includes files from the monorepo base two directories up
+  //   outputFileTracingRoot: path.join(__dirname, '../../'),
+  // },
 };
 
 const withMDX = createMDX({

@@ -17,18 +17,6 @@
       ],
       "cache": true
     },
-    "storefront": {
-      "dependsOn": [
-        "build"
-      ],
-      "outputs": [
-        "apps/storefront/.next/**",
-        "apps/storefront/dist/**",
-        "!.next/cache/**",
-        "!dist/cache/**"
-      ],
-      "cache": true
-    },
     "test": {
       "outputs": [],
       "cache": true

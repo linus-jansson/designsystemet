@@ -13,7 +13,7 @@ RUN corepack enable
 # COPY .yarn ./.yarn
 # COPY .yarnrc.yml ./.yarnrc.yml
 
-RUN yarn dlx turbo prune --scope=${APP_NAME} --docker
+RUN yarn dlx turbo prune --scope=@apps/${APP_NAME} --docker
 
 # Separate step to install dependencies, most of this will be cached if dependencies wont change
 FROM base AS builder
@@ -36,7 +36,7 @@ ARG TURBO_TOKEN
 ARG TURBO_TEAMID
 ARG TURBO_API
 # Build the project
-RUN yarn dlx turbo run build --filter=${APP_NAME}
+RUN yarn dlx turbo run build --filter=@apps/${APP_NAME}
 
 # Switch deps over to production only and prune out not needed files (https://github.com/tj/node-prune)
 RUN rm -rf node_modules && mv node_modules_production node_modules

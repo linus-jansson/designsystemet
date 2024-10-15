@@ -97,7 +97,7 @@ You can now start developing for storybook and the storefront.
 
 #### Building using docker
 
-`docker build -t storefront -f .\CI\Dockerfile --build-arg APP_NAME=storefront .`
+`docker build -t <app> -f .\CI\Dockerfile --build-arg APP_NAME=<app> .`
 
 `docker run -p <PORT>:3000 designsystemet/<app>@latest`
 
