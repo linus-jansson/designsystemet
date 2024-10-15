@@ -7,7 +7,7 @@ import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 
 import classes from './Header.module.css';
-import { DsLogo } from './logos/ds-logo';
+import { UaLogo } from './logos/ua-logo';
 import { FigmaLogo } from './logos/figma-logo';
 import { GithubLogo } from './logos/github-logo';
 
@@ -36,7 +36,7 @@ const Header = ({ menu, betaTag }: HeaderProps) => {
               onClick={() => setOpen(false)}
               prefetch={false}
             >
-              <DsLogo className={classes.logo} />
+              <UaLogo className={classes.logo} />
             </Link>
             {betaTag && <div className={classes.tag}>Beta</div>}
           </div>

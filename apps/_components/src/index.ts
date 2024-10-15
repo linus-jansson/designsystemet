@@ -3,3 +3,7 @@ export { Container } from './Container/Container';
 export { ClipboardButton } from './ClipboardButton/ClipboardButton';
 export { ColorModal } from './ColorModal/ColorModal';
 export { Header } from './Header/Header';
+export { BlogCard } from './Card/BlogCard';
+export { Contributors } from './Contributors/Contributors';
+export { PostLayout } from './PostLayout/PostLayout';
+export { Figures } from './Figures';
