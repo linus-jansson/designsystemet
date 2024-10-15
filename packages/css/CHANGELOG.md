@@ -1,5 +1,29 @@
 # Change Log
 
+## 1.0.0-next.36
+
+### Patch Changes
+
+- ValidationMessage: Add icon when `error={true}` ([#2596](https://github.com/digdir/designsystemet/pull/2596))
+
+- chip: Fix wrong font sizes ([#2595](https://github.com/digdir/designsystemet/pull/2595))
+
+- Button: Fix SVG and images shrinking in flex containers ([#2612](https://github.com/digdir/designsystemet/pull/2612))
+
+- Button: Use font-weight `--ds-font-weight-medium` ([#2618](https://github.com/digdir/designsystemet/pull/2618))
+
+- Combobox: fix overflow on screens narrower than ~340px ([#2570](https://github.com/digdir/designsystemet/pull/2570))
+
+- Label: Use data attributes for styling ([#2588](https://github.com/digdir/designsystemet/pull/2588))
+
+  ValidationMessage: Use data attributes for styling
+
+- Select + Textarea: ([#2571](https://github.com/digdir/designsystemet/pull/2571))
+
+  - Remove `label`, `hideLabel`, `description`, `characterLimit` and `error` as these will be part of `Field` API
+
+- Remove `baseline` layer and fix layerorder for typography ([#2588](https://github.com/digdir/designsystemet/pull/2588))
+
 ## 1.0.0-next.35
 
 ### Patch Changes

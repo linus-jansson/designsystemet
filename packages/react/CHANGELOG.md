@@ -1,5 +1,16 @@
 # Change Log
 
+## 1.0.0-next.36
+
+### Patch Changes
+
+- Label: Use data attributes for styling ([#2588](https://github.com/digdir/designsystemet/pull/2588))
+
+  ValidationMessage: Use data attributes for styling
+
+- Select + Textarea: ([#2571](https://github.com/digdir/designsystemet/pull/2571))
+  - Remove `label`, `hideLabel`, `description`, `characterLimit` and `error` as these will be part of `Field` API
+
 ## 1.0.0-next.35
 
 ### Patch Changes
