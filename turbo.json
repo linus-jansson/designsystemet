@@ -1,0 +1,52 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "tasks": {
+    "build": {
+      "dependsOn": [
+        "^build"
+      ],
+      "outputs": [
+        "packages/*/.next/**",
+        "packages/*/dist/**",
+        "apps/*/.next/**",
+        "apps/*/dist/**",
+        "plugins/*/.next/**",
+        "plugins/*/dist/**",
+        "!.next/cache/**",
+        "!dist/cache/**"
+      ],
+      "cache": true
+    },
+    "storefront": {
+      "dependsOn": [
+        "build"
+      ],
+      "outputs": [
+        "apps/storefront/.next/**",
+        "apps/storefront/dist/**",
+        "!.next/cache/**",
+        "!dist/cache/**"
+      ],
+      "cache": true
+    },
+    "test": {
+      "outputs": [],
+      "cache": true
+    },
+    "check-types": {
+      "outputs": [],
+      "cache": true,
+      "dependsOn": [
+        "^check-types"
+      ]
+    },
+    "lint": {
+      "outputs": [],
+      "cache": true
+    },
+    "dev": {
+      "persistent": true,
+      "cache": false
+    }
+  }
+}
