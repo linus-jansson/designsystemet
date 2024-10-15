@@ -2,15 +2,25 @@
   "theme": {
     "main": {
       "$type": "fontFamilies",
-      "$value": "Source Sans 3"
+      "$value": "IBM Plex Mono"
     },
     "bold": {
+      "$extensions": {
+        "studio.tokens": {
+          "modify": {}
+        }
+      },
       "$type": "fontWeights",
-      "$value": "SemiBold"
+      "$value": "Medium"
     },
     "extra-bold": {
+      "$extensions": {
+        "studio.tokens": {
+          "modify": {}
+        }
+      },
       "$type": "fontWeights",
-      "$value": "Bold"
+      "$value": "SemiBold"
     },
     "regular": {
       "$type": "fontWeights",

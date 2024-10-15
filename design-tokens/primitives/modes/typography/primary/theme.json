@@ -2,7 +2,7 @@
   "theme": {
     "main": {
       "$type": "fontFamilies",
-      "$value": "Source Sans 3"
+      "$value": "Inter"
     },
     "bold": {
       "$extensions": {
@@ -11,7 +11,7 @@
         }
       },
       "$type": "fontWeights",
-      "$value": "SemiBold"
+      "$value": "Medium"
     },
     "extra-bold": {
       "$extensions": {
@@ -20,7 +20,7 @@
         }
       },
       "$type": "fontWeights",
-      "$value": "Bold"
+      "$value": "Semi bold"
     },
     "regular": {
       "$type": "fontWeights",

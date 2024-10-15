@@ -5,7 +5,7 @@
 export const  color = [
   {
     $type: "color",
-    $value: "#201b00",
+    $value: "#001c36",
     filePath: "../../design-tokens/semantic/color.json",
     isSource: false,
     original: {
@@ -22,7 +22,7 @@ export const  color = [
   },
   {
     $type: "color",
-    $value: "#292300",
+    $value: "#002545",
     filePath: "../../design-tokens/semantic/color.json",
     isSource: false,
     original: {
@@ -39,7 +39,7 @@ export const  color = [
   },
   {
     $type: "color",
-    $value: "#383100",
+    $value: "#00315b",
     filePath: "../../design-tokens/semantic/color.json",
     isSource: false,
     original: {
@@ -56,7 +56,7 @@ export const  color = [
   },
   {
     $type: "color",
-    $value: "#473d00",
+    $value: "#013f75",
     filePath: "../../design-tokens/semantic/color.json",
     isSource: false,
     original: {
@@ -73,7 +73,7 @@ export const  color = [
   },
   {
     $type: "color",
-    $value: "#574b00",
+    $value: "#014b8e",
     filePath: "../../design-tokens/semantic/color.json",
     isSource: false,
     original: {
@@ -90,7 +90,7 @@ export const  color = [
   },
   {
     $type: "color",
-    $value: "#5f5300",
+    $value: "#01539b",
     filePath: "../../design-tokens/semantic/color.json",
     isSource: false,
     original: {
@@ -107,7 +107,7 @@ export const  color = [
   },
   {
     $type: "color",
-    $value: "#806f00",
+    $value: "#1971c0",
     filePath: "../../design-tokens/semantic/color.json",
     isSource: false,
     original: {
@@ -124,7 +124,7 @@ export const  color = [
   },
   {
     $type: "color",
-    $value: "#dabe00",
+    $value: "#9bc2e4",
     filePath: "../../design-tokens/semantic/color.json",
     isSource: false,
     original: {
@@ -141,7 +141,7 @@ export const  color = [
   },
   {
     $type: "color",
-    $value: "#241f00",
+    $value: "#4b90ce",
     filePath: "../../design-tokens/semantic/color.json",
     isSource: false,
     original: {
@@ -158,7 +158,7 @@ export const  color = [
   },
   {
     $type: "color",
-    $value: "#383100",
+    $value: "#277ac4",
     filePath: "../../design-tokens/semantic/color.json",
     isSource: false,
     original: {
@@ -175,7 +175,7 @@ export const  color = [
   },
   {
     $type: "color",
-    $value: "#4c4200",
+    $value: "#0163ba",
     filePath: "../../design-tokens/semantic/color.json",
     isSource: false,
     original: {
@@ -192,7 +192,7 @@ export const  color = [
   },
   {
     $type: "color",
-    $value: "#bba300",
+    $value: "#72a8d9",
     filePath: "../../design-tokens/semantic/color.json",
     isSource: false,
     original: {
@@ -209,7 +209,7 @@ export const  color = [
   },
   {
     $type: "color",
-    $value: "#fee32f",
+    $value: "#d1e3f3",
     filePath: "../../design-tokens/semantic/color.json",
     isSource: false,
     original: {
@@ -226,7 +226,7 @@ export const  color = [
   },
   {
     $type: "color",
-    $value: "#ffffff",
+    $value: "#000000",
     filePath: "../../design-tokens/semantic/color.json",
     isSource: false,
     original: {
@@ -243,7 +243,7 @@ export const  color = [
   },
   {
     $type: "color",
-    $value: "#b2b1a6",
+    $value: "#0d1823",
     filePath: "../../design-tokens/semantic/color.json",
     isSource: false,
     original: {
@@ -260,7 +260,7 @@ export const  color = [
   },
   {
     $type: "color",
-    $value: "#181c22",
+    $value: "#131c27",
     filePath: "../../design-tokens/semantic/color.json",
     isSource: false,
     original: {
@@ -277,7 +277,7 @@ export const  color = [
   },
   {
     $type: "color",
-    $value: "#20242b",
+    $value: "#192433",
     filePath: "../../design-tokens/semantic/color.json",
     isSource: false,
     original: {
@@ -294,7 +294,7 @@ export const  color = [
   },
   {
     $type: "color",
-    $value: "#2b303b",
+    $value: "#243142",
     filePath: "../../design-tokens/semantic/color.json",
     isSource: false,
     original: {
@@ -311,7 +311,7 @@ export const  color = [
   },
   {
     $type: "color",
-    $value: "#363e4b",
+    $value: "#333e4e",
     filePath: "../../design-tokens/semantic/color.json",
     isSource: false,
     original: {
@@ -328,7 +328,7 @@ export const  color = [
   },
   {
     $type: "color",
-    $value: "#434c5c",
+    $value: "#424d5b",
     filePath: "../../design-tokens/semantic/color.json",
     isSource: false,
     original: {
@@ -345,7 +345,7 @@ export const  color = [
   },
   {
     $type: "color",
-    $value: "#495365",
+    $value: "#495361",
     filePath: "../../design-tokens/semantic/color.json",
     isSource: false,
     original: {
@@ -362,7 +362,7 @@ export const  color = [
   },
   {
     $type: "color",
-    $value: "#676f80",
+    $value: "#67707c",
     filePath: "../../design-tokens/semantic/color.json",
     isSource: false,
     original: {
@@ -379,7 +379,7 @@ export const  color = [
   },
   {
     $type: "color",
-    $value: "#babec5",
+    $value: "#bbbfc4",
     filePath: "../../design-tokens/semantic/color.json",
     isSource: false,
     original: {
@@ -396,7 +396,7 @@ export const  color = [
   },
   {
     $type: "color",
-    $value: "#9299a4",
+    $value: "#a6abb2",
     filePath: "../../design-tokens/semantic/color.json",
     isSource: false,
     original: {
@@ -413,7 +413,7 @@ export const  color = [
   },
   {
     $type: "color",
-    $value: "#7d8492",
+    $value: "#90969e",
     filePath: "../../design-tokens/semantic/color.json",
     isSource: false,
     original: {
@@ -430,7 +430,7 @@ export const  color = [
   },
   {
     $type: "color",
-    $value: "#676f80",
+    $value: "#7a818c",
     filePath: "../../design-tokens/semantic/color.json",
     isSource: false,
     original: {
@@ -447,7 +447,7 @@ export const  color = [
   },
   {
     $type: "color",
-    $value: "#9ea4ae",
+    $value: "#9ea3ab",
     filePath: "../../design-tokens/semantic/color.json",
     isSource: false,
     original: {
@@ -464,7 +464,7 @@ export const  color = [
   },
   {
     $type: "color",
-    $value: "#e0e2e5",
+    $value: "#e1e3e5",
     filePath: "../../design-tokens/semantic/color.json",
     isSource: false,
     original: {
@@ -498,7 +498,7 @@ export const  color = [
   },
   {
     $type: "color",
-    $value: "#0a0b0c",
+    $value: "#1b1b1d",
     filePath: "../../design-tokens/semantic/color.json",
     isSource: false,
     original: {
@@ -515,7 +515,7 @@ export const  color = [
   },
   {
     $type: "color",
-    $value: "#1a1835",
+    $value: "#2f1213",
     filePath: "../../design-tokens/semantic/color.json",
     isSource: false,
     original: {
@@ -532,7 +532,7 @@ export const  color = [
   },
   {
     $type: "color",
-    $value: "#221f43",
+    $value: "#3e1819",
     filePath: "../../design-tokens/semantic/color.json",
     isSource: false,
     original: {
@@ -549,7 +549,7 @@ export const  color = [
   },
   {
     $type: "color",
-    $value: "#2d2a5b",
+    $value: "#522022",
     filePath: "../../design-tokens/semantic/color.json",
     isSource: false,
     original: {
@@ -566,7 +566,7 @@ export const  color = [
   },
   {
     $type: "color",
-    $value: "#3a3674",
+    $value: "#68292b",
     filePath: "../../design-tokens/semantic/color.json",
     isSource: false,
     original: {
@@ -583,7 +583,7 @@ export const  color = [
   },
   {
     $type: "color",
-    $value: "#47418e",
+    $value: "#7f3234",
     filePath: "../../design-tokens/semantic/color.json",
     isSource: false,
     original: {
@@ -600,7 +600,7 @@ export const  color = [
   },
   {
     $type: "color",
-    $value: "#4e4899",
+    $value: "#8b3639",
     filePath: "../../design-tokens/semantic/color.json",
     isSource: false,
     original: {
@@ -617,7 +617,7 @@ export const  color = [
   },
   {
     $type: "color",
-    $value: "#6d68ab",
+    $value: "#bc494c",
     filePath: "../../design-tokens/semantic/color.json",
     isSource: false,
     original: {
@@ -634,7 +634,7 @@ export const  color = [
   },
   {
     $type: "color",
-    $value: "#bebbd9",
+    $value: "#f9a9ab",
     filePath: "../../design-tokens/semantic/color.json",
     isSource: false,
     original: {
@@ -651,7 +651,7 @@ export const  color = [
   },
   {
     $type: "color",
-    $value: "#9f9bc8",
+    $value: "#9f3e41",
     filePath: "../../design-tokens/semantic/color.json",
     isSource: false,
     original: {
@@ -668,7 +668,7 @@ export const  color = [
   },
   {
     $type: "color",
-    $value: "#8986bb",
+    $value: "#7f3234",
     filePath: "../../design-tokens/semantic/color.json",
     isSource: false,
     original: {
@@ -685,7 +685,7 @@ export const  color = [
   },
   {
     $type: "color",
-    $value: "#7470af",
+    $value: "#612628",
     filePath: "../../design-tokens/semantic/color.json",
     isSource: false,
     original: {
@@ -702,7 +702,7 @@ export const  color = [
   },
   {
     $type: "color",
-    $value: "#a29fc9",
+    $value: "#f58083",
     filePath: "../../design-tokens/semantic/color.json",
     isSource: false,
     original: {
@@ -719,7 +719,7 @@ export const  color = [
   },
   {
     $type: "color",
-    $value: "#e1e0ee",
+    $value: "#fcdbdc",
     filePath: "../../design-tokens/semantic/color.json",
     isSource: false,
     original: {
@@ -736,7 +736,7 @@ export const  color = [
   },
   {
     $type: "color",
-    $value: "#000000",
+    $value: "#ffffff",
     filePath: "../../design-tokens/semantic/color.json",
     isSource: false,
     original: {
@@ -753,7 +753,7 @@ export const  color = [
   },
   {
     $type: "color",
-    $value: "#131218",
+    $value: "#fefefe",
     filePath: "../../design-tokens/semantic/color.json",
     isSource: false,
     original: {
@@ -770,7 +770,7 @@ export const  color = [
   },
   {
     $type: "color",
-    $value: "#2a1033",
+    $value: "#231a05",
     filePath: "../../design-tokens/semantic/color.json",
     isSource: false,
     original: {
@@ -787,7 +787,7 @@ export const  color = [
   },
   {
     $type: "color",
-    $value: "#371542",
+    $value: "#2d2206",
     filePath: "../../design-tokens/semantic/color.json",
     isSource: false,
     original: {
@@ -804,7 +804,7 @@ export const  color = [
   },
   {
     $type: "color",
-    $value: "#491d57",
+    $value: "#3d2e09",
     filePath: "../../design-tokens/semantic/color.json",
     isSource: false,
     original: {
@@ -821,7 +821,7 @@ export const  color = [
   },
   {
     $type: "color",
-    $value: "#5d246f",
+    $value: "#4f3a0b",
     filePath: "../../design-tokens/semantic/color.json",
     isSource: false,
     original: {
@@ -838,7 +838,7 @@ export const  color = [
   },
   {
     $type: "color",
-    $value: "#712c88",
+    $value: "#60470e",
     filePath: "../../design-tokens/semantic/color.json",
     isSource: false,
     original: {
@@ -855,7 +855,7 @@ export const  color = [
   },
   {
     $type: "color",
-    $value: "#7a3193",
+    $value: "#694d0f",
     filePath: "../../design-tokens/semantic/color.json",
     isSource: false,
     original: {
@@ -872,7 +872,7 @@ export const  color = [
   },
   {
     $type: "color",
-    $value: "#9357a8",
+    $value: "#8e6914",
     filePath: "../../design-tokens/semantic/color.json",
     isSource: false,
     original: {
@@ -889,7 +889,7 @@ export const  color = [
   },
   {
     $type: "color",
-    $value: "#d0b5d8",
+    $value: "#e8b744",
     filePath: "../../design-tokens/semantic/color.json",
     isSource: false,
     original: {
@@ -906,7 +906,7 @@ export const  color = [
   },
   {
     $type: "color",
-    $value: "#b790c5",
+    $value: "#523c0b",
     filePath: "../../design-tokens/semantic/color.json",
     isSource: false,
     original: {
@@ -923,7 +923,7 @@ export const  color = [
   },
   {
     $type: "color",
-    $value: "#a777b8",
+    $value: "#694d0f",
     filePath: "../../design-tokens/semantic/color.json",
     isSource: false,
     original: {
@@ -940,7 +940,7 @@ export const  color = [
   },
   {
     $type: "color",
-    $value: "#985eab",
+    $value: "#826112",
     filePath: "../../design-tokens/semantic/color.json",
     isSource: false,
     original: {
@@ -957,7 +957,7 @@ export const  color = [
   },
   {
     $type: "color",
-    $value: "#bb96c8",
+    $value: "#d09a1d",
     filePath: "../../design-tokens/semantic/color.json",
     isSource: false,
     original: {
@@ -974,7 +974,7 @@ export const  color = [
   },
   {
     $type: "color",
-    $value: "#eadeee",
+    $value: "#f5dfad",
     filePath: "../../design-tokens/semantic/color.json",
     isSource: false,
     original: {
@@ -991,7 +991,7 @@ export const  color = [
   },
   {
     $type: "color",
-    $value: "#000000",
+    $value: "#ffffff",
     filePath: "../../design-tokens/semantic/color.json",
     isSource: false,
     original: {
@@ -1008,7 +1008,7 @@ export const  color = [
   },
   {
     $type: "color",
-    $value: "#141015",
+    $value: "#ddd9cf",
     filePath: "../../design-tokens/semantic/color.json",
     isSource: false,
     original: {
@@ -1025,7 +1025,7 @@ export const  color = [
   },
   {
     $type: "color",
-    $value: "#0b1e20",
+    $value: "#061d30",
     filePath: "../../design-tokens/semantic/color.json",
     isSource: false,
     original: {
@@ -1042,7 +1042,7 @@ export const  color = [
   },
   {
     $type: "color",
-    $value: "#0f282a",
+    $value: "#07253c",
     filePath: "../../design-tokens/semantic/color.json",
     isSource: false,
     original: {
@@ -1059,7 +1059,7 @@ export const  color = [
   },
   {
     $type: "color",
-    $value: "#143538",
+    $value: "#0a3251",
     filePath: "../../design-tokens/semantic/color.json",
     isSource: false,
     original: {
@@ -1076,7 +1076,7 @@ export const  color = [
   },
   {
     $type: "color",
-    $value: "#194347",
+    $value: "#0d4068",
     filePath: "../../design-tokens/semantic/color.json",
     isSource: false,
     original: {
@@ -1093,7 +1093,7 @@ export const  color = [
   },
   {
     $type: "color",
-    $value: "#1f5257",
+    $value: "#0f4e7f",
     filePath: "../../design-tokens/semantic/color.json",
     isSource: false,
     original: {
@@ -1110,7 +1110,7 @@ export const  color = [
   },
   {
     $type: "color",
-    $value: "#215a5e",
+    $value: "#11558a",
     filePath: "../../design-tokens/semantic/color.json",
     isSource: false,
     original: {
@@ -1127,7 +1127,7 @@ export const  color = [
   },
   {
     $type: "color",
-    $value: "#2d7a81",
+    $value: "#1773b9",
     filePath: "../../design-tokens/semantic/color.json",
     isSource: false,
     original: {
@@ -1144,7 +1144,7 @@ export const  color = [
   },
   {
     $type: "color",
-    $value: "#a0c5c8",
+    $value: "#81c5f9",
     filePath: "../../design-tokens/semantic/color.json",
     isSource: false,
     original: {
@@ -1161,7 +1161,7 @@ export const  color = [
   },
   {
     $type: "color",
-    $value: "#38848b",
+    $value: "#13609a",
     filePath: "../../design-tokens/semantic/color.json",
     isSource: false,
     original: {
@@ -1178,7 +1178,7 @@ export const  color = [
   },
   {
     $type: "color",
-    $value: "#296e75",
+    $value: "#0f4c7a",
     filePath: "../../design-tokens/semantic/color.json",
     isSource: false,
     original: {
@@ -1195,7 +1195,7 @@ export const  color = [
   },
   {
     $type: "color",
-    $value: "#215a5e",
+    $value: "#0b3a5d",
     filePath: "../../design-tokens/semantic/color.json",
     isSource: false,
     original: {
@@ -1212,7 +1212,7 @@ export const  color = [
   },
   {
     $type: "color",
-    $value: "#78acb1",
+    $value: "#44aaf7",
     filePath: "../../design-tokens/semantic/color.json",
     isSource: false,
     original: {
@@ -1229,7 +1229,7 @@ export const  color = [
   },
   {
     $type: "color",
-    $value: "#d6e5e7",
+    $value: "#c8e6fd",
     filePath: "../../design-tokens/semantic/color.json",
     isSource: false,
     original: {
@@ -1246,7 +1246,7 @@ export const  color = [
   },
   {
     $type: "color",
-    $value: "#000000",
+    $value: "#ffffff",
     filePath: "../../design-tokens/semantic/color.json",
     isSource: false,
     original: {
@@ -1263,7 +1263,7 @@ export const  color = [
   },
   {
     $type: "color",
-    $value: "#010404",
+    $value: "#fafcfd",
     filePath: "../../design-tokens/semantic/color.json",
     isSource: false,
     original: {
@@ -2300,7 +2300,7 @@ export const  color = [
   },
   {
     $type: "color",
-    $value: "#181c22",
+    $value: "#131c27",
     filePath: "../../design-tokens/semantic/color.json",
     isSource: false,
     original: {
@@ -2317,7 +2317,7 @@ export const  color = [
   },
   {
     $type: "color",
-    $value: "#fee32f",
+    $value: "#d1e3f3",
     filePath: "../../design-tokens/semantic/color.json",
     isSource: false,
     original: {
@@ -2337,7 +2337,7 @@ export const  color = [
 export const  typography = [
   {
     $type: "typography",
-    $value: "600 3.75rem/1.3 'Source Sans 3'",
+    $value: "500 3.75rem/1.3 'Inter'",
     filePath: "../../design-tokens/semantic/style.json",
     isSource: false,
     original: {
@@ -2360,7 +2360,7 @@ export const  typography = [
   },
   {
     $type: "typography",
-    $value: "600 3rem/1.3 'Source Sans 3'",
+    $value: "500 3rem/1.3 'Inter'",
     filePath: "../../design-tokens/semantic/style.json",
     isSource: false,
     original: {
@@ -2383,7 +2383,7 @@ export const  typography = [
   },
   {
     $type: "typography",
-    $value: "600 2.25rem/1.3 'Source Sans 3'",
+    $value: "500 2.25rem/1.3 'Inter'",
     filePath: "../../design-tokens/semantic/style.json",
     isSource: false,
     original: {
@@ -2406,7 +2406,7 @@ export const  typography = [
   },
   {
     $type: "typography",
-    $value: "600 1.875rem/1.3 'Source Sans 3'",
+    $value: "500 1.875rem/1.3 'Inter'",
     filePath: "../../design-tokens/semantic/style.json",
     isSource: false,
     original: {
@@ -2429,7 +2429,7 @@ export const  typography = [
   },
   {
     $type: "typography",
-    $value: "600 1.5rem/1.3 'Source Sans 3'",
+    $value: "500 1.5rem/1.3 'Inter'",
     filePath: "../../design-tokens/semantic/style.json",
     isSource: false,
     original: {
@@ -2452,7 +2452,7 @@ export const  typography = [
   },
   {
     $type: "typography",
-    $value: "600 1.3125rem/1.3 'Source Sans 3'",
+    $value: "500 1.3125rem/1.3 'Inter'",
     filePath: "../../design-tokens/semantic/style.json",
     isSource: false,
     original: {
@@ -2475,7 +2475,7 @@ export const  typography = [
   },
   {
     $type: "typography",
-    $value: "600 1.125rem/1.3 'Source Sans 3'",
+    $value: "500 1.125rem/1.3 'Inter'",
     filePath: "../../design-tokens/semantic/style.json",
     isSource: false,
     original: {
@@ -2498,7 +2498,7 @@ export const  typography = [
   },
   {
     $type: "typography",
-    $value: "400 1.875rem/1.7 'Source Sans 3'",
+    $value: "400 1.5rem/1.5 'Inter'",
     filePath: "../../design-tokens/semantic/style.json",
     isSource: false,
     original: {
@@ -2506,22 +2506,234 @@ export const  typography = [
       $value: {
         fontFamily: "{font.family}",
         fontWeight: "{font-weight.regular}",
-        lineHeight: "{line-height.lg}",
-        fontSize: "{font-size.8}",
+        lineHeight: "{line-height.md}",
+        fontSize: "{font-size.7}",
         letterSpacing: "{letter-spacing.8}"
       }
     },
-    name: "--ds-typography-ingress-lg",
+    name: "--ds-typography-body-xl",
     attributes: {},
     path: [
       "typography",
-      "ingress",
+      "body",
+      "xl"
+    ]
+  },
+  {
+    $type: "typography",
+    $value: "400 1.3125rem/1.5 'Inter'",
+    filePath: "../../design-tokens/semantic/style.json",
+    isSource: false,
+    original: {
+      $type: "typography",
+      $value: {
+        fontFamily: "{font.family}",
+        fontWeight: "{font-weight.regular}",
+        lineHeight: "{line-height.md}",
+        fontSize: "{font-size.6}",
+        letterSpacing: "{letter-spacing.8}"
+      }
+    },
+    name: "--ds-typography-body-lg",
+    attributes: {},
+    path: [
+      "typography",
+      "body",
       "lg"
     ]
   },
   {
     $type: "typography",
-    $value: "400 1.5rem/1.7 'Source Sans 3'",
+    $value: "400 1.125rem/1.5 'Inter'",
+    filePath: "../../design-tokens/semantic/style.json",
+    isSource: false,
+    original: {
+      $type: "typography",
+      $value: {
+        fontFamily: "{font.family}",
+        fontWeight: "{font-weight.regular}",
+        lineHeight: "{line-height.md}",
+        fontSize: "{font-size.5}",
+        letterSpacing: "{letter-spacing.8}"
+      }
+    },
+    name: "--ds-typography-body-md",
+    attributes: {},
+    path: [
+      "typography",
+      "body",
+      "md"
+    ]
+  },
+  {
+    $type: "typography",
+    $value: "400 1rem/1.5 'Inter'",
+    filePath: "../../design-tokens/semantic/style.json",
+    isSource: false,
+    original: {
+      $type: "typography",
+      $value: {
+        fontFamily: "{font.family}",
+        fontWeight: "{font-weight.regular}",
+        lineHeight: "{line-height.md}",
+        fontSize: "{font-size.4}",
+        letterSpacing: "{letter-spacing.7}"
+      }
+    },
+    name: "--ds-typography-body-sm",
+    attributes: {},
+    path: [
+      "typography",
+      "body",
+      "sm"
+    ]
+  },
+  {
+    $type: "typography",
+    $value: "400 0.875rem/1.5 'Inter'",
+    filePath: "../../design-tokens/semantic/style.json",
+    isSource: false,
+    original: {
+      $type: "typography",
+      $value: {
+        fontFamily: "{font.family}",
+        fontWeight: "{font-weight.regular}",
+        lineHeight: "{line-height.md}",
+        fontSize: "{font-size.3}",
+        letterSpacing: "{letter-spacing.6}"
+      }
+    },
+    name: "--ds-typography-body-xs",
+    attributes: {},
+    path: [
+      "typography",
+      "body",
+      "xs"
+    ]
+  },
+  {
+    $type: "typography",
+    $value: "400 1.5rem/1.3 'Inter'",
+    filePath: "../../design-tokens/semantic/style.json",
+    isSource: false,
+    original: {
+      $type: "typography",
+      $value: {
+        fontFamily: "{font.family}",
+        fontWeight: "{font-weight.regular}",
+        lineHeight: "{line-height.sm}",
+        fontSize: "{font-size.7}",
+        letterSpacing: "{letter-spacing.8}"
+      }
+    },
+    name: "--ds-typography-body-short-xl",
+    attributes: {},
+    path: [
+      "typography",
+      "body",
+      "short",
+      "xl"
+    ]
+  },
+  {
+    $type: "typography",
+    $value: "400 1.3125rem/1.3 'Inter'",
+    filePath: "../../design-tokens/semantic/style.json",
+    isSource: false,
+    original: {
+      $type: "typography",
+      $value: {
+        fontFamily: "{font.family}",
+        fontWeight: "{font-weight.regular}",
+        lineHeight: "{line-height.sm}",
+        fontSize: "{font-size.6}",
+        letterSpacing: "{letter-spacing.8}"
+      }
+    },
+    name: "--ds-typography-body-short-lg",
+    attributes: {},
+    path: [
+      "typography",
+      "body",
+      "short",
+      "lg"
+    ]
+  },
+  {
+    $type: "typography",
+    $value: "400 1.125rem/1.3 'Inter'",
+    filePath: "../../design-tokens/semantic/style.json",
+    isSource: false,
+    original: {
+      $type: "typography",
+      $value: {
+        fontFamily: "{font.family}",
+        fontWeight: "{font-weight.regular}",
+        lineHeight: "{line-height.sm}",
+        fontSize: "{font-size.5}",
+        letterSpacing: "{letter-spacing.8}"
+      }
+    },
+    name: "--ds-typography-body-short-md",
+    attributes: {},
+    path: [
+      "typography",
+      "body",
+      "short",
+      "md"
+    ]
+  },
+  {
+    $type: "typography",
+    $value: "400 1rem/1.3 'Inter'",
+    filePath: "../../design-tokens/semantic/style.json",
+    isSource: false,
+    original: {
+      $type: "typography",
+      $value: {
+        fontFamily: "{font.family}",
+        fontWeight: "{font-weight.regular}",
+        lineHeight: "{line-height.sm}",
+        fontSize: "{font-size.4}",
+        letterSpacing: "{letter-spacing.7}"
+      }
+    },
+    name: "--ds-typography-body-short-sm",
+    attributes: {},
+    path: [
+      "typography",
+      "body",
+      "short",
+      "sm"
+    ]
+  },
+  {
+    $type: "typography",
+    $value: "400 0.875rem/1.3 'Inter'",
+    filePath: "../../design-tokens/semantic/style.json",
+    isSource: false,
+    original: {
+      $type: "typography",
+      $value: {
+        fontFamily: "{font.family}",
+        fontWeight: "{font-weight.regular}",
+        lineHeight: "{line-height.sm}",
+        fontSize: "{font-size.3}",
+        letterSpacing: "{letter-spacing.6}"
+      }
+    },
+    name: "--ds-typography-body-short-xs",
+    attributes: {},
+    path: [
+      "typography",
+      "body",
+      "short",
+      "xs"
+    ]
+  },
+  {
+    $type: "typography",
+    $value: "400 1.5rem/1.7 'Inter'",
     filePath: "../../design-tokens/semantic/style.json",
     isSource: false,
     original: {
@@ -2534,251 +2746,18 @@ export const  typography = [
         letterSpacing: "{letter-spacing.8}"
       }
     },
-    name: "--ds-typography-ingress-md",
+    name: "--ds-typography-body-long-xl",
     attributes: {},
     path: [
       "typography",
-      "ingress",
-      "md"
+      "body",
+      "long",
+      "xl"
     ]
   },
   {
     $type: "typography",
-    $value: "400 1.3125rem/1.7 'Source Sans 3'",
-    filePath: "../../design-tokens/semantic/style.json",
-    isSource: false,
-    original: {
-      $type: "typography",
-      $value: {
-        fontFamily: "{font.family}",
-        fontWeight: "{font-weight.regular}",
-        lineHeight: "{line-height.lg}",
-        fontSize: "{font-size.6}",
-        letterSpacing: "{letter-spacing.7}"
-      }
-    },
-    name: "--ds-typography-ingress-sm",
-    attributes: {},
-    path: [
-      "typography",
-      "ingress",
-      "sm"
-    ]
-  },
-  {
-    $type: "typography",
-    $value: "400 1.125rem/1.7 'Source Sans 3'",
-    filePath: "../../design-tokens/semantic/style.json",
-    isSource: false,
-    original: {
-      $type: "typography",
-      $value: {
-        fontFamily: "{font.family}",
-        fontWeight: "{font-weight.regular}",
-        lineHeight: "{line-height.lg}",
-        fontSize: "{font-size.5}",
-        letterSpacing: "{letter-spacing.6}"
-      }
-    },
-    name: "--ds-typography-ingress-xs",
-    attributes: {},
-    path: [
-      "typography",
-      "ingress",
-      "xs"
-    ]
-  },
-  {
-    $type: "typography",
-    $value: "400 1.3125rem/1.5 'Source Sans 3'",
-    filePath: "../../design-tokens/semantic/style.json",
-    isSource: false,
-    original: {
-      $type: "typography",
-      $value: {
-        fontFamily: "{font.family}",
-        fontWeight: "{font-weight.regular}",
-        lineHeight: "{line-height.md}",
-        fontSize: "{font-size.6}",
-        letterSpacing: "{letter-spacing.8}"
-      }
-    },
-    name: "--ds-typography-paragraph-lg",
-    attributes: {},
-    path: [
-      "typography",
-      "paragraph",
-      "lg"
-    ]
-  },
-  {
-    $type: "typography",
-    $value: "400 1.125rem/1.5 'Source Sans 3'",
-    filePath: "../../design-tokens/semantic/style.json",
-    isSource: false,
-    original: {
-      $type: "typography",
-      $value: {
-        fontFamily: "{font.family}",
-        fontWeight: "{font-weight.regular}",
-        lineHeight: "{line-height.md}",
-        fontSize: "{font-size.5}",
-        letterSpacing: "{letter-spacing.8}"
-      }
-    },
-    name: "--ds-typography-paragraph-md",
-    attributes: {},
-    path: [
-      "typography",
-      "paragraph",
-      "md"
-    ]
-  },
-  {
-    $type: "typography",
-    $value: "400 1rem/1.5 'Source Sans 3'",
-    filePath: "../../design-tokens/semantic/style.json",
-    isSource: false,
-    original: {
-      $type: "typography",
-      $value: {
-        fontFamily: "{font.family}",
-        fontWeight: "{font-weight.regular}",
-        lineHeight: "{line-height.md}",
-        fontSize: "{font-size.4}",
-        letterSpacing: "{letter-spacing.7}"
-      }
-    },
-    name: "--ds-typography-paragraph-sm",
-    attributes: {},
-    path: [
-      "typography",
-      "paragraph",
-      "sm"
-    ]
-  },
-  {
-    $type: "typography",
-    $value: "400 0.875rem/1.5 'Source Sans 3'",
-    filePath: "../../design-tokens/semantic/style.json",
-    isSource: false,
-    original: {
-      $type: "typography",
-      $value: {
-        fontFamily: "{font.family}",
-        fontWeight: "{font-weight.regular}",
-        lineHeight: "{line-height.md}",
-        fontSize: "{font-size.3}",
-        letterSpacing: "{letter-spacing.6}"
-      }
-    },
-    name: "--ds-typography-paragraph-xs",
-    attributes: {},
-    path: [
-      "typography",
-      "paragraph",
-      "xs"
-    ]
-  },
-  {
-    $type: "typography",
-    $value: "400 1.3125rem/1.3 'Source Sans 3'",
-    filePath: "../../design-tokens/semantic/style.json",
-    isSource: false,
-    original: {
-      $type: "typography",
-      $value: {
-        fontFamily: "{font.family}",
-        fontWeight: "{font-weight.regular}",
-        lineHeight: "{line-height.sm}",
-        fontSize: "{font-size.6}",
-        letterSpacing: "{letter-spacing.8}"
-      }
-    },
-    name: "--ds-typography-paragraph-short-lg",
-    attributes: {},
-    path: [
-      "typography",
-      "paragraph",
-      "short",
-      "lg"
-    ]
-  },
-  {
-    $type: "typography",
-    $value: "400 1.125rem/1.3 'Source Sans 3'",
-    filePath: "../../design-tokens/semantic/style.json",
-    isSource: false,
-    original: {
-      $type: "typography",
-      $value: {
-        fontFamily: "{font.family}",
-        fontWeight: "{font-weight.regular}",
-        lineHeight: "{line-height.sm}",
-        fontSize: "{font-size.5}",
-        letterSpacing: "{letter-spacing.8}"
-      }
-    },
-    name: "--ds-typography-paragraph-short-md",
-    attributes: {},
-    path: [
-      "typography",
-      "paragraph",
-      "short",
-      "md"
-    ]
-  },
-  {
-    $type: "typography",
-    $value: "400 1rem/1.3 'Source Sans 3'",
-    filePath: "../../design-tokens/semantic/style.json",
-    isSource: false,
-    original: {
-      $type: "typography",
-      $value: {
-        fontFamily: "{font.family}",
-        fontWeight: "{font-weight.regular}",
-        lineHeight: "{line-height.sm}",
-        fontSize: "{font-size.4}",
-        letterSpacing: "{letter-spacing.7}"
-      }
-    },
-    name: "--ds-typography-paragraph-short-sm",
-    attributes: {},
-    path: [
-      "typography",
-      "paragraph",
-      "short",
-      "sm"
-    ]
-  },
-  {
-    $type: "typography",
-    $value: "400 0.875rem/1.3 'Source Sans 3'",
-    filePath: "../../design-tokens/semantic/style.json",
-    isSource: false,
-    original: {
-      $type: "typography",
-      $value: {
-        fontFamily: "{font.family}",
-        fontWeight: "{font-weight.regular}",
-        lineHeight: "{line-height.sm}",
-        fontSize: "{font-size.3}",
-        letterSpacing: "{letter-spacing.6}"
-      }
-    },
-    name: "--ds-typography-paragraph-short-xs",
-    attributes: {},
-    path: [
-      "typography",
-      "paragraph",
-      "short",
-      "xs"
-    ]
-  },
-  {
-    $type: "typography",
-    $value: "400 1.3125rem/1.7 'Source Sans 3'",
+    $value: "400 1.3125rem/1.7 'Inter'",
     filePath: "../../design-tokens/semantic/style.json",
     isSource: false,
     original: {
@@ -2791,18 +2770,18 @@ export const  typography = [
         letterSpacing: "{letter-spacing.8}"
       }
     },
-    name: "--ds-typography-paragraph-long-lg",
+    name: "--ds-typography-body-long-lg",
     attributes: {},
     path: [
       "typography",
-      "paragraph",
+      "body",
       "long",
       "lg"
     ]
   },
   {
     $type: "typography",
-    $value: "400 1.125rem/1.7 'Source Sans 3'",
+    $value: "400 1.125rem/1.7 'Inter'",
     filePath: "../../design-tokens/semantic/style.json",
     isSource: false,
     original: {
@@ -2815,18 +2794,18 @@ export const  typography = [
         letterSpacing: "{letter-spacing.8}"
       }
     },
-    name: "--ds-typography-paragraph-long-md",
+    name: "--ds-typography-body-long-md",
     attributes: {},
     path: [
       "typography",
-      "paragraph",
+      "body",
       "long",
       "md"
     ]
   },
   {
     $type: "typography",
-    $value: "400 1rem/1.7 'Source Sans 3'",
+    $value: "400 1rem/1.7 'Inter'",
     filePath: "../../design-tokens/semantic/style.json",
     isSource: false,
     original: {
@@ -2839,18 +2818,18 @@ export const  typography = [
         letterSpacing: "{letter-spacing.7}"
       }
     },
-    name: "--ds-typography-paragraph-long-sm",
+    name: "--ds-typography-body-long-sm",
     attributes: {},
     path: [
       "typography",
-      "paragraph",
+      "body",
       "long",
       "sm"
     ]
   },
   {
     $type: "typography",
-    $value: "400 0.875rem/1.7 'Source Sans 3'",
+    $value: "400 0.875rem/1.7 'Inter'",
     filePath: "../../design-tokens/semantic/style.json",
     isSource: false,
     original: {
@@ -2863,18 +2842,18 @@ export const  typography = [
         letterSpacing: "{letter-spacing.6}"
       }
     },
-    name: "--ds-typography-paragraph-long-xs",
+    name: "--ds-typography-body-long-xs",
     attributes: {},
     path: [
       "typography",
-      "paragraph",
+      "body",
       "long",
       "xs"
     ]
   },
   {
     $type: "typography",
-    $value: "600 1.3125rem/1.3 'Source Sans 3'",
+    $value: "500 1.3125rem/1.3 'Inter'",
     filePath: "../../design-tokens/semantic/style.json",
     isSource: false,
     original: {
@@ -2897,7 +2876,7 @@ export const  typography = [
   },
   {
     $type: "typography",
-    $value: "600 1.125rem/1.3 'Source Sans 3'",
+    $value: "500 1.125rem/1.3 'Inter'",
     filePath: "../../design-tokens/semantic/style.json",
     isSource: false,
     original: {
@@ -2920,7 +2899,7 @@ export const  typography = [
   },
   {
     $type: "typography",
-    $value: "600 1rem/1.3 'Source Sans 3'",
+    $value: "500 1rem/1.3 'Inter'",
     filePath: "../../design-tokens/semantic/style.json",
     isSource: false,
     original: {
@@ -2943,7 +2922,7 @@ export const  typography = [
   },
   {
     $type: "typography",
-    $value: "600 0.875rem/1.3 'Source Sans 3'",
+    $value: "500 0.875rem/1.3 'Inter'",
     filePath: "../../design-tokens/semantic/style.json",
     isSource: false,
     original: {
@@ -2966,7 +2945,7 @@ export const  typography = [
   },
   {
     $type: "typography",
-    $value: "400 1.3125rem/1.3 'Source Sans 3'",
+    $value: "400 1.3125rem/1.3 'Inter'",
     filePath: "../../design-tokens/semantic/style.json",
     isSource: false,
     original: {
@@ -2989,7 +2968,7 @@ export const  typography = [
   },
   {
     $type: "typography",
-    $value: "400 1.125rem/1.3 'Source Sans 3'",
+    $value: "400 1.125rem/1.3 'Inter'",
     filePath: "../../design-tokens/semantic/style.json",
     isSource: false,
     original: {
@@ -3012,7 +2991,7 @@ export const  typography = [
   },
   {
     $type: "typography",
-    $value: "400 1rem/1.3 'Source Sans 3'",
+    $value: "400 1rem/1.3 'Inter'",
     filePath: "../../design-tokens/semantic/style.json",
     isSource: false,
     original: {
@@ -3035,7 +3014,7 @@ export const  typography = [
   },
   {
     $type: "typography",
-    $value: "400 0.875rem/1.3 'Source Sans 3'",
+    $value: "400 0.875rem/1.3 'Inter'",
     filePath: "../../design-tokens/semantic/style.json",
     isSource: false,
     original: {
@@ -3080,7 +3059,7 @@ export const  opacity = [
 export const  dimension = [
   {
     $type: "dimension",
-    $value: "0",
+    $value: "0.125rem",
     filePath: "../../design-tokens/semantic/style.json",
     isSource: false,
     original: {
@@ -3096,7 +3075,7 @@ export const  dimension = [
   },
   {
     $type: "dimension",
-    $value: "0",
+    $value: "0.25rem",
     filePath: "../../design-tokens/semantic/style.json",
     isSource: false,
     original: {
@@ -3112,7 +3091,7 @@ export const  dimension = [
   },
   {
     $type: "dimension",
-    $value: "0",
+    $value: "0.5rem",
     filePath: "../../design-tokens/semantic/style.json",
     isSource: false,
     original: {
@@ -3128,7 +3107,7 @@ export const  dimension = [
   },
   {
     $type: "dimension",
-    $value: "0",
+    $value: "0.75rem",
     filePath: "../../design-tokens/semantic/style.json",
     isSource: false,
     original: {
@@ -3144,7 +3123,7 @@ export const  dimension = [
   },
   {
     $type: "dimension",
-    $value: "0",
+    $value: "1rem",
     filePath: "../../design-tokens/semantic/style.json",
     isSource: false,
     original: {
@@ -3160,7 +3139,7 @@ export const  dimension = [
   },
   {
     $type: "dimension",
-    $value: "0",
+    $value: "1.5rem",
     filePath: "../../design-tokens/semantic/style.json",
     isSource: false,
     original: {
@@ -3176,7 +3155,7 @@ export const  dimension = [
   },
   {
     $type: "dimension",
-    $value: "0",
+    $value: "2rem",
     filePath: "../../design-tokens/semantic/style.json",
     isSource: false,
     original: {
