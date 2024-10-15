@@ -29,7 +29,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                 title='För designers'
                 description='Lär dig hur du kommer igång med designsystemet som designer.'
                 color='blue'
-                url='/docs/grundlaggande/for-designers/kom-igang'
+                url='/docs/grunnleggende/for-designere/kom-i-gang'
                 icon={<PaletteIcon fontSize={36} />}
                 level={2}
               ></NavigationCard>
@@ -38,7 +38,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                 title='För utvecklare'
                 description='Lär dig hur du kommer igång med designsystemet som utvecklare.'
                 color='yellow'
-                url='/docs/grundlaggande/for-utvecklare/kom-igang'
+                url='/docs/grunnleggende/for-utviklere/kom-i-gang'
                 icon={<WrenchIcon fontSize={36} />}
                 level={2}
               ></NavigationCard>

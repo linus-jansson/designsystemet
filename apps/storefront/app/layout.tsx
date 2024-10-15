@@ -38,16 +38,12 @@ const menu = [
     name: 'Mönster',
     href: '/docs/monstre',
   },
-  //   {
-  //     name: 'Bloggen',
-  //     href: '/bloggen',
-  //   },
   {
     name: 'Komponenter',
     href: '/docs/komponenter',
   },
   /* {
-    name: 'Temabygger',
+    name: 'Temabyggaren',
     href: 'https://next.theme.designsystemet.no',
   }, */
 ];
