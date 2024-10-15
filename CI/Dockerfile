@@ -1,3 +1,5 @@
+# Nextjs Dockerfile for turborepo
+
 FROM node:20.5.0-alpine AS base
 WORKDIR /app
 
@@ -8,8 +10,8 @@ FROM base AS turbo
 COPY . .
 
 RUN corepack enable
-COPY .yarn ./.yarn
-COPY .yarnrc.yml ./.yarnrc.yml
+# COPY .yarn ./.yarn
+# COPY .yarnrc.yml ./.yarnrc.yml
 
 RUN yarn dlx turbo prune --scope=${APP_NAME} --docker
 
@@ -21,7 +23,10 @@ RUN apk add --no-cache libc6-compat
 COPY --from=turbo /app/out/json/ .
 COPY --from=turbo /app/out/yarn.lock ./yarn.lock
 # First install only production deps and cache them, then install all deps
-RUN --mount=type=cache,target=/var/cache/yarn yarn install --immutable && cp -R node_modules node_modules_production && yarn workspaces focus --production
+RUN --mount=type=cache,target=/var/cache/yarn yarn workspaces focus --production && cp -R node_modules node_modules_production && yarn workspaces focus -A
+
+# # Ensure rimraf is installed
+# RUN yarn add rimraf
 
 # Then copy over the application files (change often, no longer cached from this step on)
 COPY --from=turbo /app/out/full/ .
@@ -32,8 +37,10 @@ ARG TURBO_TEAMID
 ARG TURBO_API
 # Build the project
 RUN yarn dlx turbo run build --filter=${APP_NAME}
-# Switch deps over to production only and prune out not needed files
-RUN rm -rf node_modules && mv node_modules_production node_modules && apk --no-cache add curl && curl -sf https://gobinaries.com/tj/node-prune | sh && node-prune
+
+# Switch deps over to production only and prune out not needed files (https://github.com/tj/node-prune)
+RUN rm -rf node_modules && mv node_modules_production node_modules
+RUN apk --no-cache add curl && curl -sf https://gobinaries.com/tj/node-prune | sh && node-prune
 
 
 FROM base AS runner

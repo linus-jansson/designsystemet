@@ -3,10 +3,6 @@ trigger:
     include:
       - main
       - release/*
-  paths:
-    include:
-      - EventService.Frontend/*
-      - azure-pipelines-frontend.yml
 
 pool:
   vmImage: 'ubuntu-latest'
@@ -27,4 +23,4 @@ stages:
       - template: docker/build-and-publish-container.yml@templates
         parameters:
           containerName: $(containerName)
-          dockerfilePath: apps/storefront/Dockerfile
+          dockerfilePath: CI/Dockerfile.storefront
