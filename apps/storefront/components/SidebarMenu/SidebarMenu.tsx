@@ -27,92 +27,93 @@ const SidebarMenu = ({ routerPath }: SidebarMenuProps) => {
 
   /** Find at what index in the menu tree */
   const findAndSetActiveIndex = (path: string) => {
+    path = path.replace("docs/", "").split("/")[1];
     for (let i = 0; i < SiteConfig.menu.length; i++) {
-      if (SiteConfig.menu[i].url === path.split('/')[1]) {
+      if (SiteConfig.menu[i].url.replace("docs/", "") === path) {
         setActiveIndex(i);
       }
     }
   };
 
+  if (activeIndex <= -1) {
+    return null;
+  }
+
   return (
     <div>
-      {activeIndex >= 0 && (
-        <>
-          <Button
-            className={classes.toggleBtn}
-            size='md'
-            color='neutral'
-            variant='secondary'
-            onClick={() => setShowMenu(!showMenu)}
-            aria-expanded={showMenu}
-          >
-            {showMenu ? 'Skjul' : 'Vis'} sidemeny
-          </Button>
+      <Button
+        className={classes.toggleBtn}
+        size='md'
+        color='neutral'
+        variant='secondary'
+        onClick={() => setShowMenu(!showMenu)}
+        aria-expanded={showMenu}
+      >
+        {showMenu ? 'Göm' : 'Visa'} sidemeny
+      </Button>
 
-          <div className={cl(classes.menu, showMenu && classes.activeMenu)}>
-            <h3 className={cl(classes.title, 'ds-paragraph--md')}>
-              {SiteConfig.menu[activeIndex].name}
-            </h3>
-            <ul className={classes.list}>
-              {SiteConfig.menu[activeIndex].children.map(
-                (item: PageMenuItemType, index) => (
-                  <li
-                    key={index}
-                    className={cl(classes.listGroup, {
-                      [classes.listGroupCompact]: !item.children,
-                    })}
+      <div className={cl(classes.menu, showMenu && classes.activeMenu)}>
+        <h3 className={cl(classes.title, 'ds-paragraph--md')}>
+          {SiteConfig.menu[activeIndex].name}
+        </h3>
+        <ul className={classes.list}>
+          {SiteConfig.menu[activeIndex].children.map(
+            (item: PageMenuItemType, index) => (
+              <li
+                key={index}
+                className={cl(classes.listGroup, {
+                  [classes.listGroupCompact]: !item.children,
+                })}
+              >
+                {item.children && (
+                  <>
+                    <div
+                      className={cl(classes.innerTitle, 'ds-paragraph--md')}
+                    >
+                      {item.name}
+                    </div>
+                    <ul className={classes.innerList}>
+                      {item.children.map(
+                        (nestedMenuItem: PageMenuItemType, childIndex) => (
+                          <li key={childIndex} className={classes.listItem}>
+                            <Link
+                              href={'/' + nestedMenuItem.url}
+                              prefetch={false}
+                              className={cl(
+                                classes.link,
+                                isItemActive(nestedMenuItem.url, routerPath) &&
+                                classes.linkActive,
+                                'ds-paragraph--sm',
+                              )}
+                            >
+                              {nestedMenuItem.name}
+                            </Link>
+                          </li>
+                        ),
+                      )}
+                    </ul>
+                  </>
+                )}
+                {!item.children && (
+                  <Link
+                    href={'/' + item.url}
+                    prefetch={false}
+                    className={cl(
+                      classes.link,
+                      classes.linkCompact,
+                      isItemActive(item.url, routerPath) &&
+                      classes.linkActive,
+                      'ds-paragraph--sm',
+                    )}
                   >
-                    {item.children && (
-                      <>
-                        <div
-                          className={cl(classes.innerTitle, 'ds-paragraph--md')}
-                        >
-                          {item.name}
-                        </div>
-                        <ul className={classes.innerList}>
-                          {item.children.map(
-                            (item2: PageMenuItemType, index2) => (
-                              <li key={index2} className={classes.listItem}>
-                                <Link
-                                  href={'/' + item2.url}
-                                  prefetch={false}
-                                  className={cl(
-                                    classes.link,
-                                    isItemActive(item2.url, routerPath) &&
-                                      classes.linkActive,
-                                    'ds-paragraph--sm',
-                                  )}
-                                >
-                                  {item2.name}
-                                </Link>
-                              </li>
-                            ),
-                          )}
-                        </ul>
-                      </>
-                    )}
-                    {!item.children && (
-                      <Link
-                        href={'/' + item.url}
-                        prefetch={false}
-                        className={cl(
-                          classes.link,
-                          classes.linkCompact,
-                          isItemActive(item.url, routerPath) &&
-                            classes.linkActive,
-                          'ds-paragraph--sm',
-                        )}
-                      >
-                        {item.name}
-                      </Link>
-                    )}
-                  </li>
-                ),
-              )}
-            </ul>
-          </div>
-        </>
-      )}
+                    {item.name}
+                  </Link>
+                )}
+              </li>
+            ),
+          )}
+        </ul>
+      </div>
     </div>
   );
 };

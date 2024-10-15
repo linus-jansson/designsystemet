@@ -12,38 +12,38 @@ import { Footer } from '../components/Footer/Footer';
 export const metadata: Metadata = {
   metadataBase: new URL(
     process.env.VERCEL_GIT_COMMIT_REF !== 'main'
-      ? 'https://next.designsystemet.no'
-      : 'https://designsystemet.no',
+      ? 'https://designsystem.test.uppsala.se'
+      : 'https://designsystem.uppsala.se',
   ),
   title: {
-    template: '%s - Designsystemet',
+    template: '%s - Uppsala kommun',
     default: 'Designsystemet',
   },
   openGraph: {
-    images: '/img/designsystemet-meta.png',
+    images: '/img/designsystemet-meta.png', // todo bytt ut
   },
 };
 
 const menu = [
   {
-    name: 'Grunnleggende',
-    href: '/grunnleggende',
+    name: 'Grundläggande',
+    href: '/docs/grunnleggende',
   },
   {
-    name: 'God praksis',
-    href: '/god-praksis',
+    name: 'Bästa praxis',
+    href: '/docs/god-praksis',
   },
   {
-    name: 'Mønstre',
-    href: '/monstre',
+    name: 'Mönster',
+    href: '/docs/monstre',
   },
-  {
-    name: 'Bloggen',
-    href: '/bloggen',
-  },
+  //   {
+  //     name: 'Bloggen',
+  //     href: '/bloggen',
+  //   },
   {
     name: 'Komponenter',
-    href: '/komponenter',
+    href: '/docs/komponenter',
   },
 ];
 
