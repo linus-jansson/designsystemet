@@ -5616,8 +5616,6 @@ __metadata:
 "@ua-designsystem/typescript-config@workspace:^, @ua-designsystem/typescript-config@workspace:packages/typescript-config":
   version: 0.0.0-use.local
   resolution: "@ua-designsystem/typescript-config@workspace:packages/typescript-config"
-  dependencies:
-    typescript: "npm:^5.6.3"
   languageName: unknown
   linkType: soft
 
