@@ -8,7 +8,7 @@ const GithubLink = ({
   ...rest
 }: Omit<HTMLAttributes<HTMLAnchorElement>, 'color'>) => {
   const pathName = usePathname();
-  const href = `https://github.com/digdir/designsystemet/tree/next/apps/storefront/app${pathName}/page.mdx`;
+  const href = `https://github.com/linus-jansson/designsystemet/tree/main/apps/storefront/app${pathName}/page.mdx`;
 
   return (
     <Link
@@ -19,7 +19,7 @@ const GithubLink = ({
       data-unstyled
     >
       <Github />
-      Rediger denne siden på Github (åpnes i ny fane)
+      Redigera denna sida på Github. (Öppnas i ny flik)
     </Link>
   );
 };

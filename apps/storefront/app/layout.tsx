@@ -7,7 +7,6 @@ import type { Metadata } from 'next';
 
 import { VersionBanner } from '@components';
 import { SkipLink } from '@digdir/designsystemet-react';
-import Script from 'next/script';
 import { Footer } from '../components/Footer/Footer';
 
 export const metadata: Metadata = {
@@ -27,16 +26,8 @@ export const metadata: Metadata = {
 
 const menu = [
   {
-    name: 'Grundläggande',
-    href: '/docs/grunnleggende',
-  },
-  {
-    name: 'Bästa praxis',
-    href: '/docs/god-praksis',
-  },
-  {
-    name: 'Mönster',
-    href: '/docs/monstre',
+    name: 'Dokumentation',
+    href: '/docs/basics',
   },
   {
     name: 'Komponenter',
@@ -64,9 +55,6 @@ export default function RootLayout({
           <Header menu={menu} skipLink={false} />
           {children}
           <Footer />
-          {process.env.VERCEL_ENV === 'production' && (
-            <Script src='https://siteimproveanalytics.com/js/siteanalyze_6255470.js' />
-          )}
         </div>
       </body>
     </html>
