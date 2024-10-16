@@ -18,17 +18,9 @@ resources:
 stages:
   - stage: build
     displayName: Build, test and push container
-    steps:
-      - checkout: self
-      - task: Bash@3
-        displayName: 'Set working directory to repo root'
-        inputs:
-          targetType: 'inline'
-          script: |
-            cd $(Build.SourcesDirectory)
-            echo "Changed directory to $(Build.SourcesDirectory)"
+    jobs:
       - template: docker/build-and-publish-container.yml@templates
         parameters:
           containerName: $(containerName)
-          dockerfilePath: ./CI/Dockerfile
+          dockerfilePath: CI/Dockerfile
           arguments: '--build-arg APP_NAME=storefront'
