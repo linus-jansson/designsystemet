@@ -1,0 +1,158 @@
+import { PaletteIcon } from '@navikt/aksel-icons';
+
+import { MenuPageLayout } from '@layouts';
+import { ResponsiveIframe, Image } from '@components';
+
+export const metadata = {
+  title: 'Kom igång med designsystemet i Figma',
+  description:
+    'Hur du använder Designsystemet i Figma och hur du kan aktivera biblioteken.',
+};
+
+export default ({ children }) => (
+  <MenuPageLayout
+    content={children}
+    data={{
+      title: 'Kom igång med designsystemet i Figma',
+      date : '16 oktober 2024',
+      icon: <PaletteIcon />,
+      color: 'blue',
+    }}
+  />
+);
+
+I Figma hittar du komponenter och stilar från designsystemet som du kan använda i ditt design. Designet har också tillhörande design tokens som används i react-komponenterna. Biblioteket är tillgängligt i [Figma Community](https://www.figma.com/@designsystemet).
+
+## Kom igång med komponenter
+
+Om biblioteken inte redan finns i din Figma-organisation kan du hämta filerna från Figma Community:
+
+- [Designsystemet - Core UI Kit](https://www.figma.com/@designsystemet)
+- [Aksel ikonbibliotek](https://www.figma.com/community/file/1214869602572392330)
+
+Efter att du har öppnat dem behöver du:
+
+- Placera filerna där du vill ha dem i din Figma-organisation
+- Publicera filerna
+- Aktivera de två gemensamma biblioteken i filerna du arbetar i
+
+<Image
+  src='/img/activate-library.png'
+  alt='Skärmbild av Figma. Stegen för att aktivera biblioteken.'
+  boxShadow={true}
+/>
+
+Ska du använda designsystemet med egna färger och branding? Se guiden för att [sätta upp designsystemet med eget tema](/grundläggande/for-designers/eget-tema).
+
+### Använd komponenterna
+
+För att aktivera biblioteken:
+
+1. Klicka på bok-symbolen under "Assets"
+2. Aktivera "Core UI Kit" och "Gemensamt ikonbibliotek"
+
+När du har aktiverat biblioteken ska du kunna se komponenterna genom att klicka på "Assets" och söka efter det du behöver. Du kan också använda kortkommandot SHIFT + I.
+
+Nu är det bara att dra in komponenterna i dina egna filer!
+
+Vill du vara med och skapa nya komponenter? [Se hur du kan bidra](/grundläggande/for-designers/bidra-i-figma).
+
+### Varianter
+
+Alla komponenter kommer med olika varianter och egenskaper. I Button-komponenten kan du till exempel aktivera olika vikter, states, storlekar och du kan även slå på och av ikoner.
+
+<ResponsiveIframe
+  src='/img/button-variant-properties.mp4'
+  title='Skärminspelning av Figma som visar hur man byter mellan olika varianter av en knapp.'
+  frameBorder='0'
+  allow='autoplay; fullscreen; picture-in-picture'
+  allowFullScreen
+  aspectRatio='16-9'
+></ResponsiveIframe>
+
+## Använd designsystemet med egna profilfärger
+
+Komponenterna stödjer olika brands och modes. För att sätta upp egna profiler se guiden "[Designsystemet med eget tema](/grundläggande/for-designers/eget-tema)"
+
+<ResponsiveIframe
+  src='/img/brand-variables.mp4'
+  title='Skärminspelning av Figma som visar hur man byter mellan olika brands i Figma'
+  frameBorder='0'
+  allow='autoplay; fullscreen; picture-in-picture'
+  allowFullScreen
+  aspectRatio='16-9'
+></ResponsiveIframe>
+
+## Kom igång med stilar och variabler
+
+Stilar och variabler ska vara tillgängliga i högermarginalen när du till exempel behöver välja en färg, storlek, avstånd eller skugga.
+
+### Sizing-variabler
+
+Storlekar (sizing) är det du ställer in under en **_"Section"_**, **_"Frame"_** eller **_"Group"_** i Figma. Där kan du definiera bredd (W) och höjd (H).
+
+<Image
+  src='/img/sizing.png'
+  alt='Skärmbild som visar var du kan använda Sizing-variabler i Figma'
+  boxShadow={false}
+/>
+
+### Spacing-variabler
+
+Avstånd är det du ställer in under _**"Auto Layout"**_ i Figma. Där kan du definiera avstånd ovanför, under, bredvid, eller mellan.
+
+<Image
+  src='/img/spacing.png'
+  alt='Skärmbild som visar var du kan använda Spacing-variabler i Figma'
+  boxShadow={false}
+/>
+
+### Färgvariabler
+
+Färgvariabler är namngivna efter vad de är avsedda att användas till: `background`, `surface`, `border` och `text`.
+
+- Letar du efter en `border`-färg kan det vara effektivt att söka efter "border" för att se alla tillgängliga färger.
+- Letar du efter en `fill`-färg på ett element kan det vara effektivt att söka efter "surface" för att se alla tillgängliga färger.
+- Letar du efter en färg för text eller ikon kan det vara effektivt att söka efter "text" för att se alla tillgängliga färger.
+
+<ResponsiveIframe
+  src='/img/color-variables.mp4'
+  title='Skärminspelning av Figma som visar hur man ställer in färgvariabler för "fill" och "border".'
+  frameBorder='0'
+  allow='autoplay; fullscreen; picture-in-picture'
+  allowFullScreen
+  aspectRatio='16-9'
+></ResponsiveIframe>
+
+Läs mer om [färg-tokens](/grundläggande/designelementer/farger) och vad de används till.
+
+### Typografi-stilar
+
+För all text bör du använda de färdiga typografi-komponenterna som finns tillgängliga i Figma och kod. Då säkerställer vi att vi har ett konsekvent uttryck, rätt användning av avstånd, storlekar och vikter.
+
+Du kan också använda typografi-stilarna, men då får du inte möjlighet att aktivera avstånd under:
+
+<ResponsiveIframe
+  src='/img/typografi-styles.mp4'
+  title='Skärminspelning av Figma som visar hur man ställer in en stil på texten'
+  frameBorder='0'
+  allow='autoplay; fullscreen; picture-in-picture'
+  allowFullScreen
+  aspectRatio='16-9'
+></ResponsiveIframe>
+
+När du använder Typografi-komponenterna har du möjlighet att aktivera avstånd under texten:
+
+<ResponsiveIframe
+  src='/img/typografi-komponenter.mp4'
+  title='Skärminspelning av Figma som visar hur du kan lägga in typografi-komponenter'
+  frameBorder='0'
+  allow='autoplay; fullscreen; picture-in-picture'
+  allowFullScreen
+  aspectRatio='16-9'
+></ResponsiveIframe>
+
+Läs mer om [typografi](/grundläggande/designelementer/typografi).
+
+<br />
+<br />

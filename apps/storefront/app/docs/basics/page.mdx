@@ -1,0 +1,157 @@
+import {
+  TokenIcon,
+  PaletteIcon,
+  ComponentIcon,
+  PackageIcon,
+  BranchingIcon,
+  LightBulbIcon,
+  RulerIcon,
+  CodeIcon,
+  MoonIcon,
+} from '@navikt/aksel-icons';
+
+import { NavMenuPageLayout } from '@layouts';
+import { NavigationCard, Grid } from '@components';
+
+export const metadata = {
+  title: 'Grundläggande',
+  description:
+    'Lär dig mer om designsystemet, de grundläggande designelementen, och hur du kommer igång som designer eller utvecklare.',
+};
+
+export default ({ children }) => (
+  <NavMenuPageLayout
+    content={children}
+    banner={{
+      title: 'Grundläggande',
+      ingress:
+        'Lär dig mer om designsystemet, de grundläggande designelementen, och hur du kommer igång som designer eller utvecklare.',
+      icon: <TokenIcon fontSize={34} />,
+      color: 'yellow',
+    }}
+  />
+);
+
+## Introduktion
+
+Designsystemet innehåller grundläggande designelement, mönster, bästa praxis och kodade komponenter som är värdefulla att dela inom offentlig sektor.
+
+<Grid>
+  <NavigationCard
+    title='Om designsystemet'
+    color='blue'
+    icon={<ComponentIcon fontSize={34} />}
+    url='grundlaggande/introduktion/om-designsystemet'
+    description='Vad är designsystemet, varför behöver vi det, hur gör vi det och vilka är med?'
+    backgroundColor='white'
+  />
+  <NavigationCard
+    title='Värderingar'
+    color='yellow'
+    icon={<LightBulbIcon fontSize={34} />}
+    url='grundlaggande/introduktion/varderingar'
+    description='Värderingar vi vill att designsystemet ska byggas på.'
+    backgroundColor='white'
+  />
+</Grid>
+
+## Grundläggande designelement
+
+Stilarna i designsystemet är grundläggande designelement som används i komponenterna. De finns i flera uppsättningar för olika identiteter och olika behov och situationer. Till exempel har vi en särskild uppsättning för kompakt visning, som kan vara lämplig att använda i verktyg eller administrativt gränssnitt.
+
+<Grid>
+  <NavigationCard
+    title='Design tokens'
+    color='yellow'
+    icon={<TokenIcon fontSize={34} />}
+    url='grundlaggande/designelement/design-tokens'
+    description='Design tokens är återanvändbara värden som fungerar som en brygga mellan alla ytor.'
+    backgroundColor='white'
+  />
+  <NavigationCard
+    title='Färgsystem'
+    color='red'
+    icon={<PaletteIcon fontSize={34} />}
+    url='grundlaggande/designelement/farger'
+    description='Färgsystemet består av globala färger och en semantisk nivå som beskriver vad färgen ska användas till.'
+    backgroundColor='white'
+  />
+  <NavigationCard
+    title='Avstånd'
+    color='blue'
+    icon={<RulerIcon fontSize={34} />}
+    url='grundlaggande/designelement/storlekar-och-avstand'
+    description='Uppsättningen avstånd som är definierade i tokens säkerställer konsekvens över gränssnitt.'
+    backgroundColor='white'
+  />
+  <NavigationCard
+    title='Typografi'
+    color='blue'
+    icon={<TokenIcon fontSize={34} />}
+    url='grundlaggande/designelement/typografi'
+    description='För att presentera text på ett korrekt sätt använder vi utvalda stilar och komponenter med olika kombinationer av storlek, tyngd och radavstånd.'
+    backgroundColor='white'
+  />
+  <NavigationCard
+    title='Skuggor'
+    color='yellow'
+    icon={<MoonIcon fontSize={34} />}
+    url={'grundlaggande/designelement/skuggor'}
+    description='Skuggor kan hjälpa synskadade att identifiera komponenter och bör användas konsekvent då de uttrycker att något ligger ovanpå något annat i lösningen.'
+    backgroundColor='white'
+  />
+  <NavigationCard
+    title='Ikoner'
+    color='red'
+    icon={<TokenIcon fontSize={34} />}
+    url='grundlaggande/designelement/ikoner'
+    description='Nav har skapat ett gediget set med ikoner (800+) som vi rekommenderar att använda och bidra till att vidareutveckla.'
+    backgroundColor='white'
+  />
+</Grid>
+
+## För designers
+
+Resurser och vägledning för designers
+
+<Grid>
+  <NavigationCard
+    title='Kom igång med designsystemet i Figma'
+    color='blue'
+    icon={<PaletteIcon fontSize={34} />}
+    url='grundlaggande/for-designers/kom-i-gang'
+    description='Lär dig hur du använder komponentbibliotek och stilar i Figma.'
+    backgroundColor='white'
+  />
+  <NavigationCard
+    title='Bidra med design'
+    color='red'
+    icon={<BranchingIcon fontSize={34} />}
+    url={'grundlaggande/for-designers/bidra-i-figma'}
+    description='Så här kan du vara med och designa komponenter i designsystemet.'
+    backgroundColor='white'
+  />
+</Grid>
+
+## För utvecklare
+
+Resurser och vägledning för utvecklare
+
+<Grid>
+  <NavigationCard
+    title='Kom igång som utvecklare'
+    color='blue'
+    icon={<CodeIcon fontSize={34} />}
+    url='grundlaggande/for-utvecklare/kom-i-gang'
+    description='Lär dig hur du kommer igång med designsystemet som utvecklare.'
+    backgroundColor='white'
+  />
+  <NavigationCard
+    title='Komposition'
+    color='blue'
+    icon={<PackageIcon fontSize={34} />}
+    url='grundlaggande/for-utvecklare/komposition'
+    description='Information och användning av asChild för att lösa komposition.'
+    backgroundColor='white'
+  />
+</Grid>
