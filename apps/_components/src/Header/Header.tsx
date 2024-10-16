@@ -71,7 +71,7 @@ const Header = ({ menu, betaTag, skipLink = true }: HeaderProps) => {
   return (
     <>
       {skipLink ? (
-        <SkipLink href='#main'>Hopp til hovedinnhold</SkipLink>
+        <SkipLink href='#main'>Till sidans huvudinnehåll</SkipLink>
       ) : null}
       <header
         className={cl(classes.header, isHamburger && classes.hamburger)}
@@ -82,7 +82,7 @@ const Header = ({ menu, betaTag, skipLink = true }: HeaderProps) => {
             <Link
               className={cl(classes.logoLink, 'ds-focus')}
               href='/'
-              aria-label='Designsystem forside'
+              aria-label='Designsystem startsida'
               onClick={() => setOpen(false)}
               prefetch={false}
             >
@@ -133,14 +133,14 @@ const Header = ({ menu, betaTag, skipLink = true }: HeaderProps) => {
                 )}
               >
                 <Link
-                  href='https://github.com/digdir/designsystemet'
+                  href='https://github.com/linus-jansson/designsystemet'
                   className={cl(classes.linkIcon, classes.github, 'ds-focus')}
-                  title='Designsystemets GitHub-repositorium'
+                  title='Designsystemets GitHub-repository'
                 >
                   <GithubLogo />
                 </Link>
               </li>
-              <li className={cl(classes.item, classes.itemIcon)}>
+              {/* <li className={cl(classes.item, classes.itemIcon)}>
                 <Link
                   href='https://www.figma.com/@designsystemet'
                   className={cl(classes.linkIcon, classes.figma, 'ds-focus')}
@@ -148,7 +148,7 @@ const Header = ({ menu, betaTag, skipLink = true }: HeaderProps) => {
                 >
                   <FigmaLogo />
                 </Link>
-              </li>
+              </li> */}
             </ul>
           </nav>
         </div>

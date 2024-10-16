@@ -33,10 +33,6 @@ const menu = [
     name: 'Komponenter',
     href: '/docs/komponenter',
   },
-  /* {
-    name: 'Temabyggaren',
-    href: 'https://next.theme.designsystemet.no',
-  }, */
 ];
 
 export default function RootLayout({
@@ -50,8 +46,7 @@ export default function RootLayout({
     <html lang='en'>
       <body>
         <div className='root'>
-          <SkipLink href='#main'>Hopp til hovedinnhold</SkipLink>
-          <VersionBanner />
+          <SkipLink href='#main'>Till sidans huvudinnehåll</SkipLink>
           <Header menu={menu} skipLink={false} />
           {children}
           <Footer />
