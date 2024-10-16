@@ -19,7 +19,7 @@
 body {
   color: var(--ds-color-neutral-text-default);
   line-height: 1.5;
-  font-family: "Source Sans 3", system-ui;
+  font-family: 'Source Sans 3', system-ui;
   font-size: 16px;
 }
 
@@ -41,7 +41,7 @@ body {
   justify-content: space-between;
   min-height: calc(100vh);
   position: relative;
-  font-family: "Source Sans 3", system-ui;
+  font-family: 'Source Sans 3', system-ui;
 }
 
 .root > main {

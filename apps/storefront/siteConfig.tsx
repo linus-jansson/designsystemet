@@ -101,6 +101,6 @@ export const SiteConfig = {
           ],
         },
       ],
-    }
+    },
   ],
 };

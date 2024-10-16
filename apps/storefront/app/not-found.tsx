@@ -19,12 +19,10 @@ const NotFound = ({ children }: { children: React.ReactNode }) => {
           <UaLogo className={classes.img} />
         </div>
         <div className={classes.textContainer}>
-          <Heading size='md'>
-            Denna sida finns inte
-          </Heading>
+          <Heading size='md'>Denna sida finns inte</Heading>
           <Paragraph>
-            Ursäkta, vi kan inte hitta sidan du begärde.
-            Sidan kan ha flyttats eller raderats.
+            Ursäkta, vi kan inte hitta sidan du begärde. Sidan kan ha flyttats
+            eller raderats.
           </Paragraph>
           <Link asChild>
             <NextLink href='/' prefetch={false}>

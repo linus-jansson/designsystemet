@@ -16,7 +16,8 @@
       "design-tokens/**/*",
       "apps/storefront/tokens/**",
       "**/dist/**/*",
-      "packages/theme/**/*.css"
+      "packages/theme/**/*.css",
+      "packages/typescript-config/**/*"
     ]
   },
   "formatter": {
