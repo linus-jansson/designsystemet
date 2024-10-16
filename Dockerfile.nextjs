@@ -7,9 +7,7 @@ ARG APP_NAME
 
 FROM base AS turbo
 COPY . .
-
 RUN corepack enable
-
 RUN yarn dlx turbo prune --scope=@apps/${APP_NAME} --docker
 
 # Separate step to install dependencies, most of this will be cached if dependencies wont change

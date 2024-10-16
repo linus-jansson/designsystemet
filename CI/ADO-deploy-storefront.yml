@@ -22,5 +22,5 @@ stages:
       - template: docker/build-and-publish-container.yml@templates
         parameters:
           containerName: $(containerName)
-          dockerfilePath: './CI/Dockerfile'
+          dockerfilePath: 'Dockerfile.nextjs'
           arguments: '--build-arg APP_NAME=storefront'
