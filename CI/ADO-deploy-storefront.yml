@@ -23,4 +23,5 @@ stages:
       - template: docker/build-and-publish-container.yml@templates
         parameters:
           containerName: $(containerName)
-          dockerfilePath: CI/Dockerfile.storefront
+          dockerfilePath: CI/Dockerfile
+          arguments: '--build-arg APP_NAME=storefront'
