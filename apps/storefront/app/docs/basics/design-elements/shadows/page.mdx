@@ -1,0 +1,37 @@
+import { MoonIcon } from '@navikt/aksel-icons';
+
+import { MenuPageLayout } from '@layouts';
+import { TokenList } from '@components';
+
+export const metadata = {
+  title: 'Skuggor',
+  description: 'Hur skuggor används i designsystemet',
+};
+
+export default ({ children }) => (
+  <MenuPageLayout
+    content={children}
+    data={{
+      title: 'Skuggor',
+      date : '16 oktober 2024',
+      icon: <MoonIcon />,
+      color: 'yellow',
+    }}
+  />
+);
+
+## Användning av skuggor i designet
+
+Skuggor bör användas medvetet och konsekvent då de uttrycker att något ligger över något annat i lösningen.
+
+Skuggor kan hjälpa personer med nedsatt syn att identifiera komponenter. Användning av skuggor och konturer gör det enklare och snabbare att hitta en komponent när du skannar sidor. (Research: [Material Design](https://m2.material.io/design/environment/light-shadows.html#research))
+
+### Styrkor
+
+Vi har olika styrkor på skuggorna, från xsmall till xlarge. De olika styrkorna används för att antyda höjden på ytan. Ytor på högre höjd har större skuggor, medan de på lägre höjd bör ha mindre skuggor. Skuggor ska skapa ett hierarki så att det som ligger över eller under något annat framträder tydligare.
+
+<TokenList type='shadow' />
+
+### Exempel
+
+Popover är en komponent som lägger sig över annat innehåll. Detta tydliggörs genom användningen av en medium skugga.

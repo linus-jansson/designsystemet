@@ -1,0 +1,75 @@
+import { PaletteIcon } from '@navikt/aksel-icons';
+
+import { MenuPageLayout } from '@layouts';
+import { ResponsiveIframe, Image } from '@components';
+
+export const metadata = {
+  title: 'Använd designsystemet med eget tema',
+  description:
+    'Lär dig hur du kan använda designsystemet med dina egna profilfärger och preferenser.',
+};
+
+export default ({ children }) => (
+  <MenuPageLayout
+    content={children}
+    data={{
+      title: 'Använd designsystemet med eget tema',
+      date : '16 oktober 2024',
+      icon: <PaletteIcon />,
+      color: 'blue',
+    }}
+  />
+);
+
+Ska du använda Designsystemet i din egen organisation med dina egna profilfärger och preferenser? Det finns flera sätt att göra detta på. Det första du måste ta ställning till är om du vill använda komponenterna **_med_** eller **_utan_** koppling mellan Figma och kod.
+
+Oavsett vilket bör du se till att samma Design Tokens används både i Figma och kod, så att designers och utvecklare arbetar efter samma regler. Detta säkerställer att allt ser likadant ut i Figma som i de faktiska lösningarna. Du måste bestämma om du vill göra detta manuellt eller med en koppling.
+
+**Alternativ 1:** _Utan_ koppling mellan Figma och kod \
+**Alternativ 2:** _Med_ koppling mellan Figma och kod
+
+Vilket alternativ du väljer beror på dina behov och resurser. Att sätta upp en koppling kräver en **pro-licens** av pluginen [Tokens Studio](https://tokens.studio/). Vi hoppas att vi kan göra detta enklare med vår plugin framöver.
+
+Vi guidar dig genom båda alternativen här.
+
+
+## Alternativ 1: Utan direkt koppling
+
+Detta alternativ kräver **inte** Token Studio. Här använder du samma kodsnutt från temabyggaren i Designsystemets Figma-plugin och i terminalen för att generera Design Tokens för koden. Det finns ingen direkt koppling, men variablerna/tokens genereras på samma sätt, och du får därmed samma värden i både kod och Figma.
+
+### Så här går du tillväga:
+
+1. Gå till [Temabyggaren](https://next.theme.designsystemet.no) och generera färgskalan utifrån dina profilfärger.
+2. Hämta komponentbiblioteket från [Figma Community](https://www.figma.com/community/file/1322138390374166141/designsystemet-core-ui-kit) (Tryck "Open in Figma"). Observera att detta blir en kopia av komponentbiblioteket utan koppling till huvudfilen. Filen läggs nu i dina "drafts", så du måste flytta den till en lämplig plats i din organisation.
+3. Installera designsystemets [plugin för Figma](https://www.figma.com/community/plugin/1382044395533039221/designsystemet-beta).
+4. Kopiera kodsnutten och klistra in den i pluginen du installerade i steg 2. Utvecklaren måste köra samma kodsnutt i en terminal för att generera Design Tokens för koden.
+5. Välj "Uppdatera variabler". Nu ska du se alla komponenterna med dina egna profilfärger i Figma. För att andra designers i organisationen ska kunna använda komponenterna måste du publicera filen.
+
+## Alternativ 2: Med koppling
+
+En koppling gör att du slipper lägga in variablerna i Figma, du importerar dem istället från pluginen "Tokens Studio". **Du behöver en pro-licens av pluginen "Tokens Studio" för att skapa denna koppling.** Du behöver också en plats att lagra filerna, till exempel i ett Git-repo.
+
+### Så här går du tillväga för att få det att fungera:
+
+1. Gå till [Temabyggaren](https://next.theme.designsystemet.no) och generera färgskalan utifrån dina profilfärger.
+
+2. Hämta komponentbiblioteket från [Figma Community](https://www.figma.com/community/file/1322138390374166141/designsystemet-core-ui-kit) (Tryck "Open in Figma"). Observera att detta blir en kopia av komponentbiblioteket utan koppling till huvudfilen. Filen läggs nu i dina "drafts", så du måste flytta den till en lämplig plats i din organisation.
+
+3. Installera pluginen [Tokens Studio](<https://www.figma.com/community/plugin/843461159747178978/Tokens-Studio-for-Figma-(Figma-Tokens)>) för Figma. Tokens Studio säkerställer koppling mellan Figma och kod, med hjälp av Design Tokens (i json-filer).
+
+4. Använd ditt befintliga Git-repo eller skapa ett nytt. Till exempel med [Github](https://github.com/new).
+
+5. Gå tillbaka till [Temabyggaren](https://next.theme.designsystemet.no) och klicka på "Ta i bruk tema". Kopiera kodsnutten och kör den i en terminal i ditt Git-repo. Checka in och push filerna.
+
+6. Nu sätter du upp Figma-pluginen "Tokens Studio", som du installerade i steg 3.
+
+    - Följ Tokens Studios guide "[Sync your Design Tokens with code](https://docs.tokens.studio/token-storage-and-sync/sync-provider-overview)" för att sätta upp ditt Git-repo.
+    - Kom ihåg att sätta "Token storage location" till `design-tokens` (eller vad du har valt att kalla din mapp med Design Tokens).
+
+7. Under "Tokens" i Tokens Studio ska du nu se alla färger du genererade med Temabyggaren i steg 1.
+
+8. I Tokens Studio, välj `Styles & variables` och `Export styles & variables to Figma` och följ stegen för att få dina färger tillgängliga som variabler i Figma.
+
+9. Nu ska du se alla komponenterna med dina egna profilfärger i Figma. För att andra designers i organisationen ska kunna använda komponenterna måste du publicera filen.
+
+9. Färdigt! PS. Om du ska göra ändringar på tokens i Tokens Studio kan du pusha ändringarna till ditt repo genom att trycka på "Ladda upp"-ikonen (Push) längst ner.

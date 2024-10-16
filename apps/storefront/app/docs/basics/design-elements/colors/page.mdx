@@ -1,0 +1,45 @@
+import { PaletteIcon } from '@navikt/aksel-icons';
+
+import { MenuPageLayout } from '@layouts';
+import { TokenList } from '../../../../../components/Tokens';
+
+export const metadata = {
+  title: 'Färger',
+  description:
+    'Färgsystemet består av globala färger och en semantisk nivå som beskriver vad färgen ska användas till.',
+};
+
+export default ({ children }) => (
+  <MenuPageLayout
+    content={children}
+    data={{
+      title: 'Färger',
+      date : '16 oktober 2024',
+      showMenu: true,
+      icon: <PaletteIcon />,
+      color: 'red',
+    }}
+  />
+);
+
+## Ett flexibelt färgsystem
+
+Färgsystemet består av globala färger som refererar till vad färgen är (t.ex. red-1) och en semantisk nivå som beskriver vad färgen ska användas till (t.ex. Text.Danger).
+
+### Namnstruktur
+
+Ett semantiskt färgnamn är uppbyggt av 3 delar: <br/>
+_färg - styrka - vikt_ <br/>
+
+- Background: Vanligtvis bakgrunden på hela sidan (HTML body).
+- Surface: Bakgrundsfärgen för ett objekt. T.ex. ett panel, en knapp, en sektion, etc.
+- Border: Färgen på en ram (stroke).
+- Text/Icon: Färgen på text och ikoner.
+
+## Färgtokens
+
+<TokenList
+  type='color'
+  showThemePicker={true}
+  showModeSwitcher={true}
+/>

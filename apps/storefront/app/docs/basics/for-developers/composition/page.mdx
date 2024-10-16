@@ -1,0 +1,128 @@
+import { PackageIcon } from '@navikt/aksel-icons';
+
+import { MenuPageLayout } from '@layouts';
+import { CodeSnippet } from '@repo/components';
+
+export const metadata = {
+  title: 'Komposition',
+  description: 'Information och användning av asChild för att lösa komposition.',
+};
+
+export default ({ children }) => (
+  <MenuPageLayout
+    content={children}
+    data={{
+      title: 'Komposition',
+      date : '16 oktober 2024',
+      icon: <PackageIcon />,
+      color: 'blue',
+    }}
+  />
+);
+
+Ibland kan du behöva byta ut en komponent mot en annan, till exempel att `Button` borde vara en `Link`. Det är här `asChild` kommer in i bilden.
+
+<CodeSnippet language='ts' data-unstyled>
+  {`
+  import { Button, Link } from '@digdir/designsystemet-react';
+
+  <Button asChild>
+    <Link href='https://www.digdir.no'>Länk till digdir.no</Link>
+  </Button>
+`}
+</CodeSnippet>
+
+I kodexemplet ovan renderas `Button`-komponenten som en `Link`-komponent. När detta skickas ut till DOMen är det endast ett element som renderas. Detta sker med hjälp av Radix sin `Slot`-komponent. <sup>1</sup>
+
+`Slot` mergar sina props till den komponent som är ett underordnat element. I exemplet ovan kommer `Button` sina props att läggas till på `Link`-komponenten, och en `a`-tagg renderas ut. När du använder `asChild` kan du inte ha fler än ett underordnat element, men du kan ha hur många du vill inuti det elementet.
+
+<CodeSnippet language='ts'>
+  {`
+  <>
+    /* Detta kastar ett fel */
+    <Button asChild>
+      <Icon />
+      <Link href='https://www.digdir.no'>Din länk</Link>
+    </Button>
+
+    /* Detta fungerar */
+    <Button asChild>
+      <Link href='https://www.digdir.no'>
+        <Icon />
+        Din länk
+      </Link>
+    </Button>
+
+  </>
+`}
+</CodeSnippet>
+
+## Varför använda asChild?
+
+Tidigare har vi använt en `as` prop för att rendera som andra element. Men när du använder denna, får du ingen typesafety eller korrekta typer enligt elementet du har ändrat till med `as`. `Slot` löser detta genom att lägga till alla props på det underordnade elementet av komponenten, vilket ger typesafety.
+
+<CodeSnippet language='ts'>
+  {`
+  <Button asChild>
+    <Link href='https://www.digdir.no' onClick={() => {}}>
+      <Icon />
+      Din länk
+    </Link>
+  </Button>
+`}
+</CodeSnippet>
+
+Alla klassnamn, aria-attribut och andra props som `Button` har, kommer att läggas till på `Link`-komponenten. Detta innebär att vi kan erbjuda god tillgänglighet, samtidigt som du kan använda andra komponenter som du vill.
+
+## Event handlers
+
+Om en prop börjar med `on` (t.ex. `onClick`), ses det som en event handler. När `Slot` mergar props, skapas en ny funktion som anropar alla event handlers som definierats på `Button` och `Link`. Funktionen på `Link` kommer att anropas först. Detta innebär att om du stoppar ett event på din komponent, kommer eventet på `Slot`-komponenten inte att anropas.
+
+Om en av event handlers är beroende av `event.defaultPrevented`, måste du se till att ordningen är korrekt. <sup>2</sup>
+
+<CodeSnippet language='ts'>
+  {`
+  <Button
+    asChild
+    onClick={(event) => {
+      if (!event.defaultPrevented)
+        console.log('Not logged because default is prevented.');
+    }}
+  >
+    <Link onClick={(e) => e.preventDefault()}>Din länk</Link>
+  </Button>
+`}
+</CodeSnippet>
+
+## Använd dina egna komponenter
+
+Flera komponenter i Designsystemet stödjer `asChild` med standardelement. Om du ändrar detta måste du se till att tillgängligheten upprätthålls. Det är sällsynt att du behöver ändra det underliggande elementet, men det är mer troligt att du vill använda din egen komponent.
+
+Om du vill använda en egen komponent måste du se till att sprida alla props och ha stöd för `ref`. <sup>3</sup>
+
+Dina komponenter kommer att se ut så här:
+
+<CodeSnippet language='ts'>
+{`// utan props och ref
+  const MinKnapp = () => <button />
+
+// med props
+const MinKnapp = (props) => <button {...props} />
+
+// med props och ref
+const MinKnapp = React.forwardRef((props, forwardedRef) => (
+
+<button
+  {...props}
+  ref={forwardedRef}
+/>
+))`}
+</CodeSnippet>
+
+Flera Designsystem-komponenter stödjer `asChild`.
+
+### Referenser
+
+- [1] [Radix Slot](https://www.radix-ui.com/primitives/docs/utilities/slot)
+- [2] [Radix Slot Event handlers](https://www.radix-ui.com/primitives/docs/utilities/slot#event-handlers)
+- [3] [Radix Composition](https://www.radix-ui.com/primitives/docs/guides/composition)

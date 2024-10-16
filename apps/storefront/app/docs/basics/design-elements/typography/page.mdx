@@ -1,0 +1,72 @@
+import { TokenIcon } from '@navikt/aksel-icons';
+
+import { MenuPageLayout } from '@layouts';
+import { CodeSnippet } from '@repo/components';
+
+export const metadata = {
+  title: 'Typografi',
+  description:
+    'För att presentera innehållet korrekt använder vi stilar och komponenter för typografi.',
+};
+
+export default ({ children }) => (
+  <MenuPageLayout
+    content={children}
+    data={{
+      title: 'Typografi',
+      date : '16 oktober 2024',
+      icon: <TokenIcon />,
+      color: 'blue',
+    }}
+  />
+);
+
+För att presentera text på ett korrekt sätt har vi skapat stilar som innehåller olika kombinationer av storlek, fontvikt och linjehöjd. Vi har också ett set med [typografi-komponenter](https://next.storybook.designsystemet.no/?path=/docs/komponenter-typography--docs) som wrapper typografistilarna och har inbyggd spacing.
+
+## Font-family
+
+Font-family är inte en del av designsystemets bibliotek, men i vårt varumärke använder vi **Source Sans 3**. Du måste importera denna font i din app för att säkerställa korrekt presentation. **Source Sans 3** uppfyller våra krav på tydlighet, läsbarhet och flexibilitet.
+
+Du kan importera **Source Sans 3** med följande kod:
+
+<CodeSnippet language='html'>
+  {`<link
+  rel='stylesheet'
+  href='https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&display=swap'
+/>`}
+</CodeSnippet>
+
+För att aktivera fonten i din CSS:
+
+<CodeSnippet language='css'>
+  {`font-family: 'Source Sans 3', sans-serif;`}
+</CodeSnippet>
+
+## Textstorlek
+
+Textstorleksvariabler anges i **rem**. Detta värde är relativt till `html`-elementets `font-size`,
+och baseras på den vanligaste standarden där `1rem = 16px`. När vi anger textstorlek i rem, kommer storleken att vara relaterad till webbläsarens standardstorlek och därmed också ta hänsyn till om användaren har valt att förstora textstorleken under inställningarna för tillgänglighet i sin webbläsare.
+
+Vi har totalt 10 storlekar i designsystemet: 12, 14, 16, 18, 21, 24, 30, 36, 48 och 60px. Standardtextstorleken för `paragraph` är `medium`, vilket motsvarar 18px.
+
+| Steg   | Storlek            | Paragraph\* | Ingress | Heading |
+| ------ | ------------------ | ----------- | ------- | ------- |
+| f-2    | 12px / 0.75rem     |             |         |         |
+| f-1    | 14px / 0.875rem    | xsmall      |         |         |
+| **f0** | **16px / 1.00rem** | small       |         |         |
+| f1     | 18px / 1.125rem    | medium      | xsmall  | xxsmall |
+| f2     | 21px / 1.313rem    | large       | small   | xsmall  |
+| f3     | 24px / 1.50rem     |             | medium  | small   |
+| f4     | 30px / 1.875rem    |             | large   | medium  |
+| f5     | 36px / 2.25rem     |             |         | large   |
+| f6     | 48px / 3.00rem     |             |         | xlarge  |
+| f7     | 60px / 3.75rem     |             |         | xxlarge |
+
+\*`Paragraph`-storlekarna används också för `Label` och `ValidationMessage`.
+
+## Linjelängd
+
+För bästa möjliga läsbarhet för alla användare bör det inte vara fler än 65–70 tecken per rad inklusive mellanslag. Detta gör texten mer inbjudande och mindre överväldigande, särskilt för användare med läs- eller koncentrationssvårigheter. _Källa: [uutilsynet.no](https://www.uutilsynet.no/veiledning/tekst-og-struktur/226)_
+
+<br />
+<br />
