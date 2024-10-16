@@ -7,9 +7,9 @@ import { usePathname } from 'next/navigation';
 import { useEffect, useRef, useState } from 'react';
 
 import classes from './Header.module.css';
-import { UaLogo } from './logos/ua-logo';
 import { FigmaLogo } from './logos/figma-logo';
 import { GithubLogo } from './logos/github-logo';
+import { UaLogo } from './logos/ua-logo';
 
 type HeaderProps = {
   menu: { name: string; href: string }[];

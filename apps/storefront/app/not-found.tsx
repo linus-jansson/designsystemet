@@ -1,9 +1,9 @@
 import { Heading, Link, Paragraph } from '@digdir/designsystemet-react';
 import { Container } from '@repo/components';
+import { UaLogo } from '@repo/components/src/Header/logos/ua-logo';
 import type { Metadata } from 'next';
 import NextLink from 'next/link';
 import type * as React from 'react';
-import { UaLogo } from '@repo/components/src/Header/logos/ua-logo';
 
 import classes from './not-found.module.css';
 

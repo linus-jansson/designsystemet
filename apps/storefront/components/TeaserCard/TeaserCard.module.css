@@ -36,8 +36,3 @@
   display: flex;
   gap: 12px;
 }
-/* To prevent type error */
-.author {
-}
-.date {
-}
