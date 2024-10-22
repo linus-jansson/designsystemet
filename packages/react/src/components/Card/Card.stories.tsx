@@ -157,7 +157,8 @@ export const Media: Story = () => (
   </>
 );
 
-export const Video: Story = () => (
+/* Vet ej om detta ska användas? */
+const Video: Story = () => (
   <Card color='neutral' style={{ maxWidth: '320px' }}>
     <Card.Block>
       <iframe

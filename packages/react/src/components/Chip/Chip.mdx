@@ -47,7 +47,7 @@ import { Chip } from '@digdir/designsystemet-react';
 ### `Chip.Removable`
 Vi använder `Chip` med kryss när vi vill att användarna ska kunna ta bort valda värden. Det kan till exempel vara filter som är valda, eller värden som användarna själva har skrivit in i ett textfält.
 
-Denna komponent innehåller ett kryss som indikerar att filtret kan tas bort. Det är viktigt att lägga till `aria-label` om innehållet i Chip inte förklarar att det kan tas bort. I detta exempel har `aria-label="Radera {land}"` lagts till.
+Denna komponent innehåller ett kryss som indikerar att filtret kan tas bort. Det är viktigt att lägga till `aria-label` om innehållet i Chip inte förklarar att det kan tas bort. I detta exempel har `aria-label="Radera godis"` lagts till.
 
 <Canvas of={ChipStories.Removable} />
 <br/>
@@ -63,11 +63,11 @@ Denna komponent innehåller ett kryss som indikerar att filtret kan tas bort. De
 
 Undvik att placera `Chip` vertikalt. Välj istället [`Checkbox`](/docs/komponenter-checkbox--docs) eller [`Radio`](/docs/komponenter-radio--docs) om du vill ha alternativ under varandra.
 
-Passar för att
+### Passar för att
 - filtrera information, till exempel i listor eller tabeller
 - visa vilka filter som är valda
 
-Passar inte för att
+### Passar inte för att
 - menyer, som sidomenyer eller huvudmenyer
 - icke-klickbara kategorier/ämnen (använd istället [`Tag`](/docs/komponenter-tag--docs))
 - aviseringar för antal eller status (använd istället [`Badge`](/docs/komponenter-badge--docs))
