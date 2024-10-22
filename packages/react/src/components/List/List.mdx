@@ -6,165 +6,164 @@ import * as ListStories from './List.stories';
 
 # List
 
-Lister er strukturelementer, som gjør at vi kan utheve viktig informasjon for brukerne, eller fortelle dem at de må gjøre noe i en bestemt rekkefølge.
+Listor är strukturelement som gör att vi kan framhäva viktig information för användarna, eller berätta för dem att de behöver göra något i en viss ordning.
 
 <Primary />
 <Controls />
 
-## Slik bruker du `List`
+## Så använder du `List`
 
-Listen kan være både sortert og usortert, dette endrer du ved å bruke `List.Ordered` eller `List.Unordered`.
+Listan kan vara både sorterad och osorterad, detta ändrar du genom att använda `List.Ordered` eller `List.Unordered`.
 
 ```tsx
 import { List } from '@digdir/designsystemet-react';
 
 <List.Unordered>
-  <List.Item>Item</List.Item>
+  <List.Item>Objekt</List.Item>
 </List.Unordered>
 ```
 
-## Eksempler
+## Exempel
 
 <br />
 
-### Usortert liste
+### Osorterad lista
 
-Usorterte lister bruker kulepunkter. Hensikten med en slik liste er å organisere informasjonen og fremheve viktige opplysninger. Her er ikke rekkefølgen viktig, men vi må likevel passe på at vi sorterer listen med det som er mest relevant først.
+Osorterade listor använder punkter. Syftet med en sådan lista är att organisera informationen och framhäva viktiga upplysningar. Här är inte ordningen viktig, men vi måste ändå se till att sortera listan med det mest relevanta först.
 
 <Canvas of={ListStories.Usortert} />
 
-### Sortert liste
+### Sorterad lista
 
-En sortert liste brukes når det er viktig at brukerne forstår grader av viktighet, et hendelsesforløp eller lignende. En sortert liste egner seg f.eks. for de ulike trinnene i matlaging.
+En sorterad lista används när det är viktigt att användarna förstår grader av viktighet, en händelseförlopp eller liknande. En sorterad lista passar exempelvis för de olika stegen i matlagning.
 
 <Canvas of={ListStories.Sortert} />
 
 <br />
 
-### Med overskrift
+### Med rubrik
 
-Liste kan brukes sammen med en `Heading` for å gi brukeren en rask oversikt over innholdet. Dette er spesielt nyttig for lengre lister.
+Listor kan användas tillsammans med en `Heading` för att ge användaren en snabb översikt över innehållet. Detta är särskilt användbart för längre listor.
 
-Størrelse på overskrifter over lister er avhengig av bruksområde, og er derfor noe du må sette selv.
-I løpende tekst anbefaler vi disse størrelsene:
+Storleken på rubriker över listor beror på användningsområdet och är därför något du måste sätta själv.
+I löpande text rekommenderar vi följande storlekar:
 
-| Størrelse på `List` | Størrelse på `Heading` |
-| :----------------- | :---------------------- |
-| sm                 | 2xs                     |
-| md                 | xs                      |
-| lg                 | sm                      |
+| Storlek på `List`  | Storlek på `Heading`  |
+| :----------------- | :-------------------- |
+| sm                 | 2xs                   |
+| md                 | xs                    |
+| lg                 | sm                    |
 
 <Canvas of={ListStories.ListeMedOverskrift} />
 
-### Lister i lister
+### Listor i listor
 
-Vi kan legge en liste under et enkelt listepunkt når punktet inneholder tilleggsinformasjon som må deles opp videre. Før du bruker en underliste, vurder om dette er et hovedpunkt som kan stå for seg selv, eller om det er informasjon som passer best som underpunkt. Selvstendige punkter skal ikke ha en underliste.
+Vi kan lägga en lista under en enskild lista när objektet innehåller ytterligare information som behöver delas upp vidare. Innan du använder en underlista, överväg om detta är ett huvudobjekt som kan stå på egen hand, eller om det är information som passar bäst som underobjekt. Självständiga objekt ska inte ha en underlista.
 
 <Canvas of={ListStories.Innrykk} />
 
-### Liste med lenker
+### Lista med länkar
 
-Vi kan bruke `List` til å lage en liste med lenker, og i eksempelet under har vi skrudd av list-stylingen på `List.Unordered`.
+Vi kan använda `List` för att skapa en lista med länkar, och i exemplet nedan har vi stängt av liststilen på `List.Unordered`.
 
 <Canvas of={ListStories.ListeMedLenker} />
 
 <br />
 
-## Retningslinjer for `List`
+## Riktlinjer för `List`
 
-Vi bruker lister til å strukturere innhold og utheve informasjon som er viktig for brukerne, eller fortelle dem at de må gjøre noe i en bestemt rekkefølge.
+Vi använder listor för att strukturera innehåll och framhäva information som är viktig för användarna, eller berätta för dem att de behöver göra något i en viss ordning.
 
-Passer til å
+Passar för att
 
-- gi brukerne rask oversikt over innhold i lengre tekster
-- liste opp kriterier
-
-<br />
-
-Passer ikke til å
-
-- vise brukerne lengre innhold
-- sammenligne flere grupper av informasjon
-
-<br />
-<br />
-
-
-## Tekst i komponenten
-
-Alle elementer i en liste bør ha samme form og struktur.
-
-Når hvert punkt er en fortsettelse av innledningen til punktlisten, bruker vi
-
-- liten forbokstav i punktene
-- ikke kolon etter innledningen
-- ikke punktum eller komma til slutt på hvert punkt
+- ge användarna en snabb översikt över innehåll i längre texter
+- lista upp kriterier
 
 <br />
 
-Når punktene er hele setninger, bruker vi
+Passar inte för att
 
-- stor forbokstav i det første ordet
-- punktum til slutt på hvert punkt
+- visa användarna längre innehåll
+- jämföra flera grupper av information
+
+<br />
+<br />
+
+## Text i komponenten
+
+Alla element i en lista bör ha samma form och struktur.
+
+När varje punkt är en fortsättning på inledningen till punktlistan använder vi
+
+- liten bokstav i punkterna
+- ingen kolon efter inledningen
+- ingen punkt eller komma i slutet av varje punkt
 
 <br />
 
-## Tilgjengelighet
+När punkterna är hela meningar använder vi
 
-### Lister til navigasjon
+- stor bokstav i det första ordet
+- punkt i slutet av varje punkt
 
-Dersom liste brukes som navigasjonselement (for eksempel i bunn eller ved siden av hovedinnholdet), 
-kan du legge et `<nav>` element rundt med `aria-label=""` for å gi skjermlesere en bedre brukeropplevelse.
-Dette gjøres siden [W3C anbefaler](https://www.w3.org/TR/using-aria/#label-support) å unngå `aria-label` / `aria-labelledby` rett på `ul`/`ol`.
+<br />
 
-#### Eksempel på `nav`
+## Tillgänglighet
+
+### Listor för navigering
+
+Om en lista används som ett navigationselement (till exempel i sidfoten eller bredvid huvudinnehållet),
+kan du lägga ett `<nav>`-element runt med `aria-label=""` för att ge skärmläsare en bättre användarupplevelse.
+Detta görs eftersom [W3C rekommenderar](https://www.w3.org/TR/using-aria/#label-support) att undvika `aria-label` / `aria-labelledby` direkt på `ul`/`ol`.
+
+#### Exempel på `nav`
 
 ```tsx
-<nav aria-label="Snarveier">
+<nav aria-label="Snabblänkar">
   <List.Unordered>
     <List.Item>
-      <Button>Copy</Button>
+      <Button>Kopiera</Button>
     </List.Item>
     <List.Item>
-      <Button>Cut</Button>
+      <Button>Klipp ut</Button>
     </List.Item>
     <List.Item>
-      <Button>Paste</Button>
+      <Button>Klistra in</Button>
     </List.Item>
   </List.Unordered>
 </nav>
 ```
 
-### `menu` istedenfor `ul`
+### `menu` istället för `ul`
 
-Usorterte lister kan byttest ut med `menu`, som er et semantisk alternativ til `ul`.
-Begge elementene representerer en usortert liste, og nettlesere oppfatter disse likt.
-Forskjellen er at `menu` er tiltenkt interaktive elementer.
+Osorterade listor kan bytas ut mot `menu`, som är ett semantiskt alternativ till `ul`.
+Båda elementen representerar en osorterad lista, och webbläsare tolkar dem likadant.
+Skillnaden är att `menu` är tänkt för interaktiva element.
 
-#### Eksempel på `menu`
+#### Exempel på `menu`
 
-Dette er et eksempel der `List.Unordered` har blitt endra til `menu`, og intensjonen
-for listen er å vise knapper som utfører en funksjonalitet i applikasjonen.
+Detta är ett exempel där `List.Unordered` har ändrats till `menu`, och avsikten
+med listan är att visa knappar som utför en funktion i applikationen.
 
 ```tsx
 <List.Unordered asChild>
   <menu>
     <List.Item>
-      <Button>Copy</Button>
+      <Button>Kopiera</Button>
     </List.Item>
     <List.Item>
-      <Button>Cut</Button>
+      <Button>Klipp ut</Button>
     </List.Item>
     <List.Item>
-      <Button>Paste</Button>
+      <Button>Klistra in</Button>
     </List.Item>
   </menu>
 </List.Unordered>
 ```
 
-### Liste eller tabell?
+### Lista eller tabell?
 
-Lister og tabeller har forskjellige bruksområder. Riktig bruk gjør opplevelsen tydelig for alle brukere, spesielt for de med kognitive vansker og læringsvansker, eller de som bruker skjermlesere.
+Listor och tabeller har olika användningsområden. Rätt användning gör upplevelsen tydlig för alla användare, särskilt för de med kognitiva svårigheter och inlärningssvårigheter, eller de som använder skärmläsare.
 
-- En liste presenterer relatert informasjon på en oversiktlig måte.
-- En tabell lar brukeren se og sammenligne flere grupper av informasjon.
+- En lista presenterar relaterad information på ett överskådligt sätt.
+- En tabell låter användaren se och jämföra flera grupper av information.

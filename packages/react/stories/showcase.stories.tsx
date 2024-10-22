@@ -42,7 +42,7 @@ export default {
 } as Meta;
 
 export const Showcase: StoryFn = () => {
-  const [radioValue, setRadioValue] = useState('vanilje');
+  const [radioValue, setRadioValue] = useState('vanilj');
   const [currentPage, setCurrentPage] = useState(1);
   const pagination = usePagination({
     currentPage,
@@ -54,9 +54,9 @@ export const Showcase: StoryFn = () => {
   return (
     <div className={classes.components}>
       <div className={cl(classes.card, classes.checkbox)}>
-        <Checkbox.Group error='' legend='Handleliste' size='sm'>
-          <Checkbox value='epost'>En kilo poteter</Checkbox>
-          <Checkbox value='telefon'>To liter Farris</Checkbox>
+        <Checkbox.Group error='' legend='Inköpslista' size='sm'>
+          <Checkbox value='epost'>Ett kilo potatis</Checkbox>
+          <Checkbox value='telefon'>Två liter Farris</Checkbox>
           <Checkbox value='sms' defaultChecked>
             Blomkål
           </Checkbox>
@@ -64,59 +64,59 @@ export const Showcase: StoryFn = () => {
             Pizza
           </Checkbox>
           <Checkbox value='sms' defaultChecked>
-            Tre liter lettmelk
+            Tre liter lättmjölk
           </Checkbox>
           <Divider />
-          <Checkbox value='sms'>2kg smågodt</Checkbox>
-          <Checkbox value='sms'>10 poser med Smash</Checkbox>
+          <Checkbox value='sms'>2 kg smågodis</Checkbox>
+          <Checkbox value='sms'>10 påsar med Smash</Checkbox>
         </Checkbox.Group>
       </div>
       <div className={cl(classes.card, classes.user)}>
         <Heading className={cl(classes.cardTitle, classes.userTitle)} size='xs'>
-          Opprett ny bruker
+          Skapa ny användare
         </Heading>
 
         <Textfield
-          label='Navn'
+          label='Namn'
           size='sm'
-          placeholder='Ola Normann'
+          placeholder='Ola Svensson'
           className={classes.userField}
         />
         <Textfield
           type='email'
           label='E-post'
           size='sm'
-          placeholder='ola@norge.no'
+          placeholder='ola@svenska.se'
           className={classes.userField}
         />
-        <Tooltip content='Trykk for å få hjelp' portal={false}>
+        <Tooltip content='Tryck för att få hjälp' portal={false}>
           <Link href='#' className={classes.userLink}>
-            Glemt passord?
+            Glömt lösenord?
           </Link>
         </Tooltip>
         <Button size='sm' className={classes.userBtn}>
-          Opprett ny bruker
+          Skapa ny användare
         </Button>
       </div>
       <div className={cl(classes.card, classes.tableContainer)}>
         <Heading className={classes.cardTitle} size='2xs'>
-          Alle brukere
+          Alla användare
         </Heading>
         <div className={classes.tableHeader}>
           <div className={classes.tableAction}>
-            <Select aria-label='Velg handling' size='sm'>
-              <Select.Option value='blank'>Velg handling</Select.Option>
-              <Select.Option value='everest'>Dupliser</Select.Option>
-              <Select.Option value='aconcagua'>Slett</Select.Option>
-              <Select.Option value='denali'>Oppdater</Select.Option>
+            <Select aria-label='Välj åtgärd' size='sm'>
+              <Select.Option value='blank'>Välj åtgärd</Select.Option>
+              <Select.Option value='duplikera'>Duplicera</Select.Option>
+              <Select.Option value='ta-bort'>Ta bort</Select.Option>
+              <Select.Option value='uppdatera'>Uppdatera</Select.Option>
             </Select>
             <Button className={classes.tableBtn} size='sm'>
-              Utfør
+              Utför
             </Button>
           </div>
           <Search
-            label='Label'
-            placeholder='Søk etter bruker...'
+            label='Sökfält'
+            placeholder='Sök efter användare...'
             size='sm'
             variant='simple'
             className={classes.tableSearch}
@@ -130,11 +130,11 @@ export const Showcase: StoryFn = () => {
         >
           <Table.Head>
             <Table.Row>
-              <Table.HeaderCell onClick={function Ya() {}} sort='none'>
-                Navn
+              <Table.HeaderCell onClick={function Ya() { }} sort='none'>
+                Namn
               </Table.HeaderCell>
-              <Table.HeaderCell>Epost</Table.HeaderCell>
-              <Table.HeaderCell onClick={function Ya() {}} sort='none'>
+              <Table.HeaderCell>E-post</Table.HeaderCell>
+              <Table.HeaderCell onClick={function Ya() { }} sort='none'>
                 Telefon
               </Table.HeaderCell>
             </Table.Row>
@@ -147,9 +147,9 @@ export const Showcase: StoryFn = () => {
                   src='img/avatars/female1.png'
                   alt=''
                 />
-                Lise Nordmann
+                Lisa Svensson
               </Table.Cell>
-              <Table.Cell>lise@nordmann.no</Table.Cell>
+              <Table.Cell>lisa@svensson.se</Table.Cell>
               <Table.Cell>22345678</Table.Cell>
             </Table.Row>
             <Table.Row>
@@ -159,9 +159,9 @@ export const Showcase: StoryFn = () => {
                   src='img/avatars/male2.png'
                   alt=''
                 />
-                Ola Nordmann
+                Ola Svensson
               </Table.Cell>
-              <Table.Cell>ola@nordmann.no</Table.Cell>
+              <Table.Cell>ola@svensson.se</Table.Cell>
               <Table.Cell>87654321</Table.Cell>
             </Table.Row>
           </Table.Body>
@@ -170,7 +170,7 @@ export const Showcase: StoryFn = () => {
           <Pagination.List>
             <Pagination.Item>
               <Pagination.Button {...pagination.prevButtonProps}>
-                Forrige
+                Föregående
               </Pagination.Button>
             </Pagination.Item>
             {pagination.pages.map(({ itemKey, buttonProps, page }) => (
@@ -180,7 +180,7 @@ export const Showcase: StoryFn = () => {
             ))}
             <Pagination.Item>
               <Pagination.Button {...pagination.nextButtonProps}>
-                Neste
+                Nästa
               </Pagination.Button>
             </Pagination.Item>
           </Pagination.List>
@@ -188,27 +188,27 @@ export const Showcase: StoryFn = () => {
       </div>
       <div className={cl(classes.card, classes.help)}>
         <Heading size='xs' className={classes.helpHeading}>
-          Hva kan vi hjelpe deg med?
+          Hur kan vi hjälpa dig?
         </Heading>
         <div className={classes.helpCards}>
           <Card color='brand1'>
-            <Heading size='2xs'>Sikkerhet og drift</Heading>
+            <Heading size='2xs'>Säkerhet och drift</Heading>
             <Paragraph>
               Most provide as with carried business are much better more the.
             </Paragraph>
           </Card>
           <Card color='brand2'>
-            <Heading size='2xs'>Skole og utdanning</Heading>
+            <Heading size='2xs'>Skola och utbildning</Heading>
             <Paragraph>
               Most provide as with carried business are much better more the.
             </Paragraph>
           </Card>
           <Card color='brand3'>
             <Heading size='2xs'>
-              <a href='#preview'>Mat og helse</a>
+              <a href='#preview'>Mat och hälsa</a>
             </Heading>
             <Paragraph>
-              Lenke til artikkel om mat og helse, der du kan lese mer om alt.
+              Länk till artikel om mat och hälsa, där du kan läsa mer om allt.
             </Paragraph>
           </Card>
         </div>
@@ -216,58 +216,58 @@ export const Showcase: StoryFn = () => {
       <div className={cl(classes.card, classes.radio)}>
         <Radio.Group
           error=''
-          legend='Hvilken iskremsmak er best?'
+          legend='Vilken glassmak är bäst?'
           size='sm'
           value={radioValue}
           onChange={(e: string) => setRadioValue(e)}
         >
-          <Radio value='vanilje'>Vanilje</Radio>
-          <Radio value='jordbær'>Jordbær</Radio>
-          <Radio value='sjokolade'>Sjokolade</Radio>
-          <Radio value='spiser-ikke-is'>Jeg spiser ikke iskrem</Radio>
+          <Radio value='vanilj'>Vanilj</Radio>
+          <Radio value='jordgubb'>Jordgubb</Radio>
+          <Radio value='choklad'>Choklad</Radio>
+          <Radio value='äter-inte-glass'>Jag äter inte glass</Radio>
         </Radio.Group>
       </div>
       <div className={cl(classes.card, classes.tag)}>
-        <Heading size='xs'>Emner</Heading>
+        <Heading size='xs'>Ämnen</Heading>
         <div className={classes.tagList}>
           <Tag color='brand1' size='sm'>
-            Data og IKT
+            Data och IT
           </Tag>
           <Tag color='brand2' size='sm'>
-            Mat og ernæring
+            Mat och näring
           </Tag>
           <Tag color='brand3' size='sm'>
-            Sport og Idrett
+            Sport och Idrott
           </Tag>
           <Tag color='neutral' size='sm'>
-            Politikk og samfunn
+            Politik och samhälle
           </Tag>
           <Tag color='success' size='sm'>
-            Utenriks
+            Utrikes
           </Tag>
           <Tag color='info' size='sm'>
-            Helse og velvære
+            Hälsa och välmående
           </Tag>
           <Tag color='danger' size='sm'>
-            PC Gaming
+            PC-spel
           </Tag>
           <Tag color='warning' size='sm'>
-            Trening og livsstil
+            Träning och livsstil
           </Tag>
         </div>
       </div>
       <div className={cl(classes.card, classes.switches)}>
         <Heading size='xs' style={{ marginBottom: 'var(--ds-spacing-2)' }}>
-          Innstillinger
+          Inställningar
         </Heading>
         <Paragraph size='sm' style={{ marginBottom: 'var(--ds-spacing-2)' }}>
-          Her kan du justere på innstillingene dine
+          Här kan du justera dina inställningar
         </Paragraph>
         <div className={classes.switchGroup}>
           <Switch size='sm' defaultChecked>
             TV-visning
           </Switch>
-          <Switch size='sm'>Desktopvisning</Switch>
+          <Switch size='sm'>Datorvisning</Switch>
           <Switch size='sm' defaultChecked readOnly>
             Tabletvisning
           </Switch>
@@ -278,25 +278,25 @@ export const Showcase: StoryFn = () => {
       </div>
       <div className={cl(classes.card, classes.combobox)}>
         <Heading size='xs' style={{ marginBottom: 'var(--ds-spacing-2)' }}>
-          Hvor er du fra?
+          Varifrån kommer du?
         </Heading>
         <Paragraph size='sm' style={{ marginBottom: 'var(--ds-spacing-2)' }}>
-          Svar under så finner vi flyreise
+          Svara nedan så hittar vi flygresor
         </Paragraph>
         <div className={classes.toggleCombo}>
-          <ToggleGroup defaultValue='norway' size='sm'>
-            <ToggleGroup.Item value='norway'>Norge</ToggleGroup.Item>
-            <ToggleGroup.Item value='sweden'>Sverige</ToggleGroup.Item>
+          <ToggleGroup defaultValue='sverige' size='sm'>
+            <ToggleGroup.Item value='norge'>Norge</ToggleGroup.Item>
+            <ToggleGroup.Item value='sverige'>Sverige</ToggleGroup.Item>
             <ToggleGroup.Item value='utlandet'>Utlandet</ToggleGroup.Item>
           </ToggleGroup>
           <Combobox
-            description='Velg et sted'
-            label='Hvor går reisen?'
+            description='Välj en plats'
+            label='Var går resan?'
             size='sm'
             portal={false}
             multiple
           >
-            <Combobox.Empty>Fant ingen treff</Combobox.Empty>
+            <Combobox.Empty>Inga träffar</Combobox.Empty>
             <Combobox.Option value='leikanger'>Leikanger</Combobox.Option>
             <Combobox.Option value='oslo'>Oslo</Combobox.Option>
             <Combobox.Option value='bronnoysund'>Brønnøysund</Combobox.Option>
@@ -312,64 +312,64 @@ export const Showcase: StoryFn = () => {
         <Tabs defaultValue='value1' size='sm'>
           <Tabs.List>
             <Tabs.Tab value='value1'>Min profil</Tabs.Tab>
-            <Tabs.Tab value='value2'>Tjenester</Tabs.Tab>
-            <Tabs.Tab value='value3'>Innstillinger</Tabs.Tab>
+            <Tabs.Tab value='value2'>Tjänster</Tabs.Tab>
+            <Tabs.Tab value='value3'>Inställningar</Tabs.Tab>
           </Tabs.List>
         </Tabs>
         <Paragraph size='sm'>
-          For å kunne bli registrert i{' '}
+          För att kunna bli registrerad i{' '}
           <Link href='#' color='neutral'>
             Frivillighetsregisteret
           </Link>
-          , må organisasjonen drive frivillig virksomhet. Det er bare
-          foreninger,{' '}
+          , måste organisationen driva frivillig verksamhet. Det är bara
+          föreningar,{' '}
           <Link href='#' color='neutral'>
             stiftelser
           </Link>{' '}
-          og som kan registreres. Virksomheten kan ikke dele ut midler til
-          fysiske personer. Virksomheten må ha et styre. Virksomheten må være
-          registrert i{' '}
+          som kan registreras. Verksamheten kan inte dela ut medel till
+          fysiska personer. Verksamheten måste ha en styrelse. Verksamheten
+          måste vara registrerad i{' '}
           <Link href='#' color='neutral'>
             Enhetsregisteret
           </Link>{' '}
-          før den kan bli registrert.
+          innan den kan bli registrerad.
         </Paragraph>
       </div>
       <div className={cl(classes.card, classes.faq)}>
         <Heading size='xs' className={classes.cardTitle}>
-          Ofte stillte spørsmål
+          Vanliga frågor
         </Heading>
         <Accordion color='brand3' border>
           <Accordion.Item>
             <Accordion.Heading>
-              Hvem kan registrere seg i Frivillighetsregisteret?
+              Vem kan registrera sig i Frivillighetsregisteret?
             </Accordion.Heading>
             <Accordion.Content>
-              For å kunne bli registrert i Frivillighetsregisteret, må
-              organisasjonen drive frivillig virksomhet. Det er bare foreninger,
-              stiftelser og aksjeselskap som kan registreres. Virksomheten kan
-              ikke dele ut midler til fysiske personer. Virksomheten må ha et
-              styre.
+              För att kunna bli registrerad i Frivillighetsregisteret måste
+              organisationen driva frivillig verksamhet. Det är bara föreningar,
+              stiftelser och aktiebolag som kan registreras. Verksamheten kan
+              inte dela ut medel till fysiska personer. Verksamheten måste ha en
+              styrelse.
             </Accordion.Content>
           </Accordion.Item>
           <Accordion.Item>
             <Accordion.Heading>
-              Hvordan går jeg fram for å registrere i Frivillighetsregisteret?
+              Hur går jag tillväga för att registrera i Frivillighetsregisteret?
             </Accordion.Heading>
             <Accordion.Content>
-              Virksomheten må være registrert i Enhetsregisteret før den kan bli
-              registrert i Frivillighetsregisteret. Du kan registrere i begge
-              registrene samtidig i Samordnet registermelding.
+              Verksamheten måste vara registrerad i Enhetsregisteret innan den
+              kan bli registrerad i Frivillighetsregisteret. Du kan registrera i
+              båda registren samtidigt i Samordnad registeranmälan.
             </Accordion.Content>
           </Accordion.Item>
           <Accordion.Item>
             <Accordion.Heading>
-              Hvordan går jeg fram for å registrere i Frivillighetsregisteret?
+              Hur går jag tillväga för att registrera i Frivillighetsregisteret?
             </Accordion.Heading>
             <Accordion.Content>
-              Virksomheten må være registrert i Enhetsregisteret før den kan bli
-              registrert i Frivillighetsregisteret. Du kan registrere i begge
-              registrene samtidig i Samordnet registermelding.
+              Verksamheten måste vara registrerad i Enhetsregisteret innan den
+              kan bli registrerad i Frivillighetsregisteret. Du kan registrera i
+              båda registren samtidigt i Samordnad registeranmälan.
             </Accordion.Content>
           </Accordion.Item>
         </Accordion>

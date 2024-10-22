@@ -14,11 +14,11 @@ export default {
 export const Preview: Story = (args) => (
   <>
     <Paragraph>
-      Divider er brukt for å dele opp innhold i mindre deler.
+      Divider är använd för att dela upp innehåll i mindre delar.
     </Paragraph>
     <Divider {...args} />
     <Paragraph>
-      Den kan også brukes for å skille innhold som er relatert til hverandre.
+      Den kan också användas för att skilja innehåll som är relaterat till varandra.
     </Paragraph>
   </>
 );

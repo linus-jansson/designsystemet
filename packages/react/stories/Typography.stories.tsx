@@ -8,21 +8,19 @@ const meta: Meta = {
 
 export default meta;
 
-export const EksempelTekst: StoryFn = () => (
+export const ExempelText: StoryFn = () => (
   <>
     <Heading
       level={1}
       size='xl'
       style={{ marginBottom: 'var(--ds-spacing-2)' }}
     >
-      Samordnet registermelding (H1)
+      Samordnad registeranmälan (H1)
     </Heading>
 
     <Paragraph style={{ marginBottom: 'var(--ds-spacing-2)' }} variant='long'>
-      Her kan du registrere nye virksomheter, som for eksempel
-      enkeltpersonforetak, foreninger, aksjeselskap, ansvarlige selskap,
-      samvirkeforetak og stiftelser. De aller fleste organisasjonsformene kan
-      bruke denne tjenesten.
+      Här kan du registrera nya företag, som exempelvis enskilda firmor, föreningar, aktiebolag, ansvariga företag,
+      samverkansföretag och stiftelser. De allra flesta organisationsformer kan använda den här tjänsten.
     </Paragraph>
 
     <Heading
@@ -30,15 +28,14 @@ export const EksempelTekst: StoryFn = () => (
       size='lg'
       style={{ marginBottom: 'var(--ds-spacing-2)' }}
     >
-      Når skal du bruke skjemaet? (H2)
+      När ska du använda blanketten? (H2)
     </Heading>
 
     <Paragraph style={{ marginBottom: 'var(--ds-spacing-2)' }}>
-      Denne tjenesten kan du bruke for å melde opplysninger til
-      Enhetsregisteret, Foretaksregisteret, Frivillighetsregisteret, NAV
-      Aa-registeret, Virksomhets- og foretaksregisteret hos SSB,
-      Stiftelsesregisteret og Skattedirektoratets register over upersonlige
-      skattytere.
+      Den här tjänsten kan du använda för att lämna uppgifter till
+      Enhetsregistret, Företagsregistret, Frivilligregistret, NAV Aa-registret,
+      Företags- och verksamhetsregistret hos SCB, Stiftelseregistret och Skatteverkets register över
+      juridiska personer.
     </Paragraph>
 
     <Heading
@@ -50,9 +47,8 @@ export const EksempelTekst: StoryFn = () => (
     </Heading>
 
     <Paragraph variant='short' style={{ marginBottom: 'var(--ds-spacing-2)' }}>
-      Når du skal signere meldingen vil du motta en signeringsoppgave i
-      meldingsboksen din i Altinn. Meldingen blir ikke sendt til behandling før
-      alle har signert.
+      När du ska signera meddelandet kommer du att få en signeringsuppgift i
+      din meddelandebox i Altinn. Meddelandet skickas inte för behandling förrän alla har signerat.
     </Paragraph>
 
     <Heading
@@ -60,15 +56,13 @@ export const EksempelTekst: StoryFn = () => (
       size='sm'
       style={{ marginBottom: 'var(--ds-spacing-2)' }}
     >
-      Krav om rolle for signering (H4)
+      Krav på roll för signering (H4)
     </Heading>
 
     <Paragraph style={{ marginBottom: 'var(--ds-spacing-2)' }}>
-      For å signere på vegne av en virksomhet, trenger du Altinn-rollen Signerer
-      av Samordnet registermelding. Du kan se hvilke roller du har for en aktør
-      på menypunktet Profil, Skjema og tjenester du har rettighet til. Om du
-      ikke har disse rollene, må du få noen som har rollene til å delegere dem
-      til deg.
+      För att signera å ett företags vägnar behöver du Altinn-rollen Signerare
+      av Samordnad registeranmälan. Du kan se vilka roller du har för en aktör på menypunkten Profil, Formulär och tjänster du har rättigheter till. Om du
+      inte har dessa roller, måste någon med rollerna delegera dem till dig.
     </Paragraph>
 
     <Heading
@@ -76,31 +70,28 @@ export const EksempelTekst: StoryFn = () => (
       size='xs'
       style={{ marginBottom: 'var(--ds-spacing-2)' }}
     >
-      Personvern (H5)
+      Sekretess (H5)
     </Heading>
 
     <Paragraph variant='short' style={{ marginBottom: 'var(--ds-spacing-2)' }}>
-      Personvernerklæringen gir informasjon om hvilke personopplysninger vi
-      behandler, hvordan disse blir behandlet og hvilke rettigheter du har.
+      Sekretesspolicyn ger information om vilka personuppgifter vi behandlar, hur dessa behandlas och vilka rättigheter du har.
     </Paragraph>
   </>
 );
 
-export const EksempelTekstDark: StoryFn = () => (
+export const ExempleTextDark: StoryFn = () => (
   <div data-ds-color-mode='dark'>
     <Heading
       level={1}
       size='xl'
       style={{ marginBottom: 'var(--ds-spacing-2)' }}
     >
-      Samordnet registermelding (H1)
+      Samordnad registeranmälan (H1)
     </Heading>
 
     <Paragraph style={{ marginBottom: 'var(--ds-spacing-2)' }} variant='long'>
-      Her kan du registrere nye virksomheter, som for eksempel
-      enkeltpersonforetak, foreninger, aksjeselskap, ansvarlige selskap,
-      samvirkeforetak og stiftelser. De aller fleste organisasjonsformene kan
-      bruke denne tjenesten.
+      Här kan du registrera nya företag, som exempelvis enskilda firmor, föreningar, aktiebolag, ansvariga företag,
+      samverkansföretag och stiftelser. De allra flesta organisationsformer kan använda den här tjänsten.
     </Paragraph>
 
     <Heading
@@ -108,15 +99,14 @@ export const EksempelTekstDark: StoryFn = () => (
       size='lg'
       style={{ marginBottom: 'var(--ds-spacing-2)' }}
     >
-      Når skal du bruke skjemaet? (H2)
+      När ska du använda blanketten? (H2)
     </Heading>
 
     <Paragraph style={{ marginBottom: 'var(--ds-spacing-2)' }}>
-      Denne tjenesten kan du bruke for å melde opplysninger til
-      Enhetsregisteret, Foretaksregisteret, Frivillighetsregisteret, NAV
-      Aa-registeret, Virksomhets- og foretaksregisteret hos SSB,
-      Stiftelsesregisteret og Skattedirektoratets register over upersonlige
-      skattytere.
+      Den här tjänsten kan du använda för att lämna uppgifter till
+      Enhetsregistret, Företagsregistret, Frivilligregistret, NAV Aa-registret,
+      Företags- och verksamhetsregistret hos SCB, Stiftelseregistret och Skatteverkets register över
+      juridiska personer.
     </Paragraph>
 
     <Heading
@@ -128,9 +118,8 @@ export const EksempelTekstDark: StoryFn = () => (
     </Heading>
 
     <Paragraph variant='short' style={{ marginBottom: 'var(--ds-spacing-2)' }}>
-      Når du skal signere meldingen vil du motta en signeringsoppgave i
-      meldingsboksen din i Altinn. Meldingen blir ikke sendt til behandling før
-      alle har signert.
+      När du ska signera meddelandet kommer du att få en signeringsuppgift i
+      din meddelandebox i Altinn. Meddelandet skickas inte för behandling förrän alla har signerat.
     </Paragraph>
 
     <Heading
@@ -138,15 +127,13 @@ export const EksempelTekstDark: StoryFn = () => (
       size='sm'
       style={{ marginBottom: 'var(--ds-spacing-2)' }}
     >
-      Krav om rolle for signering (H4)
+      Krav på roll för signering (H4)
     </Heading>
 
     <Paragraph style={{ marginBottom: 'var(--ds-spacing-2)' }}>
-      For å signere på vegne av en virksomhet, trenger du Altinn-rollen Signerer
-      av Samordnet registermelding. Du kan se hvilke roller du har for en aktør
-      på menypunktet Profil, Skjema og tjenester du har rettighet til. Om du
-      ikke har disse rollene, må du få noen som har rollene til å delegere dem
-      til deg.
+      För att signera å ett företags vägnar behöver du Altinn-rollen Signerare
+      av Samordnad registeranmälan. Du kan se vilka roller du har för en aktör på menypunkten Profil, Formulär och tjänster du har rättigheter till. Om du
+      inte har dessa roller, måste någon med rollerna delegera dem till dig.
     </Paragraph>
 
     <Heading
@@ -154,12 +141,11 @@ export const EksempelTekstDark: StoryFn = () => (
       size='xs'
       style={{ marginBottom: 'var(--ds-spacing-2)' }}
     >
-      Personvern (H5)
+      Sekretess (H5)
     </Heading>
 
     <Paragraph variant='short' style={{ marginBottom: 'var(--ds-spacing-2)' }}>
-      Personvernerklæringen gir informasjon om hvilke personopplysninger vi
-      behandler, hvordan disse blir behandlet og hvilke rettigheter du har.
+      Sekretesspolicyn ger information om vilka personuppgifter vi behandlar, hur dessa behandlas och vilka rättigheter du har.
     </Paragraph>
   </div>
 );

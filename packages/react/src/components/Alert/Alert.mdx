@@ -7,157 +7,157 @@ import * as AlertStories from './Alert.stories';
 
 # Alert
 
-Vi bruker `Alert` til å gi brukeren informasjon som det er ekstra viktig at de ser og forstår. Alert er designet for å fange brukernes oppmerksomhet. Teksten i varselet skal være kort og tydelig.
+Vi använder `Alert` för att ge användaren information som är extra viktig att de ser och förstår. Alert är designad för att fånga användarnas uppmärksamhet. Texten i varningen ska vara kort och tydlig.
 
 <Primary />
 <Controls />
 
-## Bruk
+## Användning
 
 ```tsx
 import { Alert } from '@digdir/designsystemet-react';
 
-<Alert>You are using the Alert component!</Alert>;
+<Alert>Du använder Alert-komponenten!</Alert>;
 ```
 
-## Eksempler
+## Exempel
 
-`Alert` kan brukes til fire ulike budskap: Informasjon, advarsler, suksess og feilmelding. Den kan også brukes sammen med andre komponenter og stiler. Her er noen eksempler.
+`Alert` kan användas för fyra olika budskap: Information, varningar, framgång och felmeddelanden. Den kan också användas tillsammans med andra komponenter och stilar. Här är några exempel.
 
 <br />
 
-### Informasjon
+### Information
 
-Bruk `info` til informasjon som er nyttig for brukerne, men ikke avgjørende for at de skal forstå oppgaven.
+Använd `info` för information som är användbar för användarna, men inte avgörande för att de ska förstå uppgiften.
 
 <Canvas of={AlertStories.VariantInfo} />
 
-### Suksess
+### Framgång
 
-Bruk `success` når du vil bekrefte at brukeren har fullført en oppgave, at handlingen var vellykket.
+Använd `success` när du vill bekräfta att användaren har slutfört en uppgift, att åtgärden var framgångsrik.
 
 <Canvas of={AlertStories.VariantSuccess} />
 
-### Advarsel
+### Varning
 
-Bruk `warning` når du vil at brukeren skal foreta en bestemt handling eller for å advare dem om noe viktig.
+Använd `warning` när du vill att användaren ska vidta en viss åtgärd eller för att varna dem om något viktigt.
 
 <Canvas of={AlertStories.VariantWarning} />
 
-### Feilmelding
+### Felmeddelande
 
-Bruk `danger` for å informere om noe som er kritisk eller som hindrer brukeren i å komme videre.
+Använd `danger` för att informera om något kritiskt eller som hindrar användaren från att gå vidare.
 
 <Canvas of={AlertStories.VariantDanger} />
 
-### Med og uten overskrift
+### Med och utan rubrik
 
-Hvis meldingen er lenger enn en setning kan det være nyttig å bruke en overskrift til å fremheve det viktigste. Dette kan gjøres ved bruk av [Typografi](/docs/komponenter-typography--docs)-komponentene. Husk å velge riktig overskriftsnivå ut fra plassen alert har i innholdsstrukturen på siden.
+Om meddelandet är längre än en mening kan det vara användbart att använda en rubrik för att framhäva det viktigaste. Detta kan göras med hjälp av [Typografi](/docs/komponenter-typography--docs)-komponenterna. Kom ihåg att välja rätt rubriknivå baserat på platsen varningen har i innehållsstrukturen på sidan.
 
 <Canvas of={AlertStories.MedHeading} />
 
-Dersom tittel og beskrivelse gjentar det samme er det bedre å bruke en enkel setning uten overskrift.
+Om rubriken och beskrivningen upprepar samma sak är det bättre att använda en enkel mening utan rubrik.
 
 <Canvas of={AlertStories.MedKunHeading} />
 
-### Med lenke
+### Med länk
 
-Du kan ha en lenke i Alert hvis det hjelper brukeren med å løse oppgaven. Men vær obs på at en lenke tar brukeren ut av tjenesten, så bruk lenke kun når det er absolutt nødvendig, for eksempel hvis du vil at brukeren skal åpne et skjema eller utføre en viktig oppgave.
+Du kan ha en länk i Alert om det hjälper användaren att lösa uppgiften. Men var medveten om att en länk tar användaren ut ur tjänsten, så använd länk endast när det är absolut nödvändigt, till exempel om du vill att användaren ska öppna ett formulär eller utföra en viktig uppgift.
 
 <Canvas of={AlertStories.MedLenke} />
 
-## Retningslinjer for alert
+## Riktlinjer för alert
 
-Alert har flere varianter, som brukes til fire ulike budskap: Informasjon, advarsler, suksess og feilmelding. Bruk komponenten varsomt. Brukere kan forveksle varsler med reklame, og dermed overse dem. Hvis vi bruker varsler for ofte, kan vi forverre dette problemet.
+Alert har flera varianter som används för fyra olika budskap: Information, varningar, framgång och felmeddelande. Använd komponenten sparsamt. Användare kan förväxla varningar med reklam och därmed ignorera dem. Om vi använder varningar för ofta kan vi förvärra detta problem.
 
-Pass på at alert har samme utseende og formspråk i alle tjenester og produkter. Denne komponenten skal være mulig å kjenne igjen over alt, så vi skal ikke justere den
+Se till att alert har samma utseende och formspråk i alla tjänster och produkter. Denna komponent ska vara igenkännbar överallt, så vi ska inte justera den.
 
-Passer til å
+Passar för att
 
-- gi korte og informative varsler
+- ge korta och informativa varningar
 
-Passer ikke til å
+Passar inte för att
 
-- gi varsler om systemfeil eller lignende
-- validere enkelte skjemaelement, bruk heller komponentens egen feilmelding
+- ge varningar om systemfel eller liknande
+- validera enskilda fält i formulär, använd istället komponentens egen felmeddelande
 
-### Størrelser
+### Storlekar
 
-Når du setter `size`, endrer vi ikke størrelsen på tekst som ligger i tekstkomponenter. Fritekst som blir sendt inn vil endre størrelse i henhold til `size`-propen.
+När du sätter `size` ändrar vi inte storleken på texten som ligger i textkomponenter. Fri text som skickas in kommer att ändra storlek i enlighet med `size`-egenskapen.
 
-Dersom du sender inn tekst ved bruk av komponenter kan du følge tabellen under for anbefalt størrelser:
+Om du skickar in text med hjälp av komponenter kan du följa tabellen nedan för rekommenderade storlekar:
 
-| Alert Størrelse | Heading størrelse | Paragraph størrelse |
-| --------------- | ----------------- | ------------------- |
-| sm              | 2xs               | sm                  |
-| md              | xs                | md                  |
-| lg              | sm                | lg                  |
+| Alert Storlek  | Rubrikstorlek      | Paragrafstorlek      |
+| ---------------| -------------------| ---------------------|
+| sm             | 2xs                | sm                   |
+| md             | xs                 | md                   |
+| lg             | sm                 | lg                   |
 
-### Ikke lag andre versjoner
+### Skapa inte andra versioner
 
-Det er viktig at Alerts har samme utseende og formspråk på tvers av produktene, så den skal ikke justeres.
+Det är viktigt att Alerts har samma utseende och formspråk över produkterna, så den ska inte justeras.
 
 <Stack direction="row" style={{
   justifyContent: 'unset',
   alignItems: 'unset'
 }}>
   <Do
-    description='Alert brukes på tvers av produkter og skal se like ut'
+    description='Alert används över produkter och ska se lika ut'
     image='/img/component-guidelines/alert/alert-ex1-do.png'
   />
 
   <Dont
-    description='Ikke fjern border, bytt ikon, eller gjør andre visuelle endringer på alert'
+    description='Ta inte bort kantlinjer, byt inte ikon eller gör andra visuella ändringar på alert'
     image='/img/component-guidelines/alert/alert-ex1-dont.png'
   />
 </Stack>
 <br />
 
-## Tekst i komponenten
+## Text i komponenten
 
-Det er ikke alltid lett å forstå forskjellen på varslene, selv om de har ulike ikoner og farger. Derfor er det viktig at teksten vi skriver i varselet er tydelig og lett å forstå.
+Det är inte alltid lätt att förstå skillnaden på varningarna, även om de har olika ikoner och färger. Därför är det viktigt att texten i varningen är tydlig och lätt att förstå.
 
-Vi kan velge om vi vil ha med en overskrift i alert. Hvis meldingen er lengre enn en setning, kan det være lurt å ha med en overskrift som fremhever det viktigste.
+Vi kan välja om vi vill ha med en rubrik i alert. Om meddelandet är längre än en mening kan det vara klokt att ha med en rubrik som framhäver det viktigaste.
 
-Det må være tydelig hvem som gjør hva. Tenk på teksten som en samtale med brukeren, bruk ord som «vi» og «du».
+Det måste vara tydligt vem som gör vad. Tänk på texten som ett samtal med användaren, använd ord som ”vi” och ”du”.
 
-Hvis meldingen er knyttet til en bestemt handling, for eksempel svar på et spørsmål, bør teksten gjenta nøkkelord fra ledeteksten.
+Om meddelandet är kopplat till en viss åtgärd, till exempel svar på en fråga, bör texten upprepa nyckelord från ledtexten.
 
-Det er spesielt viktig at teksten i varsler forteller om det er noe brukene må eller kan gjøre for å komme videre med oppgaven sin.
+Det är särskilt viktigt att texten i varningar talar om huruvida användaren måste eller kan göra något för att komma vidare med sin uppgift.
 
-Her er en liste med hvilken type informasjon en varsel bør inneholde:
+Här är en lista över vilken typ av information en varning bör innehålla:
 
-- Fortell hva som har skjedd
-  - Eksempel: "Kunne ikke koble til konto."
-- Fortell hvorfor det skjedde
-  - Eksempel: "Vi kunne ikke koble til kontoen din på grunn av tekniske problemer fra vår side."
-- Forsikre brukeren
-  - Eksempel: "Endringene dine har blitt lagret."
-- Gi dem en vei ut av problemet
-  - Eksempel: "Hvis dette problemet oppstår igjen, kontakt Kundeservice."
-- Hjelp dem å fikse problemet selv
-  - Eksempel: "Vennligst prøv igjen."
+- Berätta vad som har hänt
+  - Exempel: "Kunde inte ansluta till konto."
+- Berätta varför det hände
+  - Exempel: "Vi kunde inte ansluta till ditt konto på grund av tekniska problem från vår sida."
+- Försäkra användaren
+  - Exempel: "Dina ändringar har sparats."
+- Ge dem en väg ut ur problemet
+  - Exempel: "Om detta problem uppstår igen, kontakta Kundservice."
+- Hjälp dem att själva lösa problemet
+  - Exempel: "Försök igen."
     <br />
     <br />
 
-## Tilgjengelighet
+## Tillgänglighet
 
-### Alternativtekst
+### Alternativtext
 
-Ikonene er ikke bare dekorative. De har en standard alternativtekst som kommuniserer alvorlighetsgrad: "Informasjon", "Suksess", "Advarsel" og "Feil". Denne blir lest opp som en del av innholdet for skjermleserbrukere.
+Ikonerna är inte bara dekorativa. De har en standardalternativtext som kommunicerar allvarlighetsgrad: "Information", "Framgång", "Varning" och "Fel". Denna läses upp som en del av innehållet för skärmläsaranvändare.
 
-### Interaksjon med skjermleser
+### Interaktion med skärmläsare
 
-Alert-komponenten kommer ikke med en `role="alert"` som default, den blir presentert for skjermleserbrukere som vanlig statisk innhold. Du kan legge på `role=alert` selv, men vær opperksom på forventet oppførsel dette medfører. Du kan lese mer om dette på [dokumentasjonen til ARIA](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/alert_role).
+Alert-komponenten har inte `role="alert"` som standard, den presenteras för skärmläsaranvändare som vanligt statiskt innehåll. Du kan lägga till `role=alert` själv, men var medveten om den förväntade beteendet som detta medför. Du kan läsa mer om detta i [dokumentationen för ARIA](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/alert_role).
 
-#### Ikke gjør dette
+#### Gör inte detta
 
-Ikke bruk `role=alert` om `Alert` er synlig når siden lastes inn.
+Använd inte `role=alert` om `Alert` är synlig när sidan laddas in.
 
 <Canvas of={AlertStories.UtenAria} />
 
-#### Gjør dette
+#### Gör detta
 
-Bruk `role=alert` hvis den dukker opp dynamisk underveis pga. brukerinput eller andre faktorer som kan utløse en alert.
+Använd `role=alert` om den visas dynamiskt under användning på grund av användarinput eller andra faktorer som kan utlösa en alert.
 
 <Canvas of={AlertStories.MedAria} />
