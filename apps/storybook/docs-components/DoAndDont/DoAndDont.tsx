@@ -7,7 +7,7 @@ import styles from './DoAndDont.module.css';
 
 const Wrapper = ({ variant, description, image, alt }: WrapperProps) => {
   const icon = variant === 'do' ? <CheckmarkIcon /> : <XMarkIcon />;
-  const heading = variant === 'do' ? 'Gjør' : 'Unngå';
+  const heading = variant === 'do' ? 'Gör' : 'Undvik';
 
   return (
     <figure

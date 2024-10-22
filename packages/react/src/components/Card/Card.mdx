@@ -5,97 +5,97 @@ import * as CardStories from './Card.stories';
 
 # Card
 
-Med `Card` kan vi fremheve informasjon eller oppgaver som hører sammen. Kortene finnes i flere varianter og kan inneholde tekst, bilde, tekstfelt, knapper og/eller lenker. 
+Med `Card` kan vi framhäva information eller uppgifter som hör ihop. Korten finns i flera varianter och kan innehålla text, bild, textfält, knappar och/eller länkar.
 
 <br />
 <Primary />
 <Controls />
 
-## Slik bruker du `Card`
+## Så använder du `Card`
 
 ```tsx
 import { Card } from '@digdir/designsystemet-react';
 <Card>
-  <Card.Block>Tittel</Card.Block>
-  <Card.Block>Innhold</Card.Block>
-  <Card.Block>Valgfri fotnote</Card.Block>
+  <Card.Block>Titel</Card.Block>
+  <Card.Block>Innehåll</Card.Block>
+  <Card.Block>Valfri fotnot</Card.Block>
 </Card>;
 ```
 
-## Eksempler
+## Exempel
 
 <br />
 
 ### Med `Block`
 
-Bruk flere `Card.Block` hvis du vil dele opp kortet med skillelinjer eller legge inn utfallende bilder eller video.
-Merk at innhold kan ikke plasseres direkte i `Card` dersom du bruker `Card.Block`; da burde alt innholdet være inni en av av kortets `Card.Block`-seksjoner.
+Använd flera `Card.Block` om du vill dela upp kortet med skiljelinjer eller lägga in bilder eller video som fyller hela ytan.
+Observera att innehåll inte kan placeras direkt i `Card` om du använder `Card.Block`; då ska allt innehåll vara inuti en av kortets `Card.Block`-sektioner.
 
 <Canvas of={CardStories.Media} />
 
-### Video
+{/* ### Video
 
-<Canvas of={CardStories.Video} />
+<Canvas of={CardStories.Video} /> */}
 
-### Klikkbart
-- `Card` kan brukes som navigasjonskort for å ta brukerne videre til en annen side. 
-- Dersom kortet skal lenke til en annen side, kan du legge en lenke inn i kortets tittel. Hele kortet blir da automatisk klikkbart, men skjermlesere får en [bedre brukeropplevelse enn dersom hele kortet var en lenke](https://adrianroselli.com/2020/02/block-links-cards-clickable-regions-etc.html).
-- Dersom kortet kun innholder litt tekst, kan hele kortet bli en lenke eller knapp ved å benytte `asChild`.
+### Klickbart
+- `Card` kan användas som navigeringskort för att ta användarna vidare till en annan sida.
+- Om kortet ska länka till en annan sida kan du lägga en länk i kortets titel. Hela kortet blir då automatiskt klickbart, men skärmläsare får en [bättre användarupplevelse än om hela kortet var en länk](https://adrianroselli.com/2020/02/block-links-cards-clickable-regions-etc.html).
+- Om kortet endast innehåller lite text kan hela kortet bli en länk eller knapp genom att använda `asChild`.
 
 <br />
 <br />
 
-#### Kort med lenke i tittel:
-I dette eksempelet rendrer Card med lenke `<a>` inni tittel elementet. Dette er nyttig når Card inneholder tekst eller media, og skal navigere til en annen side.
+#### Kort med länk i titel:
+I detta exempel renderas Card med en länk `<a>` i titel-elementet. Detta är användbart när Card innehåller text eller media och ska navigera till en annan sida.
 
 <Canvas of={CardStories.WithLink} />
 
-#### Kort som er en lenke:
-I dette eksempelet rendrer Card som lenke `<a>`. Dette er nyttig når Card inneholder lite tekst, og skal navigere til en annen side.
+#### Kort som är en länk:
+I detta exempel renderas Card som en länk `<a>`. Detta är användbart när Card innehåller lite text och ska navigera till en annan sida.
 
 <Canvas of={CardStories.AsLink} />
 
-#### Kort som er en knapp:
+#### Kort som är en knapp:
 
-I dette eksempelet rendrer Card som knapp `<button>`. Dette er nyttig når Card inneholder lite tekst, og skal åpne en Modal eller utføre annen handling på samme side.
+I detta exempel renderas Card som en knapp `<button>`. Detta är användbart när Card innehåller lite text och ska öppna en Modal eller utföra annan åtgärd på samma sida.
 
 <Canvas of={CardStories.AsButton} />
 
-### Horisontalt
+### Horisontellt
 
-`Card` støtter både `display: flex` og `display: grid` for å legge `Card.Block` ved siden av hverandre:
+`Card` stöder både `display: flex` och `display: grid` för att placera `Card.Block` bredvid varandra:
+
 <Canvas of={CardStories.AsGrid} />
 
-### Farger
+### Färger
 
-Viser forskjellige varianter av `Card`-komponenten, inkludert nøytral, subtil, og andre stiler.
+Visar olika varianter av `Card`-komponenten, inklusive neutral, subtil och andra stilar.
 
 <Canvas of={CardStories.Variants} />
 
-### Komponert
+### Komponerad
 
-ler på hvordan andre komponenter kan brukes til å komponere sammen i et kort.
+Visar hur andra komponenter kan användas för att komponera tillsammans i ett kort.
 
 <Canvas of={CardStories.Composed} />
 
-## Retningslinjer for `Card`
+## Riktlinjer för `Card`
 
-`Card` passer til å gruppere innhold eller funksjonalitet som du vil skille ut fra
-resten av innholdet.
+`Card` passar för att gruppera innehåll eller funktionalitet som du vill särskilja från resten av innehållet.
 
-Dersom kortet er en link med bilde, så skal **ikke** bildet være informativt, og `alt` attributtet skal være tomt.
+Om kortet är en länk med bild ska bilden **inte** vara informativ, och `alt`-attributet ska vara tomt.
 
-Et kort skal oppfattes som en selvstendig, avgrenset enhet. Innholdet i kortet skal være helhetlig og relatert til et enkelt emne eller en destinasjon.
+Ett kort ska uppfattas som en självständig, avgränsad enhet. Innehållet i kortet ska vara helhetligt och relaterat till ett enda ämne eller en destination.
 
-Kortet skal kunne stå alene uten å være avhengig av omkringliggende elementer for kontekst. Det skal gi tilstrekkelig informasjon til å forstå det presenterte innholdet uten eksterne referanser.
+Kortet ska kunna stå ensamt utan att vara beroende av omgivande element för kontext. Det ska ge tillräckligt med information för att förstå det presenterade innehållet utan externa referenser.
 
-### Unngå
+### Undvik
 
-- å bruke for mange kort på en side, det kan skape forvirring
-- å blande for mange forskjellige typer innhold i et enkelt kort
+- att använda för många kort på en sida, det kan skapa förvirring
+- att blanda för många olika typer av innehåll i ett enda kort
 
 <br/>
 
-## Tekst i komponenten
+## Text i komponenten
 
-Unngå lange tekster på kortene. Tenk nøye gjennom hva du trenger å si og skriv en kort og presis overskrift, underoverskrift og eventuell brødtekst.
+Undvik långa texter på korten. Tänk noga igenom vad du behöver säga och skriv en kort och precis rubrik, underrubrik och eventuell brödtext.

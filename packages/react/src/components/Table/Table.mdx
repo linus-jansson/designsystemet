@@ -8,12 +8,12 @@ import { TableHeaderCell } from './';
 
 # Table
 
-Table kalles tabell på norsk. Tabeller gjør det enklere for brukerne å skanne og sammenligne informasjon.   
+Table kallas tabell på svenska. Tabeller gör det enklare för användarna att skanna och jämföra information.
 
 <Primary />
 <Controls />
 
-## Slik bruker vi table
+## Så använder vi table
 
 ```jsx
 import { Table } from '@digdir/designsystemet-react';
@@ -42,128 +42,120 @@ import { Table } from '@digdir/designsystemet-react';
 </Table>
 ```
 
-## Tabelltekster
+## Tabelltexter
 
-Bruk [`caption`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/caption) til å beskrive en tabell 
-på samme måte som vi ville brukt en overskrift.
-En tabelltekst hjelper brukerne til å finne, navigere og forstå tabeller.
-Denne plasseres rett etter `Table`-taggen.
+Använd [`caption`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/caption) för att beskriva en tabell på samma sätt som vi skulle använda en rubrik.
+En tabelltext hjälper användarna att hitta, navigera och förstå tabeller.
+Den placeras direkt efter `Table`-taggen.
 
 ```jsx
-<Table >
-  <caption>Her er tittelen på tabellen</caption>
+<Table>
+  <caption>Här är titeln på tabellen</caption>
   ...
 </Table>
 ```
 
-## Tabelloverskrifter
+## Tabellrubriker
 
-Bruk tabelloverskrifter til å fortelle brukerne hva som er innholdet i radene og kolonnene. 
-Bruk [scope-atributtet](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/th#scope) til å hjelpe brukere av hjelpeteknologi til å 
-skille mellom overskriftene på rader og kolonner.  
+Använd tabellrubriker för att tala om för användarna vad innehållet i raderna och kolumnerna är.
+Använd [scope-attributet](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/th#scope) för att hjälpa användare av hjälpmedel att skilja mellan rubriker för rader och kolumner.
 
-## Tall i en tabell
+## Tal i en tabell
 
-Når det er tall i en tabell som skal sammenlignes, plasser tallene til høyre i tabellfeltet.
+När det finns tal i en tabell som ska jämföras, placera talen till höger i tabellcellen.
 
 ## Varianter av table
 
-Tabeller kan være enkle med få rader og kolonner, eller de kan ha mye innhold med interaktive komponenter som lenker, knapper, 
-avkryssingsbokser og nedtrekkslister. 
+Tabeller kan vara enkla med få rader och kolumner, eller de kan ha mycket innehåll med interaktiva komponenter som länkar, knappar, kryssrutor och rullgardinslistor.
 
-Alle tabeller har titler på kolonner og mulighet for å sortere dataene i kolonnen. 
-Tabellen skal kunne vises i den bredden som innholdet krever.   
+Alla tabeller har rubriker för kolumner och möjlighet att sortera datan i kolumnen. 
+Tabellen ska kunna visas i den bredd som innehållet kräver.
 
 ### Sticky header
 
-Bruk `stickyHeader={true}` for å få en sticky header.
+Använd `stickyHeader={true}` för att få en fast rubrik.
 
 <Canvas of={TableStories.StickyHeader} />
 
-### Med form elementer
+### Med formelement
 
-Du kan legge inn form elementer i ein tabell, men du må håndtere logikken selv.
+Du kan lägga till formelement i en tabell, men du måste hantera logiken själv.
 
 <Canvas of={TableStories.WithFormElements} />
 
 ### Sortering
 
-`TableHeaderCell` har en `sortable` prop som kan brukes for å visa at raden er sortberbar.
-Bruk `sort` prop på `TableHeaderCell` for å indikere rekkefølgen radene er sortert.
-Bruk `onSortClick` prop for å håndtere klikk på sorterbare rader.
+`TableHeaderCell` har en `sortable` prop som kan användas för att visa att raden är sorterbar.
+Använd `sort` prop på `TableHeaderCell` för att indikera i vilken ordning raderna är sorterade.
+Använd `onSortClick` prop för att hantera klick på sorterbara rader.
 
 <Canvas of={TableStories.Sortable} />
 
 ### Fixed
 
-Du kan legge på `table-layout: fixed` for å få en tabell som ikke endrer bredden på kolonnene når innholdet endrer seg.
-Dette hjelper nettleseren til å tegne tabellen raskere, og er nyttig når du har paginering eller andre elementer som endrer innholdet i tabellen.
+Du kan lägga till `table-layout: fixed` för att få en tabell som inte ändrar bredden på kolumnerna när innehållet ändras.
+Detta hjälper webbläsaren att rita upp tabellen snabbare och är användbart när du har sidnumrering eller andra element som ändrar innehållet i tabellen.
 
 <Canvas of={TableStories.FixedTable} />
 
-## Retningslinjer for når du skal bruke table
+## Riktlinjer för när du ska använda table
 
-Vi bruker `Table` når vi skal organisere og vise data på en strukturert måte i rader og kolonner for brukerne.  
-Alt innhold bør være venstrejustert i tabeller, unntatt tall som bør høyrejusteres for at brukerne lett skal kunne sammenligne tallene.  
-For å spare plass, kan vi bruke en meny, hvis flere handlinger i en tabellrad ikke må være synlig for brukerne hele tiden. 
-I overskiftceller bruker vi `<Table.HeaderCell>`, ikke `<Table.Cell>`. En celle er en overskrift hvis den beskriver 
-innholdet i cellene under eller ved siden av.
+Vi använder `Table` när vi ska organisera och visa data på ett strukturerat sätt i rader och kolumner för användarna.  
+Allt innehåll bör vara vänsterjusterat i tabeller, förutom tal som bör vara högerjusterade för att användarna lätt ska kunna jämföra talen.  
+För att spara plats kan vi använda en meny om flera åtgärder i en tabellrad inte behöver vara synliga för användarna hela tiden. 
+I rubrikceller använder vi `<Table.HeaderCell>`, inte `<Table.Cell>`. En cell är en rubrik om den beskriver innehållet i cellerna under eller bredvid.
 
-Passer til å
-- gjøre det enkelt for brukerne å sammenligne og skanne informasjon
-- organisere og vise data på en effektiv måte i rekker og kolonner
+Passar för att
+- göra det enkelt för användarna att jämföra och skanna information
+- organisera och visa data på ett effektivt sätt i rader och kolumner
 
-Passer ikke til å 
-- lage layout for innholdet på nettsiden eller å dele opp innholdet på en side systematisk
-- vise store mengder data på mobil
+Passar inte för att
+- skapa layout för innehållet på webbplatsen eller dela upp innehållet på en sida systematiskt
+- visa stora mängder data på mobil
 
-## Tekst i komponenten
+## Text i komponenten
 
-Vi bruker overskrifter til å fortelle brukerne hva som er innholdet i radene og kolonnene.
+Vi använder rubriker för att berätta för användarna vad innehållet i raderna och kolumnerna är.
 
-Innholdet i cellene skal som regel være venstrejustert.
-Unntak som skal være høyrejustert:
-- Tall og valuta
-- Knapper
+Innehållet i cellerna ska vanligtvis vara vänsterjusterat.
+Undantag som ska vara högerjusterade:
+- Tal och valuta
+- Knappar
 
 <br />
 
-For å gjøre tabellraden lesbar på smale skjermer, skal innholdet normalt være toppjustert.
-Men hvis raden har en eller flere knapper, bruker vi sentrering.
-Overskrifter kan med fordel gjøres `sticky`, det vil si at de fortsatt blir vist, selv om brukeren ruller nedover i tabellen. 
+För att göra tabellraden läsbar på smala skärmar ska innehållet normalt vara toppjusterat.
+Men om raden har en eller flera knappar, använder vi centrering.
+Rubriker kan med fördel göras `sticky`, vilket innebär att de fortfarande visas även när användaren rullar ned i tabellen.
 
-## Tilgjengelighet
+## Tillgänglighet
 
-Selv om ulike skjermlesere håndterer tabeller litt forskjellig, har de til felles at bare en liten del
-av tabellen kan presenteres om gangen, ofte bare én celle.
-Tabellceller bør ikke slås sammen, og cellene bør kun inneholde ett interaktivt element. Da får brukerne 
-raskt oversikt over innholdet og kan sammenligne og scanne informasjonen.
+Även om olika skärmläsare hanterar tabeller lite olika, har de gemensamt att bara en liten del av tabellen kan presenteras åt gången, ofta bara en cell.
+Tabellceller bör inte slås samman, och cellerna bör endast innehålla ett interaktivt element. Då får användarna snabbt översikt över innehållet och kan jämföra och skanna informationen.
 
-Alle tabeller må ha overskrifter for hver kolonne (`<Table.HeaderCell>`). Unntaket er kolonner som inneholder kun har 
-interaktive elementer, de skal ha ledetekst. Se eksempel ["Med form elementer"](#med-form-elementer).
+Alla tabeller måste ha rubriker för varje kolumn (`<Table.HeaderCell>`). Undantaget är kolumner som bara innehåller interaktiva element, de ska ha rubrik. Se exempel ["Med formelement"](#med-form-elementer).
 
-For at brukerne skal kunne navigere i innholdet med skjermleser, må det være overskrifter i kolonnene.
-Hvis det er behov for å spare plass, kan vi visuelt skjule en eller flere overskrifter.
+För att användarna ska kunna navigera i innehållet med skärmläsare måste det finnas rubriker i kolumnerna.
+Om det finns behov av att spara plats kan vi visuellt dölja en eller flera rubriker.
 
-Det kan være vanskelig å vise tabeller på mobil, siden det ikke finnes et felles design som fungerer i alle sammenhenger.
-Noen ganger er det nødvendig å sammenligne flere kolonner vertikalt for å forstå innholdet, også på mobil.
-Andre ganger lar innholdet seg legges oppå hverandre i høyden på små skjermer uten at det går for mye ut over lesbarheten.
-Alternativt kan vi bruke en graf for å presentere innhold på mobil, dersom mulig.
+Det kan vara svårt att visa tabeller på mobil eftersom det inte finns en gemensam design som fungerar i alla sammanhang.
+Ibland är det nödvändigt att jämföra flera kolumner vertikalt för att förstå innehållet, även på mobil.
+Andra gånger kan innehållet staplas på höjden på små skärmar utan att det påverkar läsbarheten alltför mycket.
+Alternativt kan vi använda ett diagram för att presentera innehåll på mobil om möjligt.
 
-De to vanligste tabellene som brukes på mobil er
-- en tabell som ruller horisontalt
-- en tabell som blir gjort om til en listevisning
+De två vanligaste tabellerna som används på mobil är
+- en tabell som rullar horisontellt
+- en tabell som omvandlas till en listvy
 
-## Universell utforming
+## Universell utformning
 
-På små skjermer vil endre-ikon flyttes til venstre, og tabellen har horisontal scrolling ved behov. 
-- `Table.HeaderCell` skal brukes på kolonneoverskrifter. Kan også brukes på radoverskrifter for at brukerne skal kunne navigere mer 
-effektivt i tabellen med skjermleser. Husk å bruke `scope="row"` og `scope="col"`. 
-- Tomme celler skal være `Table.Cell`. 
-- Sjekk at du kan velge ulik sortering med tastatur. 
-- Test med skjermleser at du hører hva som er sorterbart, typer sortering og at du ikke mister fokus når du endrer sortering. 
-- Tabeller skal alltid ha et caption-element med kort tekst om hva tabellen viser.
-Skjermlesere vil lese caption-elementet og brukerne kan ta stilling til om de vil lese videre i tabellen.
+På små skärmar flyttas redigeringsikonen till vänster och tabellen har horisontell rullning vid behov.
+- `Table.HeaderCell` ska användas för kolumnrubriker. Kan även användas för radrubriker för att användarna ska kunna navigera mer effektivt i tabellen med skärmläsare. Kom ihåg att använda `scope="row"` och `scope="col"`.
+- Tomma celler ska vara `Table.Cell`.
+- Kontrollera att du kan välja olika sorteringsalternativ med tangentbordet.
+- Testa med skärmläsare att du hör vad som är sorterbart, vilka sorteringsalternativ som finns och att du inte tappar fokus när du ändrar sorteringsordning.
+- Tabeller ska alltid ha ett caption-element med en kort text om vad tabellen visar.
+Skärmläsare kommer att läsa upp caption-elementet och användarna kan avgöra om de vill läsa vidare i tabellen.
 
 ## `TableHeaderCell` Props
 

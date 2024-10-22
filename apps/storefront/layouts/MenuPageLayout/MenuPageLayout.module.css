@@ -40,6 +40,11 @@
   margin-top: var(--ds-spacing-3);
 }
 
+.date-last-updated {
+  margin-top: var(--ds-spacing-1);
+  opacity: 75%;
+}
+
 .iconContainer {
   position: absolute;
   right: 0;

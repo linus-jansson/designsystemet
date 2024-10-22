@@ -21,7 +21,7 @@ jobs:
       - name: Build packages
         run: yarn dlx turbo build --filter="./packages/*"
       - name: Build storefront
-        run: yarn dlx turbo dev --filter=@apps/storefront
+        run: yarn dlx turbo build --filter=@apps/storefront
       - name: Types
         run: yarn types:storefront
 

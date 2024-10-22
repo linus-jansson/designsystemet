@@ -10,93 +10,88 @@ import * as CheckboxGroupStories from './CheckboxGroup.stories';
 
 # Checkbox
 
-Vi bruker `Checkbox` (avmerkingsboks) for å gi brukerne valg, der de kan velge ett eller flere alternativer. Brukerne kan både velge og oppheve valgene de gjør. Bruk [`Checkbox.Group`](#checkboxgroup) til å gruppere flere valg.
+Vi använder `Checkbox` (kryssruta) för att ge användarna val där de kan välja ett eller flera alternativ. Användarna kan både välja och avmarkera de val de gör. Använd [`Checkbox.Group`](#checkboxgroup) för att gruppera flera val.
 
 <Primary />
 <Controls />
 
-## Slik bruker du checkbox
+## Så använder du checkbox
 
 ```tsx
 import { Checkbox } from '@digdir/designsystemet-react';
 
-<Checkbox.Group legend='What would your D&D party like to eat?'>
-  <Checkbox value='elfsalad'>Wood Elf forest salad</Checkbox>
-  <Checkbox value='firecakes'>Fire breath rice cakes</Checkbox>
-  <Checkbox value='dumplings'>Chicken-something dumplings</Checkbox>
-  <Checkbox value='ribs'>Sembian honey-glazed rothè ribs</Checkbox>
+<Checkbox.Group legend='Vad vill din D&D-grupp äta?'>
+  <Checkbox value='elfsalad'>Alvskogens sallad</Checkbox>
+  <Checkbox value='firecakes'>Eldandade riskakor</Checkbox>
+  <Checkbox value='dumplings'>Kyckling-dumplings</Checkbox>
+  <Checkbox value='ribs'>Sembianska honungsglaserade rothè-revben</Checkbox>
 </Checkbox.Group>;
 ```
 
-## Eksempler
+## Exempel
 
 <br />
 
-### Kun ett valg
+### Endast ett val
 
-Hvis brukeren skal bekrefte noe, men ikke velge noe, kan en `checkbox` stå alene. For eksempel når brukeren skal samtykke til vilkår.
+Om användaren ska bekräfta något men inte välja något kan en `checkbox` stå ensam. Till exempel när användaren ska samtycka till villkor.
 
 <Canvas of={CheckboxGroupStories.OneOption} />
 
-### Ubestemt
+### Obestämd
 
-Bruk `indeterminate` til å signalisere at en eller flere sjekkbokser er markert i gruppen.
+Använd `indeterminate` för att signalera att en eller flera kryssrutor är markerade i gruppen.
 
 <Canvas of={TableStories.WithFormElements} />
 
 ### Checkbox.Group
 
-Bruk `Checkbox.Group` for gruppering av flere valg.
+Använd `Checkbox.Group` för att gruppera flera val.
 
 <Canvas of={CheckboxGroupStories.Preview} />
 <Controls of={CheckboxGroupStories.Preview} />
 
-#### Feilmelding
+#### Felmeddelande
 
-Bruk `error` på `Checkbox.Group` for å vise feilmelding.
+Använd `error` på `Checkbox.Group` för att visa ett felmeddelande.
 
-Her må du bruke `Checkbox.Group` for å gjøre innholdet tilgjengelig og aktivere riktig stil.
+Här måste du använda `Checkbox.Group` för att göra innehållet tillgängligt och aktivera rätt stil.
 
 <Canvas of={CheckboxGroupStories.WithError} />
 
-#### Kontrollert
+#### Kontrollerad
 
-Bruk `value` på `Checkbox.Group` for å kontrollere verdiene selv.
+Använd `value` på `Checkbox.Group` för att själv kontrollera värdena.
 
 <Canvas of={CheckboxGroupStories.Controlled} />
 
 #### Readonly
 
-Felter med `readonly`-attributtet er med i tabrekkefølgen. Brukerne kan kopiere innholdet men ikke redigere det. Informasjon blir med når skjemaet sendes inn.
+Fält med attributet `readonly` ingår i tabbsekvensen. Användarna kan kopiera innehållet men inte redigera det. Informationen följer med när formuläret skickas in.
 
-`Readonly`-felter kan være forvirrende for noen brukere. Ikke alle vil skjønne hvorfor de ikke får til å endre innholdet i feltet. Vi anbefaler derfor å unngå readonly så langt det lar seg gjøre.
+`Readonly`-fält kan vara förvirrande för vissa användare. Alla förstår inte varför de inte kan ändra innehållet i fältet. Vi rekommenderar därför att undvika readonly så långt det går.
 
 <Canvas of={CheckboxGroupStories.ReadOnly} />
 
 #### Disabled
 
-Unngå deaktiverte tilstander om du kan. De har lav fargekontrast som er problematisk for noen brukere. `Disabled` kan ikke møte kontrastkravene, for da kan brukeren tro at elementet er aktivt, prøve å trykke på det, og ikke skjønne hvorfor det ikke går.
+Undvik inaktiverade tillstånd om du kan. De har låg färgkontrast som är problematisk för vissa användare. `Disabled` kan inte uppfylla kontrastkraven, vilket kan få användaren att tro att elementet är aktivt, försöka klicka på det och inte förstå varför det inte fungerar.
 
 <Canvas of={CheckboxGroupStories.Disabled} />
 
 <br />
 
-## Retningslinjer for checkbox
+## Riktlinjer för checkbox
 
-Hvis det er flere enn 7 svaralternativer, bruk [`Select`](/docs/komponenter-select--docs) eller [`Combobox`](/docs/komponenter-combobox--docs) istedenfor.
+Om det finns fler än 7 svarsalternativ, använd istället [`Select`](/docs/komponenter-select--docs) eller [`Combobox`](/docs/komponenter-combobox--docs).
 
 ### Sortering
 
-Alternativene skal som hovedregel sorteres alfabetisk. Velger du å
-presentere de mest aktuelle alternativene først kan det bli vanskelig å finne ønsket
-alternativ. Du kan også risikere å påvirke svaret, noe som er uheldig.
+Alternativen ska som regel sorteras alfabetiskt. Om du väljer att presentera de mest relevanta alternativen först kan det bli svårt att hitta det önskade alternativet. Du riskerar också att påverka svaret, vilket inte är önskvärt.
 
-### Plassering
+### Placering
 
-`Checkbox` skal som hovedregel kun plasseres vertikalt, av hensyn
-til lesbarhet. Det er enklere for brukere å skanne listen når alternativene ligger
-under hverandre. For brukere som trenger å forstørre (zoome inn) nettsiden for å
-se godt nok, er en horisontal liste ekstra vanskelig.
+`Checkbox` ska som regel endast placeras vertikalt, med hänsyn till läsbarheten. Det är lättare för användarna att skanna listan när alternativen ligger under varandra. För användare som behöver zooma in på sidan för att se ordentligt är en horisontell lista extra svår.
 
 <Stack
   direction='row'
@@ -106,47 +101,46 @@ se godt nok, er en horisontal liste ekstra vanskelig.
   }}
 >
   <Do
-    description='Plasser checkboxes vertikalt, slik at listen blir lettere å lese. '
+    description='Placera kryssrutorna vertikalt, så att listan blir lättare att läsa.'
     image='/img/component-guidelines/checkbox/CheckboxGroupV.png'
   />
   <Dont
-    description='Du bør unngå å plassere checkboxes i flere kolonner.'
+    description='Undvik att placera kryssrutorna i flera kolumner.'
     image='/img/component-guidelines/checkbox/CheckboxGroupH.png'
   />
 </Stack>
 
 <br />
 
-## Tekst i checkbox
+## Text i checkbox
 
-I et skjema er ofte forklaringen formulert som et spørsmål. Vurder om du trenger å ha med informasjon om at brukeren kan velge flere svaralternativer.
+I ett formulär formuleras ofta förklaringen som en fråga. Överväg om du behöver inkludera information om att användaren kan välja flera svarsalternativ.
 
-Bruk et aktivt og positivt språk. Tenk på innholdet som en samtale. Når `legend`
-er en setning, kan du skrive den i du-form og svaralternativene (`label`) i jeg-form.
+Använd ett aktivt och positivt språk. Tänk på innehållet som en konversation. När `legend` är en mening kan du skriva den i du-form och svarsalternativen (`label`) i jag-form.
 
-- `legend` og eventuell `description` plasseres før listen med svaralternativ kommer.
-- `label` til hver boks må beskrive alternativet.
-- `label` skal stå til høyre for boksen. Hvis det er nødvendi med ekstra beskrivelse, kan du ha en `description` under `label` .
-- `label` skal alltid ha stor forbokstav.
+- `legend` och eventuell `description` placeras innan listan med svarsalternativ visas.
+- `label` för varje ruta måste beskriva alternativet.
+- `label` ska stå till höger om rutan. Om det behövs en extra beskrivning kan du lägga en `description` under `label`.
+- `label` ska alltid ha versal första bokstav.
 
 <img
   src='/img/component-guidelines/checkbox/checkbox-anatomy.png'
-  alt='Illustrasjonen viser hva som er legend, description og label i en gruppe med avmerkingsbokser.'
+  alt='Illustrationen visar vad som är legend, description och label i en grupp med kryssrutor.'
 />
 
-### Lag logisk sammenheng mellom forklaringen og svaralternativene
+### Skapa logisk sammanhang mellan förklaringen och svarsalternativen
 
-Brukeren skal kunne lese hvert svaralternativ som en logisk respons på forklaringen over boksene.
+Användaren ska kunna läsa varje svarsalternativ som en logisk respons på förklaringen ovanför rutorna.
 
-Eksempel på riktig logisk sammenheng:
+Exempel på korrekt logisk sammanhang:
 
 <Canvas of={CheckboxGroupStories.ContentEx1} />
 
-### Gi svaralternativene samme språklige form
+### Ge svarsalternativen samma språkliga form
 
-Det betyr at de kan ha enten fullstendige setninger eller ett ord, ikke begge deler.
+Det innebär att de kan ha antingen fullständiga meningar eller ett ord, men inte båda.
 
-**Enten:**
+**Antingen:**
 
 <Canvas of={CheckboxGroupStories.ContentEx2} />
 
@@ -156,13 +150,12 @@ Det betyr at de kan ha enten fullstendige setninger eller ett ord, ikke begge de
 
 <br />
 
-## Tilgjengelighet
+## Tillgänglighet
 
-Det skal være mulig å flytte fokus til `Checkbox`, ved å trykke `Tab` på tastaturet. Det skal være mulig å merke og fjerne avmerking ved å trykke `Space`.
+Det ska vara möjligt att flytta fokus till `Checkbox` genom att trycka på `Tab` på tangentbordet. Det ska vara möjligt att markera och avmarkera genom att trycka på `Space`.
 
-### Bruk label
+### Använd label
 
-`Checkbox` skal alltid ha en `label`. Bruker du `label` fra en annen plass, husk da å bruke `aria-label` eller `aria-labelledby` (Se kode under).
+`Checkbox` ska alltid ha en `label`. Om du använder `label` från en annan plats, kom ihåg att använda `aria-label` eller `aria-labelledby` (Se koden nedan).
 
 <Canvas of={CheckboxStories.Single} />
-./Group.stories

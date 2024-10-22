@@ -8,20 +8,17 @@ import * as ValidationMessageStories from '../src/components/ValidationMessage/V
 
 <Meta of={typographyStories} />
 
-# Typography
+# Typografi
 
-Typografi er en viktig del av det å bygge opp innhold på en nettside. Det er avgjørende
-at tekst blir brukt konsekvent på tvers av et nettsted slik at brukeren enkelt kan
-prosessere informasjonen som er der. Typografien er delt inn i fire kategorier som er
-ment å dekke alle behov som måtte dukke opp på et nettsted:
+Typografi är en viktig del av att bygga upp innehåll på en webbplats. Det är avgörande att text används konsekvent över hela webbplatsen så att användaren enkelt kan bearbeta informationen som finns där. Typografin är uppdelad i fyra kategorier som är tänkta att täcka alla behov som kan uppstå på en webbplats:
 
-## Bruk
+## Användning
 
-Typografikomponentene kommer med hverken innebygd eller definert font-familie. Det er opp til bruker å selv å importere ønsket font.
+Typografikomponenterna kommer utan inbyggt eller definierat typsnitt. Det är upp till användaren att själv importera önskat typsnitt.
 
-Vi anbefaler å bruke fonten [Inter](https://rsms.me/inter/) da det er denne fonten komponentene i designsystemet har blitt designet og testet med. Inter er en skrifttype spesielt designet for god lesbarhet på dataskjermer.
+Vi rekommenderar att använda typsnittet [Inter](https://rsms.me/inter/) eftersom det är det typsnitt som komponenterna i designsystemet har designats och testats med. Inter är ett typsnitt speciellt designat för god läsbarhet på datorskärmar.
 
-Den er tilgjengelig i Altinn CDN.
+Det är tillgängligt i Altinn CDN.
 
 ```html
 <link
@@ -30,7 +27,7 @@ Den er tilgjengelig i Altinn CDN.
 />
 ```
 
-Til `font-family` anbefaler vi følgende sammensetning med fallback til `Arial`.
+För `font-family` rekommenderar vi följande sammansättning med fallback till `Arial`.
 
 ```css
 font-family: 'Inter', Arial, sans-serif;
@@ -38,25 +35,25 @@ font-family: 'Inter', Arial, sans-serif;
 
 ## Heading
 
-Alle oversikrifter skal bruke `Heading`-komponenten. Dette er tekst med en tyngre font-vektning og større font-størrelse som grupperer innhold som kommer under.
+Alla rubriker ska använda komponenten `Heading`. Detta är text med en tyngre fontvikt och större teckenstorlek som grupperar innehåll som följer.
 
-Det skal kun vere 1 `<h1>` tag per side, men det kan vere flere h2-h6. Det er viktig at heading-hirarkiet på en side går logisk fra `<h1>` og nedover både når det kommer til størrelse og rekkefølge (se bruk).
+Det ska endast finnas 1 `<h1>`-tagg per sida, men det kan finnas flera h2-h6. Det är viktigt att rubrikhierarkin på en sida går logiskt från `<h1>` och nedåt både vad gäller storlek och ordning (se användning).
 
-H1 trenger ikke vere samme størrelse på alle nettsider. I en intern admin applikasjon kan H1 for eksempel vere 36px, mens på en annen nettside 44px. Det som er viktig er at H1-H6 skalerer logiske nedover i størrelse.
+H1 behöver inte vara samma storlek på alla webbplatser. I en intern admin-applikation kan H1 till exempel vara 36px, medan på en annan webbplats 44px. Det viktiga är att H1-H6 logiskt minskar i storlek.
 
 <Canvas of={HeadingStories.Preview} />
 <Controls of={HeadingStories.Preview} />
 
 ## Paragraph
 
-Brukes når det trengs tekst over flere linjer. Mesteparten av teksten på et nettsted vil bruke `Paragraph`.
+Används när det behövs text över flera rader. Det mesta av texten på en webbplats kommer att använda `Paragraph`.
 
 <Canvas of={ParagraphStories.Preview} />
 <Controls of={ParagraphStories.Preview} />
 
 ## Label
 
-`Label` blir brukt for å framheve tekst, ofte sammen med `Paragraph`. Den har mindre linjehøyde enn `Paragraph`, og fungerer slik fint inne i komponenter. Ofte brukt som navn på skjemakomponenter.
+`Label` används för att framhäva text, ofta tillsammans med `Paragraph`. Den har mindre radavstånd än `Paragraph` och fungerar därför bra inuti komponenter. Ofta används den som namn på formulärkomponenter.
 
 <Canvas of={LabelStories.Preview} />
 <Controls of={LabelStories.Preview} />
@@ -66,10 +63,10 @@ Brukes når det trengs tekst over flere linjer. Mesteparten av teksten på et ne
 <Canvas of={ValidationMessageStories.Preview} />
 <Controls of={ValidationMessageStories.Preview} />
 
-## Eksempel
+## Exempel
 
-<Canvas of={typographyStories.EksempelTekst} />
+<Canvas of={typographyStories.ExempelText} />
 
-Vi endrer `color` og `background-color` for deg når du setter `data-ds-color-mode`.
+Vi ändrar `color` och `background-color` åt dig när du sätter `data-ds-color-mode`.
 
-<Canvas of={typographyStories.EksempelTekstDark} />
+<Canvas of={typographyStories.ExempleTextDark} />
