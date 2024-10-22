@@ -6,19 +6,19 @@ import * as BreadcrumbsStories from './Breadcrumbs.stories';
 
 # Breadcrumbs
 
-`Breadcrumb` er en navigasjon med synlig søkebane. Vi bruker denne komponenten til å hjelpe brukerne å forstå 
-hvor de er i en struktur, for eksempel på en nettside. Da kan de lettere bytte mellom de ulike nivåene i strukturen.
+`Breadcrumb` är en navigering med en synlig sökväg. Vi använder denna komponent för att hjälpa användarna att förstå 
+var de befinner sig i en struktur, till exempel på en webbplats. Det gör det lättare för dem att byta mellan de olika nivåerna i strukturen.
 
 <Primary />
 <Controls of={BreadcrumbsStories.Preview} />
 
-## Slik bruker du `Breadcrumb`
+## Så använder du `Breadcrumb`
 
-Den siste lenken i brødsmulestien blir automatisk markert med `aria-current="page"`.
+Den sista länken i brödsmulespåret markeras automatiskt med `aria-current="page"`.
 
 ```tsx
-<Breadcrumbs aria-label="Du er her:">
-  <Breadcrumbs.Link aria-label="Tilbake til nivå 3">Nivå 3</Breadcrumbs.Link>
+<Breadcrumbs aria-label="Du är här:">
+  <Breadcrumbs.Link aria-label="Tillbaka till nivå 3">Nivå 3</Breadcrumbs.Link>
   <Breadcrumbs.List>
     <Breadcrumbs.Item>
       <Breadcrumbs.Link href="https://designsystemet.no/">Nivå 1</Breadcrumbs.Link>
@@ -32,48 +32,47 @@ Den siste lenken i brødsmulestien blir automatisk markert med `aria-current="pa
 
 ## Varianter av `Breadcrumb`
 
-### Kun tilbake-knapp
+### Endast tillbaka-knapp
 
-Hvis du legger en `Breadcrumbs.Link` som direkte barn av `Breadcrumbs`, vil denne lenken vises som en tilbake-knapp. Det er viktig at du er konsistent i din løsning og bruker enten tilbake-knapp eller sti. 
+Om du lägger en `Breadcrumbs.Link` som direkt barn till `Breadcrumbs`, kommer denna länk att visas som en tillbaka-knapp. Det är viktigt att du är konsekvent i din lösning och använder antingen tillbaka-knapp eller sökväg.
 
 <Canvas of={BreadcrumbsStories.BackOnly} />
 
-### Kun sti
+### Endast sökväg
 
-Hvis du legger en `Breadcrumbs.List` som direkte barn av `Breadcrumbs`, vil denne vises som en sti.
+Om du lägger en `Breadcrumbs.List` som direkt barn till `Breadcrumbs`, kommer denna att visas som en sökväg.
 
 <Canvas of={BreadcrumbsStories.ListOnly} />
 
-### Både sti på desktop og tilbake-knapp på mobil
+### Både sökväg på skrivbord och tillbaka-knapp på mobil
 
-Hvis du legger både en `Breadcrumbs.Link` som direkte barn av `Breadcrumbs` og en `Breadcrumbs.List`, vil tilbake-knapp vises på mobil, og sti vises på desktop.
+Om du lägger både en `Breadcrumbs.Link` som direkt barn till `Breadcrumbs` och en `Breadcrumbs.List`, kommer tillbaka-knappen att visas på mobil, och sökvägen visas på skrivbord.
 
 <Canvas of={BreadcrumbsStories.Preview} />
 
-## Retningslinjer
+## Riktlinjer
 
-En navigasjon med synlig søkebane vises vanligvis høyt oppe på nettsiden, gjerne rett under sidetittelen.
+En navigering med en synlig sökväg visas vanligtvis högt upp på webbplatsen, gärna direkt under sidtiteln.
 
-Det er først når det er tre eller flere nivåer at det er behov for en brødsmulesti.
+Det är först när det finns tre eller fler nivåer som det behövs en brödsmulesti.
 
-
-Vi bruker **ikke** brødsmulestier til lineær navigasjon, for eksempel for de ulike stegene i en arbeidsflyt et skjema.
+Vi använder **inte** brödsmulestigar för linjär navigering, till exempel för de olika stegen i ett arbetsflöde i ett formulär.
 <br/>
-### Plassering
-Brødsmulestien skal alltid plasseres øverst på venstre del av siden. Den skal være under menyen og hovednavigasjonen, men over sidetittelen. 
+### Placering
+Brödsmulestigen ska alltid placeras högst upp till vänster på sidan. Den ska vara under menyn och huvudnavigeringen, men ovanför sidtiteln.
 
-Hvis vi bruker `Breadcrumbs` i applikasjoner, skal vi vise den på alle sider som ikke er forsiden. Alle elementene i 
-brødsmulestien skal være lenker, men siden brukerne står på, skal se ut som vanlig tekst.
+Om vi använder `Breadcrumbs` i applikationer, ska vi visa den på alla sidor som inte är förstasidan. Alla element i 
+brödsmulestigen ska vara länkar, men sidan användarna befinner sig på ska se ut som vanlig text.
 
-## Tilgjengelighet
+## Tillgänglighet
 
-Det skal være enkelt for brukerne å benytte seg av brødsmulestien. Pass derfor på at det ikke ligger andre interaktive elementer for nær den.
+Det ska vara enkelt för användarna att använda brödsmulestigen. Se därför till att inga andra interaktiva element ligger för nära den.
 
-`Breadcrumbs` kan ha flere interaktive elementer som må navigeres over med tastaturet. 
-Pass derfor på at du legger inn at [`SkipLink`](/docs/komponenter-skiplink--docs) til 
-hovedinnholdet også skal hoppe over brødsmulestien.
+`Breadcrumbs` kan ha flera interaktiva element som måste navigeras över med tangentbordet.
+Se därför till att lägga in att [`SkipLink`](/docs/komponenter-skiplink--docs) till 
+huvudinnehållet också ska hoppa över brödsmulestigen.
 <br/>
-### Skjule brødsmulestien på mobil
+### Dölja brödsmulestigen på mobil
 
-Hvis du har lang navigasjon, kan du sette opp komponenten til bare å vise første og siste del av søkebanen på mobil. 
-Dette skjer automatisk på skjermer under 650px, hvor vi kun viser link ned et nivå.
+Om du har lång navigering kan du konfigurera komponenten så att den endast visar den första och sista delen av sökvägen på mobil. 
+Detta sker automatiskt på skärmar under 650px, där vi bara visar länken ner en nivå.

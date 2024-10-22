@@ -1,192 +1,102 @@
 export const SiteConfig = {
   menu: [
     {
-      name: 'Grunnleggende',
-      url: 'grunnleggende',
+      name: 'Grundläggande',
+      url: 'docs/basics',
       children: [
         {
-          name: 'Introduksjon',
-          url: 'grunnleggende/introduksjon',
+          name: 'Introduktion',
+          url: 'docs/basics/introduction',
           children: [
             {
               name: 'Om designsystemet',
-              url: 'grunnleggende/introduksjon/om-designsystemet',
+              url: 'docs/basics/introduction/about',
             },
             {
-              name: 'Verdier',
-              url: 'grunnleggende/introduksjon/verdier',
+              name: 'Designprinciper',
+              url: 'docs/basics/introduction/design-principles',
             },
             {
-              name: 'Designprinsipper',
-              url: 'grunnleggende/introduksjon/designprinsipper',
+              name: 'Tillgänglighet',
+              url: 'docs/basics/introduction/a11y',
             },
             {
-              name: 'Tilgjengelighet',
-              url: 'grunnleggende/introduksjon/tilgjengelighet',
-            },
-            {
-              name: 'Slack',
-              url: 'grunnleggende/introduksjon/slack',
+              name: 'Värderingar',
+              url: 'docs/basics/introduction/values',
             },
           ],
         },
         {
-          name: 'Designelementer',
-          url: 'grunnleggende/designelementer',
+          name: 'Designelement',
+          url: 'docs/basics/design-elements',
           children: [
             {
               name: 'Design tokens',
-              url: 'grunnleggende/designelementer/design-tokens',
+              url: 'docs/basics/design-elements/design-tokens',
             },
             {
-              name: 'Farger',
-              url: 'grunnleggende/designelementer/farger',
+              name: 'Färger',
+              url: 'docs/basics/design-elements/colors',
             },
             {
               name: 'Ikoner',
-              url: 'grunnleggende/designelementer/ikoner',
+              url: 'docs/basics/design-elements/icons',
             },
             {
-              name: 'Skygger',
-              url: 'grunnleggende/designelementer/skygger',
+              name: 'Skuggor',
+              url: 'docs/basics/design-elements/shadows',
             },
             {
               name: 'Typografi',
-              url: 'grunnleggende/designelementer/typografi',
+              url: 'docs/basics/design-elements/typography',
             },
             {
-              name: 'Størrelser og avstander',
-              url: 'grunnleggende/designelementer/storrelser-og-avstander',
+              name: 'Margins och paddings',
+              url: 'docs/basics/design-elements/size-and-margins',
             },
           ],
         },
         {
-          name: 'For designere',
-          url: 'grunnleggende/for-designere',
+          name: 'For designers',
+          url: 'docs/basics/for-designers',
           children: [
             {
-              name: 'Kom i gang',
-              url: 'grunnleggende/for-designere/kom-i-gang',
+              name: 'Kom i gång',
+              url: 'docs/basics/for-designers/getting-started',
             },
             {
               name: 'Eget tema',
-              url: 'grunnleggende/for-designere/eget-tema',
+              url: 'docs/basics/for-designers/creating-a-theme',
             },
             {
-              name: 'Fargesystem',
-              url: 'grunnleggende/for-designere/fargesystem',
+              name: 'Färgsystem',
+              url: 'docs/basics/for-designers/colorsystem',
             },
-            {
-              name: 'Hent oppdateringer',
-              url: 'grunnleggende/for-designere/hent-oppdateringer',
-            },
+            // {
+            //   name: 'Hent oppdateringer',
+            //   url: 'docs/basics/for-designers/hent-oppdateringer',
+            // },
             {
               name: 'Bidra med design',
-              url: 'grunnleggende/for-designere/bidra-i-figma',
+              url: 'docs/basics/for-designers/contribute',
             },
           ],
         },
         {
-          name: 'For utviklere',
-          url: 'grunnleggende/for-utviklere',
+          name: 'För utvecklare',
+          url: 'docs/basics/for-utviklere',
           children: [
             {
-              name: 'Kom i gang',
-              url: 'grunnleggende/for-utviklere/kom-i-gang',
+              name: 'Kom i gång',
+              url: 'docs/basics/for-developers/getting-started',
             },
             {
-              name: 'Komposisjon',
-              url: 'grunnleggende/for-utviklere/komposisjon',
-            },
-          ],
-        },
-      ],
-    },
-    {
-      name: 'God praksis',
-      url: 'god-praksis',
-      children: [
-        {
-          name: 'Brukerinnsikt',
-          url: 'god-praksis/brukerinnsikt',
-          children: [
-            {
-              name: 'Felles innsiktsbibliotek',
-              url: 'god-praksis/brukerinnsikt/felles-innsiktsbase',
-            },
-          ],
-        },
-        {
-          name: 'Tilgjengelighet',
-          url: 'god-praksis/tilgjengelighet',
-          children: [
-            {
-              name: 'Forstå synsnedsettelse',
-              url: 'god-praksis/tilgjengelighet/forsta-synsnedsettelse',
+              name: 'Komposition',
+              url: 'docs/basics/for-developers/composition',
             },
             {
-              name: 'Kontrast',
-              url: 'god-praksis/tilgjengelighet/kontrast',
-            },
-          ],
-        },
-        {
-          name: 'Innhold',
-          url: 'god-praksis/innholdsarbeid',
-          children: [
-            {
-              name: 'Skriveråd',
-              url: 'god-praksis/innholdsarbeid/skriverad',
-            },
-            {
-              name: 'Skumlesing',
-              url: 'god-praksis/innholdsarbeid/skumlesing',
-            },
-          ],
-        },
-      ],
-    },
-    {
-      name: 'Mønstre',
-      url: 'monstre',
-      children: [
-        {
-          name: 'Ferdig',
-          url: 'monstre/brukeroppgaver',
-          children: [
-            {
-              name: 'Obligatoriske felt *',
-              url: 'monstre/obligatoriske-og-valgfrie-felt',
-            },
-            {
-              name: 'Feilmeldinger *',
-              url: 'monstre/feilmeldinger',
-            },
-          ],
-        },
-        {
-          name: 'Kommende',
-          url: 'monstre/skjema',
-          children: [
-            {
-              name: 'Systemvarsler *',
-              url: 'monstre/systemvarsler',
-            },
-            {
-              name: 'Dato',
-              url: 'monstre/dato',
-            },
-            {
-              name: 'Innlogging',
-              url: 'monstre/innlogging',
-            },
-            {
-              name: 'Navigering',
-              url: 'monstre/navigering',
-            },
-            {
-              name: 'Ofte brukte handlinger',
-              url: 'monstre/handlinger',
+              name: 'Bidra med kod',
+              url: 'docs/basics/for-developers/contribute',
             },
           ],
         },

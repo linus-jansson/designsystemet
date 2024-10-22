@@ -9,33 +9,33 @@ import * as TabsStories from './Tabs.stories';
 
 # Tabs
 
-Tabs lar brukerne navigere mellom relaterte deler av innholdet, der én del vises om gangen.
+Tabs låter användarna navigera mellan relaterade delar av innehållet, där en del visas åt gången.
 
 <Primary />
 <Controls />
 
-## Bruk
+## Användning
 
 ```tsx
 import { Tabs } from '@digdir/designsystemet-react';
 
 <Tabs defaultValue='value1'>
   <Tabs.List>
-    <Tabs.Tab value='value1'>Tab 1</Tabs.Tab>
-    <Tabs.Tab value='value2'>Tab 2</Tabs.Tab>
-    <Tabs.Tab value='value3'>Tab 3</Tabs.Tab>
+    <Tabs.Tab value='value1'>Flik 1</Tabs.Tab>
+    <Tabs.Tab value='value2'>Flik 2</Tabs.Tab>
+    <Tabs.Tab value='value3'>Flik 3</Tabs.Tab>
   </Tabs.List>
-  <Tabs.Panel value='value1'>content 1</Tabs.Panel>
-  <Tabs.Panel value='value2'>content 2</Tabs.Panel>
-  <Tabs.Panel value='value3'>content 3</Tabs.Panel>
+  <Tabs.Panel value='value1'>innehåll 1</Tabs.Panel>
+  <Tabs.Panel value='value2'>innehåll 2</Tabs.Panel>
+  <Tabs.Panel value='value3'>innehåll 3</Tabs.Panel>
 </Tabs>;
 ```
 
-## Icons only
+## Endast ikoner
 
 <Canvas of={TabsStories.IconsOnly} />
 
-## Controlled
+## Kontrollerad
 
 <Canvas of={TabsStories.Controlled} />
 
@@ -53,12 +53,12 @@ import { Tabs } from '@digdir/designsystemet-react';
 
 <ArgTypes of={TabsPanel} />
 
-### Størrelse på ikon
+### Storlek på ikon
 
-Når du bruker ikon må du sette størrelsen på ikonet selv. Vi anbefaler å bruke disse størrelsene for [Aksel](https://aksel.nav.no/ikoner) sine ikoner:
+När du använder en ikon måste du själv sätta storleken på ikonen. Vi rekommenderar att du använder följande storlekar för [Aksel](https://aksel.nav.no/ikoner) sina ikoner:
 
-| Størrelse på Tab | Aksel Ikon `fontSize` |
-| :--------------- | :-------------------- |
-| sm               | 1.25rem               |
-| md               | 1.75rem               |
-| lg               | 2.25rem               |
+| Storlek på Tab  | Aksel Ikon `fontSize`   |
+| :-------------- | :--------------------- |
+| sm              | 1.25rem                |
+| md              | 1.75rem                |
+| lg              | 2.25rem                |

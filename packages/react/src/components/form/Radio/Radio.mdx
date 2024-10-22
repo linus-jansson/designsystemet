@@ -7,119 +7,118 @@ import * as RadioGroupStories from './RadioGroup.stories';
 
 # Radio
 
-`Radio` viser brukeren en liste med alternativer de kan velge mellom. Brukerne kan bytte mellom alternativene, men må velge ett. Bruk `Radio.Group` for å gruppere alternativknappene.
+`Radio` visar användaren en lista med alternativ som de kan välja mellan. Användarna kan växla mellan alternativen men måste välja ett. Använd `Radio.Group` för att gruppera radioknapparna.
 
 <Primary />
 <Controls />
 
-## Slik bruker du radio
+## Så använder du radio
 
 ```tsx
 import { Radio } from '@digdir/designsystemet-react';
 
-<Radio.Group legend='Er du over 18 år?'>
+<Radio.Group legend='Är du över 18 år?'>
   <Radio value='Ja'>Ja</Radio>
-  <Radio value='Ne'>Nei</Radio>
+  <Radio value='Nej'>Nej</Radio>
 </Radio.Group>;
 ```
 
-## Eksempler
+## Exempel
 
 <br />
 
 ### Enkel radio
 
-`Radio` skal alltid ha en `label`. Når du bruker `label` fra en annen plass, husk å bruke `aria-label` eller `aria-labelledby`.
+`Radio` ska alltid ha en `label`. När du använder `label` från en annan plats, kom ihåg att använda `aria-label` eller `aria-labelledby`.
 
 <Canvas of={RadioStories.Single} />
 
 ## `Radio.Group`
 
-Bruk `Radio.Group` for gruppering av alternativknapper.
+Använd `Radio.Group` för att gruppera radioknappar.
 
 <Canvas of={RadioGroupStories.Preview} />
 <Controls of={RadioGroupStories.Preview} />
 
-### Feilmelding
+### Felmeddelande
 
-Bruk `error` på `Radio.Group` for å vise feilmelding.
+Använd `error` på `Radio.Group` för att visa ett felmeddelande.
 
-Her må vi bruke `Radio.Group`, fordi den aktiverer riktig stil og sørger for at innholdet har de riktige attributtene for tilgjengelighet.
+Här måste vi använda `Radio.Group`, eftersom den aktiverar rätt stil och säkerställer att innehållet har rätt attribut för tillgänglighet.
 
 <Canvas of={RadioGroupStories.WithError} />
 
-### Kontrollert
+### Kontrollerad
 
-Bruk `value` på `Radio.Group` for å kontrollere verdiene selv.
+Använd `value` på `Radio.Group` för att kontrollera värdena själv.
 
 <Canvas of={RadioGroupStories.Controlled} />
 
 ### Readonly
 
-Felter med `readonly`-attributtet er med i tabrekkefølgen. Brukerne kan kopiere innholdet men ikke redigere det. Informasjon blir med når skjemaet sendes inn.
+Fält med attributet `readonly` ingår i tabbsekvensen. Användarna kan kopiera innehållet men inte redigera det. Informationen följer med när formuläret skickas in.
 
-`readonly`-felter kan være forvirrende for noen brukere. Ikke alle vil skjønne hvorfor de ikke får til å endre innholdet i feltet. Vi anbefaler derfor å unngå `readonly` så langt det lar seg gjøre.
+`readonly`-fält kan vara förvirrande för vissa användare. Alla förstår inte varför de inte kan ändra innehållet i fältet. Vi rekommenderar därför att undvika `readonly` så långt det går.
 
 <Canvas of={RadioGroupStories.ReadOnly} />
 
 ### Disabled
 
-Unngå deaktiverte tilstander om du kan. De har lav fargekontrast som er problematisk for noen brukere. `disabled` kan ikke møte kontrastkravene, for da kan brukeren tro at elementet er aktivt, prøve å trykke på det, og ikke skjønne hvorfor det ikke går.
+Undvik inaktiverade tillstånd om möjligt. De har låg färgkontrast vilket är problematiskt för vissa användare. `disabled` kan inte uppfylla kontrastkraven, och användaren kan tro att elementet är aktivt, försöka klicka på det och inte förstå varför det inte fungerar.
 
 <Canvas of={RadioGroupStories.Disabled} />
 
 ### Inline
 
-Bruk `inline` for å plassere alternativene på samme linje. Anbefales kun dersom du har to alternativer og korte `label`s.
-Bruk `inline` for å plassere alternativene på samme linje. Anbefales kun dersom du har to alternativer og korte `labels`.
+Använd `inline` för att placera alternativen på samma rad. Rekommenderas endast om du har två alternativ och korta `label`s.
 
 <Canvas of={RadioGroupStories.Inline} />
 
-## Retningslinjer
+## Riktlinjer
 
-Vi bruker `Radio` når vi skal gi brukerne mulighet til å velge kun ett alternativ. Skal de kunne velge flere, bruker du [`Checkbox`](/docs/komponenter-checkbox--docs).
+Vi använder `Radio` när vi vill ge användarna möjlighet att välja endast ett alternativ. Om de ska kunna välja flera, använd [`Checkbox`](/docs/komponenter-checkbox--docs) istället.
 
-Vi ha opptil syv alternativer i en gruppe. Trenger vi å gi brukerne mer enn syv valg, bør vi heller bruke [`Combobox`](/docs/komponenter-combobox--docs)-komponenten. Hvis vi bare skal gi brukerne ett valg, kan en [`Switch`](/docs/komponenter-switch--docs) eller [`Checkbox`](/docs/komponenter-checkbox--docs) passe bedre.
+Vi har upp till sju alternativ i en grupp. Om vi behöver ge användarna fler än sju val, bör vi istället använda [`Combobox`](/docs/komponenter-combobox--docs)-komponenten. Om vi bara ska ge användarna ett val, kan en [`Switch`](/docs/komponenter-switch--docs) eller [`Checkbox`](/docs/komponenter-checkbox--docs) passa bättre.
 
 ### Sortering
 
-Alternativene skal som hovedregel sorteres alfabetisk. Velger du å presentere de mest aktuelle alternativene først kan det bli vanskelig å finne ønsket alternativ. Du kan også risikere å påvirke svaret, noe som er uheldig.
+Alternativen ska som regel sorteras alfabetiskt. Om du väljer att presentera de mest relevanta alternativen först kan det bli svårt att hitta det önskade alternativet. Du riskerar också att påverka svaret, vilket inte är önskvärt.
 
-### Plassering
+### Placering
 
-`Radio` skal som hovedregel plasseres vertikalt, av hensyn til lesbarhet. Det er enklere for brukere å skanne listen når alternativene ligger under hverandre. For brukere som trenger å forstørre (zoome inn) nettsiden for å se godt nok, er en horisontal liste ekstra vanskelig.
+`Radio` ska som regel placeras vertikalt för läsbarhetens skull. Det är enklare för användare att skanna listan när alternativen ligger under varandra. För användare som behöver förstora (zooma in) en webbsida för att se ordentligt är en horisontell lista extra svår.
 
-Hvis vi bare har to valg med korte `labels`, kan vi vise dem ved siden av hverandre. I en [likert-skala](https://docs.altinn.studio/nb/app/development/ux/components/likert/) vil det også være naturlig å vise dem ved siden av hverandre. I en horisontal visning er det viktig at det kommer tydelig fram hvilken tekst som hører til hvilken boks.
+Om vi bara har två val med korta `labels` kan vi visa dem bredvid varandra. I en [likert-skala](https://docs.altinn.studio/nb/app/development/ux/components/likert/) är det också naturligt att visa dem bredvid varandra. Vid horisontell visning är det viktigt att det framgår tydligt vilken text som hör till vilken ruta.
 
-### Unngå forhåndsvalgt alternativ
+### Undvik förvalt alternativ
 
-Tenk nøye over om du virkelig trenger å ha et forhåndsvalgt alternativ. Det kan ha motsatt effekt av det du ønsker, for eksempel at brukeren føler seg manipulert til å ta ett bestemt valg, eller ikke klarer å ta et bevisst valg selv.
+Tänk noga över om du verkligen behöver ha ett förvalt alternativ. Det kan ha motsatt effekt mot vad du vill, till exempel att användaren känner sig manipulerad att välja ett visst alternativ eller inte kan göra ett medvetet val själv.
 
 <br />
 
-## Tekst i komponenten
+## Text i komponenten
 
-En gruppe med alternativknapper bør alltid ha en `legend` og eventuelt en `description` dersom hjelpetekst er nødvendig.
+En grupp med radioknappar bör alltid ha en `legend` och eventuellt en `description` om hjälpinformation behövs.
 
-Radioknapper skal alltid ha en `label`. Den skal være så kort som mulig og hvert alternativ bør være formulert på samme måte. Radio-komponenten kan også ha `description`. Da kommer den rett under `label`.
+Radioknappar ska alltid ha en `label`. Den ska vara så kort som möjligt och varje alternativ bör vara formulerat på samma sätt. Radio-komponenten kan också ha `description`. Den visas då direkt under `label`.
 
 <img
   src='/img/component-guidelines/radio/radio-anatomy.png'
-  alt='Illustrasjonen viser hva som er legend, description og label i en gruppe med alternativknapper.'
+  alt='Illustrationen visar vad som är legend, description och label i en grupp med radioknappar.'
 />
 
 <br />
 
-## Tilgjengelighet
+## Tillgänglighet
 
-Pass på at det er nok luft rundt hver alternativknapp, slik at den er lett å velge også på berøringsskjermer.
+Se till att det finns tillräckligt med utrymme runt varje radioknapp så att den är lätt att välja även på pekskärmar.
 
-Unngå å plassere alternativknapper ved siden av hverandre. Det gjør det vanskelig å lese. Det skaper også problemer for brukere som må forstørre (zoome) en nettside eller app for å se godt nok.
+Undvik att placera radioknappar bredvid varandra. Det gör det svårare att läsa. Det skapar också problem för användare som måste zooma in på en webbsida eller app för att se ordentligt.
 
-Merk at vi bruker piltastene til å velge alternativer i `Radio`-komponenten, ikke Tab-tasten.
+Notera att vi använder piltangenterna för att välja alternativ i `Radio`-komponenten, inte Tab-tangenten.
 
-- Pil opp/venstre - går til forrige valg
-- Pil ned/høyre - går til neste valg
-- Mellomromstasten - går til det første alternativet i en gruppe med alternativknapper, når gruppa ikke har et forhåndsvalgt alternativ.
-- Tab - går til hele gruppa med alternativer.
+- Pil upp/vänster - går till föregående val
+- Pil ner/höger - går till nästa val
+- Mellanslagstangenten - går till första alternativet i en grupp med radioknappar, när gruppen inte har ett förvalt alternativ.
+- Tab - går till hela gruppen med alternativ.
 ./Group.stories

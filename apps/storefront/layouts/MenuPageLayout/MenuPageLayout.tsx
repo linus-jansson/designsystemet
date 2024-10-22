@@ -30,13 +30,13 @@ type PageLayoutProps = {
 type PageLayoutData = {
   title: string;
   date: string;
+  updated?: string;
   icon: React.ReactNode;
   color: 'blue' | 'red' | 'yellow' | 'grey';
 };
 
 const MenuPageLayout = ({ content, data, banner }: PageLayoutProps) => {
   const pathname = usePathname();
-
   return (
     <div>
       {banner && (
@@ -56,6 +56,7 @@ const MenuPageLayout = ({ content, data, banner }: PageLayoutProps) => {
               <div className={classes.headerText}>
                 <Heading size='lg'>{data.title}</Heading>
                 {data.date && <div className={classes.date}>{data.date}</div>}
+                {/* {data.updated && <div className={classes['date-last-updated']}>Senast Uppdaterad: {data.updated}</div>} */}
               </div>
               <div
                 className={cn(

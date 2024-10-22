@@ -11,7 +11,7 @@ import { Dropdown } from './';
 <Primary />
 <Controls />
 
-## Slik bruker du `Dropdown`
+## Så använder du `Dropdown`
 
 ```tsx
 import { Dropdown } from '@digdir/designsystemet-react';
@@ -20,47 +20,47 @@ import { Dropdown } from '@digdir/designsystemet-react';
 <Dropdown.Context>
   <Dropdown.Trigger>Trigger</Dropdown.Trigger>
   <Dropdown>
-    <Dropdown.Heading>Heading</Dropdown.Heading>
+    <Dropdown.Heading>Rubrik</Dropdown.Heading>
     <Dropdown.List>
-      <Dropdown.Item>Item</Dropdown.Item>
+      <Dropdown.Item>Objekt</Dropdown.Item>
     </Dropdown.List>
   </Dropdown>
 </Dropdown.Context>
 
-// uten context
+// utan context
 <Button popovertarget="my-dropdown">Trigger</Button>
 <Dropdown id="my-dropdown">
-  <Dropdown.Heading>Heading</Dropdown.Heading>
+  <Dropdown.Heading>Rubrik</Dropdown.Heading>
   <Dropdown.List>
-    <Dropdown.Item>Item</Dropdown.Item>
+    <Dropdown.Item>Objekt</Dropdown.Item>
   </Dropdown.List>
 </Dropdown>
 ```
 
-## Eksempler på bruk
+## Exempel på användning
 
-### Kontrollert
+### Kontrollerad
 
-Dersom du sender inn `open`, så bruker du `Dropdown` kontrollert. Du kan bruke `onClose` for å få beskjed når `Dropdown` vil lukkes.
+Om du skickar in `open`, använder du `Dropdown` kontrollerat. Du kan använda `onClose` för att få information när `Dropdown` stängs.
 
 <Canvas of={DropdownStories.Controlled} />
 
 ### Ikoner
 
-Du kan legge ikon rett inn i `Dropdown.Item`, dersom det blir mye mellomrom til kanten kan du legge på din egen klasse og endre på `padding`.
+Du kan lägga till en ikon direkt i `Dropdown.Item`, om det blir för mycket mellanrum till kanten kan du lägga till din egen klass och justera `padding`.
 
 <Canvas of={DropdownStories.Icons} />
 
-### Uten Trigger
+### Utan Trigger
 
-`Dropdown` bruker popover APIet, så du kan bruke `Dropdown` uten `Dropdown.Trigger`.
-Du må da legge til `popovertarget={id}` på `Dropdown`, og `id` på `Dropdown`.
+`Dropdown` använder popover-API:t, så du kan använda `Dropdown` utan `Dropdown.Trigger`.
+Du måste då lägga till `popovertarget={id}` på `Dropdown` och `id` på `Dropdown`.
 
 <Canvas of={DropdownStories.WithoutTrigger} />
 
-## Tilgjengelighet
+## Tillgänglighet
 
-Det er innebygd tilgjengelighet i `Dropdown.Trigger` med `aria-expanded={true/false}` i henhold til åpne/lukket tilstand, og `aria-haspopup='menu'`.
+Det finns inbyggd tillgänglighet i `Dropdown.Trigger` med `aria-expanded={true/false}` beroende på om det är öppet eller stängt, och `aria-haspopup='menu'`.
 
 ### `Dropdown.List`
 
@@ -68,14 +68,14 @@ Det er innebygd tilgjengelighet i `Dropdown.Trigger` med `aria-expanded={true/fa
 
 ### `Dropdown.Trigger`
 
-Triggeren er en [Button](/docs/komponenter-button--docs) som standard.
+Triggen är som standard en [Button](/docs/komponenter-button--docs).
 
-Bruk `Dropdown.Trigger` til å aktivere `Dropdown`. Du kan bruke `asChild` for å endre `Dropdown.Trigger` elementet.
-Dersom du skal legge på funksjoner som `onClick`, legg det på ditt element, og legg `asChild` på `Dropdown.Trigger`.
+Använd `Dropdown.Trigger` för att aktivera `Dropdown`. Du kan använda `asChild` för att ändra `Dropdown.Trigger`-elementet.
+Om du vill lägga till funktioner som `onClick`, lägg dem på ditt element och använd `asChild` på `Dropdown.Trigger`.
 
-### Referanser
+### Referenser
 
-Vi bruker `ul` og `li` tags i dropdownen, valget er basert på denne:
+Vi använder `ul` och `li` taggar i dropdownen, valet är baserat på dessa:
 
 - https://www.w3.org/WAI/tutorials/menus/flyout/#flyoutnavkbbtn
 - https://www.w3.org/WAI/ARIA/apg/patterns/menu-button/../Dropdown.stories.

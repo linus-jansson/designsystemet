@@ -6,87 +6,84 @@ import * as SwitchStories from './Switch.stories';
 
 # Switch
 
-Vi bruker `Switch` til å gi brukerne et valg mellom to alternativer. Bryteren kan enten slås av eller på og skal alltid være innstilt med et standardvalg.
+Vi använder `Switch` för att ge användarna ett val mellan två alternativ. Brytaren kan antingen slås av eller på och ska alltid vara förinställd med ett standardval.
 
 <Primary />
 <Controls />
 
-## Slik bruker du `Switch`
+## Så använder du `Switch`
 
 ```tsx
 import { Switch, Fieldset } from '@digdir/designsystemet-react';
 
-<Fieldset legend='Profil instillinger'>
-  <Switch>Mørk modus</Switch>
+<Fieldset legend='Profilinställningar'>
+  <Switch>Mörkt läge</Switch>
 </Fieldset>;
 ```
 
 ## Gruppering
 
-Bruker [Fieldset](/docs/komponenter-fieldset--docs) til gruppering.
+Använd [Fieldset](/docs/komponenter-fieldset--docs) för gruppering.
 
 <Canvas of={SwitchStories.FullWidth} />
 
-### Høyrejustert
+### Högerjusterad
 
-Bruk `position="right"` til å plassere `Switch` på høyre side av ledeteksten hvis
-du trenger det.
+Använd `position="right"` för att placera `Switch` på höger sida om etiketten om
+du behöver det.
 
 <Canvas of={SwitchStories.FullWidthRight} />
 
-## Retningslinjer for `Switch`
+## Riktlinjer för `Switch`
 
-`Switch` skal være et valg mellom to alternativer. Vi bruker `Switch` til innstillinger, ikke i skjema.
-
-<br />
-Passer til å
-
-- aktivere eller deaktivere funksjoner/tilstander med en gang
-- slå varsler av
-  og på
-- endre visning av innhold mellom to kategorier, for eksempel se
-  statistikk per måned eller år
-
-  {' '}
-
-  <br />
-  Passer ikke til
-
-- å gi flere alternativer enn to
-- å bruke i stedet for avmerkingsboks (checkbox) eller alternativknapper (radio buttons) i et skjema
-- situasjoner der brukerne må lagre informasjon før en endring får effekt
+`Switch` ska vara ett val mellan två alternativ. Vi använder `Switch` för inställningar, inte i formulär.
 
 <br />
-Bruk heller
+Passar för att
 
-- avmerkingsbokser (checkboxes) hvis du skal tilby brukerne flere valg, der de skal velge ett eller flere alternativer
-- alternativknapper (radio buttons) hvis brukerne skal få flere valg, men bare skal velge ett
-- chip til å filtrere innhold
+- aktivera eller inaktivera funktioner/tillstånd direkt
+- slå av och på aviseringar
+- ändra visning av innehåll mellan två kategorier, till exempel visa
+  statistik per månad eller år
 
 <br />
-## Tekst i komponenten
+Passar inte för att
 
-Teksten til en switch må være kort og presis, ofte betyr det bare ett eller to ord. Det skal gi mening når du sier ledeteksten høyt og legger til av/på etterpå. Unngå tekst med flere ord og mellomrom.
+- ge fler än två alternativ
+- användas istället för kryssrutor (checkbox) eller alternativknappar (radioknappar) i ett formulär
+- situationer där användarna måste spara information innan en ändring får effekt
 
-### Eksempel
+<br />
+Använd istället
 
-- ⚠️ Ikke: Skru på flymodus (Av/på)
-- 👍 Riktig: Flymodus (Av/på)
+- kryssrutor (checkboxes) om du vill ge användarna flera val, där de kan välja ett eller flera alternativ
+- alternativknappar (radio buttons) om användarna ska få flera val men bara kan välja ett
+- chip för att filtrera innehåll
+
+<br />
+## Text i komponenten
+
+Texten till en switch måste vara kort och precis, ofta innebär det bara ett eller två ord. Den ska ge mening när du säger etiketten högt och lägger till av/på efteråt. Undvik text med fler ord och mellanslag.
+
+### Exempel
+
+- ⚠️ Inte: Slå på flygplansläge (Av/på)
+- 👍 Rätt: Flygplansläge (Av/på)
   <br />
 
-### Plassering av tekst
+### Placering av text
 
-Som regel er det høyre som er den beste plasseringen for tekst, unntaket er når `Switch` er fast plassert på høyre side i grensesnittet er det best at teksten er på venstre side. Slik at alle knappene blir justert etter samme vertikale linje.
+Som regel är höger den bästa placeringen för texten, undantaget är när `Switch` är fast placerad på höger sida i gränssnittet – då är det bäst att texten är på vänster sida så att alla knappar justeras efter samma vertikala linje.
 
 <br />
-## Tilgjengelighet
+## Tillgänglighet
 
-Sørg for at komponenten oppfører seg konsekvent gjennom en hel tjeneste.
-Hvis du har en gruppe med flere vippebrytere, må du passe på at du er konsekvent med hvordan du formulerer tekstene til hver av dem også, ikke formulerer dem forskjellig.
+Se till att komponenten beter sig konsekvent genom hela tjänsten.
+Om du har en grupp med flera strömbrytare, måste du se till att du är konsekvent med hur du formulerar texterna till var och en av dem också, och inte formulerar dem olika.
 
-Vi bruker `role="switch"` for å fortelle skjermlesere at dette er en vippebryter. Dette gjør at skjermlesere kan gi brukeren informasjon om at dette er en vippebryter og at den kan skrus av og på.
-Det er ikke lagt på `aria-checked` siden dette er ikke nødvendig når bryteren er en input med `type="checkbox"`. <sup>1</sup>
+Vi använder `role="switch"` för att informera skärmläsare om att detta är en strömbrytare. Detta gör att skärmläsare kan ge användaren information om att det är en brytare som kan slås av och på.
+Det finns inget behov av att lägga till `aria-checked` eftersom det inte behövs när brytaren är ett input-element med `type="checkbox"`. <sup>1</sup>
 
-### Referanser
+### Referenser
 
-[1. Switch rolle](https://www.w3.org/WAI/ARIA/apg/patterns/switch/#:~:text=If%20the%20switch%20element%20is%20an%20HTML%20input%5Btype%3D%22checkbox%22%5D%2C%20it%20uses%20the%20HTML%20checked%20attribute%20instead%20of%20the%20aria%2Dchecked%20property.)
+[1. Switch roll](https://www.w3.org/WAI/ARIA/apg/patterns/switch/#:~:text=If%20the%20switch%20element%20is%20an%20HTML%20input%5Btype%3D%22checkbox%22%5D%2C%20it%20uses%20the%20HTML%20checked%20attribute%20instead%20of%20the%20aria%2Dchecked%20property.)

@@ -6,12 +6,12 @@ import * as BadgeStories from './Badge.stories';
 
 # Badge
 
-`Badge` er en ikke-interaktiv komponent som viser status med eller uten tall.
+`Badge` är en icke-interaktiv komponent som visar status med eller utan siffror.
 
 <Primary />
 <Controls />
 
-## Bruk
+## Användning
 
 ```tsx
 import { Badge } from '@digdir/designsystemet-react';
@@ -19,43 +19,43 @@ import { Badge } from '@digdir/designsystemet-react';
 /* Inline */
 <Badge count={5} />
 
-/* Flytende over element */
+/* Flytande över element */
 <Badge count={5}>
   <Elem />
 </Badge>
 
-/* Flytende over element som dot */
+/* Flytande över element som dot */
 <Badge>
   <Elem />
 </Badge>
 ```
 
-## Flytende over element
+## Flytande över element
 
-Sett plassering med `placement`. Dersom elementet du plasserer over er en sirkel kan du sette `overlap="circle"`.
+Ställ in placering med `placement`. Om elementet du placerar över är en cirkel kan du sätta `overlap="circle"`.
 
 <Canvas of={BadgeStories.Floating} />
 
-Noen ganger kan ikon være forskjellige, og da må du endre på hvor `Badge` skal plasseres.
-Dersom du ikke får `Badge` til å ligge der du vil, kan du bruke `style` for å overstyre posisjoneringen.
-Dette vil også fungere for `overlap="circle"`.
+Ibland kan ikoner vara olika, och då måste du ändra var `Badge` ska placeras.
+Om du inte får `Badge` att ligga där du vill kan du använda `style` för att åsidosätta positioneringen.
+Detta fungerar även med `overlap="circle"`.
 
 <Canvas of={BadgeStories.CustomPlacement} />
 
-## Vise staus
+## Visa status
 
-Dersom du ikke sender inn `count`, viser kun en sirkel. Dette kan brukes for å vise status.
+Om du inte skickar in `count` visas endast en cirkel. Detta kan användas för att visa status.
 
 <Canvas of={BadgeStories.Status} />
 
-## I tabs
+## I flikar
 
-Du kan bruke komponenten inline eller flytene over et element.
+Du kan använda komponenten inline eller flytande över ett element.
 
 <Canvas of={BadgeStories.InTabs} />
 
-## I button
+## I knapp
 
-Du kan bruke komponenten inni eller flytende på en knapp.
+Du kan använda komponenten inuti eller flytande på en knapp.
 
 <Canvas of={BadgeStories.InButton} />

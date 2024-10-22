@@ -8,19 +8,19 @@ import { Accordion } from '.';
 
 # Accordion
 
-Med `Accordion` kan du presentere mye innhold på liten plass i en eller flere rader. Hele raden er klikkbar og lar brukere åpne eller lukke visningen av innholdet under.
+Med `Accordion` kan du presentera mycket innehåll på liten ytan i en eller flera rader. Hela raden är klickbar och låter användare öppna eller stänga visningen av innehållet under.
 
-**Vær oppmerksom på:**
+**Var uppmärksam på:**
 
-- Ved å legge innhold i `Accordion` risikerer du at det ikke blir sett av brukerne. Innhold som er viktig bør _ikke_ skjules.
-- Ikke legg en `Accordion` inni en annen.
+- Genom att lägga innehåll i `Accordion` riskerar du att det inte blir sett av användare. Viktigt innehåll bör _inte_ döljas.
+- Lägg inte en `Accordion` inuti en annan.
 
 <br />
 
 <Primary />
 <Controls />
 
-## Bruk
+## Användning
 
 ```tsx
 import { Accordion } from '@digdir/designsystemet-react';
@@ -37,76 +37,76 @@ import { Accordion } from '@digdir/designsystemet-react';
 </Accordion>;
 ```
 
-## Eksempler
+## Exempel
 
 <br />
-### Med ramme
+### Med Ram
 
-`Accordion` kan vises med ramme. Dette kan passe i tilfeller der accordions ikke fyller hele siden, eller når det kun er en rad.
+`Accordion` kan visas med ram. Detta kan vara lämpligt i fall där accordeons inte fyller hela sidan eller när det endast finns en rad.
 
 <Canvas of={AccordionStories.AccordionBorder} />
 
-### Med farger
+### Med färger
 
-`Accordion` kan vises i farger fra ditt brand.
+`Accordion` kan visas i färger från ditt varumärke.
 
 <Canvas of={AccordionStories.AccordionColor} />
 
-#### Kontrollert
+#### Kontrollerad
 
-`Accordion` har egen tilstand på åpen/lukker, men dette kan kontrolleres utenfra.
+`Accordion` har ett eget tillstånd för öppet/stängt, men detta kan styras externt.
 
 <Canvas of={AccordionStories.Controlled} />
 
 <br />
 
-## Retningslinjer
+## Riktlinjer
 
-Tester viser at brukerne sjeldnere ser på skjult innhold, enn det som er synlig direkte på siden. Ikke bruk `Accordion` til å skjule innhold for å gjøre siden "ryddigere". Finn ut om du faktisk må skjule innhold og vær klar over hvorfor du gjør det. Tenk over om det er lurt å vise det viktigste innholdet i åpen status når brukeren kommer inn på siden.
+Tester visar att användare sällan tittar på dolt innehåll, jämfört med innehåll som visas direkt på sidan. Använd inte `Accordion` för att dölja innehåll bara för att göra sidan "renare". Avgör om du verkligen behöver dölja innehållet och var medveten om varför du gör det. Tänk på om det är klokt att visa det viktigaste innehållet i öppet läge när användaren kommer in på sidan.
 
-Hvis innholdet er for langt eller komplisert, bør du heller omformulere teksten og/eller eventuelt fordele den på flere sider.
+Om innehållet är för långt eller komplicerat bör du hellre omformulera texten och/eller eventuellt dela upp det på flera sidor.
 
-### Egnet til
+### Lämpligt för
 
-- samle innhold som er litt lengre
-- gjøre det frivillig å se innhold som er litt mindre viktig enn alltid synlig innhold
-- vise ofte stilte spørsmål
-- vise tilleggsinformasjon som kan være til hjelp for brukerne
+- samla innehåll som är något längre
+- göra det frivilligt att visa innehåll som är mindre viktigt än det alltid synliga innehållet
+- visa vanliga frågor
+- visa ytterligare information som kan vara till hjälp för användare
 
-### Ikke egnet til
+### Inte lämpligt för
 
-- vise små mengder innhold
-- vise informasjon hvis det bare er ett element
-- vise viktig innhold som alle bør se når de kommer til siden (for eksempel feilmeldinger)
-- gi mer informasjon om et spørsmål i et skjema – det innholdet bør brukeren se med en gang
-- velge mellom ulike alternativer
-- skjule innhold fra søkeresultater eller oversikter/tabeller
-- dele opp en logisk flyt eller en rekke med handlinger, da bør du heller bruke en trinnvis liste
+- visa små mängder innehåll
+- visa information om det bara finns ett objekt
+- visa viktigt innehåll som alla bör se när de kommer till sidan (till exempel felmeddelanden)
+- ge mer information om en fråga i ett formulär – det innehållet bör användaren se direkt
+- välja mellan olika alternativ
+- dölja innehåll från sökresultat eller översikter/tabeller
+- dela upp ett logiskt flöde eller en serie åtgärder, då bör du hellre använda en stegvis lista
 
-### Unngå
+### Undvik
 
-- Ikke legg en `Accordion` inni en annen, det vi kaller nøstede lister.
-
-<br />
-
-## Tekst i komponenten
-
-Accordion skal brukes til maksimalt to avsnitt innenfor hvert nedtrekk. Sørg for at overskriften gir en god beskrivelse av hva innholdet i accordion er. En tydelig og beskrivende overskrift skal gjøre brukerne nysgjerrige på innholdet. Overskriftene til accordion kan ha stor betydning for om brukerne finner det de trenger, om innholdet blir lest og om det kan regnes som tilgjengelig for alle brukere. «Vis mer» eller «Les mer her» er ikke gode nok titler. Har du en accordion med mange nedtrekk, kan du ha en hovedoverskrift eller temaoverskrift over hele listen.
+- Lägg inte en `Accordion` inuti en annan, det vi kallar nästlade listor.
 
 <br />
 
-## Tilgjengelighet
+## Text i komponenten
 
-Som standard er `Accordion.Heading` et `h1` element. Du må selv velge riktig overskriftsnivå for din side. Hvis `Accordion.Heading` er en del av en større overskrift, kan du bruke `h2`, `h3` osv. for å opprettholde en logisk rekkefølge.
+Accordion bör användas för maximalt två stycken inom varje nedfällning. Se till att rubriken ger en bra beskrivning av vad innehållet i accordion är. En tydlig och beskrivande rubrik ska göra användarna nyfikna på innehållet. Rubrikerna till accordion kan ha stor betydelse för om användarna hittar det de behöver, om innehållet blir läst och om det kan anses vara tillgängligt för alla användare. "Visa mer" eller "Läs mer här" är inte tillräckligt bra titlar. Om du har en accordion med många nedfällningar kan du ha en huvudrubrik eller temarubrik över hela listan.
 
-[`Chevron`](https://aksel.nav.no/ikoner/ChevronDown)-ikonet er bevisst plassert til venstre for teksten, av hensyn til brukerer med nedsatt synsfelt. Der er det lettere for brukeren å se det (fordi vi leser fra venstre). Mange brukere tror at de må peke på og velge ikonet for å åpne.
+<br />
 
-Ikke plasser andre interaktive elementer inn i `Accordion`-heading, da hele raden skal være klikkbar. Ikonet og teksten skal _ikke_ lenke til ulike handlinger (for eksempel at teksten går videre til en side, mens ikonet åpner listen). Brukerne forventer ikke at ikon og tekst skal gi ulikt resultat når de velger dem.
+## Tillgänglighet
 
-`Tab` : Flytter fokus til neste element som kan ha fokus \
-`Shift` + `Tab` : Flytter fokus til forrige element som kan ha fokus \
-`Space` : Aktiverer knapp \
-`Enter` : Aktiverer knapp
+Som standard är `Accordion.Heading` ett `h1`-element. Du måste själv välja rätt rubriknivå för din sida. Om `Accordion.Heading` är en del av en större rubrik kan du använda `h2`, `h3` osv. för att bibehålla en logisk ordning.
+
+[`Chevron`](https://aksel.nav.no/ikoner/ChevronDown)-ikonen är medvetet placerad till vänster om texten för att underlätta för användare med begränsat synfält. Det är lättare för användaren att se den (eftersom vi läser från vänster). Många användare tror att de måste peka på och välja ikonen för att öppna.
+
+Placera inte andra interaktiva element i `Accordion`-rubriken, eftersom hela raden ska vara klickbar. Ikonen och texten ska _inte_ länka till olika åtgärder (till exempel att texten leder till en sida medan ikonen öppnar listan). Användare förväntar sig inte att ikon och text ska ge olika resultat när de väljer dem.
+
+`Tab`: Flyttar fokus till nästa element som kan ha fokus \
+`Shift` + `Tab`: Flyttar fokus till föregående element som kan ha fokus \
+`Space`: Aktiverar knapp \
+`Enter`: Aktiverar knapp
 
 <br />
 

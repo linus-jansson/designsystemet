@@ -79,7 +79,7 @@ export const Accent: StoryFn<typeof Button> = () => (
       Gå videre
     </Button>
     <Button variant='secondary' color='accent'>
-      Fortsett senere
+      Fortsätt senare
     </Button>
     <Button variant='tertiary' color='accent'>
       Avbryt
@@ -107,11 +107,11 @@ export const Neutral: StoryFn<typeof Button> = () => (
     </Button>
     <Button variant='secondary' color='neutral'>
       <PencilWritingIcon aria-hidden fontSize='1.5rem' />
-      Rediger
+      Redigera
     </Button>
     <Button variant='tertiary' color='neutral'>
       <ArrowForwardIcon aria-hidden fontSize='1.5rem' />
-      Videresend
+      Vidarebefodra
     </Button>
   </>
 );
@@ -183,12 +183,12 @@ export const AsLink: StoryFn<typeof Button> = () => (
 export const TextAndIcon: StoryFn<typeof Button> = () => (
   <>
     <Button variant='primary' color='neutral'>
-      Start utfylling
+      Spara
       <ArrowRightIcon aria-hidden fontSize='1.5rem' />
     </Button>
     <Button variant='secondary' color='neutral'>
       <ArrowUndoIcon aria-hidden fontSize='1.5rem' />
-      Angre
+      Ångra
     </Button>
   </>
 );
@@ -196,13 +196,13 @@ export const TextAndIcon: StoryFn<typeof Button> = () => (
 export const Loading: StoryFn<typeof Button> = () => (
   <>
     <Button variant='primary' loading>
-      Laster...
+      Laddar...
     </Button>
     <Button variant='secondary' loading>
-      Laster...
+      Laddar...
     </Button>
     <Button variant='tertiary' loading>
-      Laster...
+      Laddar...
     </Button>
   </>
 );
@@ -210,21 +210,21 @@ export const Loading: StoryFn<typeof Button> = () => (
 export const Icons: StoryFn<typeof Button> = () => (
   <>
     <Button variant='primary' size='sm'>
-      <CogIcon fontSize='1rem' title='Innstillinger' />
+      <CogIcon fontSize='1rem' title='Inställningar' />
     </Button>
     <Button variant='primary' size='sm'>
       <CogIcon fontSize='1rem' aria-hidden />
       Small
     </Button>
     <Button variant='primary' size='md'>
-      <CogIcon fontSize='1.5rem' title='Innstillinger' />
+      <CogIcon fontSize='1.5rem' title='Inställningar' />
     </Button>
     <Button variant='primary' size='md'>
       <CogIcon fontSize='1.5rem' aria-hidden />
       Medium
     </Button>
     <Button variant='primary' size='lg'>
-      <CogIcon fontSize='2rem' title='Innstillinger' />
+      <CogIcon fontSize='2rem' title='Inställningar' />
     </Button>
     <Button variant='primary' size='lg'>
       <CogIcon fontSize='2rem' aria-hidden />
@@ -235,22 +235,22 @@ export const Icons: StoryFn<typeof Button> = () => (
 
 export const IconOnly: StoryFn<typeof Button> = () => (
   <>
-    <Tooltip content='Legg til ny'>
+    <Tooltip content='Lägg till ny'>
       <Button icon color='neutral' variant='tertiary' aria-label='Legg til ny'>
         <PlusCircleIcon fontSize='1.5rem' aria-hidden />
       </Button>
     </Tooltip>
-    <Tooltip content='Varslinger'>
-      <Button icon color='neutral' variant='tertiary' aria-label='Varslinger'>
+    <Tooltip content='Aviseringar'>
+      <Button icon color='neutral' variant='tertiary' aria-label='Aviseringar'>
         <BellIcon fontSize='1.5rem' aria-hidden />
       </Button>
     </Tooltip>
-    <Tooltip content='Instillinger'>
+    <Tooltip content='Inställningar'>
       <Button
         icon
         color='neutral'
         variant='tertiary'
-        aria-label='Innstillinger'
+        aria-label='Inställningar'
       >
         <CogIcon fontSize='1.5rem' aria-hidden />
       </Button>
@@ -267,13 +267,13 @@ IconOnly.parameters = {
 export const IconsOnlyPrimary: StoryFn<typeof Button> = () => (
   <>
     <Button icon variant='primary' size='sm'>
-      <CogIcon fontSize='1.5rem' title='Innstillinger' />
+      <CogIcon fontSize='1.5rem' title='Inställningar' />
     </Button>
     <Button icon variant='primary' size='md'>
-      <CogIcon fontSize='2rem' title='Innstillinger' />
+      <CogIcon fontSize='2rem' title='Inställningar' />
     </Button>
     <Button icon variant='primary' size='lg'>
-      <CogIcon fontSize='2.5rem' title='Innstillinger' />
+      <CogIcon fontSize='2.5rem' title='Inställningar' />
     </Button>
   </>
 );

@@ -6,52 +6,52 @@ import * as SkipLinkStories from './SkipLink.stories';
 
 # SkipLink
 
-Vi bruker snarvei-komponenten `SkipLink` når vi vil hjelpe folk som kun bruker tastaturet til å navigere, slik at de enkelt kan gå til det viktigste innholdet på en side. Snarveien bør være det første elementet markøren går til når du navigerer med tastaturet.
+Vi använder genvägskomponenten `SkipLink` när vi vill hjälpa personer som endast använder tangentbordet för att navigera, så att de enkelt kan hoppa till det viktigaste innehållet på en sida. Genvägen bör vara det första elementet markören går till när du navigerar med tangentbordet.
 
 <Primary />
 <Controls />
 
-## Bruk
+## Användning
 
 ```tsx
 import { SkipLink } from '@digdir/designsystemet-react';
 
-<SkipLink href='#main-content'>Hopp til hovedinnhold</SkipLink>
+<SkipLink href='#main-content'>Hoppa till huvudinnehållet</SkipLink>
 
-<main id='main-content' tabIndex={-1} >
-  Region som kan motta fokus fra skiplink.
+<main id='main-content' tabIndex={-1}>
+  Region som kan ta emot fokus från skiplink.
 </main>
 ```
 
-## Retningslinjer for `SkipLink`
+## Riktlinjer för `SkipLink`
 
-Noen brukere navigerer med Tab på tastaturet når de skal flytte markøren forbi lenker eller skjemalementer på en nettside. Når vi inkluderer en snarvei-komponent på siden, får disse brukerne muligheten til å gå forbi alle navigeringslenkene øverst på siden, og kan gå direkte til hovedinnholdet.
+Vissa användare navigerar med Tab-tangenten på tangentbordet när de ska flytta markören förbi länkar eller formulärelement på en webbplats. När vi inkluderar en genvägskomponent på sidan får dessa användare möjlighet att hoppa över alla navigeringslänkar högst upp på sidan och gå direkt till huvudinnehållet.
 
-Det er vanligvis et krav at det skal være med en snarvei-komponent i faste sidemaler til alle nettsteder.
+Det är vanligtvis ett krav att ha med en genvägskomponent i fasta sidmallar för alla webbplatser.
 
-Hvis det er færre enn fem tab-stopp til hovedinnholdet er det ikke sikkert at du trenger å legge inn en `SkipLink`, det fører bare til at det blir flere knapper å forholde seg til.
+Om det är färre än fem Tab-stopp till huvudinnehållet kan det hända att du inte behöver lägga till en `SkipLink`, eftersom det bara skulle tillföra fler knappar att hantera.
 
-Vi plasserer snarveien som det første fokuserbare elementet. Hvis siden har et varsel om informasjonskapsler, legger du `SkipLink` rett etter koden for dette varselet.
+Vi placerar genvägen som det första fokuserbara elementet. Om sidan har en cookie-meddelande, lägger du `SkipLink` precis efter koden för detta meddelande.
 
-Snarveien bør skille seg tydelig ut fra resten av innholdet, slik at folk som kan se, men bruker tastaturet til å navigere, kjenner igjen dette element før de flytter videre.
-
-<br />
-
-## Tekst i komponenten
-
-Pass på at teksten tydelig sier hva snarveien skal brukes til. Bruk en enkel tekst, som for eksempel «Gå direkte til innholdet» eller «Hopp direkte til innholdet».
+Genvägen bör tydligt sticka ut från resten av innehållet, så att personer som kan se men använder tangentbordet för att navigera känner igen detta element innan de flyttar vidare.
 
 <br />
 
-## Tilgjengelighet
+## Text i komponenten
 
-Snarvei-komponenten er vanligvis ikke synlig før et trykk på tastaturet aktiverer den.
-
-- Snarveien må bli godt synlig når den får fokus.
-- Teksten på snarveien må ha riktig fargekontrast.
+Se till att texten tydligt anger vad genvägen ska användas till. Använd enkel text, som till exempel "Gå direkt till innehållet" eller "Hoppa direkt till innehållet".
 
 <br />
 
-Vær oppmerksom på at noen automatiske tester for tilgjengelighet kan varsle om at snarveien mangler i et landemerke. Dette varslet gjelder ikke for snarveier, så det kan du overse.
+## Tillgänglighet
 
-Pass på at snarveier oppfører seg forutsigbart. En snarvei med teksten «Gå direkte til innholdet» skal flytte brukerens fokus til starten på innholdet, ikke til starten av første avsnitt under overskriften.
+Genvägskomponenten är vanligtvis inte synlig förrän ett tryck på tangentbordet aktiverar den.
+
+- Genvägen måste bli tydligt synlig när den får fokus.
+- Texten på genvägen måste ha rätt färgkontrast.
+
+<br />
+
+Observera att vissa automatiska tester för tillgänglighet kan varna om att genvägen saknar ett landmärke. Denna varning gäller inte genvägar, så du kan ignorera den.
+
+Se till att genvägar beter sig förutsägbart. En genväg med texten "Gå direkt till innehållet" ska flytta användarens fokus till början av innehållet, inte till början av första stycket under rubriken.

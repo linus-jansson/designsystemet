@@ -1,0 +1,50 @@
+import { LightBulbIcon } from '@navikt/aksel-icons';
+
+import { MenuPageLayout } from '@layouts';
+
+export const metadata = {
+  title: 'Värderingar',
+  description: 'Värderingar som designsystemet byggs på.',
+};
+
+export default ({ children }) => (
+  <MenuPageLayout
+    content={children}
+    data={{
+      title: 'Värderingar',
+      date : '16 oktober 2024',
+      icon: <LightBulbIcon />,
+      color: 'yellow',
+    }}
+  />
+);
+
+Dessa värderingar vill vi att designsystemet ska byggas på:
+
+## Kvalitet
+
+Designsystemet ska hålla hög kvalitet och göra det effektivt att skapa digitala produkter med hög kvalitet. Med hög kvalitet menar vi både en bra användarupplevelse och en solid teknisk grund. Alla komponenter ska uppfylla lagstadgade krav, till exempel universell utformning. Det vi skapar ska vara [tillgängligt](/grundlaggande/introduktion/tillganglighet) och ge en bra användarupplevelse för alla, oavsett varaktiga eller tillfälligt nedsatta förmågor.
+
+## Helhet
+
+Målet är att designsystemet ska bidra till mer enhetliga och konsekventa användarupplevelser inom offentlig sektor. När lösningarna använder samma byggstenar skapas förutsägbarhet för medborgarna. Förutom återanvändbara komponenter ska vi hjälpa varandra att etablera igenkännbara mönster över olika lösningar. Mönstren ska visa hur de vanligaste användaruppgifterna och handlingarna hanteras. När vi använder etablerade mönster och konventioner som medborgarna känner igen blir lösningarna mer intuitiva och bidrar till att minska digitalt utanförskap.
+
+## Samarbete och öppenhet
+
+Designsystemet bygger på en filosofi om samarbete och det är önskvärt att det utvecklas i samverkan mellan offentliga aktörer. Det ska vara enkelt för alla att ta ägarskap över designsystemet och delta med bidrag och synpunkter. Allt vi gör delar vi öppet - [källkod](https://github.com/digdir/designsystemet), [backlog](https://github.com/orgs/digdir/projects/3/views/1), [roadmap](https://github.com/orgs/digdir/projects/3/views/1?pane=issue&itemId=19744450), [Figma](https://www.figma.com/@designsystemet), [Storybook](https://storybook.designsystemet.no) och [dokumentation](https://www.designsystemet.no).
+
+Det som finns i designsystemet är inte hugget i sten - det är önskvärt att vi skapar detta gemensamt och att det fungerar för flera. Alla synpunkter, argument, insikter och bidrag är välkomna. Det ska vara enkelt att bidra om det leder till bättre lösningar.
+
+## Design- och utvecklarupplevelse
+
+Det ska vara lätt för andra utvecklare och designers att använda och implementera ändringar i designsystemet och komponenterna. Det ska vara enkelt att hitta komponenter, förstå vad de gör och när de ska användas. Om det finns utmaningar kopplade till en komponent ska detta synliggöras och dokumenteras. Det ska vara enkelt och förutsägbart att navigera i den tekniska lösningen.
+
+## Tillit
+
+Designsystemet ska hantera utmaningar och förändringar på ett tryggt och bra sätt så att det uppnår hög tillit bland användarna. Användare av designsystemet ska kunna lita på att komponenter inte slutar fungera och att de beter sig som förväntat. Användare måste också kunna lita på att designsystemet tas väl om hand och hålls uppdaterat enligt nya krav och behov som uppstår. Vi strävar efter ömsesidig tillit - förtroendet för bidragsgivare är också viktigt.
+
+<br />
+<br />
+---
+
+Har du synpunkter eller tankar om detta? Vill du vara mer involverad i samarbetet? Skicka oss ett mejl på: [designsystem@digdir.no](mailto:designsystem@digdir.no). Alla synpunkter välkomnas med tacksamhet.

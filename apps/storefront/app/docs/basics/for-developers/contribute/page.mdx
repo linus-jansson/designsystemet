@@ -1,0 +1,20 @@
+import { CodeIcon } from '@navikt/aksel-icons';
+
+import { MenuPageLayout } from '@layouts';
+
+export const metadata = {
+  title: 'Bidra till designsystemet som utvecklare',
+  description: 'All information du behöver för att bidra som utvecklare.',
+};
+
+export default ({ children }) => (
+  <MenuPageLayout
+    content={children}
+    data={{
+      title: 'Bidra till designsystemet som utvecklare',
+      date : '16 oktober 2024',
+      icon: <CodeIcon />,
+      color: 'blue',
+    }}
+  />
+);

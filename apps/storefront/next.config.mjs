@@ -1,3 +1,9 @@
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 import createMDX from '@next/mdx';
 import { s } from 'hastscript';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
@@ -12,9 +18,10 @@ const nextConfig = {
     ignoreDuringBuilds: true,
   },
   i18n: {
-    locales: ['no'],
-    defaultLocale: 'no',
+    locales: ['sv'],
+    defaultLocale: 'sv',
   },
+  output: 'standalone',
 };
 
 const withMDX = createMDX({

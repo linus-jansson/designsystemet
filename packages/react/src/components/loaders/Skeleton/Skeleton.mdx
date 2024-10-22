@@ -6,32 +6,32 @@ import * as SkeletonStories from './Skeleton.stories';
 
 # Skeleton
 
-`Skeleton` kan brukes for å indikere at innhold på en side laster. I motsetning til `Spinner` kan `Skeleton` gi en indikasjon til brukeren hvordan siden kommer til å se ut.
+`Skeleton` kan användas för att indikera att innehåll på en sida laddar. Till skillnad från `Spinner` kan `Skeleton` ge en indikation till användaren om hur sidan kommer att se ut.
 
 <Primary />
 <Controls />
 
-## Bruk
+## Användning
 
 <Canvas of={SkeletonStories.Components} />
 
-Skeleton kommer i tre ulike varianter: `Skeleton variant="rectangle"`, `Skeleton variant="circle"`, og `Skeleton variant="text"`
-Du kan bygge opp komponenter og seksjoner av siden din ved å bruke disse som byggeklosser. Målet er at resultatet skal etterligne innholdet som lastes.
+Skeleton kommer i tre olika varianter: `Skeleton variant="rectangle"`, `Skeleton variant="circle"`, och `Skeleton variant="text"`.
+Du kan bygga upp komponenter och sektioner av din sida genom att använda dessa som byggstenar. Målet är att resultatet ska efterlikna det innehåll som laddas.
 
 <Canvas of={SkeletonStories.UsageExample} />
 
-### Skalering av komponenten
+### Skalning av komponenten
 
-Alle varianter av skeleton har `height` og `width` props, som kan brukes til å manuelt sette størrelser. Du kan oppgi størrelsene i `px`, `%`, eller andre enheter som kan settes direkte på style.
-For `Skeleton variant="text"` holder det ofte å sette kun `width` til det antallet bokstaver du antar vil oppstå, da høyden automatisk skaleres etter tekstinnholdet.
+Alla varianter av skeleton har `height` och `width` props, som kan användas för att manuellt ställa in storlekar. Du kan ange storlekarna i `px`, `%`, eller andra enheter som kan ställas in direkt på stil.
+För `Skeleton variant="text"` räcker det ofta med att bara ställa in `width` till det antal bokstäver du förväntar dig ska visas, då höjden automatiskt skalas efter textinnehållet.
 
-Skeleton vil også tilpasse seg etter `children` som du sender inn til komponenten, men dette vil resultere i en høyde og bredde som matcher summen av samtlige barn.
+Skeleton anpassar sig också efter `children` som du skickar in till komponenten, men detta resulterar i en höjd och bredd som matchar summan av alla barn.
 
 <Canvas of={SkeletonStories.Children} />
 
 ## Text
 
-`Skeleton variant="text"` skalerer automatisk etter den lokale fontstørrelsen, enten den kommer fra `parent`, `children` , eller fordi typografi-komponenter er satt til Skeletons gjennom `asChild`-propen.
-For best mulig resultat anbefaler vi at du bruker flere `Skeleton variant="text"` med  `width` til det antallet bokstaver du antar vil oppstå.
+`Skeleton variant="text"` skalas automatiskt efter den lokala teckenstorleken, oavsett om den kommer från `parent`, `children`, eller för att typografikomponenter har ställts in på Skeletons genom `asChild`-propen.
+För bästa resultat rekommenderar vi att du använder flera `Skeleton variant="text"` med `width` inställd på det antal bokstäver du förväntar dig ska visas.
 
 <Canvas of={SkeletonStories.Text} />

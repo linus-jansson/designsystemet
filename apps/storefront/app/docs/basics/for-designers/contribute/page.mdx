@@ -1,0 +1,81 @@
+import { BranchingIcon } from '@navikt/aksel-icons';
+
+import { MenuPageLayout } from '@layouts';
+
+export const metadata = {
+  title: 'Bidra med design',
+  description:
+    'Vi uppskattar att du hjälper oss att förbättra komponenter och design i Figma.',
+};
+
+export default ({ children }) => (
+  <MenuPageLayout
+    content={children}
+    data={{
+      title: 'Bidra med design',
+      date : '16 oktober 2024',
+      icon: <BranchingIcon />,
+      color: 'red',
+    }}
+  />
+);
+
+## Föreslå nytt design eller förbättringar
+
+Vi uppskattar att du hjälper oss att förbättra komponenter och design i Figma. De bästa lösningarna kommer genom samarbete.
+
+### Ny komponent
+
+Om du vill föreslå en ny komponent uppskattar vi om du [registrerar det i Github](https://github.com/digdir/designsystemet/discussions/new?category=components).
+
+När en ny komponent föreslås måste vi bedöma om den är värdefull nog att vara en del av designsystemet. Vi vill inte hamna i en situation med hundratals komponenter med små skillnader, då det kan leda till oönskad komplexitet, underhåll samt design- och teknikskuld.
+
+För nya komponenter som godkänns måste vi:
+
+- Identifiera och utforska liknande behov hos andra produktteam och offentliga aktörer. Hur många produkter/myndigheter kommer att ha användning för den?
+- Bedöma problemet som komponenten ska lösa och värdet det ger.
+- Tänk på om den kan göras flexibel och återanvändbar nog.
+- Tänk på om den överensstämmer med [designprinciperna](/grundläggande/introduction/designprinciper) och om den passar in i helheten.
+
+### Rapportera fel eller brister på en komponent i Figma
+
+Om du har hittat en svaghet med någon av de befintliga komponenterna i Figma, uppskattar vi om du antingen lämnar en kommentar i Figma bredvid den aktuella komponenten, eller om du skapar en [bug-rapport i Github som förklarar felet](https://github.com/digdir/designsystemet/issues/new?assignees=&labels=%F0%9F%90%9B+bug&projects=&template=1bug_report.yml), eller en [feature-request som förklarar önskad tilläggsfunktionalitet](https://github.com/digdir/designsystemet/issues/new?assignees=&labels=%E2%9C%A8feature+request%2Cneeds+prioritization%E2%9D%97%EF%B8%8F&projects=&template=2feature_request.yml).
+
+## Skapa en komponent i Figma
+
+Komponenter som är under utveckling ligger i egna arbetsfiler. När designen är klar flyttas komponenten till [Designsystemet - Core UI Kit](https://www.figma.com/file/vpM9dqqQPHqU6ogfKp5tlr/Felles-komponenter?type=design&node-id=503%3A3192&mode=design&t=NoWd7lRReSIFNcOx-1). Denna fil delas i Figma Community.
+
+Det finns ett par saker att tänka på när komponenter skapas i Figma:
+
+- Prata med en utvecklare om specifikation, krav, tillgänglighet, egenskaper och varianter. Kom överens om omfattningen av komponenten och dokumentera detta i komponentens [Github-ärende](https://github.com/orgs/digdir/projects/3/views/14).
+
+- [Alla styles](https://docs.tokens.studio/available-tokens/available-tokens) (färger, avstånd, storlekar, skuggor, etc.) ska vara kopplade till rätt tokens. Om du använder de befintliga stilarna, är de redan automatiskt kopplade till tokens. Om du behöver nya stilar, måste de också skapas som tokens.
+
+- Använd typografi-komponenterna för all text som ska finnas i komponenten.
+
+- [Autolayout](https://help.figma.com/hc/en-us/articles/5731482952599-Using-auto-layout): Innehållet ska skalas som förväntat vid storleksändring. Fundera på om innehållet ska wrappa om det inte finns tillräckligt med bredd. Kan det vara lämpligt med en min- eller max-width? Kanske behöver texten trunka (...) om den blir för lång?
+
+- [Varianter](https://help.figma.com/hc/en-us/articles/360056440594-Create-and-use-variants) och "[component properties](https://help.figma.com/hc/en-us/articles/5579474826519-Explore-component-properties)": Använd varianter för olika versioner, färger, states, storlekar och liknande. Använd Component properties för att visa/dölja lager, instance-swap (t.ex. byta ett ikon) och byta text. Properties namnges på samma sätt som props i Storybook. Vi använder `Variant`, `Size`, `Color`, `State`.
+
+- Vilka storlekar ska komponenten finnas i? Fundera på om komponenten passar med storlekarna på andra komponenter. Till exempel bör ett medium text-field vara lika högt som en medium button, eftersom de kan placeras bredvid varandra. En medium komponent bör använda typografi-size medium, och en small komponent bör använda typografi-size small.
+
+- Är komponenten interaktiv? I så fall måste olika states finnas som varianter av komponenten, och dessa kopplas upp med "[Change to](https://help.figma.com/hc/en-us/articles/360061175334-Create-interactive-components-with-variants#create)".
+
+- Multibranding. Fundera på i vilken grad komponenten ska stödja olika theming och se till att använda brand-färger från tokens.
+
+- Namngivning och organisering: Se till att lagren i komponenten har rimliga namn och att det inte finns onödiga grupperingar eller lager.
+
+- Fundera på hur en annan designer kommer att använda komponenten. Är den intuitiv att använda? Är den tillräckligt flexibel så att de inte behöver detacha den? Kanske bör den ställas in med [slots](https://www.youtube.com/watch?v=FOGgsPz3UTk) så att det är möjligt att byta ut innehållet utan att behöva detacha. Använd gärna också "[Preferred values](https://help.figma.com/hc/en-us/articles/5579474826519-Explore-component-properties#preferred)" för att framhäva de komponenter vi tror kommer att användas mest.
+
+  - Kontrollera att du har tillräcklig [kontrast](https://www.uutilsynet.no/regelverk/testprosedyrar-nettstader/709#suksesskriterium_143_kontrast)
+  - Fundera på hur tangentbordsnavigering ska fungera om du skapar en ny komponent som inte är standard. (Standard HTML-element har tangentbordsnavigering redan definierat).
+  - Instruktioner eller information som är viktig för användaren ska inte bara vara markerad visuellt. Ett exempel kan vara att använda en ikon eller text i kombination med röd färg för att indikera ett fel.
+  - Focus: Alla element ska ha en visuell markör som blir synlig när elementet får tangentbordsfokus. Fokusmarkören ska ha tillräcklig kontrast mot bakgrunden. För att uppnå detta använder vi en svart border (2px) och en gul outline (3px).
+
+- När komponenten är klar markeras den som "Ready for review". Den testas av andra och efter eventuella justeringar markeras den som "[Ready for development](https://help.figma.com/hc/en-us/articles/15023124644247-Guide-to-Dev-Mode)". När den har utvecklats som en React-komponent länkar vi till komponentsidan i [Storybook](https://storybook.designsystemet.no).
+
+### Uppdatera tokens
+
+För att kunna ändra eller skapa nya tokens måste du skapa en ny branch i pluginen [Tokens Studio for Figma](https://tokens.studio/). Du behöver Pro-versionen av pluginen för att göra detta.
+
+[Se hur du kopplar pluginen till våra design tokens](/grundläggande/för-designers/kom-i-gang#bruk-egen-fargepalett-pa-komponentene).

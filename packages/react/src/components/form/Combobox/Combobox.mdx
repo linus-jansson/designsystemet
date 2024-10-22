@@ -11,54 +11,54 @@ import { Combobox } from './index';
 <Primary />
 <Controls />
 
-## Multiple
+## Flera val
 
 <Canvas of={ComboboxStories.Multiple} />
 
-## Med beskrivelse
+## Med beskrivning
 
 <Canvas of={ComboboxStories.WithDescription} />
 
-## Kontrollert
+## Kontrollerad
 
 <Canvas of={ComboboxStories.Controlled} />
 
-## I form
+## I formulär
 
-Du må legge til `name` på `Combobox` for at den skal fungere i et skjema.
-Den bruker native `select`-elementer under panseret, så du kan bruke
-`Combobox.Option` som vanlig.
+Du måste lägga till `name` på `Combobox` för att den ska fungera i ett formulär.
+Den använder inbyggda `select`-element under huven, så du kan använda
+`Combobox.Option` som vanligt.
 
 <Canvas of={ComboboxStories.InForm} />
 
-## Chips utenfor
+## Chips utanför
 
 <Canvas of={ComboboxStories.WithChipsOutside} />
 
-## Forhåndsvalgt verdi
+## Förvalt värde
 
 <Canvas of={ComboboxStories.SelectAll} />
 
-## Virtualisert
+## Virtualiserad
 
-Lista med elementer kan bli veldig lang, så det kan være lurt å virtualisere.
-Det gjør du ved å sette `virtual` til `true` på `Combobox`.
+Listan med element kan bli väldigt lång, så det kan vara bra att virtualisera.
+Det gör du genom att sätta `virtual` till `true` på `Combobox`.
 
 <Canvas of={ComboboxStories.Virtualized} />
 
-## Loading
+## Laddar
 
 <Canvas of={ComboboxStories.Loading} />
 
 ## `Combobox.Option`
 
-Brukes som direkte barn av `Combobox` for å vise et element i listen.
-Teksten fra `children` vises til brukeren når elementet er valgt. `value` er
-det som blir sendt til `onValueChange` når elementet blir valgt.
+Används som direkt barn av `Combobox` för att visa ett objekt i listan.
+Texten från `children` visas för användaren när objektet är valt. `value` är
+det som skickas till `onValueChange` när objektet blir valt.
 
 <ArgTypes of={Combobox.Option} />
 
 ## `Combobox.Empty`
 
-Brukes som direkte barn av `Combobox` for å vise en melding når det ikke er
-noen elementer i listen.
+Används som direkt barn av `Combobox` för att visa ett meddelande när det inte finns
+några objekt i listan.

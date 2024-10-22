@@ -6,14 +6,14 @@ import * as ToggleGroupStories from './ToggleGroup.stories';
 
 # ToggleGroup
 
-Med `ToggleGroup` kan brukerne velge alternativer som påvirker innholdet på en side. Komponenten består av en gruppe knapper som henger sammen, der kun én knapp er mulig å velge om gangen.
+Med `ToggleGroup` kan användarna välja alternativ som påverkar innehållet på en sida. Komponenten består av en grupp knappar som hänger ihop, där endast en knapp kan väljas åt gången.
 
 <Primary />
 <Controls />
 
-## Slik bruker du `ToggleGroup`
+## Så här använder du `ToggleGroup`
 
-Plasser helst innholdet du skal styre rett etter `ToggleGroup` i DOM-en. Hvis ikke, bør du bruke `aria-controls` på `ToggleGroup` for å knytte komponenten til den containeren for innholdet som endrer seg.
+Placera helst innehållet du ska styra direkt efter `ToggleGroup` i DOM:en. Om inte, bör du använda `aria-controls` på `ToggleGroup` för att koppla komponenten till den container som innehåller det föränderliga innehållet.
 
 ```tsx
 import { ToggleGroup } from '@digdir/designsystemet-react';
@@ -25,75 +25,74 @@ import { ToggleGroup } from '@digdir/designsystemet-react';
 </ToggleGroup>;
 ```
 
-## Eksempler
+## Exempel
 
 <br />
 
-### Innholdet på knappene
-`ToggleGroup` kan ha tre typer innhold:
-- Bare tekst.
-- Tekst med ikon til venstre for teksten.
-- Bare ikon.
+### Innehållet på knapparna
+`ToggleGroup` kan ha tre typer av innehåll:
+- Endast text.
+- Text med ikon till vänster om texten.
+- Endast ikon.
 
 <br />
 
-#### Bare ikon
-Alternativet "Bare ikon" brukes kun når du vet at brukerne vil forstå ikonet. Det kan for eksempel være ekspertbrukere eller brukere av interne tjenester, som kjenner symbolene i den aktuelle `ToggleGroup` godt. Forklar handlingene med [`Tooltip`](/docs/komponenter-tooltip--docs) når du bruker kun ikoner. 
+#### Endast ikon
+Alternativet "Endast ikon" används endast när du vet att användarna kommer att förstå ikonen. Det kan till exempel vara expertanvändare eller användare av interna tjänster som känner till symbolerna i den aktuella `ToggleGroup` väl. Förklara åtgärderna med [`Tooltip`](/docs/komponenter-tooltip--docs) när du endast visar ikoner.
 
 
 <Canvas of={ToggleGroupStories.OnlyIcons} />
 
-### Kontrollert
-Bruk `value` på `ToggleGroup.Item` og `ToggleGroup` for å kontrollere verdiene selv.
+### Kontrollerad
+Använd `value` på `ToggleGroup.Item` och `ToggleGroup` för att själv styra värdena.
 
 <Canvas of={ToggleGroupStories.Kontrollert} />
 
 
-## Retningslinjer for `ToggleGroup`
+## Riktlinjer för `ToggleGroup`
 
 <br />
 
-Det bør være minst to, men ikke flere enn fem valg i en `ToggleGroup`. Trenger du flere valg enn fem, bruker du [`Combobox`](/docs/komponenter-combobox--docs).
+Det bör finnas minst två men inte fler än fem alternativ i en `ToggleGroup`. Behöver du fler alternativ än fem, använd [`Combobox`](/docs/komponenter-combobox--docs).
 
-Passer til å
+Passar för att
 
-- filtrere innhold i lister og tabeller
-- veksle mellom datavisning og innhold, for eksempel mellom tabell og graf
-- styre hvilke felter i et skjema som skal vises
-
-<br />
-Passer ikke til å
-
-- bruke som skjemaelement – bruk heller [`Radio`](/docs/komponenter-radio--docs)
-- navigere – bruk heller [`Tabs`](/docs/komponenter-tabs--docs) hvis det dreier seg om panelnavigasjon
-<br />
-### Gi nok plass til komponenten
-
-Pass på at hele komponenten får plass på skjermen og at alle valgene er godt synlig for brukerne. I grensesnitt med liten plass, for eksempel på mobil, kan vi bruke [`Combobox`](/docs/komponenter-combobox--docs) i stedet.
+- filtrera innehåll i listor och tabeller
+- växla mellan datavisning och innehåll, till exempel mellan tabell och graf
+- styra vilka fält i ett formulär som ska visas
 
 <br />
+Passar inte för att
 
-## Tekst i komponenten 
+- användas som formulärselement – använd hellre [`Radio`](/docs/komponenter-radio--docs)
+- navigera – använd hellre [`Tabs`](/docs/komponenter-tabs--docs) om det handlar om panelnavigering
+<br />
+### Ge komponenten tillräckligt med utrymme
 
-Ha gjerne med en ledetekst for gruppen, som forklarer hva valgene gjelder. Skriv tydelige tekster for valgene i komponenten, og pass på at de har samme språklige form. Ta med hint i [`Tooltip`](/docs/komponenter-tooltip--docs), særlig hvis du bare viser ikoner.
+Se till att hela komponenten får plats på skärmen och att alla alternativ är väl synliga för användarna. I gränssnitt med begränsat utrymme, till exempel på mobil, kan vi använda [`Combobox`](/docs/komponenter-combobox--docs) istället.
 
 <br />
 
-## Tilgjengelighet
+## Text i komponenten 
 
-`ToggleGroup` har standard fokusindikator (ramme).
-Vi bruker `roving tabindex` for å håndtere fokusbevegelse mellom knappene.
+Ha gärna med en ledtext för gruppen som förklarar vad alternativen gäller. Skriv tydliga texter för alternativen i komponenten och se till att de har samma språkliga form. Använd gärna hintar i [`Tooltip`](/docs/komponenter-tooltip--docs), särskilt om du endast visar ikoner.
 
-### Tastaturinteraksjon 
+<br />
 
-- `Tab` Flytter fokuset til den aktive toggle-knappen.
-- `Shift+Tab` Flytter fokuset til elementet før `ToggleGroup` i tabindex.
-- `Mellomrom` Velger en knapp.
-- `Enter` Velger en knapp.
-- `Pil opp` Flytter fokuset til forrige knapp i gruppa.
-- `Pil venstre` Flytter fokuset til forrige knapp i gruppa.
-- `Pil ned` Flytter fokuset til neste knapp i gruppa.
-- `Pil høyre` Flytter fokuset til neste knapp i gruppa.
-- `Home` Går til første knapp i gruppa.
-- `End` Går til siste knapp i gruppa.
+## Tillgänglighet
 
+`ToggleGroup` har en standardfokusindikator (ram).
+Vi använder `roving tabindex` för att hantera fokusförflyttning mellan knapparna.
+
+### Tangentbordsinteraktion 
+
+- `Tab` Flyttar fokus till den aktiva toggle-knappen.
+- `Shift+Tab` Flyttar fokus till elementet före `ToggleGroup` i tabindex.
+- `Mellanslag` Väljer en knapp.
+- `Enter` Väljer en knapp.
+- `Pil upp` Flyttar fokus till föregående knapp i gruppen.
+- `Pil vänster` Flyttar fokus till föregående knapp i gruppen.
+- `Pil ner` Flyttar fokus till nästa knapp i gruppen.
+- `Pil höger` Flyttar fokus till nästa knapp i gruppen.
+- `Home` Går till första knappen i gruppen.
+- `End` Går till sista knappen i gruppen.

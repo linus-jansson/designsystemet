@@ -35,13 +35,14 @@ export default {
 export const Preview: Story = (args) => (
   <Card {...args} style={{ maxWidth: '320px' }}>
     <Heading size='sm' level={2}>
-      Card Neutral
+      Kort Neutral
     </Heading>
     <Paragraph>
-      Most provide as with carried business are much better more the perfected
-      designer. Writing slightly explain desk unable at supposedly about this
+      De flesta som tillhandahåller affärer är mycket bättre på den perfekta
+      designern. Att skriva förklarar något lättare skrivbord som påstått
+      handlar om detta.
     </Paragraph>
-    <Paragraph size='sm'>Footer text</Paragraph>
+    <Paragraph size='sm'>Fottext</Paragraph>
   </Card>
 );
 
@@ -57,12 +58,12 @@ export const Variants: StoryFn<typeof Card> = () => (
       </Card.Block>
       <Card.Block>
         <Heading level={2} size='sm'>
-          Card Neutral
+          Kort Neutral
         </Heading>
         <Paragraph>
-          Most provide as with carried business are much better more the
-          perfected designer. Writing slightly explain desk unable at supposedly
-          about this
+          De flesta som tillhandahåller affärer är mycket bättre på den perfekta
+          designern. Att skriva förklarar något lättare skrivbord som påstått
+          handlar om detta.
         </Paragraph>
       </Card.Block>
     </Card>
@@ -72,12 +73,12 @@ export const Variants: StoryFn<typeof Card> = () => (
       </Card.Block>
       <Card.Block>
         <Heading level={2} size='sm'>
-          Card Subtle
+          Kort Subtil
         </Heading>
         <Paragraph>
-          Most provide as with carried business are much better more the
-          perfected designer. Writing slightly explain desk unable at supposedly
-          about this
+          De flesta som tillhandahåller affärer är mycket bättre på den perfekta
+          designern. Att skriva förklarar något lättare skrivbord som påstått
+          handlar om detta.
         </Paragraph>
       </Card.Block>
     </Card>
@@ -87,12 +88,12 @@ export const Variants: StoryFn<typeof Card> = () => (
       </Card.Block>
       <Card.Block>
         <Heading level={2} size='sm'>
-          Card First
+          Kort Första
         </Heading>
         <Paragraph>
-          Most provide as with carried business are much better more the
-          perfected designer. Writing slightly explain desk unable at supposedly
-          about this
+          De flesta som tillhandahåller affärer är mycket bättre på den perfekta
+          designern. Att skriva förklarar något lättare skrivbord som påstått
+          handlar om detta.
         </Paragraph>
       </Card.Block>
     </Card>
@@ -102,12 +103,12 @@ export const Variants: StoryFn<typeof Card> = () => (
       </Card.Block>
       <Card.Block>
         <Heading level={2} size='sm'>
-          Card Second
+          Kort Andra
         </Heading>
         <Paragraph>
-          Most provide as with carried business are much better more the
-          perfected designer. Writing slightly explain desk unable at supposedly
-          about this
+          De flesta som tillhandahåller affärer är mycket bättre på den perfekta
+          designern. Att skriva förklarar något lättare skrivbord som påstått
+          handlar om detta.
         </Paragraph>
       </Card.Block>
     </Card>
@@ -117,12 +118,12 @@ export const Variants: StoryFn<typeof Card> = () => (
       </Card.Block>
       <Card.Block>
         <Heading level={2} size='sm'>
-          Card Third
+          Kort Tredje
         </Heading>
         <Paragraph>
-          Most provide as with carried business are much better more the
-          perfected designer. Writing slightly explain desk unable at supposedly
-          about this
+          De flesta som tillhandahåller affärer är mycket bättre på den perfekta
+          designern. Att skriva förklarar något lättare skrivbord som påstått
+          handlar om detta.
         </Paragraph>
       </Card.Block>
     </Card>
@@ -137,24 +138,24 @@ export const Media: Story = () => (
       </Card.Block>
       <Card.Block>
         <Heading level={2} size='sm'>
-          Card Neutral
+          Kort Neutral
         </Heading>
         <Paragraph>
-          Most provide as with carried business are much better more the
-          perfected designer. Writing slightly explain desk unable at supposedly
-          about this
+          De flesta som tillhandahåller affärer är mycket bättre på den perfekta
+          designern. Att skriva förklarar något lättare skrivbord som påstått
+          handlar om detta.
         </Paragraph>
       </Card.Block>
     </Card>
     <Card>
       <Card.Block>
         <Heading level={2} size='sm'>
-          Card Neutral
+          Kort Neutral
         </Heading>
         <Paragraph>
-          Most provide as with carried business are much better more the
-          perfected designer. Writing slightly explain desk unable at supposedly
-          about this
+          De flesta som tillhandahåller affärer är mycket bättre på den perfekta
+          designern. Att skriva förklarar något lättare skrivbord som påstått
+          handlar om detta.
         </Paragraph>
       </Card.Block>
       <Card.Block>
@@ -164,7 +165,8 @@ export const Media: Story = () => (
   </>
 );
 
-export const Video: Story = () => (
+/* Vet ej om detta ska användas? */
+const Video: Story = () => (
   <Card color='neutral' style={{ maxWidth: '320px' }}>
     <Card.Block>
       <iframe
@@ -183,21 +185,21 @@ export const Video: Story = () => (
           target='_blank'
           rel='noreferrer'
         >
-          Vi feira 30 år med digitalt innsyn
+          Vi firar 30 år med digitalt insyn
         </a>
       </Heading>
       <Paragraph>
-        Det er i år 30 år sidan dei første forsøka med elektronisk postjournal i
-        Noreg. Sjå opptak frå feiringa på Pressens Hus der det både var
-        historiske tilbakeblikk og debatt om innsyn og openheit i forvaltninga.
+        Det är i år 30 år sedan de första försöken med elektronisk postjournal i
+        Norge. Se inspelningen från firandet på Pressens Hus där det både var
+        historiska återblickar och debatt om insyn och öppenhet i förvaltningen.
       </Paragraph>
     </Card.Block>
   </Card>
 );
 
 const options = [
-  { value: 'daglig leder', label: 'Dalig leder' },
-  { value: 'forretningsfører', label: 'Forretningsfører' },
+  { value: 'daglig leder', label: 'Daglig leder' },
+  { value: 'forretningsfører', label: 'Försäljningschef' },
 ];
 
 export const Composed: Story = () => (
@@ -220,16 +222,16 @@ export const Composed: Story = () => (
           }}
         >
           <Heading level={2} size='xs'>
-            Rolle 1
+            Roll 1
           </Heading>
           <Button variant='secondary' color='danger' size='sm'>
             <TrashFillIcon aria-hidden fontSize='1.5rem' />
-            Fjern
+            Ta bort
           </Button>
         </div>
       </Card.Block>
       <Card.Block>
-        <Label htmlFor='my-select'>Velg rolle</Label>
+        <Label htmlFor='my-select'>Välj roll</Label>
         <Select id='my-select'>
           {options.map(({ value, label }, index) => (
             <Select.Option key={index} value={value}>
@@ -237,12 +239,12 @@ export const Composed: Story = () => (
             </Select.Option>
           ))}
         </Select>
-        <Textfield label='Fødsels- eller d-nummer' />
-        <Textfield label='Etternavn' />
+        <Textfield label='Personnummer' />
+        <Textfield label='Efternamn' />
       </Card.Block>
       <Card.Block>
         <Button variant='secondary' size='sm'>
-          Legg til rolle
+          Lägg till roll
           <PlusIcon aria-hidden fontSize='1.5rem' />
         </Button>
       </Card.Block>
@@ -253,12 +255,12 @@ export const Composed: Story = () => (
       </Card.Block>
       <Card.Block>
         <Heading level={2} size='sm'>
-          Card Neutral
+          Kort Neutral
         </Heading>
         <Paragraph>
-          Most provide as with carried business are much better more the
-          perfected designer. Writing slightly explain desk unable at supposedly
-          about this.
+          De flesta som tillhandahåller affärer är mycket bättre på den perfekta
+          designern. Att skriva förklarar något lättare skrivbord som påstått
+          handlar om detta.
         </Paragraph>
       </Card.Block>
     </Card>
@@ -278,15 +280,15 @@ export const WithLink: Story = (args) => (
             target='_blank'
             rel='noopener noreferrer'
           >
-            Link Card
+            Länk Kort
           </a>
         </Heading>
         <Paragraph>
-          Most provide as with carried business are much better more the
-          perfected designer. Writing slightly explain desk unable at supposedly
-          about this
+          De flesta som tillhandahåller affärer är mycket bättre på den perfekta
+          designern. Att skriva förklarar något lättare skrivbord som påstått
+          handlar om detta.
         </Paragraph>
-        <Paragraph size='sm'>Footer text</Paragraph>
+        <Paragraph size='sm'>Fottext</Paragraph>
       </Card.Block>
     </Card>
     <Card {...args} color='neutral'>
@@ -297,15 +299,15 @@ export const WithLink: Story = (args) => (
             target='_blank'
             rel='noopener noreferrer'
           >
-            Link Card
+            Länk Kort
           </a>
         </Heading>
         <Paragraph>
-          Most provide as with carried business are much better more the
-          perfected designer. Writing slightly explain desk unable at supposedly
-          about this
+          De flesta som tillhandahåller affärer är mycket bättre på den perfekta
+          designern. Att skriva förklarar något lättare skrivbord som påstått
+          handlar om detta.
         </Paragraph>
-        <Paragraph size='sm'>Footer text</Paragraph>
+        <Paragraph size='sm'>Fottext</Paragraph>
       </Card.Block>
       <Card.Block>
         <img src={cat5} alt='' />
@@ -324,13 +326,13 @@ export const AsLink: Story = (args) => (
       >
         <Card.Block>
           <Heading size='sm' level={2}>
-            Link Card with blocks
+            Länk Kort med block
           </Heading>
         </Card.Block>
         <Card.Block>
           <Paragraph>
-            Most provide as with carried business are much better more the
-            perfected designer.
+            De flesta som tillhandahåller affärer är mycket bättre på den
+            perfekta designern.
           </Paragraph>
         </Card.Block>
       </a>
@@ -342,11 +344,11 @@ export const AsLink: Story = (args) => (
         rel='noopener noreferrer'
       >
         <Heading size='sm' level={2}>
-          Link Card
+          Länk Kort
         </Heading>
         <Paragraph>
-          Most provide as with carried business are much better more the
-          perfected designer.
+          De flesta som tillhandahåller affärer är mycket bättre på den perfekta
+          designern.
         </Paragraph>
       </a>
     </Card>
@@ -359,13 +361,13 @@ export const AsButton: Story = (args) => (
       <button type='button'>
         <Card.Block>
           <Heading size='sm' level={2}>
-            Button Card with blocks
+            Knapp Kort med block
           </Heading>
         </Card.Block>
         <Card.Block>
           <Paragraph>
-            Most provide as with carried business are much better more the
-            perfected designer.
+            De flesta som tillhandahåller affärer är mycket bättre på den
+            perfekta designern.
           </Paragraph>
         </Card.Block>
       </button>
@@ -373,11 +375,11 @@ export const AsButton: Story = (args) => (
     <Card {...args} color='neutral' asChild>
       <button type='button'>
         <Heading size='sm' level={2}>
-          Link Card
+          Länk Kort
         </Heading>
         <Paragraph>
-          Most provide as with carried business are much better more the
-          perfected designer.
+          De flesta som tillhandahåller affärer är mycket bättre på den perfekta
+          designern.
         </Paragraph>
       </button>
     </Card>
@@ -388,13 +390,13 @@ export const AsGrid: Story = (args) => (
   <Card {...args} style={{ display: 'grid', gridTemplateColumns: '1fr 1fr' }}>
     <Card.Block>
       <Heading size='sm' level={2}>
-        Button Card with blocks
+        Knapp Kort med block
       </Heading>
     </Card.Block>
     <Card.Block>
       <Paragraph>
-        Most provide as with carried business are much better more the perfected
-        designer.
+        De flesta som tillhandahåller affärer är mycket bättre på den perfekta
+        designern.
       </Paragraph>
     </Card.Block>
   </Card>

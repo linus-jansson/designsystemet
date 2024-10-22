@@ -7,29 +7,29 @@ import { usePagination } from './usePagination';
 
 # Pagination
 
-`Pagination` er en liste av knapper som ofte brukes for å navigere mellom sider av informasjon.
+`Pagination` är en lista med knappar som ofta används för att navigera mellan sidor med information.
 
-Komponenten kan brukes på forskjellige måter, se under [bruk](/docs/komponenter-pagination--docs#bruk) for mer informasjon
+Komponenten kan användas på olika sätt, se under [användning](/docs/komponenter-pagination--docs#bruk) för mer information.
 
-Vær oppmerksom på:
+Observera:
 
-- Knappene er som standard `button` elementer.
-- Dersom ny side fører til ny side sørg for at paginering knapper er `a` elementer.
-  - Se eksempel [Paginering med lenker](/docs/komponenter-pagination--with-anchor).
+- Knapparna är som standard `button`-element.
+- Om en ny sida leder till en ny sida, se till att pagineringsknapparna är `a`-element.
+  - Se exempel [Paginering med länkar](/docs/komponenter-pagination--with-anchor).
 
 <Primary />
 <Controls of={PaginationStories.Preview} include={['aria-label', 'asChild', 'size']} />
 
-## Bruk
+## Användning
 
-### Eksempel på bruk med `Pagination`
+### Exempel på användning med `Pagination`
 
-`Pagination` er en kontrollert komponent. Det vil si at komponentens tilstand om hvilken side som er aktiv styres utenfra.
+`Pagination` är en kontrollerad komponent. Det innebär att komponentens tillstånd om vilken sida som är aktiv styrs externt.
 
 ```tsx
 import { Pagination } from '@digdir/designsystemet-react';
 
-const onChange = (event, page: number) => console.log(`Going to page ${page}`);
+const onChange = (event, page: number) => console.log(`Går till sida ${page}`);
 const [currentPage, setCurrentPage] = useState(4);
 const { pages, prevButtonProps, nextButtonProps, hasNext, hasPrevious } = usePagination({
   currentPage,
@@ -42,20 +42,20 @@ const { pages, prevButtonProps, nextButtonProps, hasNext, hasPrevious } = usePag
 <Pagination>
   <Pagination.List>
     <Pagination.Item>
-      <Pagination.Button aria-label='Forrige side' {...prevButtonProps}>
-        Forrige
+      <Pagination.Button aria-label='Föregående sida' {...prevButtonProps}>
+        Föregående
       </Pagination.Button>
     </Pagination.Item>
     {pages.map(({ page, itemKey, buttonProps }) => (
       <Pagination.Item key={itemKey}>
-        <Pagination.Button {...buttonProps} aria-label={`Side ${page}`}>
+        <Pagination.Button {...buttonProps} aria-label={`Sida ${page}`}>
           {page}
         </Pagination.Button>
       </Pagination.Item>
     ))}
     <Pagination.Item>
-      <Pagination.Button aria-label='Neste side' {...nextButtonProps}>
-        Neste
+      <Pagination.Button aria-label='Nästa sida' {...nextButtonProps}>
+        Nästa
       </Pagination.Button>
     </Pagination.Item>
   </Pagination.List>
@@ -64,9 +64,8 @@ const { pages, prevButtonProps, nextButtonProps, hasNext, hasPrevious } = usePag
 
 ## Paginering med `usePagination`
 
-Bruk `usePagination` for paginering-logikk sammen med de enkelt del-komponentene.
-Du kan sende inn:
-
+Använd `usePagination` för pagineringslogik tillsammans med de enskilda delkomponenterna.
+Du kan skicka in:
 
 ## Props
 
@@ -77,21 +76,20 @@ I respons får du objektet:
 
 ```ts
 {
-  hasPrev: boolean, // Indikererer om det finnes en forrige side
-  hasNext: boolean, // Indikererer om det finnes en neste side
-  prevButtonProps: PaginationButtonProps, // Properties du kan spre på forrie-knappen
-  nextButtonProps: PaginationButtonProps, // Properties du kan spre på neste-knappen
+  hasPrev: boolean, // Indikerar om det finns en föregående sida
+  hasNext: boolean, // Indikerar om det finns en nästa sida
+  prevButtonProps: PaginationButtonProps, // Egenskaper du kan sprida på föregående-knappen
+  nextButtonProps: PaginationButtonProps, // Egenskaper du kan sprida på nästa-knappen
   pages: Array<{
-    page: number | string; // Tall for side, eller tom streng dersom knappen skal være ...
-    itemKey: string; // key du kan sende til Pagination.Item for å sikre riktig fokus håndtering
-    buttonProps: PaginationButtonProps; // Properties du kan spre på Pagination.Button
+    page: number | string; // Nummer för sidan, eller tom sträng om knappen ska vara ...
+    itemKey: string; // key du kan skicka till Pagination.Item för att säkerställa korrekt fokus hantering
+    buttonProps: PaginationButtonProps; // Egenskaper du kan sprida på Pagination.Button
   }>
 }
 ```
 
-### Pagenering med lenker
+### Paginering med länkar
 
-Alle del-komponenter støtter `asChild` som kan brukes til å endre `Pagination.Button` til lenker (`a`).
+Alla delkomponenter stöder `asChild` som kan användas för att ändra `Pagination.Button` till länkar (`a`).
 
 <Canvas of={PaginationStories.WithAnchor} />
-

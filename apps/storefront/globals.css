@@ -1,4 +1,6 @@
-@import url('https://altinncdn.no/fonts/inter/inter.css');
+/* @import url('https://altinncdn.no/fonts/inter/inter.css'); */
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
 
 @layer normalize, ds;
 
@@ -15,7 +17,10 @@
 }
 
 body {
-  font-family: 'Inter', sans-serif;
+  color: var(--ds-color-neutral-text-default);
+  line-height: 1.5;
+  font-family: 'Source Sans 3', system-ui;
+  font-size: 16px;
 }
 
 * {
@@ -36,7 +41,7 @@ body {
   justify-content: space-between;
   min-height: calc(100vh);
   position: relative;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Source Sans 3', system-ui;
 }
 
 .root > main {

@@ -6,70 +6,70 @@ import * as AvatarStories from './Avatar.stories';
 
 # Avatar
 
-`Avatar` er en komponent som viser et bilde, initialer eller ikon for en bruker eller profil.
+`Avatar` är en komponent som visar en bild, initialer eller ikon för en användare eller profil.
 
 <Primary />
 <Controls />
 
-## Bruk
+## Användning
 
 ```tsx
 import { Avatar } from '@digdir/designsystemet-react';
 
-/* Med standard brukerikon */
+/* Med standard användarikon */
 <Avatar aria-label="Ola Nordmann" />
 
 /* Med initialer */
 <Avatar aria-label="Ola Nordmann">ON</Avatar>
 
-/* Med bilde */
+/* Med bild */
 <Avatar aria-label="Ola Nordmann">
   <img src="..." />
 </Avatar>
 ```
 
-## Standard ikon
+## Standardikon
 
-Sender du ikke inn `children` viser vi et standard brukerikon.	
+Om du inte skickar in `children` visar vi en standard användarikon.
 
 <Canvas of={AvatarStories.NoName} />
 
-## Størrelser
+## Storlekar
 
-`Avatar` kommer i flere størrelser. Tekst og ikon vil skalere, men det kan hende ikonet ditt må tilpasses.
+`Avatar` kommer i flera storlekar. Text och ikon skalas, men ditt ikon kan behöva anpassas.
 
 <Canvas of={AvatarStories.Sizes} />
 
-## Fargevarianter
+## Färgvarianter
 
-Du kan bruke alle tema fargene dine på `Avatar`.
+Du kan använda alla dina temafärger på `Avatar`.
 
 <Canvas of={AvatarStories.ColorVariants} />
 
 ## Varianter
 
-Du kan endre mellom sirkel og firkantet form. Standard er sirkel.
+Du kan växla mellan cirkulär och fyrkantig form. Standard är cirkulär.
 
 <Canvas of={AvatarStories.ShapeVariants} />
 
-## Med bilde
+## Med bild
 
-Skal du ha bilde, legger du dette som direkte barn av `Avatar`. 
+Om du vill ha en bild, lägg in den som ett direkt barn till `Avatar`.
 
-Bilde (og andre child elements) får automatisk `aria-hidden="true"` for å unngå dobbel informasjon.
+Bilden (och andra child-element) får automatiskt `aria-hidden="true"` för att undvika dubbel information.
 
 <Canvas of={AvatarStories.WithImage} />
 
 ## Komponering
 
-Du kan komponere `Avatar` inn i andre komponenter, som `DropdownMenu`, samt bruke komponenter som
-`Badge` rundt for å vise status.
+Du kan komponera `Avatar` in i andra komponenter, som `DropdownMenu`, samt använda komponenter som
+`Badge` runt om för att visa status.
 
 <Canvas of={AvatarStories.InDropdown} />
 
-## Som lenke
+## Som länk
 
-Legg lenker eller knapper rundt `Avatar` for å gjøre det klikkbart.
-Du må selv sette styling dersom du skal ha en interaktiv `Avatar`.
+Lägg länkar eller knappar runt `Avatar` för att göra det klickbart.
+Du måste själv ställa in styling om du ska ha en interaktiv `Avatar`.
 
 <Canvas of={AvatarStories.AsLink} />

@@ -6,22 +6,22 @@ import * as SelectStories from './Select.stories';
 
 # Select
 
-`Select` er en enkel nedtrekksliste som lar brukeren velge ett eller flere alternativer fra et statisk utvalg.
-Komponenten er bygget på HTML-elementet `select`, som benytter seg av operativsystemets standarder (derav "native").
-Dette sikrer forutsigbarhet og tilgjengelighet, men det setter noen begrensninger på hvordan komponenten kan tilpasses.
-For eksempel er det ikke mulig å overstyre formateringen av alternativene.
+`Select` är en enkel nedrullningslista som låter användaren välja ett eller flera alternativ från ett statiskt urval.
+Komponenten är byggd på HTML-elementet `select`, som använder sig av operativsystemets standarder (därav "native").
+Detta säkerställer förutsägbarhet och tillgänglighet, men det innebär vissa begränsningar för hur komponenten kan anpassas.
+Till exempel är det inte möjligt att åsidosätta formateringen av alternativen.
 
-## Props
+## Egenskaper (Props)
 
 <Primary />
 <Controls />
 
-## Bruk
+## Användning
 
 ```tsx
 import { Select } from '@digdir/designsystemet-react';
 
-<Label htmlFor='my-select'>Ta et valg</Label>
+<Label htmlFor='my-select'>Gör ett val</Label>
 <Select id='my-select'>
   <Select.Option value='1'>Alternativ 1</Select.Option>
   <Select.Option value='2'>Alternativ 2</Select.Option>
@@ -29,13 +29,13 @@ import { Select } from '@digdir/designsystemet-react';
 </Select>;
 ```
 
-## Eksempler
+## Exempel
 
-### Deaktivert
+### Inaktiverad
 
 <Canvas of={SelectStories.Disabled} />
 
-### Med feil
+### Med fel
 
 <Canvas of={SelectStories.WithError} />
 

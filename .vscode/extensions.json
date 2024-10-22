@@ -19,7 +19,7 @@
     "editorconfig.editorconfig",
     "zignd.html-css-class-completion",
     "streetsidesoftware.code-spell-checker",
-    "streetsidesoftware.code-spell-checker-norwegian-bokmal",
-    "biomejs.biome"
+    "biomejs.biome",
+    "streetsidesoftware.code-spell-checker-swedish"
   ]
 }

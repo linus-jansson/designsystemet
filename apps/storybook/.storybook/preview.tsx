@@ -132,12 +132,12 @@ const preview: Preview = {
         order: [
           'Oversikt',
           'Kom i gang',
-          'Endringslogger',
           'Komponenter',
           'Utilities',
           'Experimental',
           'Primitives',
           'Avviklet',
+          'Changelogs',
         ],
       },
     },

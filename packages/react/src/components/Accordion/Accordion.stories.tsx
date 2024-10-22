@@ -17,23 +17,20 @@ export const Preview: StoryFn<typeof Accordion> = (args) => (
   <Accordion {...args}>
     <Accordion.Item>
       <Accordion.Heading>
-        Hvem kan registrere seg i Frivillighetsregisteret?
+        Vem kan registrera sig i Frivillighetsregistret?
       </Accordion.Heading>
       <Accordion.Content>
-        For å kunne bli registrert i Frivillighetsregisteret, må organisasjonen
-        drive frivillig virksomhet. Det er bare foreninger, stiftelser og
-        aksjeselskap som kan registreres. Virksomheten kan ikke dele ut midler
-        til fysiske personer. Virksomheten må ha et styre.
+        Frivilighetsregistret är öppet för alla typer av frivilliga
       </Accordion.Content>
     </Accordion.Item>
     <Accordion.Item>
       <Accordion.Heading>
-        Hvordan går jeg fram for å registrere i Frivillighetsregisteret?
+        Hur går jag tillväga för att registrera mig i Frivillighetsregistret?
       </Accordion.Heading>
       <Accordion.Content>
-        Virksomheten må være registrert i Enhetsregisteret før den kan bli
-        registrert i Frivillighetsregisteret. Du kan registrere i begge
-        registrene samtidig i Samordnet registermelding.
+        Företaget måste vara registrerat i Enhetsregistret innan det kan
+        registreras i Frivillighetsregistret. Du kan registrera dig i båda
+        registren samtidigt i Samordnet registermelding.
       </Accordion.Content>
     </Accordion.Item>
   </Accordion>
