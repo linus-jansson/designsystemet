@@ -39,7 +39,8 @@ export const Preview: Story = (args) => (
     </Heading>
     <Paragraph>
       De flesta som tillhandahåller affärer är mycket bättre på den perfekta
-      designern. Att skriva förklarar något lättare skrivbord som påstått handlar om detta.
+      designern. Att skriva förklarar något lättare skrivbord som påstått
+      handlar om detta.
     </Paragraph>
     <Paragraph size='sm'>Fottext</Paragraph>
   </Card>
@@ -60,8 +61,9 @@ export const Variants: StoryFn<typeof Card> = () => (
           Kort Neutral
         </Heading>
         <Paragraph>
-          De flesta som tillhandahåller affärer är mycket bättre på den
-          perfekta designern. Att skriva förklarar något lättare skrivbord som påstått handlar om detta.
+          De flesta som tillhandahåller affärer är mycket bättre på den perfekta
+          designern. Att skriva förklarar något lättare skrivbord som påstått
+          handlar om detta.
         </Paragraph>
       </Card.Block>
     </Card>
@@ -74,8 +76,9 @@ export const Variants: StoryFn<typeof Card> = () => (
           Kort Subtil
         </Heading>
         <Paragraph>
-          De flesta som tillhandahåller affärer är mycket bättre på den
-          perfekta designern. Att skriva förklarar något lättare skrivbord som påstått handlar om detta.
+          De flesta som tillhandahåller affärer är mycket bättre på den perfekta
+          designern. Att skriva förklarar något lättare skrivbord som påstått
+          handlar om detta.
         </Paragraph>
       </Card.Block>
     </Card>
@@ -88,8 +91,9 @@ export const Variants: StoryFn<typeof Card> = () => (
           Kort Första
         </Heading>
         <Paragraph>
-          De flesta som tillhandahåller affärer är mycket bättre på den
-          perfekta designern. Att skriva förklarar något lättare skrivbord som påstått handlar om detta.
+          De flesta som tillhandahåller affärer är mycket bättre på den perfekta
+          designern. Att skriva förklarar något lättare skrivbord som påstått
+          handlar om detta.
         </Paragraph>
       </Card.Block>
     </Card>
@@ -102,8 +106,9 @@ export const Variants: StoryFn<typeof Card> = () => (
           Kort Andra
         </Heading>
         <Paragraph>
-          De flesta som tillhandahåller affärer är mycket bättre på den
-          perfekta designern. Att skriva förklarar något lättare skrivbord som påstått handlar om detta.
+          De flesta som tillhandahåller affärer är mycket bättre på den perfekta
+          designern. Att skriva förklarar något lättare skrivbord som påstått
+          handlar om detta.
         </Paragraph>
       </Card.Block>
     </Card>
@@ -116,8 +121,9 @@ export const Variants: StoryFn<typeof Card> = () => (
           Kort Tredje
         </Heading>
         <Paragraph>
-          De flesta som tillhandahåller affärer är mycket bättre på den
-          perfekta designern. Att skriva förklarar något lättare skrivbord som påstått handlar om detta.
+          De flesta som tillhandahåller affärer är mycket bättre på den perfekta
+          designern. Att skriva förklarar något lättare skrivbord som påstått
+          handlar om detta.
         </Paragraph>
       </Card.Block>
     </Card>
@@ -135,8 +141,9 @@ export const Media: Story = () => (
           Kort Neutral
         </Heading>
         <Paragraph>
-          De flesta som tillhandahåller affärer är mycket bättre på den
-          perfekta designern. Att skriva förklarar något lättare skrivbord som påstått handlar om detta.
+          De flesta som tillhandahåller affärer är mycket bättre på den perfekta
+          designern. Att skriva förklarar något lättare skrivbord som påstått
+          handlar om detta.
         </Paragraph>
       </Card.Block>
     </Card>
@@ -146,8 +153,9 @@ export const Media: Story = () => (
           Kort Neutral
         </Heading>
         <Paragraph>
-          De flesta som tillhandahåller affärer är mycket bättre på den
-          perfekta designern. Att skriva förklarar något lättare skrivbord som påstått handlar om detta.
+          De flesta som tillhandahåller affärer är mycket bättre på den perfekta
+          designern. Att skriva förklarar något lättare skrivbord som påstått
+          handlar om detta.
         </Paragraph>
       </Card.Block>
       <Card.Block>
@@ -250,8 +258,9 @@ export const Composed: Story = () => (
           Kort Neutral
         </Heading>
         <Paragraph>
-          De flesta som tillhandahåller affärer är mycket bättre på den
-          perfekta designern. Att skriva förklarar något lättare skrivbord som påstått handlar om detta.
+          De flesta som tillhandahåller affärer är mycket bättre på den perfekta
+          designern. Att skriva förklarar något lättare skrivbord som påstått
+          handlar om detta.
         </Paragraph>
       </Card.Block>
     </Card>
@@ -275,8 +284,9 @@ export const WithLink: Story = (args) => (
           </a>
         </Heading>
         <Paragraph>
-          De flesta som tillhandahåller affärer är mycket bättre på den
-          perfekta designern. Att skriva förklarar något lättare skrivbord som påstått handlar om detta.
+          De flesta som tillhandahåller affärer är mycket bättre på den perfekta
+          designern. Att skriva förklarar något lättare skrivbord som påstått
+          handlar om detta.
         </Paragraph>
         <Paragraph size='sm'>Fottext</Paragraph>
       </Card.Block>
@@ -293,8 +303,9 @@ export const WithLink: Story = (args) => (
           </a>
         </Heading>
         <Paragraph>
-          De flesta som tillhandahåller affärer är mycket bättre på den
-          perfekta designern. Att skriva förklarar något lättare skrivbord som påstått handlar om detta.
+          De flesta som tillhandahåller affärer är mycket bättre på den perfekta
+          designern. Att skriva förklarar något lättare skrivbord som påstått
+          handlar om detta.
         </Paragraph>
         <Paragraph size='sm'>Fottext</Paragraph>
       </Card.Block>
@@ -336,8 +347,8 @@ export const AsLink: Story = (args) => (
           Länk Kort
         </Heading>
         <Paragraph>
-          De flesta som tillhandahåller affärer är mycket bättre på den
-          perfekta designern.
+          De flesta som tillhandahåller affärer är mycket bättre på den perfekta
+          designern.
         </Paragraph>
       </a>
     </Card>
@@ -367,8 +378,8 @@ export const AsButton: Story = (args) => (
           Länk Kort
         </Heading>
         <Paragraph>
-          De flesta som tillhandahåller affärer är mycket bättre på den
-          perfekta designern.
+          De flesta som tillhandahåller affärer är mycket bättre på den perfekta
+          designern.
         </Paragraph>
       </button>
     </Card>

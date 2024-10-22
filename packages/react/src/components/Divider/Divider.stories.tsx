@@ -18,7 +18,8 @@ export const Preview: Story = (args) => (
     </Paragraph>
     <Divider {...args} />
     <Paragraph>
-      Den kan också användas för att skilja innehåll som är relaterat till varandra.
+      Den kan också användas för att skilja innehåll som är relaterat till
+      varandra.
     </Paragraph>
   </>
 );

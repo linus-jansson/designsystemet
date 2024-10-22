@@ -130,11 +130,11 @@ export const Showcase: StoryFn = () => {
         >
           <Table.Head>
             <Table.Row>
-              <Table.HeaderCell onClick={function Ya() { }} sort='none'>
+              <Table.HeaderCell onClick={function Ya() {}} sort='none'>
                 Namn
               </Table.HeaderCell>
               <Table.HeaderCell>E-post</Table.HeaderCell>
-              <Table.HeaderCell onClick={function Ya() { }} sort='none'>
+              <Table.HeaderCell onClick={function Ya() {}} sort='none'>
                 Telefon
               </Table.HeaderCell>
             </Table.Row>
@@ -326,9 +326,9 @@ export const Showcase: StoryFn = () => {
           <Link href='#' color='neutral'>
             stiftelser
           </Link>{' '}
-          som kan registreras. Verksamheten kan inte dela ut medel till
-          fysiska personer. Verksamheten måste ha en styrelse. Verksamheten
-          måste vara registrerad i{' '}
+          som kan registreras. Verksamheten kan inte dela ut medel till fysiska
+          personer. Verksamheten måste ha en styrelse. Verksamheten måste vara
+          registrerad i{' '}
           <Link href='#' color='neutral'>
             Enhetsregisteret
           </Link>{' '}

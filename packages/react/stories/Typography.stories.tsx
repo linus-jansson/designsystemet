@@ -19,8 +19,10 @@ export const ExempelText: StoryFn = () => (
     </Heading>
 
     <Paragraph style={{ marginBottom: 'var(--ds-spacing-2)' }} variant='long'>
-      Här kan du registrera nya företag, som exempelvis enskilda firmor, föreningar, aktiebolag, ansvariga företag,
-      samverkansföretag och stiftelser. De allra flesta organisationsformer kan använda den här tjänsten.
+      Här kan du registrera nya företag, som exempelvis enskilda firmor,
+      föreningar, aktiebolag, ansvariga företag, samverkansföretag och
+      stiftelser. De allra flesta organisationsformer kan använda den här
+      tjänsten.
     </Paragraph>
 
     <Heading
@@ -34,8 +36,8 @@ export const ExempelText: StoryFn = () => (
     <Paragraph style={{ marginBottom: 'var(--ds-spacing-2)' }}>
       Den här tjänsten kan du använda för att lämna uppgifter till
       Enhetsregistret, Företagsregistret, Frivilligregistret, NAV Aa-registret,
-      Företags- och verksamhetsregistret hos SCB, Stiftelseregistret och Skatteverkets register över
-      juridiska personer.
+      Företags- och verksamhetsregistret hos SCB, Stiftelseregistret och
+      Skatteverkets register över juridiska personer.
     </Paragraph>
 
     <Heading
@@ -47,8 +49,9 @@ export const ExempelText: StoryFn = () => (
     </Heading>
 
     <Paragraph variant='short' style={{ marginBottom: 'var(--ds-spacing-2)' }}>
-      När du ska signera meddelandet kommer du att få en signeringsuppgift i
-      din meddelandebox i Altinn. Meddelandet skickas inte för behandling förrän alla har signerat.
+      När du ska signera meddelandet kommer du att få en signeringsuppgift i din
+      meddelandebox i Altinn. Meddelandet skickas inte för behandling förrän
+      alla har signerat.
     </Paragraph>
 
     <Heading
@@ -61,8 +64,9 @@ export const ExempelText: StoryFn = () => (
 
     <Paragraph style={{ marginBottom: 'var(--ds-spacing-2)' }}>
       För att signera å ett företags vägnar behöver du Altinn-rollen Signerare
-      av Samordnad registeranmälan. Du kan se vilka roller du har för en aktör på menypunkten Profil, Formulär och tjänster du har rättigheter till. Om du
-      inte har dessa roller, måste någon med rollerna delegera dem till dig.
+      av Samordnad registeranmälan. Du kan se vilka roller du har för en aktör
+      på menypunkten Profil, Formulär och tjänster du har rättigheter till. Om
+      du inte har dessa roller, måste någon med rollerna delegera dem till dig.
     </Paragraph>
 
     <Heading
@@ -74,7 +78,8 @@ export const ExempelText: StoryFn = () => (
     </Heading>
 
     <Paragraph variant='short' style={{ marginBottom: 'var(--ds-spacing-2)' }}>
-      Sekretesspolicyn ger information om vilka personuppgifter vi behandlar, hur dessa behandlas och vilka rättigheter du har.
+      Sekretesspolicyn ger information om vilka personuppgifter vi behandlar,
+      hur dessa behandlas och vilka rättigheter du har.
     </Paragraph>
   </>
 );
@@ -90,8 +95,10 @@ export const ExempleTextDark: StoryFn = () => (
     </Heading>
 
     <Paragraph style={{ marginBottom: 'var(--ds-spacing-2)' }} variant='long'>
-      Här kan du registrera nya företag, som exempelvis enskilda firmor, föreningar, aktiebolag, ansvariga företag,
-      samverkansföretag och stiftelser. De allra flesta organisationsformer kan använda den här tjänsten.
+      Här kan du registrera nya företag, som exempelvis enskilda firmor,
+      föreningar, aktiebolag, ansvariga företag, samverkansföretag och
+      stiftelser. De allra flesta organisationsformer kan använda den här
+      tjänsten.
     </Paragraph>
 
     <Heading
@@ -105,8 +112,8 @@ export const ExempleTextDark: StoryFn = () => (
     <Paragraph style={{ marginBottom: 'var(--ds-spacing-2)' }}>
       Den här tjänsten kan du använda för att lämna uppgifter till
       Enhetsregistret, Företagsregistret, Frivilligregistret, NAV Aa-registret,
-      Företags- och verksamhetsregistret hos SCB, Stiftelseregistret och Skatteverkets register över
-      juridiska personer.
+      Företags- och verksamhetsregistret hos SCB, Stiftelseregistret och
+      Skatteverkets register över juridiska personer.
     </Paragraph>
 
     <Heading
@@ -118,8 +125,9 @@ export const ExempleTextDark: StoryFn = () => (
     </Heading>
 
     <Paragraph variant='short' style={{ marginBottom: 'var(--ds-spacing-2)' }}>
-      När du ska signera meddelandet kommer du att få en signeringsuppgift i
-      din meddelandebox i Altinn. Meddelandet skickas inte för behandling förrän alla har signerat.
+      När du ska signera meddelandet kommer du att få en signeringsuppgift i din
+      meddelandebox i Altinn. Meddelandet skickas inte för behandling förrän
+      alla har signerat.
     </Paragraph>
 
     <Heading
@@ -132,8 +140,9 @@ export const ExempleTextDark: StoryFn = () => (
 
     <Paragraph style={{ marginBottom: 'var(--ds-spacing-2)' }}>
       För att signera å ett företags vägnar behöver du Altinn-rollen Signerare
-      av Samordnad registeranmälan. Du kan se vilka roller du har för en aktör på menypunkten Profil, Formulär och tjänster du har rättigheter till. Om du
-      inte har dessa roller, måste någon med rollerna delegera dem till dig.
+      av Samordnad registeranmälan. Du kan se vilka roller du har för en aktör
+      på menypunkten Profil, Formulär och tjänster du har rättigheter till. Om
+      du inte har dessa roller, måste någon med rollerna delegera dem till dig.
     </Paragraph>
 
     <Heading
@@ -145,7 +154,8 @@ export const ExempleTextDark: StoryFn = () => (
     </Heading>
 
     <Paragraph variant='short' style={{ marginBottom: 'var(--ds-spacing-2)' }}>
-      Sekretesspolicyn ger information om vilka personuppgifter vi behandlar, hur dessa behandlas och vilka rättigheter du har.
+      Sekretesspolicyn ger information om vilka personuppgifter vi behandlar,
+      hur dessa behandlas och vilka rättigheter du har.
     </Paragraph>
   </div>
 );
