@@ -1,5 +1,11 @@
 # Change Log
 
+## 1.0.0-next.36
+
+### Minor Changes
+
+- Implemented a more flexible system of semantic border-radius tokens. ([#2497](https://github.com/digdir/designsystemet/pull/2497))
+
 ## 1.0.0-next.35
 
 ### Patch Changes
