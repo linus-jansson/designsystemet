@@ -1,0 +1,71 @@
+import { ComponentIcon } from '@navikt/aksel-icons';
+import { MenuPageLayout } from '@layouts';
+
+export const metadata = {
+  title: 'Om designsystemet',
+  description:
+    'En gemensam verktygslåda för grundläggande UI-komponenter, riktlinjer och mönster för offentlig sektor.',
+};
+
+export default ({ children }) => (
+  <MenuPageLayout
+    content={children}
+    data={{
+      title: 'Om designsystemet',
+      date : '16 oktober 2024',
+      icon: <ComponentIcon />,
+      color: 'blue',
+    }}
+  />
+);
+
+Designsystemet är en gemensam verktygslåda med UI-komponenter, riktlinjer och mönster som är värdefulla att dela mellan olika verksamheter inom offentlig sektor. Syftet är att förenkla produktutvecklingen och skapa en enhetlig användarupplevelse.
+
+## Vad är ett designsystem?
+
+Ett designsystem består av UI-komponenter och mönster som säkerställer genomtänkta och konsekventa användarupplevelser i digitala tjänster. Med komponenterna kan produktteam enkelt skapa och vidareutveckla lösningar.
+
+Ett designsystem fungerar som en bro mellan design och utveckling, vilket säkerställer att vi arbetar utifrån samma värderingar och riktlinjer.
+
+## Varför ett gemensamt designsystem?
+
+Uppsala kommuns vision är att digitala tjänster ska vara tillgängliga för alla medborgare. Genom att ha ett gemensamt designsystem säkerställer vi att medborgarna får en förutsägbar och sammanhållen upplevelse över olika tjänster.
+
+Genom att återanvända komponenter och mönster kan vi fokusera mer på att lösa komplexa problem och minska dubbelarbete. Tjänsterna blir lättare att använda, mer tillgängliga och anpassade för alla.
+
+## Vad består designsystemet av?
+
+Designsystemet består av grundläggande designelement, UI-komponenter, mönster och god praxis:
+
+- **Grundläggande designelement** \
+  Design tokens som styr färger, typografi, storlekar och avstånd för att säkerställa enhetlighet och tillgänglighet. Färger och typografi anpassas enligt Uppsala kommuns varumärkesprofil, och tillgänglighet är prioriterad.
+
+- **UI-komponenter** \
+  Komponenterna är utformade för att vara enkla att använda och följa riktlinjer för tillgänglighet och responsiv design. De finns tillgängliga i React och dokumenteras i Storybook för att underlätta användning och implementering.
+
+- **Mönster och god praxis** \
+  Återanvändbara mönster hjälper till att skapa en konsekvent användarupplevelse över olika digitala tjänster. Exempel på mönster är hur navigering, formulär och felmeddelanden ska hanteras i gränssnittet.
+
+## Hur bidrar vi tillsammans?
+
+Designsystemet är öppet för alla som vill bidra. Genom att samarbeta kan vi fortsätta utveckla systemet och dela erfarenheter, insikter och förbättringar. Bidra med design, utveckling eller insikter via våra öppna kanaler och följ vårt arbete på GitHub.
+
+- [Bidra med design](/grundlaggande/for-designers/bidra-i-figma)
+- [Bidra med utveckling](https://github.com/uppsalakommun/designsystemet/blob/main/CONTRIBUTING.md)
+- [Bidra med insikt](https://github.com/uppsalakommun/innsiktsbibliotek)
+- Skriv en artikel
+
+## Hur samarbetar vi?
+
+Genom att vara öppna och transparenta i vårt arbete skapar vi förutsättningar för ett bredare samarbete. Allt vi gör är tillgängligt och delat genom våra öppna kanaler - GitHub, backlog, Figma, och Storybook. Vi har också regelbundna möten för att diskutera framsteg och samla in insikter från olika team och avdelningar.
+
+---
+
+Vill du vara med och bidra? Skicka oss ett mejl på:
+[designsystem@uppsala.se](mailto:designsystem@uppsala.se)
+
+---
+
+**Källor**
+
+[1] Uppsala kommuns digitala strategi

@@ -1,0 +1,29 @@
+import { PaletteIcon } from '@navikt/aksel-icons';
+
+import { MenuPageLayout } from '@layouts';
+
+export const metadata = {
+  title: 'Hämta uppdateringar från Figma',
+  description:
+    'Vad gör du när det har kommit en ny version av Figma community-filen?',
+};
+
+export default ({ children }) => (
+  <MenuPageLayout
+    content={children}
+    data={{
+      title: 'Hämta uppdateringar från Figma',
+      date : '16 oktober 2024',
+      icon: <PaletteIcon />,
+      color: 'blå',
+    }}
+  />
+);
+
+Vad gör du när det har kommit en ny version av Figma community-filen?
+
+Svaret är tyvärr att det inte finns något idealiskt sätt att göra detta på idag. Figma har för närvarande [ingen support för att hämta ner ändringar från en Community-fil](https://forum.figma.com/t/need-a-way-to-get-latest-updates-or-subscribe-to-changes-from-a-published-community-file/32571). Vi hoppas att detta kommer, men under tiden kan du överväga följande alternativ:
+
+1. Hämta ner den senaste versionen av Community-filen och publicera den. De som använder komponenterna från och med nu kommer då att ha de senaste komponenterna. Det är troligen av liten nytta att uppdatera gamla skisser och prototyper med nya komponenter. Om du ändå vill göra detta kan du använda "Swap"-funktionen i Figma.
+
+2. Skapa ett [plugin](https://github.com/digdir/designsystemet/issues/289#issuecomment-2037555899) som kan hämta de senaste ändringarna. Detta är något vi kommer att överväga att titta på framöver.

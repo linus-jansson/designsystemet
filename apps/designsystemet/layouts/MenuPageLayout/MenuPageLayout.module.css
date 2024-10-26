@@ -1,0 +1,151 @@
+.page {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--ds-spacing-10);
+  margin-top: var(--ds-spacing-8);
+  margin-bottom: var(--page-spacing-bottom);
+}
+
+.left {
+  flex-basis: 220px;
+  flex-grow: 1;
+}
+
+.right {
+  flex-basis: 600px;
+  flex-grow: 500;
+  max-width: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: var(--ds-spacing-6);
+  padding: var(--ds-spacing-10);
+  width: 100%;
+  border-radius: var(--ds-border-radius-xl);
+  background-color: var(--ds-color-neutral-background-subtle);
+}
+
+.headerText {
+  color: inherit;
+  padding-right: 290px;
+}
+
+.date {
+  margin-top: var(--ds-spacing-3);
+}
+
+.date-last-updated {
+  margin-top: var(--ds-spacing-1);
+  opacity: 75%;
+}
+
+.iconContainer {
+  position: absolute;
+  right: 0;
+  margin-right: 85px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 190px;
+  width: 190px;
+  border-radius: var(--ds-border-radius-lg);
+  border: 7px solid #8f9296;
+  transform: rotate(45deg);
+}
+
+.iconContainer.red {
+  border-color: var(--ds-color-brand1-4);
+}
+
+.iconContainer.blue {
+  border-color: var(--ds-color-brand3-4);
+}
+
+.iconContainer.yellow {
+  border-color: var(--ds-color-brand2-4);
+}
+
+.iconContainer svg {
+  color: var(--ds-color-neutral-base-default);
+  position: relative;
+  z-index: 54;
+  opacity: 0.7;
+  font-size: 4.1rem;
+  transform: rotate(-45deg) scale(1.6);
+}
+
+.iconContainer.red svg {
+  color: var(--ds-color-brand1-6);
+}
+
+.iconContainer.blue svg {
+  color: var(--ds-color-brand3-6);
+}
+
+.iconContainer.yellow svg {
+  color: var(--ds-color-brand2-6);
+}
+
+.content {
+  padding: var(--ds-spacing-4) var(--ds-spacing-10) 0 var(--ds-spacing-10);
+  height: fit-content;
+}
+
+.githubLink {
+  display: inline-block;
+  margin-top: var(--ds-spacing-12);
+}
+
+@media (max-width: 1200px) {
+  .header {
+    padding: 32px;
+  }
+
+  .iconContainer {
+    height: 120px;
+    width: 120px;
+    border-width: 5px;
+    margin-right: 60px;
+  }
+
+  .iconContainer svg {
+    font-size: 3rem;
+  }
+
+  .headerText {
+    padding-right: 190px;
+  }
+}
+
+@media (max-width: 576px) {
+  .content {
+    padding: 0;
+  }
+
+  .header {
+    padding: 135px 24px 24px;
+  }
+
+  .iconContainer {
+    position: absolute;
+    top: 37px;
+    left: 37px;
+    height: 70px;
+    width: 70px;
+    border-width: 4px;
+  }
+
+  .iconContainer svg {
+    font-size: 2rem;
+  }
+
+  .headerText {
+    padding-right: 0;
+  }
+}
