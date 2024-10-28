@@ -1,5 +1,46 @@
 [
   {
+    "id": "b42b7583f79b77845c84669a62daa517d8bd9b42",
+    "name": "colors",
+    "$figmaStyleReferences": {},
+    "selectedTokenSets": {
+      "uppsala primitives": "enabled"
+    },
+    "group": "Uppsala kommun Primitives",
+    "$figmaCollectionId": "VariableCollectionId:15007:98419",
+    "$figmaModeId": "15007:0",
+    "$figmaVariableReferences": {
+      "uppsala-purple.125": "19d1e9f414b1f9c0cc169a606fc21bb543c159f2",
+      "uppsala-purple.150": "843bd44947c6006ec169e9334231d66118a48ccb",
+      "uppsala-purple.175": "a9244bd612e6bacd7e702296c3a9b7f2ec7d1c0d",
+      "uppsala-purple.200": "157f983f61c7fb4ec84b79705e53676baabaec3f",
+      "uppsala-purple.250": "1869ebc6b2b2657fbbcc77e021ea49115d41a9aa",
+      "uppsala-purple.275": "e7e54459d071b142b4963ac9409eb70c5dfcae92",
+      "uppsala-purple.300": "1f8f4ecd59e1f055ef9e956d2400652408cdd65c",
+      "uppsala-purple.350": "7d65caa3fac798c4adcbe87ba80c1d20301d568a",
+      "uppsala-purple.400": "5a248c343f8284e870c3061aed1df41da49d73ab",
+      "uppsala-purple.450": "12638a480362cdff82dc86546c98178f0636072e",
+      "uppsala-purple.500": "53d93167d164c482f08fbfcacca0f57233f3a4ae",
+      "uppsala-purple.550": "24d87f7771e906126b2e1c13e454211c6c71e1dc",
+      "uppsala-purple.600": "fb27b4e9b32ba48d41ab72bd97120f6079e38c96",
+      "uppsala-purple.650": "ecafd6f5177062e7f41ea8deb9c079ac85a1e8c5",
+      "uppsala-purple.700": "51102b5eac9a6e00ccbb0f1c75f2016b0f0fc05f",
+      "uppsala-purple.725": "19b61c0ee16ca86b1e634a8fe0cd32adaf9da94e",
+      "uppsala-purple.750": "e5b888de0c635096b69c9b827867599fcb8128b5",
+      "uppsala-purple.775": "c0304a215649203ae14547ce615edc6e8a30ce81",
+      "uppsala-purple.800": "c8af69ba503c71bb8a11ec05f6b1459d533fbd78",
+      "uppsala-purple.850": "81a65762864690983d3c4f3d609362d222d5bd60",
+      "uppsala-purple.875": "c8b311aa7b6837f20068def2411f90615e00cb03",
+      "uppsala-purple.900": "13d85e237c20416618dbcc86d8f0e3c82a437018",
+      "uppsala-purple.925": "d5e6b2981687f2af5f5c15c86a0aae33461bb745",
+      "uppsala-purple.950": "cb9767bec656a2f45ca9b222fc44408a03d9b25e",
+      "uppsala-purple.975": "8f6d3f92700d7be4b1dd7816950dd45ed9b28239",
+      "uppsala-purple.025": "a341d62c6cf4ccaadd456997f399bbf3607f2da5",
+      "uppsala-purple.050": "fb5d49e1dfbdd34c7def6c42baa5919a0722d1ce",
+      "uppsala-purple.075": "a7bf51744a81f9f83398ab1db6a97f779a423b63"
+    }
+  },
+  {
     "id": "8b2c8cc86611a34b135cb22948666779361fd729",
     "name": "default",
     "$figmaStyleReferences": {},

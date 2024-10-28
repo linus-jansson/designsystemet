@@ -127,55 +127,55 @@
     "brand1": {
       "1": {
         "$type": "color",
-        "$value": "#001c36"
+        "$value": "{uppsala-purple.925}"
       },
       "2": {
         "$type": "color",
-        "$value": "#002545"
+        "$value": "{uppsala-purple.850}"
       },
       "3": {
         "$type": "color",
-        "$value": "#00315b"
+        "$value": "{uppsala-purple.775}"
       },
       "4": {
         "$type": "color",
-        "$value": "#013f75"
+        "$value": "{uppsala-purple.750}"
       },
       "5": {
         "$type": "color",
-        "$value": "#014b8e"
+        "$value": "{uppsala-purple.725}"
       },
       "6": {
         "$type": "color",
-        "$value": "#01539b"
+        "$value": "{uppsala-purple.650}"
       },
       "7": {
         "$type": "color",
-        "$value": "#1971c0"
+        "$value": "{uppsala-purple.550}"
       },
       "8": {
         "$type": "color",
-        "$value": "#9bc2e4"
+        "$value": "{uppsala-purple.200}"
       },
       "9": {
         "$type": "color",
-        "$value": "#4b90ce"
+        "$value": "{uppsala-purple.350}"
       },
       "10": {
         "$type": "color",
-        "$value": "#277ac4"
+        "$value": "{uppsala-purple.450}"
       },
       "11": {
         "$type": "color",
-        "$value": "#0163ba"
+        "$value": "{uppsala-purple.550}"
       },
       "12": {
         "$type": "color",
-        "$value": "#72a8d9"
+        "$value": "{uppsala-purple.275}"
       },
       "13": {
         "$type": "color",
-        "$value": "#d1e3f3"
+        "$value": "{uppsala-purple.075}"
       },
       "contrast-1": {
         "$type": "color",
@@ -183,7 +183,7 @@
       },
       "contrast-2": {
         "$type": "color",
-        "$value": "#0d1823"
+        "$value": "{uppsala-purple.950}"
       }
     },
     "brand2": {
