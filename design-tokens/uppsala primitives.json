@@ -1,1 +1,112 @@
-{}
+{
+  "uppsala-purple": {
+    "125": {
+      "$type": "color",
+      "$value": "#F5E6FA"
+    },
+    "150": {
+      "$type": "color",
+      "$value": "#EFD7F7"
+    },
+    "175": {
+      "$type": "color",
+      "$value": "#E9CAF3"
+    },
+    "200": {
+      "$type": "color",
+      "$value": "#DEB6EB"
+    },
+    "250": {
+      "$type": "color",
+      "$value": "#D7ABE6"
+    },
+    "275": {
+      "$type": "color",
+      "$value": "#D0A0E0"
+    },
+    "300": {
+      "$type": "color",
+      "$value": "#C391D4"
+    },
+    "350": {
+      "$type": "color",
+      "$value": "#B784C8"
+    },
+    "400": {
+      "$type": "color",
+      "$value": "#A973BB"
+    },
+    "450": {
+      "$type": "color",
+      "$value": "#9E69B0"
+    },
+    "500": {
+      "$type": "color",
+      "$value": "#955AAA"
+    },
+    "550": {
+      "$type": "color",
+      "$value": "#8D4EA3"
+    },
+    "600": {
+      "$type": "color",
+      "$value": "#833D9A"
+    },
+    "650": {
+      "$type": "color",
+      "$value": "#7A3093"
+    },
+    "700": {
+      "$type": "color",
+      "$value": "#6F2688"
+    },
+    "725": {
+      "$type": "color",
+      "$value": "#641C7D"
+    },
+    "750": {
+      "$type": "color",
+      "$value": "#550E6D"
+    },
+    "800": {
+      "$type": "color",
+      "$value": "#3C0051"
+    },
+    "850": {
+      "$type": "color",
+      "$value": "#340045"
+    },
+    "875": {
+      "$type": "color",
+      "$value": "#2B003A"
+    },
+    "900": {
+      "$type": "color",
+      "$value": "#23002E"
+    },
+    "925": {
+      "$type": "color",
+      "$value": "#1A0023"
+    },
+    "950": {
+      "$type": "color",
+      "$value": "#110017"
+    },
+    "975": {
+      "$type": "color",
+      "$value": "#09000C"
+    },
+    "025": {
+      "$type": "color",
+      "$value": "#FEFBFE"
+    },
+    "050": {
+      "$type": "color",
+      "$value": "#FCF8FE"
+    },
+    "075": {
+      "$type": "color",
+      "$value": "#FBF4FD"
+    }
+  }
+}
