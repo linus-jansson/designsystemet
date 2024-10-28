@@ -1,5 +1,6 @@
 {
   "tokenSetOrder": [
+    "uppsala primitives",
     "primitives/globals",
     "primitives/size/default",
     "primitives/size/compact",
