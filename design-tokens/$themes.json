@@ -10,8 +10,11 @@
     "$figmaCollectionId": "VariableCollectionId:15007:98419",
     "$figmaModeId": "15007:0",
     "$figmaVariableReferences": {
-      "uppsala-purple.125": "19d1e9f414b1f9c0cc169a606fc21bb543c159f2",
+      "uppsala-purple.25": "a341d62c6cf4ccaadd456997f399bbf3607f2da5",
+      "uppsala-purple.50": "fb5d49e1dfbdd34c7def6c42baa5919a0722d1ce",
+      "uppsala-purple.75": "a7bf51744a81f9f83398ab1db6a97f779a423b63",
       "uppsala-purple.100": "206581024c4ed9b65b3c573314f1d6fcc19813dc",
+      "uppsala-purple.125": "19d1e9f414b1f9c0cc169a606fc21bb543c159f2",
       "uppsala-purple.150": "843bd44947c6006ec169e9334231d66118a48ccb",
       "uppsala-purple.175": "a9244bd612e6bacd7e702296c3a9b7f2ec7d1c0d",
       "uppsala-purple.200": "157f983f61c7fb4ec84b79705e53676baabaec3f",
@@ -35,10 +38,7 @@
       "uppsala-purple.900": "13d85e237c20416618dbcc86d8f0e3c82a437018",
       "uppsala-purple.925": "d5e6b2981687f2af5f5c15c86a0aae33461bb745",
       "uppsala-purple.950": "cb9767bec656a2f45ca9b222fc44408a03d9b25e",
-      "uppsala-purple.975": "8f6d3f92700d7be4b1dd7816950dd45ed9b28239",
-      "uppsala-purple.025": "a341d62c6cf4ccaadd456997f399bbf3607f2da5",
-      "uppsala-purple.050": "fb5d49e1dfbdd34c7def6c42baa5919a0722d1ce",
-      "uppsala-purple.075": "a7bf51744a81f9f83398ab1db6a97f779a423b63"
+      "uppsala-purple.975": "8f6d3f92700d7be4b1dd7816950dd45ed9b28239"
     }
   },
   {
