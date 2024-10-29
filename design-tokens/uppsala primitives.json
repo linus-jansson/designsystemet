@@ -116,5 +116,123 @@
       "$type": "color",
       "$value": "#09000C"
     }
+  },
+  "uppsala-green": {
+    "25": {
+      "$type": "color",
+      "$value": "#FCFDFD"
+    },
+    "50": {
+      "$type": "color",
+      "$value": "#F5FAFA"
+    },
+    "75": {
+      "$type": "color",
+      "$value": "#F2F8F9"
+    },
+    "100": {
+      "$type": "color",
+      "$value": "#EBF5F6"
+    },
+    "125": {
+      "$type": "color",
+      "$value": "#DBEDEE"
+    },
+    "150": {
+      "$type": "color",
+      "$value": "#CBE3E5"
+    },
+    "175": {
+      "$type": "color",
+      "$value": "#BCDADD"
+    },
+    "200": {
+      "$type": "color",
+      "$value": "#A5CACE"
+    },
+    "250": {
+      "$type": "color",
+      "$value": "#99C3C7"
+    },
+    "275": {
+      "$type": "color",
+      "$value": "#8CBCC0"
+    },
+    "300": {
+      "$type": "color",
+      "$value": "#75AEB2"
+    },
+    "350": {
+      "$type": "color",
+      "$value": "#64A2A7"
+    },
+    "400": {
+      "$type": "color",
+      "$value": "#52949A"
+    },
+    "450": {
+      "$type": "color",
+      "$value": "#3C878E"
+    },
+    "500": {
+      "$type": "color",
+      "$value": "#317E85"
+    },
+    "550": {
+      "$type": "color",
+      "$value": "#247178"
+    },
+    "600": {
+      "$type": "color",
+      "$value": "#19666C"
+    },
+    "650": {
+      "$type": "color",
+      "$value": "#195D63"
+    },
+    "700": {
+      "$type": "color",
+      "$value": "#0C565C"
+    },
+    "725": {
+      "$type": "color",
+      "$value": "#0B4A4F"
+    },
+    "750": {
+      "$type": "color",
+      "$value": "#093D42"
+    },
+    "775": {
+      "$type": "color",
+      "$value": "#073135"
+    },
+    "800": {
+      "$type": "color",
+      "$value": "#062B2E"
+    },
+    "850": {
+      "$type": "color",
+      "$value": "#052528"
+    },
+    "875": {
+      "$type": "color",
+      "$value": "#041F21"
+    },
+    "900": {
+      "$type": "color",
+      "$value": "#04191B"
+    },
+    "925": {
+      "$type": "color",
+      "$value": "#031214"
+    },
+    "950": {
+      "$type": "color",
+      "$value": "#020C0D"
+    },
+    "975": {
+      "$type": "color",
+      "$value": "#010607"
+    }
   }
 }
