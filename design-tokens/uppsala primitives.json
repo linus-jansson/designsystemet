@@ -1,5 +1,21 @@
 {
   "uppsala-purple": {
+    "25": {
+      "$type": "color",
+      "$value": "#FEFBFE"
+    },
+    "50": {
+      "$type": "color",
+      "$value": "#FCF8FE"
+    },
+    "75": {
+      "$type": "color",
+      "$value": "#FBF4FD"
+    },
+    "100": {
+      "$type": "color",
+      "$value": "#F9F0FC"
+    },
     "125": {
       "$type": "color",
       "$value": "#F5E6FA"
@@ -99,18 +115,6 @@
     "975": {
       "$type": "color",
       "$value": "#09000C"
-    },
-    "025": {
-      "$type": "color",
-      "$value": "#FEFBFE"
-    },
-    "050": {
-      "$type": "color",
-      "$value": "#FCF8FE"
-    },
-    "075": {
-      "$type": "color",
-      "$value": "#FBF4FD"
     }
   }
 }
