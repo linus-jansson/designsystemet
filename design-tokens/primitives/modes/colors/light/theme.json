@@ -147,7 +147,7 @@
       },
       "6": {
         "$type": "color",
-        "$value": "#bab8d7"
+        "$value": "{uppsala-blue.100}"
       },
       "7": {
         "$type": "color",

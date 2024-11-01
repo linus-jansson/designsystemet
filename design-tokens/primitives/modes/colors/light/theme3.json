@@ -147,7 +147,7 @@
       },
       "6": {
         "$type": "color",
-        "$value": "#b5b7ea"
+        "$value": "{uppsala-green.100}"
       },
       "7": {
         "$type": "color",
@@ -209,7 +209,7 @@
       },
       "6": {
         "$type": "color",
-        "$value": "#fea769"
+        "$value": "{uppsala-green.100}"
       },
       "7": {
         "$type": "color",
