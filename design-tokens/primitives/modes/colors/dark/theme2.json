@@ -127,7 +127,7 @@
     "brand1": {
       "1": {
         "$type": "color",
-        "$value": "{uppsala-purple.925}"
+        "$value": "{uppsala-purple.900}"
       },
       "2": {
         "$type": "color",
