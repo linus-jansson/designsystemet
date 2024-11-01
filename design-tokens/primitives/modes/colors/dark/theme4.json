@@ -175,7 +175,7 @@
       },
       "13": {
         "$type": "color",
-        "$value": "{uppsala-gray.100}"
+        "$value": "{uppsala-gray.150}"
       },
       "contrast-1": {
         "$type": "color",

@@ -127,15 +127,15 @@
     "brand1": {
       "1": {
         "$type": "color",
-        "$value": "#fefeff"
+        "$value": "{uppsala-green.75}"
       },
       "2": {
         "$type": "color",
-        "$value": "#f3f4fc"
+        "$value": "{uppsala-green.25}"
       },
       "3": {
         "$type": "color",
-        "$value": "#dfe0f6"
+        "$value": "{uppsala-green.50}"
       },
       "4": {
         "$type": "color",
@@ -175,7 +175,7 @@
       },
       "13": {
         "$type": "color",
-        "$value": "#252756"
+        "$value": "{uppsala-green.900}"
       },
       "contrast-1": {
         "$type": "color",

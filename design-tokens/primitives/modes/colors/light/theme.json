@@ -135,7 +135,7 @@
       },
       "3": {
         "$type": "color",
-        "$value": "#e1e0ee"
+        "$value": "{uppsala-blue.50}"
       },
       "4": {
         "$type": "color",
@@ -175,7 +175,7 @@
       },
       "13": {
         "$type": "color",
-        "$value": "#292653"
+        "$value": "{uppsala-blue.900}"
       },
       "contrast-1": {
         "$type": "color",
