@@ -139,11 +139,11 @@
       },
       "4": {
         "$type": "color",
-        "$value": "#cecff1"
+        "$value": "{uppsala-green.125}"
       },
       "5": {
         "$type": "color",
-        "$value": "#bbbdec"
+        "$value": "{uppsala-green.150}"
       },
       "6": {
         "$type": "color",
@@ -151,23 +151,23 @@
       },
       "7": {
         "$type": "color",
-        "$value": "#7377d8"
+        "$value": "{uppsala-green.400}"
       },
       "8": {
         "$type": "color",
-        "$value": "#414595"
+        "$value": "{uppsala-green.550}"
       },
       "9": {
         "$type": "color",
-        "$value": "#5b60d1"
+        "$value": "{uppsala-green.650}"
       },
       "10": {
         "$type": "color",
-        "$value": "#4b4fad"
+        "$value": "{uppsala-green.725}"
       },
       "11": {
         "$type": "color",
-        "$value": "#3b3e88"
+        "$value": "{uppsala-green.775}"
       },
       "12": {
         "$type": "color",
