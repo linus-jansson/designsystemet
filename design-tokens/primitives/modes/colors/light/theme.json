@@ -127,7 +127,7 @@
     "brand1": {
       "1": {
         "$type": "color",
-        "$value": "{uppsala-blue.75}"
+        "$value": "{uppsala-blue.100}"
       },
       "2": {
         "$type": "color",
@@ -171,7 +171,7 @@
       },
       "12": {
         "$type": "color",
-        "$value": "#605aa3"
+        "$value": "#1472A0"
       },
       "13": {
         "$type": "color",
