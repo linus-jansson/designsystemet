@@ -2,23 +2,13 @@
   "theme2": {
     "main": {
       "$type": "fontFamilies",
-      "$value": "Helvetica Neue"
+      "$value": "Source Sans 3"
     },
     "bold": {
-      "$extensions": {
-        "studio.tokens": {
-          "modify": {}
-        }
-      },
       "$type": "fontWeights",
-      "$value": "Medium"
+      "$value": "SemiBold"
     },
     "extra-bold": {
-      "$extensions": {
-        "studio.tokens": {
-          "modify": {}
-        }
-      },
       "$type": "fontWeights",
       "$value": "Bold"
     },
