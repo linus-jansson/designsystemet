@@ -470,5 +470,23 @@
       "$type": "color",
       "$value": "#040609"
     }
+  },
+  "uppsala-kommun": {
+    "main": {
+      "$type": "fontFamilies",
+      "$value": "Source Sans 3"
+    }
+  },
+  "regular": {
+    "$type": "fontWeights",
+    "$value": "Regular"
+  },
+  "semi-bold": {
+    "$type": "fontWeights",
+    "$value": "SemiBold"
+  },
+  "bold": {
+    "$type": "fontWeights",
+    "$value": "Bold"
   }
 }
