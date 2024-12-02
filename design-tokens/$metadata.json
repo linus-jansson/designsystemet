@@ -2,7 +2,6 @@
   "tokenSetOrder": [
     "uppsala-kommun/colors",
     "uppsala-kommun/typography",
-    "uppsala-kommun/typography_Copy",
     "primitives/globals",
     "primitives/size/default",
     "primitives/size/compact",
