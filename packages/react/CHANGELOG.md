@@ -1,5 +1,13 @@
 # Change Log
 
+## 1.0.0-next.40
+
+### Patch Changes
+
+- React: Set `"type": "module"` in `package.json` ([#2842](https://github.com/digdir/designsystemet/pull/2842))
+
+- Rename `Accordion` to `Details` ([#2839](https://github.com/digdir/designsystemet/pull/2839))
+
 ## 1.0.0-next.39
 
 ## 1.0.0-next.38
