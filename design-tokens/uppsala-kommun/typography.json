@@ -22,15 +22,99 @@
   "line-height": {
     "sm": {
       "$type": "lineHeights",
-      "$value": "130%"
+      "$value": "100%"
     },
     "md": {
       "$type": "lineHeights",
-      "$value": "150%"
+      "$value": "115%"
     },
     "lg": {
       "$type": "lineHeights",
-      "$value": "170%"
+      "$value": "130%"
+    }
+  },
+  "letter-spacing": {
+    "1": {
+      "$type": "letterSpacing",
+      "$value": "-2.5%"
+    },
+    "2": {
+      "$type": "letterSpacing",
+      "$value": "-2%"
+    },
+    "3": {
+      "$type": "letterSpacing",
+      "$value": "-1.5%"
+    },
+    "4": {
+      "$type": "letterSpacing",
+      "$value": "-1%"
+    },
+    "5": {
+      "$type": "letterSpacing",
+      "$value": "-0.9%"
+    },
+    "6": {
+      "$type": "letterSpacing",
+      "$value": "-0.5%"
+    },
+    "7": {
+      "$type": "letterSpacing",
+      "$value": "0"
+    },
+    "8": {
+      "$type": "letterSpacing",
+      "$value": "0.6%"
+    },
+    "9": {
+      "$type": "letterSpacing",
+      "$value": "1%"
+    }
+  },
+  "font-size": {
+    "1": {
+      "$type": "sizing",
+      "$value": "12"
+    },
+    "2": {
+      "$type": "sizing",
+      "$value": "14"
+    },
+    "3": {
+      "$type": "sizing",
+      "$value": "16"
+    },
+    "4": {
+      "$type": "sizing",
+      "$value": "18"
+    },
+    "5": {
+      "$type": "sizing",
+      "$value": "20"
+    },
+    "6": {
+      "$type": "sizing",
+      "$value": "22"
+    },
+    "7": {
+      "$type": "sizing",
+      "$value": "24"
+    },
+    "8": {
+      "$type": "sizing",
+      "$value": "28"
+    },
+    "9": {
+      "$type": "sizing",
+      "$value": "36"
+    },
+    "10": {
+      "$type": "sizing",
+      "$value": "48"
+    },
+    "11": {
+      "$type": "sizing",
+      "$value": "60"
     }
   }
 }
