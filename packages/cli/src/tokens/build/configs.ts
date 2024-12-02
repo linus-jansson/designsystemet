@@ -1,16 +1,23 @@
 import { expandTypesMap, register } from '@tokens-studio/sd-transforms';
-import type { ThemeObject } from '@tokens-studio/types';
 import * as R from 'ramda';
 import StyleDictionary from 'style-dictionary';
-import type { Config, LogConfig, TransformedToken } from 'style-dictionary/types';
+import type { Config as StyleDictionaryConfig, TransformedToken } from 'style-dictionary/types';
 import { outputReferencesFilter } from 'style-dictionary/utils';
 
-import * as formats from './formats/css.js';
+import { DEFAULT_COLOR, buildOptions } from '../build.js';
+import { formats } from './formats/css.js';
 import { jsTokens } from './formats/js-tokens.js';
 import { nameKebab, resolveMath, sizeRem, typographyName } from './transformers.js';
-import { permutateThemes as permutateThemes_ } from './utils/permutateThemes.js';
-import type { PermutatedThemes } from './utils/permutateThemes.js';
-import { pathStartsWithOneOf, typeEquals } from './utils/utils.js';
+import type {
+  ColorCategories,
+  GetSdConfigOptions,
+  IsCalculatedToken,
+  SDConfigForThemePermutation,
+  ThemeDimension,
+  ThemePermutation,
+} from './types.js';
+import { type ProcessedThemeObject, getMultidimensionalThemes } from './utils/getMultidimensionalThemes.js';
+import { isColorCategoryToken, pathStartsWithOneOf, typeEquals } from './utils/utils.js';
 
 void register(StyleDictionary, { withSDBuiltins: false });
 /** Use official W3C design token format
@@ -19,7 +26,6 @@ void register(StyleDictionary, { withSDBuiltins: false });
 const usesDtcg = true;
 export const prefix = 'ds';
 export const basePxFontSize = 16;
-export const separator = '_';
 
 const fileHeader = () => [`These files are generated from design tokens defind using Token Studio`];
 
@@ -29,9 +35,9 @@ StyleDictionary.registerTransform(typographyName);
 StyleDictionary.registerTransform(resolveMath);
 
 StyleDictionary.registerFormat(jsTokens);
-StyleDictionary.registerFormat(formats.colormode);
-StyleDictionary.registerFormat(formats.semantic);
-StyleDictionary.registerFormat(formats.typography);
+for (const format of Object.values(formats)) {
+  StyleDictionary.registerFormat(format);
+}
 
 const dsTransformers = [
   nameKebab.name,
@@ -48,8 +54,6 @@ const dsTransformers = [
 
 const paritionPrimitives = R.partition(R.test(/(?!.*global\.json).*primitives.*/));
 
-const hasUnknownProps = R.pipe(R.values, R.none(R.equals('unknown')), R.not);
-
 const outputColorReferences = (token: TransformedToken) => {
   if (
     R.test(/accent|neutral|brand1|brand2|brand3|success|danger|warning/, token.name) &&
@@ -61,25 +65,19 @@ const outputColorReferences = (token: TransformedToken) => {
   return false;
 };
 
-export type IsCalculatedToken = (token: TransformedToken, options?: Config) => boolean;
+export type GetStyleDictionaryConfig = (
+  permutation: ThemePermutation,
+  options: {
+    outPath?: string;
+  },
+) => StyleDictionaryConfig | { config: StyleDictionaryConfig; permutationOverrides?: Partial<ThemePermutation> }[];
 
-export const permutateThemes = ($themes: ThemeObject[]) =>
-  permutateThemes_($themes, {
-    separator,
-  });
-
-type GetConfig = (options: {
-  mode?: string;
-  theme?: string;
-  semantic?: string;
-  size?: string;
-  typography?: string;
-  outPath?: string;
-}) => Config;
-
-export const colorModeVariables: GetConfig = ({ mode = 'light', outPath, theme }) => {
-  const selector = `${mode === 'light' ? ':root, ' : ''}[data-ds-color-mode="${mode}"]`;
-  const layer = `ds.theme.color-mode.${mode}`;
+const colorSchemeVariables: GetStyleDictionaryConfig = (
+  { 'color-scheme': colorScheme = 'light', theme },
+  { outPath },
+) => {
+  const selector = `${colorScheme === 'light' ? ':root, ' : ''}[data-color-scheme="${colorScheme}"]`;
+  const layer = `ds.theme.color-scheme.${colorScheme}`;
 
   return {
     usesDtcg,
@@ -88,7 +86,7 @@ export const colorModeVariables: GetConfig = ({ mode = 'light', outPath, theme }
       css: {
         // custom
         outPath,
-        mode,
+        colorScheme,
         theme,
         selector,
         layer,
@@ -98,21 +96,84 @@ export const colorModeVariables: GetConfig = ({ mode = 'light', outPath, theme }
         transforms: dsTransformers,
         files: [
           {
-            destination: `color-mode/${mode}.css`,
-            format: formats.colormode.name,
+            destination: `color-scheme/${colorScheme}.css`,
+            format: formats.colorScheme.name,
             filter: (token) => !token.isSource && typeEquals('color', token),
           },
         ],
         options: {
           fileHeader,
-          outputReferences: (token, options) => outputColorReferences(token) && outputReferencesFilter(token, options),
+          outputReferences: false,
         },
       },
     },
   };
 };
 
-export const semanticVariables: GetConfig = ({ outPath, theme }) => {
+const colorCategoryVariables =
+  (category: ColorCategories): GetStyleDictionaryConfig =>
+  ({ 'color-scheme': colorScheme, theme, [`${category}-color` as const]: color }, { outPath }) => {
+    const layer = `ds.theme.color`;
+    const isDefault = color === buildOptions?.accentColor;
+    const selector = `${isDefault ? ':root, [data-color-scheme], ' : ''}[data-color="${color}"]`;
+
+    const config: StyleDictionaryConfig = {
+      usesDtcg,
+      preprocessors: ['tokens-studio'],
+      platforms: {
+        css: {
+          // custom
+          outPath,
+          colorScheme,
+          theme,
+          selector,
+          layer,
+          //
+          prefix,
+          buildPath: `${outPath}/${theme}/`,
+          transforms: dsTransformers,
+          files: [
+            {
+              destination: `color/${color}.css`,
+              format: formats.colorCategory.name,
+              filter: (token) => isColorCategoryToken(token, category),
+            },
+          ],
+          options: {
+            fileHeader,
+            outputReferences: true,
+          },
+        },
+      },
+    };
+    if (isDefault && color !== DEFAULT_COLOR) {
+      console.log(
+        `Creating "${DEFAULT_COLOR}" color variables pointing to "${color}", since a color named "${DEFAULT_COLOR}" is not defined`,
+      );
+      // Create a --ds-color-accent-* scale which points to the default color
+      const defaultColorConfig = R.mergeDeepRight(config, {
+        platforms: {
+          css: {
+            selector: ':root',
+            files: [
+              {
+                ...config.platforms?.css?.files?.[0],
+                destination: `color/${DEFAULT_COLOR}.css`,
+              },
+            ],
+            options: { replaceCategoryWith: DEFAULT_COLOR },
+          },
+        },
+      } satisfies StyleDictionaryConfig);
+      return [
+        { config },
+        { config: defaultColorConfig, permutationOverrides: { 'main-color': `${DEFAULT_COLOR} → ${color}` } },
+      ];
+    }
+    return config;
+  };
+
+const semanticVariables: GetStyleDictionaryConfig = ({ theme }, { outPath }) => {
   const selector = `:root`;
   const layer = `ds.theme.semantic`;
 
@@ -163,7 +224,7 @@ export const semanticVariables: GetConfig = ({ outPath, theme }) => {
   };
 };
 
-export const typescriptTokens: GetConfig = ({ mode = 'unknown', outPath, theme }) => {
+const typescriptTokens: GetStyleDictionaryConfig = ({ 'color-scheme': colorScheme, theme }, { outPath }) => {
   return {
     usesDtcg,
     preprocessors: ['tokens-studio'],
@@ -175,7 +236,7 @@ export const typescriptTokens: GetConfig = ({ mode = 'unknown', outPath, theme }
         buildPath: `${outPath}/${theme}/`,
         files: [
           {
-            destination: `${mode}.ts`,
+            destination: `${colorScheme}.ts`,
             format: jsTokens.name,
             outputReferences: outputColorReferences,
             filter: (token: TransformedToken) => {
@@ -201,7 +262,7 @@ export const typescriptTokens: GetConfig = ({ mode = 'unknown', outPath, theme }
   };
 };
 
-export const typographyVariables: GetConfig = ({ outPath, theme, typography }) => {
+const typographyVariables: GetStyleDictionaryConfig = ({ theme, typography }, { outPath }) => {
   const selector = `${typography === 'primary' ? ':root, ' : ''}[data-ds-typography="${typography}"]`;
   const layer = `ds.theme.typography.${typography}`;
 
@@ -256,53 +317,48 @@ export const typographyVariables: GetConfig = ({ outPath, theme, typography }) =
   };
 };
 
-type getConfigs = (
-  getConfig: GetConfig,
-  outPath: string,
-  tokensDir: string,
-  themes: PermutatedThemes,
-  logVerbosity: LogConfig['verbosity'],
-) => { mode: string; theme: string; semantic: string; size: string; typography: string; config: Config }[];
+export const configs = {
+  colorSchemeVariables,
+  mainColorVariables: colorCategoryVariables('main'),
+  supportColorVariables: colorCategoryVariables('support'),
+  typographyVariables,
+  semanticVariables,
+  typescriptTokens,
+};
 
-export const getConfigs: getConfigs = (getConfig, outPath, tokensDir, permutatedThemes, logVerbosity) =>
-  permutatedThemes
-    .map((permutatedTheme) => {
-      const {
-        selectedTokenSets = [],
-        mode = 'unknown',
-        theme = 'unknown',
-        semantic = 'unknown',
-        size = 'unknown',
-        typography = 'unknown',
-      } = permutatedTheme;
+export const getConfigsForThemeDimensions = (
+  getConfig: GetStyleDictionaryConfig,
+  themes: ProcessedThemeObject[],
+  dimensions: ThemeDimension[],
+  options: GetSdConfigOptions,
+): SDConfigForThemePermutation[] => {
+  const { outPath, tokensDir } = options;
 
-      if (hasUnknownProps(permutatedTheme)) {
-        throw Error(`Theme ${permutatedTheme.name} has unknown props: ${JSON.stringify(permutatedTheme)}`);
-      }
-
+  const permutations = getMultidimensionalThemes(themes, dimensions);
+  return permutations
+    .flatMap(({ selectedTokenSets, permutation }) => {
       const setsWithPaths = selectedTokenSets.map((x) => `${tokensDir}/${x}.json`);
 
       const [source, include] = paritionPrimitives(setsWithPaths);
 
-      const config_ = getConfig({
-        outPath,
-        theme,
-        mode,
-        semantic,
-        size,
-        typography,
+      const configOrConfigs = getConfig(permutation, { outPath });
+      const configs_ = Array.isArray(configOrConfigs) ? configOrConfigs : [{ config: configOrConfigs }];
+
+      const configs: SDConfigForThemePermutation[] = configs_.map(({ config, permutationOverrides }) => {
+        return {
+          permutation: { ...permutation, ...permutationOverrides },
+          config: {
+            ...config,
+            log: {
+              ...config?.log,
+              verbosity: buildOptions?.verbose ? 'verbose' : 'silent',
+            },
+            source,
+            include,
+          },
+        };
       });
-
-      const config: Config = {
-        ...config_,
-        log: {
-          ...config_?.log,
-          verbosity: logVerbosity,
-        },
-        source,
-        include,
-      };
-
-      return { mode, theme, semantic, size, typography, config };
+      return configs;
     })
     .sort();
+};

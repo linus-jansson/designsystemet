@@ -25,10 +25,10 @@ export default meta;
 export const Preview: Story = (args) => <Badge {...args}></Badge>;
 
 Preview.args = {
-  size: 'md',
+  'data-size': 'md',
   count: 10,
   maxCount: 9,
-  color: 'accent',
+  'data-color': 'accent',
 };
 
 export const Floating: Story = (args) => (
@@ -38,19 +38,19 @@ export const Floating: Story = (args) => (
       gap: 'var(--ds-spacing-6)',
     }}
   >
-    <Badge color='accent' size='md' placement='top-right'>
-      <EnvelopeClosedFillIcon fontSize='2rem' title='Meldinger' />
+    <Badge data-color='accent' placement='top-right'>
+      <EnvelopeClosedFillIcon title='Meldinger' />
     </Badge>
-    <Badge color='accent' size='md' placement='top-left'>
-      <EnvelopeClosedFillIcon fontSize='2rem' title='Meldinger' />
+    <Badge data-color='accent' placement='top-left'>
+      <EnvelopeClosedFillIcon title='Meldinger' />
     </Badge>
-    <Badge color='accent' size='md' placement='bottom-right'>
-      <EnvelopeClosedFillIcon fontSize='2rem' title='Meldinger' />
+    <Badge data-color='accent' placement='bottom-right'>
+      <EnvelopeClosedFillIcon title='Meldinger' />
     </Badge>
-    <Badge color='accent' size='md' placement='bottom-left'>
-      <EnvelopeClosedFillIcon fontSize='2rem' title='Meldinger' />
+    <Badge data-color='accent' placement='bottom-left'>
+      <EnvelopeClosedFillIcon title='Meldinger' />
     </Badge>
-    <Badge color='accent' size='md' placement='top-right' overlap='circle'>
+    <Badge data-color='accent' placement='top-right' overlap='circle'>
       <div
         style={{
           width: '2rem',
@@ -60,7 +60,7 @@ export const Floating: Story = (args) => (
         }}
       />
     </Badge>
-    <Badge color='accent' size='md' placement='top-left' overlap='circle'>
+    <Badge data-color='accent' placement='top-left' overlap='circle'>
       <div
         style={{
           width: '2rem',
@@ -70,7 +70,7 @@ export const Floating: Story = (args) => (
         }}
       />
     </Badge>
-    <Badge color='accent' size='md' placement='bottom-right' overlap='circle'>
+    <Badge data-color='accent' placement='bottom-right' overlap='circle'>
       <div
         style={{
           width: '2rem',
@@ -80,7 +80,7 @@ export const Floating: Story = (args) => (
         }}
       />
     </Badge>
-    <Badge color='accent' size='md' placement='bottom-left' overlap='circle'>
+    <Badge data-color='accent' placement='bottom-left' overlap='circle'>
       <div
         style={{
           width: '2rem',
@@ -101,15 +101,14 @@ export const CustomPlacement: Story = (args) => (
     }}
   >
     <Badge
-      color='accent'
-      size='md'
+      data-color='accent'
       placement='top-right'
       style={{
         top: '16%',
         right: '10%',
       }}
     >
-      <EnvelopeClosedFillIcon fontSize='2rem' title='Meldinger' />
+      <EnvelopeClosedFillIcon title='Meldinger' />
     </Badge>
   </div>
 );
@@ -121,31 +120,31 @@ export const Status: Story = (args) => (
       gap: 'var(--ds-spacing-4)',
     }}
   >
-    <Badge color='danger' size='sm'>
-      <VideoFillIcon fontSize='2rem' title='Videokamera' />
+    <Badge data-color='danger' data-size='sm'>
+      <VideoFillIcon title='Videokamera' />
     </Badge>
-    <Badge color='danger' size='md'>
-      <VideoFillIcon fontSize='2rem' title='Videokamera' />
+    <Badge data-color='danger' data-size='md'>
+      <VideoFillIcon title='Videokamera' />
     </Badge>
-    <Badge color='danger' size='lg'>
-      <VideoFillIcon fontSize='2rem' title='Videokamera' />
+    <Badge data-color='danger' data-size='lg'>
+      <VideoFillIcon title='Videokamera' />
     </Badge>
   </div>
 );
 
 export const InTabs: Story = (args) => (
-  <Tabs defaultValue='value1' size='md'>
+  <Tabs defaultValue='value1'>
     <Tabs.List>
       <Tabs.Tab value='value1'>
-        <HeartFillIcon fontSize='1.75rem' aria-hidden />
+        <HeartFillIcon aria-hidden />
         Favoritter
-        <Badge count={64} maxCount={10} color='neutral' />
+        <Badge count={64} maxCount={10} data-color='neutral' />
       </Tabs.Tab>
       <Tabs.Tab value='value2'>Tab 2</Tabs.Tab>
       <Tabs.Tab value='value3'>
-        <PencilIcon fontSize='1.75rem' aria-hidden />
+        <PencilIcon aria-hidden />
         Nylige
-        <Badge count={2} color='neutral' />
+        <Badge count={2} data-color='neutral' />
       </Tabs.Tab>
     </Tabs.List>
     <Tabs.Panel value='value1'>content 1</Tabs.Panel>
@@ -162,18 +161,18 @@ export const InButton: Story = (args) => (
     }}
   >
     <Button icon variant='tertiary'>
-      <Badge color='danger' count={1000} maxCount={99} size='sm'>
-        <InboxIcon fontSize='1.75rem' title='Innboks' />
+      <Badge data-color='danger' count={1000} maxCount={99} data-size='sm'>
+        <InboxIcon title='Innboks' />
       </Badge>
     </Button>
     <Button icon variant='tertiary'>
-      <Badge color='danger' count={10} size='sm'>
-        <ChatIcon fontSize='1.75rem' title='Meldinger' />
+      <Badge data-color='danger' count={10} data-size='sm'>
+        <ChatIcon title='Meldinger' />
       </Badge>
     </Button>
     <Button icon variant='tertiary'>
-      <Badge color='danger' size='sm'>
-        <VideoIcon fontSize='1.75rem' title='Skru på video' />
+      <Badge data-color='danger' data-size='sm'>
+        <VideoIcon title='Skru på video' />
       </Badge>
     </Button>
   </div>

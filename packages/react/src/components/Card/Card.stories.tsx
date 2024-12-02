@@ -6,13 +6,16 @@ import cat5 from '@assets/img/cats/Cat 5.jpg';
 import { PlusIcon, TrashFillIcon } from '@navikt/aksel-icons';
 import type { Meta, StoryFn } from '@storybook/react';
 
-import { Card } from '.';
-import { Button } from '../Button';
-import { Heading } from '../Heading';
-import { Label } from '../Label';
-import { Paragraph } from '../Paragraph';
-import { Select } from '../form/Select';
-import { Textfield } from '../form/Textfield';
+import {
+  Button,
+  Card,
+  Field,
+  Heading,
+  Label,
+  Paragraph,
+  Select,
+  Textfield,
+} from '../../';
 
 type Story = StoryFn<typeof Card>;
 
@@ -34,30 +37,34 @@ export default {
 
 export const Preview: Story = (args) => (
   <Card {...args} style={{ maxWidth: '320px' }}>
-    <Heading size='sm' level={2}>
-      Card Neutral
-    </Heading>
+    <Heading>Card Neutral</Heading>
     <Paragraph>
       Most provide as with carried business are much better more the perfected
       designer. Writing slightly explain desk unable at supposedly about this
     </Paragraph>
-    <Paragraph size='sm'>Footer text</Paragraph>
+    <Paragraph data-size='sm'>Footer text</Paragraph>
   </Card>
 );
 
 Preview.args = {
-  color: 'neutral',
+  'data-color': 'neutral',
 };
 
 export const Variants: StoryFn<typeof Card> = () => (
   <>
-    <Card color='neutral'>
+    <Card data-color='neutral'>
       <Card.Block>
         <img src={cat1} alt='katt' />
       </Card.Block>
       <Card.Block>
-        <Heading level={2} size='sm'>
-          Card Neutral
+        <Heading>
+          <a
+            href='https://designsystemet.no'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            Card Neutral
+          </a>
         </Heading>
         <Paragraph>
           Most provide as with carried business are much better more the
@@ -66,13 +73,19 @@ export const Variants: StoryFn<typeof Card> = () => (
         </Paragraph>
       </Card.Block>
     </Card>
-    <Card color='subtle'>
+    <Card data-color='subtle'>
       <Card.Block>
         <img src={cat2} alt='katt' />
       </Card.Block>
       <Card.Block>
-        <Heading level={2} size='sm'>
-          Card Subtle
+        <Heading>
+          <a
+            href='https://designsystemet.no'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            Card Subtle
+          </a>
         </Heading>
         <Paragraph>
           Most provide as with carried business are much better more the
@@ -81,13 +94,19 @@ export const Variants: StoryFn<typeof Card> = () => (
         </Paragraph>
       </Card.Block>
     </Card>
-    <Card color='brand1'>
+    <Card data-color='brand1'>
       <Card.Block>
         <img src={cat3} alt='katter' />
       </Card.Block>
       <Card.Block>
-        <Heading level={2} size='sm'>
-          Card First
+        <Heading>
+          <a
+            href='https://designsystemet.no'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            Card First
+          </a>
         </Heading>
         <Paragraph>
           Most provide as with carried business are much better more the
@@ -96,13 +115,19 @@ export const Variants: StoryFn<typeof Card> = () => (
         </Paragraph>
       </Card.Block>
     </Card>
-    <Card color='brand2'>
+    <Card data-color='brand2'>
       <Card.Block>
         <img src={cat4} alt='katt' />
       </Card.Block>
       <Card.Block>
-        <Heading level={2} size='sm'>
-          Card Second
+        <Heading>
+          <a
+            href='https://designsystemet.no'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            Card Second
+          </a>
         </Heading>
         <Paragraph>
           Most provide as with carried business are much better more the
@@ -111,13 +136,19 @@ export const Variants: StoryFn<typeof Card> = () => (
         </Paragraph>
       </Card.Block>
     </Card>
-    <Card color='brand3'>
+    <Card data-color='brand3'>
       <Card.Block>
         <img src={cat5} alt='katt' />
       </Card.Block>
       <Card.Block>
-        <Heading level={2} size='sm'>
-          Card Third
+        <Heading>
+          <a
+            href='https://designsystemet.no'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            Card Third
+          </a>
         </Heading>
         <Paragraph>
           Most provide as with carried business are much better more the
@@ -136,9 +167,7 @@ export const Media: Story = () => (
         <img src={cat1} alt='katt' />
       </Card.Block>
       <Card.Block>
-        <Heading level={2} size='sm'>
-          Card Neutral
-        </Heading>
+        <Heading>Card Neutral</Heading>
         <Paragraph>
           Most provide as with carried business are much better more the
           perfected designer. Writing slightly explain desk unable at supposedly
@@ -148,9 +177,7 @@ export const Media: Story = () => (
     </Card>
     <Card>
       <Card.Block>
-        <Heading level={2} size='sm'>
-          Card Neutral
-        </Heading>
+        <Heading>Card Neutral</Heading>
         <Paragraph>
           Most provide as with carried business are much better more the
           perfected designer. Writing slightly explain desk unable at supposedly
@@ -165,7 +192,7 @@ export const Media: Story = () => (
 );
 
 export const Video: Story = () => (
-  <Card color='neutral' style={{ maxWidth: '320px' }}>
+  <Card data-color='neutral' style={{ maxWidth: '320px' }}>
     <Card.Block>
       <iframe
         data-chromatic='ignore'
@@ -177,7 +204,7 @@ export const Video: Story = () => (
       ></iframe>
     </Card.Block>
     <Card.Block>
-      <Heading level={2} size='sm'>
+      <Heading>
         <a
           href='https://www.digdir.no/felleslosninger/30-ar-med-digitalt-innsyn/5015'
           target='_blank'
@@ -219,31 +246,31 @@ export const Composed: Story = () => (
             alignItems: 'center',
           }}
         >
-          <Heading level={2} size='xs'>
-            Rolle 1
-          </Heading>
-          <Button variant='secondary' color='danger' size='sm'>
-            <TrashFillIcon aria-hidden fontSize='1.5rem' />
+          <Heading>Rolle 1</Heading>
+          <Button variant='secondary' data-color='danger' data-size='sm'>
+            <TrashFillIcon aria-hidden />
             Fjern
           </Button>
         </div>
       </Card.Block>
       <Card.Block>
-        <Label htmlFor='my-select'>Velg rolle</Label>
-        <Select id='my-select'>
-          {options.map(({ value, label }, index) => (
-            <Select.Option key={index} value={value}>
-              {label}
-            </Select.Option>
-          ))}
-        </Select>
+        <Field>
+          <Label>Velg rolle</Label>
+          <Select>
+            {options.map(({ value, label }, index) => (
+              <Select.Option key={index} value={value}>
+                {label}
+              </Select.Option>
+            ))}
+          </Select>
+        </Field>
         <Textfield label='Fødsels- eller d-nummer' />
         <Textfield label='Etternavn' />
       </Card.Block>
       <Card.Block>
-        <Button variant='secondary' size='sm'>
+        <Button variant='secondary' data-size='sm'>
           Legg til rolle
-          <PlusIcon aria-hidden fontSize='1.5rem' />
+          <PlusIcon aria-hidden />
         </Button>
       </Card.Block>
     </Card>
@@ -252,9 +279,7 @@ export const Composed: Story = () => (
         <img src={cat1} alt='katt' />
       </Card.Block>
       <Card.Block>
-        <Heading level={2} size='sm'>
-          Card Neutral
-        </Heading>
+        <Heading>Card Neutral</Heading>
         <Paragraph>
           Most provide as with carried business are much better more the
           perfected designer. Writing slightly explain desk unable at supposedly
@@ -267,12 +292,12 @@ export const Composed: Story = () => (
 
 export const WithLink: Story = (args) => (
   <>
-    <Card {...args} color='brand1'>
+    <Card {...args} data-color='brand1'>
       <Card.Block>
         <img src={cat5} alt='' />
       </Card.Block>
       <Card.Block>
-        <Heading size='sm' level={2}>
+        <Heading>
           <a
             href='https://designsystemet.no'
             target='_blank'
@@ -286,12 +311,12 @@ export const WithLink: Story = (args) => (
           perfected designer. Writing slightly explain desk unable at supposedly
           about this
         </Paragraph>
-        <Paragraph size='sm'>Footer text</Paragraph>
+        <Paragraph data-size='sm'>Footer text</Paragraph>
       </Card.Block>
     </Card>
-    <Card {...args} color='neutral'>
+    <Card {...args} data-color='neutral'>
       <Card.Block>
-        <Heading size='sm' level={2}>
+        <Heading>
           <a
             href='https://designsystemet.no'
             target='_blank'
@@ -305,7 +330,7 @@ export const WithLink: Story = (args) => (
           perfected designer. Writing slightly explain desk unable at supposedly
           about this
         </Paragraph>
-        <Paragraph size='sm'>Footer text</Paragraph>
+        <Paragraph data-size='sm'>Footer text</Paragraph>
       </Card.Block>
       <Card.Block>
         <img src={cat5} alt='' />
@@ -316,16 +341,14 @@ export const WithLink: Story = (args) => (
 
 export const AsLink: Story = (args) => (
   <>
-    <Card {...args} color='brand1' asChild>
+    <Card {...args} data-color='brand1' asChild>
       <a
         href='https://designsystemet.no'
         target='_blank'
         rel='noopener noreferrer'
       >
         <Card.Block>
-          <Heading size='sm' level={2}>
-            Link Card with blocks
-          </Heading>
+          <Heading>Link Card with blocks</Heading>
         </Card.Block>
         <Card.Block>
           <Paragraph>
@@ -335,15 +358,13 @@ export const AsLink: Story = (args) => (
         </Card.Block>
       </a>
     </Card>
-    <Card {...args} color='neutral' asChild>
+    <Card {...args} data-color='neutral' asChild>
       <a
         href='https://designsystemet.no'
         target='_blank'
         rel='noopener noreferrer'
       >
-        <Heading size='sm' level={2}>
-          Link Card
-        </Heading>
+        <Heading>Link Card</Heading>
         <Paragraph>
           Most provide as with carried business are much better more the
           perfected designer.
@@ -355,12 +376,10 @@ export const AsLink: Story = (args) => (
 
 export const AsButton: Story = (args) => (
   <>
-    <Card {...args} color='brand1' asChild>
+    <Card {...args} data-color='brand1' asChild>
       <button type='button'>
         <Card.Block>
-          <Heading size='sm' level={2}>
-            Button Card with blocks
-          </Heading>
+          <Heading>Button Card with blocks</Heading>
         </Card.Block>
         <Card.Block>
           <Paragraph>
@@ -370,11 +389,9 @@ export const AsButton: Story = (args) => (
         </Card.Block>
       </button>
     </Card>
-    <Card {...args} color='neutral' asChild>
+    <Card {...args} data-color='neutral' asChild>
       <button type='button'>
-        <Heading size='sm' level={2}>
-          Link Card
-        </Heading>
+        <Heading>Link Card</Heading>
         <Paragraph>
           Most provide as with carried business are much better more the
           perfected designer.
@@ -387,9 +404,7 @@ export const AsButton: Story = (args) => (
 export const AsGrid: Story = (args) => (
   <Card {...args} style={{ display: 'grid', gridTemplateColumns: '1fr 1fr' }}>
     <Card.Block>
-      <Heading size='sm' level={2}>
-        Button Card with blocks
-      </Heading>
+      <Heading>Button Card with blocks</Heading>
     </Card.Block>
     <Card.Block>
       <Paragraph>

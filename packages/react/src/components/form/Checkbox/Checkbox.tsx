@@ -1,94 +1,51 @@
-import { useMergeRefs } from '@floating-ui/react';
-import cl from 'clsx/lite';
-import type { InputHTMLAttributes, ReactNode } from 'react';
+import type { ReactNode } from 'react';
 import { forwardRef } from 'react';
 
-import { omit } from '../../../utilities';
+import type { Color } from '../../../colors';
+import type { DefaultProps, LabelRequired } from '../../../types';
+import type { MergeRight } from '../../../utilities';
 import { Label } from '../../Label';
-import { Paragraph } from '../../Paragraph';
-import type { FormFieldProps } from '../useFormField';
+import { ValidationMessage } from '../../ValidationMessage';
+import { Field } from '../Field';
+import { Input, type InputProps } from '../Input';
 
-import { useCheckbox } from './useCheckbox';
+export type CheckboxProps = MergeRight<
+  DefaultProps & Omit<InputProps, 'type' | 'role' | 'size'>,
+  {
+    /** The color of the fill for checked and indeterminate checkboxes.
+     * If left unspecified, the color is inherited from the nearest ancestor with data-color.
+     */
+    'data-color'?: Color;
+    /** Optional aria-label */
+    'aria-label'?: string;
+    /** Checkbox label */
+    label?: ReactNode;
+    /** Description for field */
+    description?: ReactNode;
+    /** Value of the `input` element */
+    value?: InputProps['value'];
+    /** Validation message for field */
+    validation?: ReactNode;
+  } & LabelRequired
+>;
 
-export type CheckboxProps = {
-  /** Checkbox label */
-  children?: ReactNode;
-  /** Value of the `input` element */
-  value: string;
-  /**Toggle indeterminate state for Checkbox
-   * @default false
-   */
-  indeterminate?: boolean;
-} & Omit<FormFieldProps, 'error' | 'errorId'> &
-  Omit<InputHTMLAttributes<HTMLInputElement>, 'size' | 'value'>;
-
+/**
+ * Checkbox used to select multiple options.
+ * @example
+ * <Checkbox label="I agree" value="agree" />
+ */
 export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
-  (props, ref) => {
-    const { children, description, className, style, ...rest } = props;
-    const {
-      inputProps,
-      descriptionId,
-      hasError,
-      size = 'md',
-      readOnly,
-    } = useCheckbox(props);
-
-    const inputRef = useMergeRefs<HTMLInputElement>([
-      ref,
-      (el) => {
-        if (el) {
-          el.indeterminate = rest.indeterminate ?? false;
-        }
-      },
-    ]);
-
+  function Checkbox(
+    { 'data-size': size, children, label, description, validation, ...rest },
+    ref,
+  ) {
     return (
-      <Paragraph asChild size={size}>
-        <div
-          className={cl(
-            'ds-checkbox',
-            `ds-checkbox--${size}`,
-            hasError && `ds-checkbox--error`,
-            readOnly && `ds-checkbox--readonly`,
-            className,
-          )}
-          style={style}
-        >
-          <input
-            className={`ds-checkbox__input`}
-            ref={inputRef}
-            {...omit(['size', 'error', 'indeterminate'], rest)}
-            {...inputProps}
-            type='checkbox'
-            disabled={inputProps.disabled}
-            aria-checked={rest.indeterminate ? 'mixed' : inputProps.checked}
-          />
-          {children && (
-            <>
-              <Label
-                className={cl(`ds-checkbox__label`)}
-                htmlFor={inputProps.id}
-                size={size}
-                weight='regular'
-              >
-                <span>{children}</span>
-              </Label>
-              {description && (
-                <Paragraph asChild size={size}>
-                  <div
-                    id={descriptionId}
-                    className={`ds-checkbox__description`}
-                  >
-                    {description}
-                  </div>
-                </Paragraph>
-              )}
-            </>
-          )}
-        </div>
-      </Paragraph>
+      <Field data-size={size}>
+        <Input type='checkbox' ref={ref} {...rest} />
+        {!!label && <Label weight='regular'>{label}</Label>}
+        {!!description && <div data-field='description'>{description}</div>}
+        {!!validation && <ValidationMessage>{validation}</ValidationMessage>}
+      </Field>
     );
   },
 );
-
-Checkbox.displayName = 'Checkbox';

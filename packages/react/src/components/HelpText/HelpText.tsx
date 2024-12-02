@@ -3,43 +3,46 @@ import cl from 'clsx/lite';
 import { forwardRef } from 'react';
 import type { ButtonHTMLAttributes } from 'react';
 
-import { Popover, type PopoverProps } from '../Popover';
+import type { Color } from '../../colors';
+import type { DefaultProps } from '../../types';
+import type { MergeRight } from '../../utilities';
+import { Popover } from '../Popover';
 
-export type HelpTextProps = {
-  /**
-   * Required descriptive label for screen readers.
-   **/
-  'aria-label': string;
-  /**
-   * Size of the helptext
-   * @default md
-   */
-  size?: PopoverProps['size'];
-  /**
-   * Placement of the Popover.
-   * @default 'right'
-   */
-  placement?: Placement;
-} & Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'color'>;
+export type HelpTextProps = MergeRight<
+  DefaultProps & Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'color'>,
+  {
+    /** Specify which color palette to use. If left unspecified, the color is inherited from the nearest ancestor with data-color.
+     */
+    'data-color'?: Color;
+    /**
+     * Required descriptive label for screen readers.
+     **/
+    'aria-label': string;
+    /**
+     * Placement of the Popover.
+     * @default 'right'
+     */
+    placement?: Placement;
+  }
+>;
 
 export const HelpText = forwardRef<HTMLButtonElement, HelpTextProps>(
   function HelpText(
-    { placement = 'right', size = 'md', className, children, ...rest },
+    { placement = 'right', className, children, ...rest },
     ref,
   ) {
     return (
-      <Popover.Context>
+      <Popover.TriggerContext>
         <Popover.Trigger
           className={cl('ds-helptext', className)}
           ref={ref}
-          size={size}
           variant='tertiary'
           {...rest}
         />
-        <Popover placement={placement} size={size} variant='info'>
+        <Popover placement={placement} data-color='info'>
           {children}
         </Popover>
-      </Popover.Context>
+      </Popover.TriggerContext>
     );
   },
 );

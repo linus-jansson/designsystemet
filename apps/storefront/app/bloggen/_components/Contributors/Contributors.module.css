@@ -30,7 +30,7 @@
   top: calc(var(--height) / -2);
   left: 50%;
   transform: translateX(-50%);
-  background-color: white;
+  background-color: var(--ds-color-neutral-background-default);
 }
 
 .logo .logoImage {
@@ -55,7 +55,7 @@
   height: 7px;
   transform: rotate(45deg);
   border-radius: 1px;
-  background-color: var(--ds-color-brand1-7);
+  background-color: var(--ds-color-brand1-border-default);
   margin: auto 0;
   break-after: avoid;
 }

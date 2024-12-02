@@ -19,4 +19,9 @@
 
 .outerPage {
   background-color: var(--ds-color-neutral-background-subtle);
+
+  [data-color-scheme='dark'] &,
+  [data-color-scheme='auto'] & {
+    background-color: var(--ds-color-neutral-background-default);
+  }
 }

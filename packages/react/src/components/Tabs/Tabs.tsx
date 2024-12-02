@@ -1,26 +1,29 @@
 import cl from 'clsx/lite';
 import type { HTMLAttributes } from 'react';
 import { createContext, forwardRef, useState } from 'react';
+import type { Color } from '../../colors';
+import type { DefaultProps } from '../../types';
+import type { MergeRight } from '../../utilities';
 
-export type TabsProps = {
-  /** Controlled state for `Tabs` component. */
-  value?: string;
-  /** Default value. */
-  defaultValue?: string;
-  /** Callback with selected `TabItem` `value` */
-  onChange?: (value: string) => void;
-  /**
-   * Changes items size and paddings
-   * @default md
-   */
-  size?: 'sm' | 'md' | 'lg';
-} & Omit<HTMLAttributes<HTMLDivElement>, 'onChange' | 'value'>;
+export type TabsProps = MergeRight<
+  DefaultProps & Omit<HTMLAttributes<HTMLDivElement>, 'onChange' | 'value'>,
+  {
+    /** Specify which color palette to use. If left unspecified, the color is inherited from the nearest ancestor with data-color.
+     */
+    'data-color'?: Color;
+    /** Controlled state for `Tabs` component. */
+    value?: string;
+    /** Default value. */
+    defaultValue?: string;
+    /** Callback with selected `TabItem` `value` */
+    onChange?: (value: string) => void;
+  }
+>;
 
 export type ContextProps = {
   value?: string;
   defaultValue?: string;
   onChange?: (value: string) => void;
-  size?: TabsProps['size'];
 };
 
 export const Context = createContext<ContextProps>({});
@@ -42,7 +45,7 @@ export const Context = createContext<ContextProps>({});
  * ```
  */
 export const Tabs = forwardRef<HTMLDivElement, TabsProps>(function Tabs(
-  { size = 'md', value, defaultValue, className, onChange, ...rest },
+  { value, defaultValue, className, onChange, ...rest },
   ref,
 ) {
   const isControlled = value !== undefined;
@@ -64,15 +67,9 @@ export const Tabs = forwardRef<HTMLDivElement, TabsProps>(function Tabs(
         value,
         defaultValue,
         onChange: onValueChange,
-        size,
       }}
     >
-      <div
-        className={cl('ds-tabs', className)}
-        data-size={size}
-        ref={ref}
-        {...rest}
-      />
+      <div className={cl('ds-tabs', className)} ref={ref} {...rest} />
     </Context.Provider>
   );
 });

@@ -33,7 +33,7 @@ export const Preview: Story = {
   args: {
     disabled: false,
     readOnly: false,
-    size: 'md',
+    'data-size': 'md',
     cols: 40,
     id: 'my-textarea',
   },
@@ -45,24 +45,8 @@ export const Preview: Story = {
   ),
 };
 
-// export const WithCharacterCounter: Story = {
-//   args: {
-//     cols: 40,
-//     characterLimit: {
-//       maxCount: 5,
-//     },
-//   },
-//   render: (args) => (
-//     <>
-//       <Label>Label</Label>
-//       <Textarea {...args} />
-//     </>
-//   ),
-// };
-
 export const FullWidth: Story = {
   args: {
-    rows: 10,
     cols: 40,
     id: 'my-textarea',
   },

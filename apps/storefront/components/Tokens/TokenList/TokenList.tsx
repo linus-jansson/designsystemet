@@ -54,9 +54,6 @@ const TokensTable = ({ tokens }: TokenTableProps) => {
         {tokens.map(([, tokens]) => {
           return tokens.map((token) => {
             const value = token.$value as string;
-            const pxSize = /\b\d+px\b/.test(value)
-              ? value
-              : `${parseFloat(value) * 16}px`;
             const isBorderRadius = token.path.includes('border-radius');
 
             return (
@@ -69,12 +66,14 @@ const TokensTable = ({ tokens }: TokenTableProps) => {
                   />
                 </Table.Cell>
                 <Table.Cell>{token.$value}</Table.Cell>
-                <Table.Cell>{pxSize}</Table.Cell>
+                <Table.Cell>
+                  <ComputedValue value={value} />
+                </Table.Cell>
                 <Table.Cell>
                   {isBorderRadius ? (
-                    <TokenBorderRadius value={pxSize} />
+                    <TokenBorderRadius value={value} />
                   ) : (
-                    <TokenSize value={pxSize} />
+                    <TokenSize value={value} />
                   )}
                 </Table.Cell>
               </Table.Row>
@@ -84,6 +83,24 @@ const TokensTable = ({ tokens }: TokenTableProps) => {
       </Table.Body>
     </Table>
   );
+};
+
+const ComputedValue = ({ value }: { value: string }) => {
+  const [computedValue, setComputedValue] = useState<string>('');
+
+  useEffect(() => {
+    if (!document) return;
+
+    const elm = document.createElement('div');
+    elm.style.cssText = `width: ${value}; height: ${value};`;
+    document.body.appendChild(elm);
+    const computedValue = getComputedStyle(elm).width;
+    document.body.removeChild(elm);
+
+    setComputedValue(computedValue);
+  }, [value]);
+
+  return <>{computedValue}</>;
 };
 
 type TokenCardsProps = {
@@ -97,7 +114,7 @@ const TokenCards = ({ tokens, cols, hideValue, type }: TokenCardsProps) => {
   return tokens.map(([group, tokens]) => {
     return (
       <div key={group}>
-        <Heading size='xs' level={4} className={classes.title}>
+        <Heading data-size='xs' level={4} className={classes.title}>
           {capitalizeString(group)}
         </Heading>
         <div className={cl(classes.group)}>
@@ -144,7 +161,7 @@ const TokenCard = ({ token, type, hideValue, ...rest }: TokenCardProps) => {
       </div>
 
       <div className={classes.textContainer}>
-        <Heading level={5} size='2xs' className={classes.name}>
+        <Heading level={5} data-size='2xs' className={classes.name}>
           {weight ? getColorNameFromNumber(weight) : capitalizeString(title)}
           &nbsp;
           <ClipboardButton
@@ -178,7 +195,7 @@ const TokenList = ({
   type = 'color',
   hideValue = false,
 }: TokenListProps) => {
-  const [brand, setBrand] = useState<BrandType>('digdir');
+  const [brand] = useState<BrandType>('digdir');
   const [mode, setMode] = useState<'light' | 'dark'>('light');
   const [cardColumns, setCardColumns] = useState<CardColumnType>(3);
 
@@ -215,49 +232,30 @@ const TokenList = ({
             className={classes.npmShield}
           />
         </Link>
-        <Paragraph size='sm'>@digdir/designsystemet-theme</Paragraph>
+        <Paragraph data-size='sm'>@digdir/designsystemet-theme</Paragraph>
       </div>
       {(showThemePicker || showModeSwitcher) && (
         <div className={classes.toggleGroup}>
-          {showThemePicker && (
-            <Dropdown.Context>
-              <Dropdown.Trigger variant='secondary'>
-                Brand: {capitalizeString(brand)}
-              </Dropdown.Trigger>
-              <Dropdown>
-                <Dropdown.List>
-                  <Dropdown.Item onClick={() => setBrand('digdir')}>
-                    Digdir
-                  </Dropdown.Item>
-                  <Dropdown.Item onClick={() => setBrand('altinn')}>
-                    Altinn
-                  </Dropdown.Item>
-                  <Dropdown.Item onClick={() => setBrand('tilsynet')}>
-                    Tilsynet
-                  </Dropdown.Item>
-                  <Dropdown.Item onClick={() => setBrand('portal')}>
-                    Brreg
-                  </Dropdown.Item>
-                </Dropdown.List>
-              </Dropdown>
-            </Dropdown.Context>
-          )}
           {showModeSwitcher && (
-            <Dropdown.Context>
+            <Dropdown.TriggerContext>
               <Dropdown.Trigger variant='secondary'>
                 Mode: {capitalizeString(mode)}
               </Dropdown.Trigger>
               <Dropdown>
                 <Dropdown.List>
-                  <Dropdown.Item onClick={() => setMode('light')}>
-                    Light
+                  <Dropdown.Item>
+                    <Dropdown.Button onClick={() => setMode('light')}>
+                      Light
+                    </Dropdown.Button>
                   </Dropdown.Item>
-                  <Dropdown.Item onClick={() => setMode('dark')}>
-                    Dark
+                  <Dropdown.Item>
+                    <Dropdown.Button onClick={() => setMode('dark')}>
+                      Dark
+                    </Dropdown.Button>
                   </Dropdown.Item>
                 </Dropdown.List>
               </Dropdown>
-            </Dropdown.Context>
+            </Dropdown.TriggerContext>
           )}
         </div>
       )}
