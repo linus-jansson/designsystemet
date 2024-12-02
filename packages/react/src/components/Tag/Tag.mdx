@@ -6,12 +6,12 @@ import * as TagStories from './Tag.stories';
 
 # Tag
 
-Tags er merkelapper som kan brukes til å kategorisere elementer eller kommunisere fremdrift, status eller prosess. Tags kan gi brukeren et raskere overblikk over innholdet. Bruk tags når innholdet har mange kategorier og det er hensiktsmessig å kunne skille mellom dem. Tags er statiske merkelapper; de kan ikke klikkes på.
+Tags är etiketter som kan användas för att kategorisera element eller kommunicera framsteg, status eller process. Tags kan ge användaren en snabb överblick över innehållet. Använd tags när innehållet har många kategorier och det är lämpligt att kunna skilja mellan dem. Tags är statiska etiketter; de kan inte klickas på.
 
 <Primary />
 <Controls />
 
-## Bruk
+## Användning
 
 ```tsx
 import { Tag } from '@digdir/designsystemet-react';
@@ -19,25 +19,25 @@ import { Tag } from '@digdir/designsystemet-react';
 <Tag>Beta</Tag>;
 ```
 
-### Anbefalinger
+### Rekommendationer
 
-- Bruk korte etiketter for enkel skanning. Helst ett ord. Maks to ord dersom det er nødvendig for å beskrive statusen og skille den fra andre tagger.
-- Bruk stor forbokstav og små bokstaver for resten.
-- Bruk ord og begreper som er gjenkjennelige for løsningen, unngå ukjente og fremmede ord.
-- Tags bør som regel plasseres bak tittelen eller navnet på tilhørende element.
-- Tags bør ikke plasseres sammen med knapper da det kan forvirre brukeren. Vurder plasseringen og brukertest gjerne.
-- Vil du bruke flere tags sammen, bør du bruke en `<ul>` med en `<li>` for hver tag for å sikre at tagsene blir lest opp hver for seg som en liste og ikke som en setning.
+- Använd korta etiketter för enkel skanning. Helst ett ord. Max två ord om det behövs för att beskriva statusen och skilja den från andra taggar.
+- Använd stor bokstav i början och små bokstäver för resten.
+- Använd ord och begrepp som är igenkännbara för lösningen, undvik obekanta och främmande ord.
+- Tags bör vanligtvis placeras efter titeln eller namnet på det tillhörande elementet.
+- Tags bör inte placeras tillsammans med knappar, då det kan förvirra användaren. Överväg placeringen och genomför användartest om möjligt.
+- Om du vill använda flera tags tillsammans bör du använda en `<ul>` med en `<li>` för varje tagg för att säkerställa att taggarna läses upp separat som en lista och inte som en mening.
 
-### Ikke egnet til
+### Ej lämpliga för
 
-- Tag er ikke egnet som link til andre sider (bruk heller link).
-- Tag er ikke egnet til handlinger (bruk heller [button](/docs/altinn-button--docs)).
-- For filtrering der brukeren kan filtrere data og bare se elementer innenfor ønsket kategori kan du bruke Chip komponenten.
+- Tag är inte lämplig som länk till andra sidor (använd hellre länk).
+- Tag är inte lämplig för åtgärder (använd hellre [button](/docs/altinn-button--docs)).
+- För filtrering där användaren kan filtrera data och endast se element inom önskad kategori kan du använda Chip-komponenten.
 
-## Sizes
+## Storlekar
 
 <Canvas of={TagStories.Sizes} />
 
-## Colors
+## Färger
 
 <Canvas of={TagStories.Colors} />

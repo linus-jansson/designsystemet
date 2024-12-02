@@ -9,42 +9,42 @@ import * as PopoverStories from './Popover.stories.tsx';
 <Primary />
 <Controls />
 
-## Slik bruker du `Popover`
+## Så använder du `Popover`
 
 ```tsx
 import { Popover } from '@digdir/designsystemet-react';
 
 // med context
 <Popover.Context>
-  <Popover.Trigger>Trigger</Popover.Trigger>
-  <Popover>Content</Popover>
+  <Popover.Trigger>Utlösare</Popover.Trigger>
+  <Popover>Innehåll</Popover>
 </Popover.Context>
 
-// uten context med egen trigger
-<Button popovertarget="my-popover">Trigger</Button>
-<Popover id="my-popover">Content</Popover>
+// utan context med egen utlösare
+<Button popovertarget="my-popover">Utlösare</Button>
+<Popover id="my-popover">Innehåll</Popover>
 ```
 
-## Eksempler
+## Exempel
 
-### Variants
+### Varianter
 
-`Popover` har fire varianter, `default`, `info`, `warning` og `danger`. Du kan bruke `variant` for å endre varianten.
+`Popover` har fyra varianter: `default`, `info`, `warning` och `danger`. Du kan använda `variant` för att ändra varianten.
 
 <Canvas of={PopoverStories.Variants} />
 
-### Kontrollert
+### Kontrollerad
 
-Dersom du sender inn `open`, så bruker du `Popover` kontrollert. Du kan bruke `onClose` for å få beskjed når `Popover` vil lukkes.
-Dette er nyttig dersom du har innhold som skal lukke `Popover` når du klikker på det.
+Om du skickar in `open`, så använder du `Popover` kontrollerat. Du kan använda `onClose` för att få meddelande när `Popover` stängs.
+Detta är användbart om du har innehåll som ska stänga `Popover` när du klickar på det.
 
 <Canvas of={PopoverStories.Controlled} />
 
-## Tilgjengelighet
+## Tillgänglighet
 
-Det er innebygd tilgjengelighet i [Popover APIet](https://developer.mozilla.org/en-US/docs/Web/API/Popover_API) i henhold til åpne/lukket tilstand og tastatur navigasjon.
+Det finns inbyggd tillgänglighet i [Popover APIet](https://developer.mozilla.org/en-US/docs/Web/API/Popover_API) när det gäller öppna/stängda tillstånd och tangentbordsnavigering.
 
-## React og `popovertarget`
-Når du bruker `Popover` uten `Popover.Context`, kobler du selv sammen utløseren og `Popover`.
-Da brukes `popovertarget` i små bokstaver, slik at alle versjoner av React korrekt gjengir attributtet.
-Når du bruker `@digdir/designsystemet-react` utvider vi `@types/react-dom` til å akseptere dette.
+## React och `popovertarget`
+När du använder `Popover` utan `Popover.Context`, kopplar du själv ihop utlösaren och `Popover`.
+Då används `popovertarget` i små bokstäver, så att alla versioner av React korrekt återger attributet.
+När du använder `@digdir/designsystemet-react` utökar vi `@types/react-dom` för att acceptera detta.

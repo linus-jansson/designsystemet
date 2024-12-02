@@ -1,0 +1,46 @@
+import { TokenIcon } from '@navikt/aksel-icons';
+
+import { MenuPageLayout } from '@layouts';
+
+export const metadata = {
+  title: 'Designtokens',
+  description:
+    'Designtokens är återanvändbara värden som fungerar som en brygga mellan alla ytor.',
+};
+
+export default ({ children }) => (
+  <MenuPageLayout
+    content={children}
+    data={{
+      title: 'Designtokens',
+      date : '16 oktober 2024',
+      icon: <TokenIcon />,
+      color: 'yellow',
+    }}
+  />
+);
+
+## Vad är designtokens
+
+"Designtokens" styr hur komponenterna ska se ut när det gäller färger, typografi, storlekar, avstånd, former, osv. Designtokens säkerställer att både designers och utvecklare arbetar efter samma regler och riktlinjer.
+
+Några av variablerna är tema-baserade, vilket innebär att de utgår från ditt varumärke med de färger och preferenser du själv väljer. Vi arbetar med en tema-byggare som ska göra det enklare för dig att anpassa stilarna.
+
+Designtokens är flexibla variabler som kan användas oberoende av teknik eller designverktyg.
+
+## Designtokens i Figma
+
+Vi använder Figma-pluginen "Tokens Studio", då denna låter oss hantera fler stilar och egenskaper än vad Figma själv kan erbjuda.
+
+Pluginen strävar efter att vara W3C-kompatibel och följer standarden som etablerats av [W3C Design Tokens Community Group](https://github.com/design-tokens/community-group). Tokens-värdena är därmed inte låsta till ett verktyg – JSON-filen kan flyttas till andra verktyg om det skulle bli aktuellt.
+
+### Flera set och teman
+
+Användning av variabler och tokens gör det möjligt att ha _ett_ designsystem med olika identiteter. Vi kan skapa en komponent i Figma bara en gång och styla den flera gånger – Med ett klick kan vi aktivera ett annat tema, till exempel med en annan färgpalett eller en annan uppsättning storlekar. Genom att dela upp tokens i både set och teman kan vi erbjuda avancerade former av återanvändning.
+
+![Exempel på färgsystem i Figma](/img/fargerfigma.gif)
+Videon ovan visar att när setet för «Tilsynet» aktiveras, skrivs både de färger som används i filen över och de stilar som finns tillgängliga i högermarginalen byts ut.
+
+### Designtokens för utvecklare
+
+Installera NPM-paketet [@digdir/designsystemet-theme](https://www.npmjs.com/package/@digdir/designsystemet-theme) och följ beskrivningen där för användning av tokens. Överskriv vid behov.

@@ -8,20 +8,20 @@ import { Modal } from './';
 
 # Modal
 
-`Modal` bruker native `dialog` elementet, du kan enten bruke vår `Trigger` komponent eller `ref` for å åpne modalen.
-Dersom du trenger kontroll over når modalen lukkes, må du bruke `ref`.
-Les [MDN Docs](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog) for mer info.
+`Modal` använder det inbyggda `dialog`-elementet. Du kan antingen använda vår `Trigger`-komponent eller `ref` för att öppna modalen.
+Om du behöver kontroll över när modalen stängs, måste du använda `ref`.
+Läs [MDN Docs](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog) för mer information.
 
-`Modal` har native focus trap, som betyr at brukeren ikke kan tabbe til annet innhold på siden.
+`Modal` har inbyggd focus trap, vilket innebär att användaren inte kan tabba till annat innehåll på sidan.
 
 <Primary />
 <Controls />
 
-## Slik bruker du `Modal`
+## Så använder du `Modal`
 
 ```tsx
 <Modal.Context>
-  <Modal.Trigger>Open Modal</Modal.Trigger>
+  <Modal.Trigger>Öppna Modal</Modal.Trigger>
   <Modal>
     <Modal.Block>
       <Heading size="xs">Header</Heading>
@@ -32,53 +32,53 @@ Les [MDN Docs](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog)
 </Modal.Context>
 ```
 
-## Bruk med eksten trigger
+## Användning med extern trigger
 
-Dersom du vil bruke en ekstern trigger, som for eksempel ligger en annen plass i treet, kan du bruke `ref` for å åpne modalen.
+Om du vill använda en extern trigger, som exempelvis ligger på en annan plats i trädet, kan du använda `ref` för att öppna modalen.
 
 ```tsx
 const modalRef = useRef<HTMLDialogElement>(null);
 
 ...
 
-<Button onClick={() => modalRef.current?.showModal()}>Open Modal</Button>
-<Modal ref={modalRef} >
+<Button onClick={() => modalRef.current?.showModal()}>Öppna Modal</Button>
+<Modal ref={modalRef}>
   Content
 </Modal>
 ```
 
-### Med bruk av `ref`
+### Med användning av `ref`
 
 <Canvas of={ModalStories.WithoutModalContext} />
 
-### Close on backdrop click
+### Stäng vid klick på backdrop
 
-Vi bruker `backdropClose={true}` proppen for å lukke modalen når brukeren klikker utenfor.
+Vi använder proppen `backdropClose={true}` för att stänga modalen när användaren klickar utanför.
 
 <Canvas of={ModalStories.BackdropClose} />
 
 ### Med `Block`
 
-Bruk flere `Modal.Block` hvis du vil dele opp modalen med skillelinjer til for eksempel topp- og bunn-område.
-Merk at innhold kan ikke plasseres direkte i `Modal` dersom du bruker `Modal.Block`; da burde alt innholdet være inni en av av modalens `Modal.Block`-seksjoner.
+Använd flera `Modal.Block` om du vill dela upp modalen med skiljelinjer, till exempel för topp- och bottenområde.
+Observera att innehåll inte kan placeras direkt i `Modal` om du använder `Modal.Block`; allt innehåll bör vara inom en av modalens `Modal.Block`-sektioner.
 
 <Canvas of={ModalStories.WithHeaderAndFooter} />
 
-### Form
+### Formulär
 
-Vi bruker native `autoFocus` på `Textfield` for å fokusere inputen i skjemaet.
+Vi använder inbyggt `autoFocus` på `Textfield` för att fokusera input-fältet i formuläret.
 
 <Canvas of={ModalStories.ModalWithForm} />
 
-### Med egendefinert bredde
+### Med anpassad bredd
 
-Bruk `max-width` for å sette egendefinert maks bredde på modalen. Default er 40rem.
+Använd `max-width` för att ställa in anpassad maximal bredd på modalen. Standard är 40rem.
 
 <Canvas of={ModalStories.ModalWithMaxWidth} />
 
-### Innhold som går utenfor Modalen
+### Innehåll som går utanför modalen
 
-Bruk `overflow: visible` for å la innhold gå utenfor modalen.
+Använd `overflow: visible` för att låta innehåll sträcka sig utanför modalen.
 
 <Canvas of={ModalStories.ModalWithCombobox} />
 

@@ -2,12 +2,12 @@ import { Meta } from '@storybook/blocks';
 
 import { CodeSnippet } from '@doc-components';
 
-<Meta title='Bruk' />
+<Meta title='Användning' />
 
-# Bruk
+# Användning
 
-På denne siden finner du informasjon om hvordan du kan bruke Designsystemet.
-Under kan du lese om:
+På denna sida hittar du information om hur du kan använda designsystemet.
+Nedan kan du läsa om:
 
 - [React](#react)
   - [Props](#props)
@@ -15,19 +15,19 @@ Under kan du lese om:
   - [Komponenter med `.Root`](#komponenter-med-root)
 - [CSS](#css)
   - [Layers](#layers)
-  - [Data attributter](#data-attributter)
+  - [Data-attribut](#data-attribut)
 
 ## React
 
 ### Props
 
-Alle komponenter har props og typescript typer iht. underliggende element. F.eks `Button` godtar alle props som et vanlig `button` element gjør.
+Alla komponenter har props och typer enligt underliggande element. Till exempel godtar `Button` alla props som ett vanligt `button`-element gör.
 
-- Innsendte props vil bli lagt bakerst på komponenten.
-- Innsendte handler funksjoner (alt som begynner med `on`), vil bli kalt sist dersom de er i bruk internt.
-- Innsendte klassenavn vil bli lagt bakerst i lista av klasser.
+- Insända props kommer att placeras längst bak på komponenten.
+- Insända handler-funktioner (allt som börjar med `on`) kommer att anropas sist om de används internt.
+- Insända klassnamn kommer att placeras längst bak i listan av klasser.
 
-#### Eksempel
+#### Exempel
 
 <CodeSnippet language='ts'>
   {`
@@ -37,15 +37,15 @@ Alle komponenter har props og typescript typer iht. underliggende element. F.eks
 
 <br />
 
-Vil bli til:
+Blir till:
 
 <CodeSnippet language='ts'>
   {`
   <button 
     className='ds-btn ... my-class' 
     onClick={() => {
-      () => {} // vår funksjon
-      rest.onClick(); // logget til konsollen kommer her
+      () => {} // vår funktion
+      rest.onClick(); // loggningen till konsolen sker här
     }}
     data-attr="data"
   >
@@ -58,17 +58,16 @@ Vil bli til:
 
 ### SSR
 
-Alle våre komponenter er klient komponenter, og bruker `"use client"`.
+Alla våra komponenter är klientkomponenter och använder `"use client"`.
 
-Dersom du ønsker å bruke våre komponenter i dine server komponenter, så kan du ikke bruke dot-notation.
-Dette betyr at du ikke kan skrive `<Accordion.Item>`, men må skrive `<AccordionItem>`. Grunnen for dette er at serveren ikke kan få tak i noe
-som ligger i en klient komponent, som `Accordion` er.
+Om du vill använda våra komponenter i dina serverkomponenter kan du inte använda dot-notation.
+Detta betyder att du inte kan skriva `<Accordion.Item>`, utan måste skriva `<AccordionItem>`. Anledningen är att servern inte kan hantera något som ligger i en klientkomponent, vilket `Accordion` är.
 
-#### I en server komponent:
+#### I en serverkomponent:
 
 <CodeSnippet language='ts'>
 {`
-import { Accordion, AccordionHeading, AccordionItem, AccordionContent } from '@digdir/designsystemet-react';
+import { Accordion, AccordionHeading, AccordionItem, AccordionContent } från '@digdir/designsystemet-react';
 
 <Accordion>
   <AccordionItem>
@@ -79,11 +78,11 @@ import { Accordion, AccordionHeading, AccordionItem, AccordionContent } from '@d
 `}
 </CodeSnippet>
 
-#### I en klient komponent:
+#### I en klientkomponent:
 
 <CodeSnippet language='ts'>
 {`
-import { Accordion } from '@digdir/designsystemet-react';
+import { Accordion } från '@digdir/designsystemet-react';
 
 <Accordion>
   <Accordion.Item>
@@ -96,9 +95,8 @@ import { Accordion } from '@digdir/designsystemet-react';
 
 ### Komponenter med `.Root`
 
-Noen komponenter har en `.Root` komponent, som må wrappes rundt barn. Disse må brukes for at komponenten skal funke.
-Accordion har f.eks en `Accordion` komponent som må wrappes rundt `Accordion.Item` komponentene.
-Dette er for å få riktig funksjonalitet gjennom komponenten.
+Vissa komponenter har en `.Root`-komponent, som måste wrapas runt barnkomponenterna. Dessa måste användas för att komponenten ska fungera korrekt.
+Till exempel har `Accordion` en `Accordion`-komponent som måste wrappa runt `Accordion.Item`-komponenterna för att ge rätt funktionalitet.
 
 <br />
 <br />
@@ -106,42 +104,42 @@ Dette er for å få riktig funksjonalitet gjennom komponenten.
 
 ## CSS
 
-For å bruke Designsystemets CSS, så må du installere `@digdir/designsystemet-css` og `@digdir/designsystemet-theme`.
+För att använda designsystemets CSS måste du installera `@digdir/designsystemet-css` och `@digdir/designsystemet-theme`.
 
 ### Layers
 
-Vi bruker [css layers](https://developer.mozilla.org/en-US/docs/Web/CSS/@layer) for å få lavest mulig spesifisitet på vår css.
-Dette betyr at du lett kan overstye med din egen styling.
+Vi använder [css layers](https://developer.mozilla.org/en-US/docs/Web/CSS/@layer) för att få så låg specifikhet som möjligt på vår css.
+Detta gör att du enkelt kan åsidosätta vår styling med din egen.
 
-Alle våre layers ligger under layer gruppen `ds`.
+Alla våra layers ligger under layer-gruppen `ds`.
 
-Har du f.eks en css reset, så vil denne overstyre deler av det vi har gjort. Vi anbefaler å legge denne i en layer og sortere denne først.
-Dette gjør du ved å først legge reseten din i en layer, og så sortere denne layeren først:
+Om du till exempel har en css-reset kommer den att åsidosätta delar av det vi har gjort. Vi rekommenderar att du placerar den i en layer och sorterar den först.
+Det gör du genom att lägga din reset i en layer och sedan sortera den layern först:
 
 <CodeSnippet language='css'>{`@layer my-reset, ds;`}</CodeSnippet>
 
-### Data attributter
+### Data-attribut
 
-Vi tilbyr flere data attributter som kan brukes for å endre tema på komponentene.
+Vi erbjuder flera data-attribut som kan användas för att ändra temat på komponenterna.
 
 <br />
 #### `data-ds-color-mode`
 
-Brukes til å endre fargemodus på komponentene. Mulige verdier er `light`, `dark` og `auto`.
-Dersom `auto` er valgt, vil fargemodusen endres basert på brukerens preferanser ved hjelp av
+Används för att ändra färgläget på komponenterna. Möjliga värden är `light`, `dark` och `auto`.
+Om `auto` är valt kommer färgläget att ändras baserat på användarens preferenser med hjälp av
 [prefers-color-scheme](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme).
 
 <br />
 #### `data-ds-typography`
 
-Brukes til å endre typografien på komponentene. Mulige verdier er `primary` og `secondary`.
-Et vanlig bruksområde for denne attributten er når du ønsker en monospace font på tabeller.
+Används för att ändra typografin på komponenterna. Möjliga värden är `primary` och `secondary`.
+Ett vanligt användningsområde för detta attribut är när du vill ha ett monospace-typsnitt i tabeller.
 
-Hvilken typografi som er tilknyttet `primary` eller `secondary` må defineres i teamet, ved hjelp av [Tokens Studio](https://tokens.studio/)
-(med Designsystemet design-tokens) eller [Temabyggeren](https://theme.designsystemet.no/).
+Vilken typografi som är kopplad till `primary` eller `secondary` måste definieras i temat med hjälp av [Tokens Studio](https://tokens.studio/)
+(med designsystemets design-tokens) eller [Temabyggaren](https://theme.designsystemet.no/).
 
-Dersom du skal bruke denne attributten må du huske å definere `font-family` til å bruke `--ds-font-family` CSS variabelen.
-Dette kan løses ved å f.eks bruke [attribute selector](https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors) i CSS.
+Om du ska använda detta attribut måste du komma ihåg att definiera `font-family` så att det använder CSS-variabeln `--ds-font-family`.
+Detta kan lösas genom att till exempel använda [attribute selector](https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors) i CSS.
 
 <CodeSnippet language='html'>
   {`

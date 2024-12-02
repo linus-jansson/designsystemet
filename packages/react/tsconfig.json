@@ -1,5 +1,5 @@
 {
-  "extends": "../../tsconfig.json",
+  "extends": "@ua-designsystem/typescript-config/tsconfig.packages.json",
   "compilerOptions": {
     "outDir": "./tsc-build",
     "declarationDir": "./dist/types",

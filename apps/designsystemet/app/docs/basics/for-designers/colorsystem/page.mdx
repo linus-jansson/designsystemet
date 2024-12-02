@@ -1,0 +1,72 @@
+import { Table } from '@digdir/designsystemet-react';
+
+import { PaletteIcon } from '@navikt/aksel-icons';
+
+import { MenuPageLayout } from '@layouts';
+import { Image, ResponsiveIframe } from '@components';
+
+export const metadata = {
+  title: 'Sätt upp ditt eget färgsystem',
+  description: 'Här får du hjälp att sätta upp ett färgsystem',
+};
+
+export default ({ children }) => (
+  <MenuPageLayout
+    content={children}
+    data={{
+      title: 'Sätt upp ditt eget färgsystem',
+      date : '16 oktober 2024',
+      icon: <PaletteIcon />,
+      color: 'blue',
+    }}
+  />
+);
+
+Med ett genomtänkt färgsystem kan vi säkerställa att text alltid har tillräcklig kontrast mot våra bakgrundsfärger och att det finns tillräckligt med olika färger för alla tillstånd.
+
+En profilmanual innehåller ofta endast ett set med primärfärger och sekundärfärger i några olika nyanser. Att skapa en digital produkt med enbart dessa färger är svårt. För att säkerställa korrekt kontrast och färger för olika tillstånd behöver vi definiera fler variationer av profilfärgerna. Bara button-komponenten består av 6 olika blå nyanser:
+
+<Image
+  src='/img/button-colors.png'
+  alt='Skärmbild som visar button-komponenten och alla de olika färgkoderna den består av.'
+  boxShadow={false}
+  caption='Som du ser i exemplet behöver vi 6 olika färgvariationer bara för Button-komponenten.'
+/>
+
+Färgsystemet är strukturerat för att stödja multibranding och olika modes (darkmode, contrastmode, etc.), samtidigt som vi upprätthåller kontrastkraven. Vi har inspirerats av [USWDS "magic numbers"](https://designsystem.digital.gov/design-tokens/color/overview/) för att säkerställa tillgängliga färgkombinationer från vilken färgpalett som helst. Vi har också inspirerats av [Radix färgsystem](https://www.radix-ui.com/colors) med tydliga intentioner för de olika färgerna. För att säkerställa att en organisation kan använda sin faktiska varumärkesfärg har vi valt att kombinera två tillvägagångssätt till ett helt nytt system.
+
+## Designsystemets temagenerator
+
+För att generera en skala som fungerar kan du använda [Designsystemets temagenerator](https://next.theme.designsystemet.no). Det enda du behöver göra är att klistra in hex-koden för varumärkets accentfärg och övriga profilfärger.
+
+<Image
+  src='/img/fargesystem.png'
+  alt='Skärmbild som visar ett utsnitt från färggeneratorn med 5 färgpaletter.'
+  boxShadow={false}
+  caption='Färgsystemet använder brand-färgen för att generera flera färgvariationer, så att vi kan säkerställa god kontrast mellan text och bakgrundsfärger.'
+/>
+
+Temageneratorn är baserad på ett färgsystem som säkerställer att både varumärkesfärger bevaras och att kontrastkraven uppfylls genom de linjära färger som genereras från varumärkesfärgen. Färger avsedda för text kommer därmed alltid att ha tillräcklig kontrast mot bakgrundsfärger.
+
+Exempel:
+
+- `Text-default` har alltid tillräcklig kontrast mot alla `background`- och `surface`-färger.
+- `Text-subtle` har alltid tillräcklig kontrast mot alla `background`-färger och `surface-default`.
+- Detta gäller oavsett vad du har valt som basfärg.
+
+`Base-default`-färgen kommer alltid vara densamma som den färg du har valt. Detta är för att bevara ditt varumärke på bästa sätt. Du måste dock själv se till att färgen du väljer uppfyller kontrastkraven i förhållande till var den ska användas. [Designsystemets temagenerator](https://next.theme.designsystemet.no) informerar dig om eventuella kontrastbrott.
+
+Låt oss titta på ett exempel där vi byter ut färgerna:
+
+<ResponsiveIframe
+  src='/img/theme-generator.mp4'
+  title='Skärminspelning från prototypen. Videon visar hur användaren ändrar en färg och att komponenterna påverkas omedelbart.'
+  frameBorder='0'
+  allow='autoplay; fullscreen; picture-in-picture'
+  allowFullScreen
+  aspectRatio='16-9'
+></ResponsiveIframe>
+
+## Använd de genererade färgerna
+
+När du har genererat skalorna kan du [använda de nya färgkoderna i Designsystemet](/grundläggande/for-designers/eget-tema), så att alla komponenter följer din profil.

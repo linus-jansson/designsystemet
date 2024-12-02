@@ -2,7 +2,9 @@
   "$schema": "https://unpkg.com/@changesets/config@3.0.2/schema.json",
   "changelog": [
     "@svitejs/changesets-changelog-github-compact",
-    { "repo": "digdir/designsystemet" }
+    {
+      "repo": "linus-jansson/designsystemet"
+    }
   ],
   "commit": false,
   "fixed": [
@@ -18,10 +20,10 @@
   "baseBranch": "main",
   "updateInternalDependencies": "patch",
   "ignore": [
-    "theme",
-    "storefront",
+    "@apps/theme",
+    "@apps/storefront",
     "@repo/components",
-    "@designsystemet/storybook",
+    "@apps/storybook",
     "figma-plugin"
   ]
 }

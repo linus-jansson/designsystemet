@@ -6,79 +6,78 @@ import * as ChipStories from './Chip.stories';
 
 # Chip
 
-`Chip` er små, interaktive komponenter som lar brukerne styre hvordan de vil se innhold. For eksempel kan de brukes til å filtrere kategorier i et søkeresultat og vise hvilke filter som er aktive. 
+`Chip` är små, interaktiva komponenter som låter användarna styra hur de vill se innehåll. Till exempel kan de användas för att filtrera kategorier i ett sökresultat och visa vilka filter som är aktiva.
 
-- Ikke bruk `Chip` til å merke innhold med kategori/emne som ikke er interaktivt. Bruk heller [`Tag`](/docs/komponenter-tag--docs)-komponenten dersom kategori/emne ikke er klikkbart.
+- Använd inte `Chip` för att märka innehåll med kategori/ämne som inte är interaktivt. Använd istället [`Tag`](/docs/komponenter-tag--docs)-komponenten om kategori/ämne inte är klickbart.
 
-- Ikke bruk `Chip` som varsler for antall eller status. Bruk heller [`Badge`](/docs/komponenter-badge--docs)-komponenten.
+- Använd inte `Chip` som aviseringar för antal eller status. Använd istället [`Badge`](/docs/komponenter-badge--docs)-komponenten.
 
 <Primary />
 <Controls />
 
-## Slik  bruker du `Chip`
+## Så använder du `Chip`
 
 ```tsx
 import { Chip } from '@digdir/designsystemet-react';
 
 // som radio
-<Chip.Radio name="my-chip" defaultChecked>You are using the Chip component!</Chip.Radio>;
-<Chip.Radio name="my-chip">You are using the Chip component!</Chip.Radio>;
+<Chip.Radio name="my-chip" defaultChecked>Du använder Chip-komponenten!</Chip.Radio>;
+<Chip.Radio name="my-chip">Du använder Chip-komponenten!</Chip.Radio>;
 
 // som checkbox
-<Chip.Checkbox name="my-chip" defaultChecked>You are using the Chip component!</Chip.Checkbox>;
+<Chip.Checkbox name="my-chip" defaultChecked>Du använder Chip-komponenten!</Chip.Checkbox>;
 
 // som removable
-<Chip.Removable>You are using the Chip component!</Chip.Removable>;
+<Chip.Removable>Du använder Chip-komponenten!</Chip.Removable>;
 
 // som button
-<Chip.Button>You are using the Chip component!</Chip.Button>;
+<Chip.Button>Du använder Chip-komponenten!</Chip.Button>;
 ```
 
 <br/>
 
-## Eksempler
+## Exempel
 
 <br/>
 ### `Chip.Checkbox` 
-`Chip.Checkbox` kan brukes som et alternativ til `Checkbox`.
+`Chip.Checkbox` kan användas som ett alternativ till `Checkbox`.
 <Canvas of={ChipStories.Checkbox} />
 <br/>
 
 ### `Chip.Removable`
-Vi bruker `Chip` med kryss når vi vil at brukerne skal kunne fjerne valgte verdier. Det kan for eksempel være filter som er satt, eller verdier som brukerne selv har skrevet inn i et tekstfelt.
+Vi använder `Chip` med kryss när vi vill att användarna ska kunna ta bort valda värden. Det kan till exempel vara filter som är valda, eller värden som användarna själva har skrivit in i ett textfält.
 
-Denne komponenten inneholder et kryss som indikerer at filteret kan fjernes. Det er viktig å merke seg at `aria-label` må legges til dersom innholdet
-i Chip ikke forklarer at den kan fjernes. I dette eksempelet er det lagt til `aria-label="Slett {land}"`.
+Denna komponent innehåller ett kryss som indikerar att filtret kan tas bort. Det är viktigt att lägga till `aria-label` om innehållet i Chip inte förklarar att det kan tas bort. I detta exempel har `aria-label="Radera godis"` lagts till.
 
 <Canvas of={ChipStories.Removable} />
 <br/>
 ### `Chip.Button` 
-`Chip.Button` kan brukes i gruppe, for å vise valgmuligheter - ikke handlinger.
+`Chip.Button` kan användas i grupp för att visa valmöjligheter - inte åtgärder.
 <Canvas of={ChipStories.Button} />
 <br/>
 <br/>
 
-## Retningslinjer for `Chip`
+## Riktlinjer för `Chip`
 
-`Chip` lar brukerne styre hvordan de vil vise innhold. `Chip` kan vises på en eller flere rekker, de tilpasser seg den plassen de får.
+`Chip` låter användarna styra hur de vill visa innehåll. `Chip` kan visas på en eller flera rader och anpassar sig till det utrymme de får.
 
-Unngå å plassere `Chip` vertikalt. Velg heller [`Checkbox`](/docs/komponenter-checkbox--docs) eller [`Radio`](/docs/komponenter-radio--docs) hvis du vil ha alternativer under hverandre.
+Undvik att placera `Chip` vertikalt. Välj istället [`Checkbox`](/docs/komponenter-checkbox--docs) eller [`Radio`](/docs/komponenter-radio--docs) om du vill ha alternativ under varandra.
 
-Passer til å
-- filtrere informasjon, for eksempel i lister eller tabeller
-- vise hvilke filtre som er valgt
+### Passar för att
+- filtrera information, till exempel i listor eller tabeller
+- visa vilka filter som är valda
 
-Passer ikke til
-- menyer, som sidemenyer eller hovedmenyer
-- ikke klikkbare kategorier/emner (bruk heller [`Tag`](/docs/komponenter-tag--docs))
-- varsler for antall eller status (bruk heller [`Badge`](/docs/komponenter-badge--docs))
-
-<br/>
-
-## Tekst i komponenten
-Chips bør ha så få ord som mulig, helst bare ett eller to.
+### Passar inte för att
+- menyer, som sidomenyer eller huvudmenyer
+- icke-klickbara kategorier/ämnen (använd istället [`Tag`](/docs/komponenter-tag--docs))
+- aviseringar för antal eller status (använd istället [`Badge`](/docs/komponenter-badge--docs))
 
 <br/>
 
-## Tilgjengelighet
-Hvis deler av en side blir oppdatert samtidig som brukerne gjør noe på siden, må vi passe på at brukere med skjermleser får beskjed om det. Vi kan bruke en `ARIA live region` til det, som kan vise antall treff eller andre endringer.
+## Text i komponenten
+Chips bör ha så få ord som möjligt, helst bara ett eller två.
+
+<br/>
+
+## Tillgänglighet
+Om delar av en sida uppdateras samtidigt som användarna gör något på sidan, måste vi se till att användare med skärmläsare får information om detta. Vi kan använda en `ARIA live region` för det, som kan visa antal träffar eller andra ändringar.

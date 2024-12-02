@@ -2,6 +2,7 @@
 dist
 ignore
 tsc-build
+out/
 
 # Yarn stuff; we're not using PnP/Zero installs
 .pnp.*
@@ -36,5 +37,6 @@ coverage/
 # Typescript
 next-env.d.ts
 
+.turbo
 # jest/vitest test reports
 test-report.xml

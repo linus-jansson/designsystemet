@@ -7,49 +7,32 @@ import type { Metadata } from 'next';
 
 import { VersionBanner } from '@components';
 import { SkipLink } from '@digdir/designsystemet-react';
-import Script from 'next/script';
 import { Footer } from '../components/Footer/Footer';
 
 export const metadata: Metadata = {
   metadataBase: new URL(
     process.env.VERCEL_GIT_COMMIT_REF !== 'main'
-      ? 'https://next.designsystemet.no'
-      : 'https://designsystemet.no',
+      ? 'https://designsystem.test.uppsala.se'
+      : 'https://designsystem.uppsala.se',
   ),
   title: {
-    template: '%s - Designsystemet',
+    template: '%s - Uppsala kommun',
     default: 'Designsystemet',
   },
   openGraph: {
-    images: '/img/designsystemet-meta.png',
+    images: '/img/designsystemet-meta.png', // todo bytt ut
   },
 };
 
 const menu = [
   {
-    name: 'Grunnleggende',
-    href: '/grunnleggende',
-  },
-  {
-    name: 'God praksis',
-    href: '/god-praksis',
-  },
-  {
-    name: 'Mønstre',
-    href: '/monstre',
-  },
-  {
-    name: 'Bloggen',
-    href: '/bloggen',
+    name: 'Dokumentation',
+    href: '/docs/basics',
   },
   {
     name: 'Komponenter',
-    href: '/komponenter',
+    href: '/docs/komponenter',
   },
-  /* {
-    name: 'Temabygger',
-    href: 'https://next.theme.designsystemet.no',
-  }, */
 ];
 
 export default function RootLayout({
@@ -63,14 +46,10 @@ export default function RootLayout({
     <html lang='en'>
       <body>
         <div className='root'>
-          <SkipLink href='#main'>Hopp til hovedinnhold</SkipLink>
-          <VersionBanner />
+          <SkipLink href='#main'>Till sidans huvudinnehåll</SkipLink>
           <Header menu={menu} skipLink={false} />
           {children}
           <Footer />
-          {process.env.VERCEL_ENV === 'production' && (
-            <Script src='https://siteimproveanalytics.com/js/siteanalyze_6255470.js' />
-          )}
         </div>
       </body>
     </html>

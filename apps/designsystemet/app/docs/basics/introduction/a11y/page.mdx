@@ -1,0 +1,29 @@
+import { HandHeartIcon } from '@navikt/aksel-icons';
+
+import { MenuPageLayout } from '@layouts';
+
+export const metadata = {
+  title: 'Tillgänglighet',
+  description:
+    'Designsystemet ska vara tillgängligt för alla, oavsett varaktiga eller tillfälligt nedsatta förmågor.',
+};
+
+export default ({ children }) => (
+  <MenuPageLayout
+    content={children}
+    data={{
+      title: 'Tillgänglighet',
+      date : '16 oktober 2024',
+      icon: <HandHeartIcon />,
+      color: 'yellow',
+    }}
+  />
+);
+
+Designsystemet ska vara tillgängligt för alla, oavsett varaktiga eller tillfälligt nedsatta förmågor.
+
+Tillgänglighet är en del av utvecklingen från det att vi börjar specificera komponenten tills den är i produktion. När vi upptäcker fel eller brister på komponenten som påverkar dess tillgänglighet, kommer dessa uppgifter att prioriteras av designsystemteamet. Alla komponenter ska följa de [lagstadgade kraven för universell utformning i offentlig sektor](https://www.uutilsynet.no/regelverk/gjeldende-regelverk-og-krav/746).
+
+Tillgängliga komponenter är bara en del av att skapa tillgängliga lösningar. Därför kommer vi även att skapa guider och andra verktyg så att teamen får extra stöd för att använda komponenterna som de är avsedda.
+
+Under [God praxis - Tillgänglighet](/god-praksis#tilgjengelighet) kommer vi att lägga ut artiklar som handlar om hur vi kan göra våra lösningar så tillgängliga som möjligt.

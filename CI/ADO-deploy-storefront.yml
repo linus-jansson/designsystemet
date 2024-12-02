@@ -1,0 +1,29 @@
+trigger:
+  branches:
+    include:
+      - main
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+variables:
+  containerName: 'designsystem.storefront'
+
+resources:
+  repositories:
+    - repository: templates
+      type: git
+      name: pipeline.templates
+
+stages:
+  - stage: build
+    displayName: Build, test and push container
+    jobs:
+      - template: docker/build-and-publish-container.yml@templates
+        parameters:
+          containerName: $(containerName)
+          # for now I will store this in the root of the project. 
+          # ADO pipelines seems to run the buildcontext from the place where the dockerfile is located. 
+          # Even though buildContext is set to $(Build.SourcesDirectory)
+          dockerfilePath: 'Dockerfile.nextjs' 
+          arguments: '--build-arg APP_NAME=storefront'

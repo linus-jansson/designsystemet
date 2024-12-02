@@ -5,25 +5,25 @@ import * as InputStories from './Input.stories';
 
 <Meta of={InputStories} />
 
-<Alert color="warning">Input er under utvikling og burde ikke tas i bruk enda. Bruk heller Textfield komponenten.</Alert>
+<Alert color="warning">Input är under utveckling och bör inte användas ännu. Använd istället Textfield-komponenten.</Alert>
 <br />
 
 # Input
 
-`Input` kalles tekstfelt på norsk. Det er et inndatafelt som for eksempel gir brukerne mulighet til å skrive korte tekster eller tall.
+`Input` kallas textfält på svenska. Det är ett inmatningsfält som till exempel ger användarna möjlighet att skriva korta texter eller siffror.
 
 <Primary />
 <Controls />
 
 ## Prefix/Suffix
 
-Prefixer og suffixer er nyttige for å vise enheter, valuta eller andre typer informasjon som er relevant for feltet.
-Du skal **ikke** bruke disse alene, siden skjermlesere ikke leser dem opp.
-Det er viktig at samme informasjon som vises i prefixet eller suffixet også er inkludert i ledeteksten.
+Prefix och suffix är användbara för att visa enheter, valuta eller annan information som är relevant för fältet.
+Du ska **inte** använda dessa ensamma, eftersom skärmläsare inte läser upp dem.
+Det är viktigt att samma information som visas i prefixet eller suffixet också inkluderas i etiketten.
 
 <Canvas of={InputStories.Adornments} />
 
-## Kontrollert
+## Kontrollerad
 
 <Canvas of={InputStories.Controlled} />
 
@@ -31,51 +31,51 @@ Det er viktig at samme informasjon som vises i prefixet eller suffixet også er 
 
 <Canvas of={InputStories.HtmlSize} />
 
-## Retningslinjer for når du skal bruke `Input`
+## Riktlinjer för när du ska använda `Input`
 
-Vi bruker tekstfelt når vi vil gi brukeren mulighet til å skrive tekst/svar på maks. én linje, Det kan for eksempel være navn eller telefonnummer.
+Vi använder textfält när vi vill ge användaren möjlighet att skriva text/svar på max. en rad, till exempel namn eller telefonnummer.
 
-Passer til å
+Passar för att
 
-- gi mulighet for korte tekster eller svar
-- legge inn tall, for eksempel et telefonnummer
+- ge möjlighet för korta texter eller svar
+- mata in siffror, till exempel ett telefonnummer
 
-Passer ikke til å
+Passar inte för att
 
-- gi lengre svar, bruk heller `Textarea`
-- legge inn formaterte data, som markdown
+- ge längre svar, använd istället `Textarea`
+- mata in formaterad data, som markdown
   <br />
 
-### Plassering av ledeteksten
+### Placering av etiketten
 
-Ledeteksten og en eventuell beskrivelse skal alltid stå over tekstfeltet. Da er de lette å se på små skjermer og hindres ikke av eventuelle feilmeldinger.
+Etiketten och eventuell beskrivning ska alltid placeras ovanför textfältet. Då är de lätta att se på små skärmar och hindras inte av eventuella felmeddelanden.
 
-### Unngå plassholdertekster
+### Undvik platshållartexter
 
-Plassholdertekster forsvinner når brukerne skriver i feltet. Det er derfor bedre å inkludere hint og viktig informasjon i selve ledeteksten eller den tilhørende beskrivelsen.
+Platshållartexter försvinner när användarna skriver i fältet. Det är därför bättre att inkludera tips och viktig information i själva etiketten eller den tillhörande beskrivningen.
 
-### Tilpass bredden på tekstfeltet
+### Anpassa bredden på textfältet
 
-Tilpass bredden til det brukerne skal skrive inn, kort bredde til telefonnummer og bredere til stedsnavn. Ulik bredde på feltene gjør det enklere å navigere i skjemaer som har mange felter.
+Anpassa bredden till vad användarna ska skriva in, kort bredd för telefonnummer och bredare för ortnamn. Olika bredd på fälten gör det enklare att navigera i formulär som har många fält.
 
-### Inndata og formatering
+### Inmatning och formatering
 
-- Bruk `autoComplete` for felter som mottar personlig informasjon. Hvis feltet skal be om personopplysninger om en annen person enn brukeren, må du skru `autoComplete` av (WCAG 1.3.5).
-- Bruk gjerne inndatatyper som viser hva du ber om, for eksempel telefonnummer og e-post. Slike inndatatyper gir mobilbrukere et tastatur som passer til det de skal angi, for eksempel et numerisk tastatur for telefonnummer, men de kan også utløse validering på klientsiden.
-- Godta det meste av inndata fra brukerne, så lenge det er forståelig. Eksempler kan være kontonummer med punktum, telefonnummer med mellomrom eller mellomrom på slutten av en e-postadresse.
-- Pass på at brukerne ser inndata som formateres automatisk, men uten at det forstyrrer dem mens de fyller ut.
-- Ikke bruk bare store bokstaver eller kursiv tekst i ledeteksten. Det er vanskelig å lese.
+- Använd `autoComplete` för fält som tar emot personlig information. Om fältet ska be om personuppgifter om någon annan än användaren, måste du stänga av `autoComplete` (WCAG 1.3.5).
+- Använd gärna inmatningstyper som visar vad du ber om, till exempel telefonnummer och e-post. Sådana inmatningstyper ger mobilanvändare ett tangentbord som passar för det de ska ange, till exempel ett numeriskt tangentbord för telefonnummer, men de kan också utlösa validering på klientsidan.
+- Acceptera så mycket inmatning som möjligt från användarna, så länge det är begripligt. Exempel kan vara kontonummer med punkter, telefonnummer med mellanrum eller mellanrum i slutet av en e-postadress.
+- Se till att användarna kan se inmatning som formateras automatiskt, utan att det stör dem när de fyller i.
+- Använd inte bara versaler eller kursiv text i etiketten. Det är svårare att läsa.
 
-## Tekst i komponenten
+## Text i komponenten
 
-Det skal alltid være ledetekst på `Input`. I spesielle tilfeller kan vi skjule ledeteksten med `hidelabel`. Det kan for eksempel være i tabeller, hvis feltet får ledeteksten fra tabelloverskriften. Selv om vi har tenkt å skjule ledeteksten, må vi alltid skrive en ledetekst som gir mening, siden den leses opp av skjermlesere.
+Det ska alltid finnas en etikett på `Input`. I speciella fall kan vi dölja etiketten med `hidelabel`. Det kan till exempel vara i tabeller om fältet får sin etikett från tabellhuvudet. Även om vi planerar att dölja etiketten måste vi alltid skriva en etikett som ger mening, eftersom den läses upp av skärmläsare.
 
-## Tilgjengelighet
+## Tillgänglighet
 
-### Ikke bruk deaktiverte felt
+### Använd inte inaktiverade fält
 
-Ikke bruk deaktivert tilstand (disabled state) på tekstfelt. Tenk heller over om du trenger å vise feltet i det hele tatt, eller om du heller kan skrive informasjonen ut i ren tekst eller bruke Read Only.
+Använd inte inaktiverat läge (disabled state) på textfält. Tänk istället över om du behöver visa fältet överhuvudtaget, eller om du kan skriva ut informationen som ren text eller använda Read Only.
 
-### Prefiks og suffiks
+### Prefix och suffix
 
-Prefiks og suffiks er et ekstra visuelt hjelpemiddel, som blir ignorert av skjermlesere. Vi må alltid ha en beskrivende ledetekst. Prefiks og suffiks er plassert utenfor inndatafeltene de tilhører. Da unngår vi at de ikke skaper trøbbel i noen nettlesere, som kan sette inn et ikon i inndatafeltet (for eksempel ikoner for å vise eller lage passord).
+Prefix och suffix är ett extra visuellt hjälpmedel som ignoreras av skärmläsare. Vi måste alltid ha en beskrivande etikett. Prefix och suffix är placerade utanför inmatningsfälten de tillhör. På så sätt undviker vi att de skapar problem i vissa webbläsare, som kan lägga till en ikon i inmatningsfältet (till exempel ikoner för att visa eller skapa lösenord).
