@@ -1,5 +1,4 @@
 import type { CssColor } from '@adobe/leonardo-contrast-colors';
-import type { ThemeColors } from '../colors/types.js';
 
 export type Token = { $value: string; $type: string };
 export type Tokens1ary = Record<string, Token>;
@@ -20,14 +19,18 @@ export type Tokens = {
   colors: {
     light: ColorModeTokens;
     dark: ColorModeTokens;
-    contrast: ColorModeTokens;
+    contrast?: ColorModeTokens;
   };
   typography: {
     primary: TokensSet;
   };
 };
 
-export type Colors = Record<ThemeColors, CssColor>;
+export type Colors = {
+  main: Record<string, CssColor>;
+  support: Record<string, CssColor>;
+  neutral: CssColor;
+};
 export type Typography = { fontFamily?: string };
 export type TypographyModes = 'primary' | 'secondary';
 

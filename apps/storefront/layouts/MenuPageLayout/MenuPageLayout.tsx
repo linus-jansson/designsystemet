@@ -54,7 +54,7 @@ const MenuPageLayout = ({ content, data, banner }: PageLayoutProps) => {
           {data && (
             <div className={classes.header}>
               <div className={classes.headerText}>
-                <Heading size='lg'>{data.title}</Heading>
+                <Heading data-size='lg'>{data.title}</Heading>
                 {data.date && <div className={classes.date}>{data.date}</div>}
               </div>
               <div
@@ -77,6 +77,16 @@ const MenuPageLayout = ({ content, data, banner }: PageLayoutProps) => {
           </div>
         </main>
       </Container>
+      <style suppressHydrationWarning>
+        {`
+          header {
+            [data-color-scheme='dark'] &,
+            [data-color-scheme='auto'] & {
+              background-color: var(--ds-color-neutral-background-default) !important;
+            }
+          }
+        `}
+      </style>
     </div>
   );
 };

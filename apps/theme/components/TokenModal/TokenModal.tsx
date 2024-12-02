@@ -8,7 +8,7 @@ import {
   Paragraph,
   Textfield,
 } from '@digdir/designsystemet-react';
-import { createTokens } from '@digdir/designsystemet/tokens/create.js';
+import { colorCliOptions, createTokens } from '@digdir/designsystemet/tokens';
 import { CodeIcon, InformationSquareIcon } from '@navikt/aksel-icons';
 import { CodeSnippet } from '@repo/components';
 import { useEffect, useRef, useState } from 'react';
@@ -44,11 +44,9 @@ export const TokenModal = ({
   const [themeName, setThemeName] = useState('theme');
 
   const cliSnippet = `npx @digdir/designsystemet@next tokens create \\
-   --accent "${accentColor}" \\
-   --neutral "${neutralColor}" \\
-   --brand1 "${brand1Color}" \\
-   --brand2 "${brand2Color}" \\
-   --brand3 "${brand3Color}" \\
+   --${colorCliOptions.main} "accent:${accentColor}" \\
+   --${colorCliOptions.neutral} "${neutralColor}" \\
+   --${colorCliOptions.support} "brand1:${brand1Color}" "brand2:${brand2Color}" "brand3:${brand3Color}" \\
    --theme "${themeName}" \\
    --write
    `;
@@ -56,11 +54,15 @@ export const TokenModal = ({
   useEffect(() => {
     const tokens = createTokens({
       colors: {
-        accent: accentColor,
+        main: {
+          accent: accentColor,
+        },
         neutral: neutralColor,
-        brand1: brand1Color,
-        brand2: brand2Color,
-        brand3: brand3Color,
+        support: {
+          brand1: brand1Color,
+          brand2: brand2Color,
+          brand3: brand3Color,
+        },
       },
       typography: { fontFamily: 'Inter' },
       themeName: 'theme',
@@ -92,8 +94,8 @@ export const TokenModal = ({
         </div>
         <div className={classes.infoBox__right}>
           <div className={classes.infoBox__container}>
-            <Heading size='2xs'>{title}</Heading>
-            <Paragraph size='sm'>{desc}</Paragraph>
+            <Heading data-size='2xs'>{title}</Heading>
+            <Paragraph data-size='sm'>{desc}</Paragraph>
           </div>
         </div>
       </div>
@@ -101,7 +103,7 @@ export const TokenModal = ({
   };
 
   return (
-    <Modal.Context>
+    <Modal.TriggerContext>
       <Modal.Trigger
         className={classes.trigger}
         onClick={() => {
@@ -116,7 +118,7 @@ export const TokenModal = ({
         ref={modalRef}
         backdropClose={true}
       >
-        <Heading className={classes.modalHeader} size='xs'>
+        <Heading className={classes.modalHeader} data-size='xs'>
           <img src='img/emblem.svg' alt='' className={classes.emblem} />
           <span className={classes.headerText}>Ta i bruk tema</span>
         </Heading>
@@ -127,7 +129,7 @@ export const TokenModal = ({
               label='Navn på tema'
               description="Kun bokstaver, tall og bindestrek. Eks: 'mitt-tema'"
               value={themeName}
-              size='sm'
+              data-size='sm'
               onChange={(e) => {
                 const value = e.currentTarget.value
                   .replace(/\s+/g, '-')
@@ -181,15 +183,15 @@ export const TokenModal = ({
           </div>
           <div className={classes.rightSection}>
             <div className={classes.snippet}>
-              <CodeSnippet syntax='shell'>{cliSnippet}</CodeSnippet>
+              <CodeSnippet language='shell'>{cliSnippet}</CodeSnippet>
             </div>
             <div className={classes.contact}>
               <div className={classes.contact__icon}>
                 <InformationSquareIcon aria-hidden='true' fontSize='1.5rem' />
               </div>
               <div className={classes.contact__content}>
-                <Heading size='2xs'>Noe som ikke fungerer?</Heading>
-                <Paragraph size='sm'>
+                <Heading data-size='2xs'>Noe som ikke fungerer?</Heading>
+                <Paragraph data-size='sm'>
                   Send oss en melding på{' '}
                   <Link
                     target='_blank'
@@ -211,6 +213,6 @@ export const TokenModal = ({
           </div>
         </div>
       </Modal>
-    </Modal.Context>
+    </Modal.TriggerContext>
   );
 };

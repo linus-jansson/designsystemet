@@ -1,5 +1,4 @@
 import { ComponentCard } from '@components';
-import React from 'react';
 
 import { data } from './component-list';
 
@@ -23,10 +22,15 @@ export default function page() {
       {sortedData.map((component) => (
         <ComponentCard key={component.title} {...component} />
       ))}
-      <style>
+      <style suppressHydrationWarning>
         {`
     body {
       background-color: var(--ds-color-neutral-background-subtle);
+
+        [data-color-scheme='dark'] &,
+        [data-color-scheme='auto'] & {
+          background-color: var(--ds-color-neutral-background-default);
+        }
     }
   `}
       </style>

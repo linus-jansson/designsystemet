@@ -1,8 +1,10 @@
 import type { CssColor } from '@adobe/leonardo-contrast-colors';
 import { BackgroundColor, Color, Theme } from '@adobe/leonardo-contrast-colors';
 import { Hsluv } from 'hsluv';
+import * as R from 'ramda';
 
-import type { ColorInfo, ColorMode, ColorNumber, ContrastMode, GlobalColors, ThemeColors, ThemeInfo } from './types.js';
+import type { Colors } from '../tokens/types.js';
+import type { ColorInfo, ColorMode, ColorNumber, ContrastMode, GlobalColors, ThemeInfo } from './types.js';
 import { getContrastFromHex, getContrastFromLightness, getLightnessFromHex } from './utils.js';
 
 export const baseColors: Record<GlobalColors, CssColor> = {
@@ -11,10 +13,8 @@ export const baseColors: Record<GlobalColors, CssColor> = {
   orange: '#B8581D',
   purple: '#663299',
   red: '#C01B1B',
-  yellow: '#EABF28',
+  yellow: '#D4B12F',
 };
-
-type Colors = Record<ThemeColors, CssColor>;
 
 export type ColorError = 'none' | 'decorative' | 'interaction';
 
@@ -32,18 +32,18 @@ type ThemeGenType = {
  * Generates a Leonardo theme color that is used to create a Leonardo Theme
  *
  * @param color CssColor
- * @param mode Light, Dark or Contrastmode
+ * @param colorScheme Light, Dark or Contrast
  * @param contrastMode Contrast mode
  * @returns
  */
-const generateThemeColor = (color: CssColor, mode: ColorMode, contrastMode: 'aa' | 'aaa' = 'aa') => {
+const generateThemeColor = (color: CssColor, colorScheme: ColorMode, contrastMode: 'aa' | 'aaa' = 'aa') => {
   const leoBackgroundColor = new BackgroundColor({
     name: 'backgroundColor',
     colorKeys: ['#ffffff'],
     ratios: [1],
   });
   let colorLightness = getLightnessFromHex(color);
-  if (mode === 'dark' || mode === 'contrast') {
+  if (colorScheme === 'dark' || colorScheme === 'contrast') {
     color = getBaseColor(color);
     colorLightness = colorLightness <= 30 ? 70 : 100 - colorLightness;
   }
@@ -68,18 +68,18 @@ const generateThemeColor = (color: CssColor, mode: ColorMode, contrastMode: 'aa'
     leoBackgroundColor.colorKeys[0],
   );
 
-  const textSubLightLightness = contrastMode === 'aa' ? 42 : 30;
+  const textSubLightLightness = contrastMode === 'aa' ? 41 : 30;
   const textDefLightLightness = contrastMode === 'aa' ? 18 : 12;
 
-  const textSubDarkLightness = contrastMode === 'aa' ? 67 : 80;
+  const textSubDarkLightness = contrastMode === 'aa' ? 66 : 80;
   const textDefDarkLightness = contrastMode === 'aa' ? 90 : 94;
 
   let lightnessScale: number[] = [];
 
-  if (mode === 'light') {
-    lightnessScale = [100, 96, 90, 84, 78, 76, 54, 33, textSubLightLightness, textDefLightLightness];
-  } else if (mode === 'dark') {
-    lightnessScale = [10, 14, 20, 26, 32, 35, 47, 77, textSubDarkLightness, textDefDarkLightness];
+  if (colorScheme === 'light') {
+    lightnessScale = [100, 96, 90, 84, 78, 76, 53, 41, textSubLightLightness, textDefLightLightness];
+  } else if (colorScheme === 'dark') {
+    lightnessScale = [10, 14, 20, 26, 32, 35, 52, 66, textSubDarkLightness, textDefDarkLightness];
   } else {
     lightnessScale = [1, 6, 14, 20, 26, 58, 70, 82, 80, 95];
   }
@@ -106,14 +106,14 @@ const generateThemeColor = (color: CssColor, mode: ColorMode, contrastMode: 'aa'
  * Generates a color scale based on a base color and a mode.
  *
  * @param color The base color that is used to generate the color scale
- * @param mode The mode of the theme
+ * @param colorScheme The color scheme to generate a scale for
  */
 export const generateScaleForColor = (
   color: CssColor,
-  mode: ColorMode,
+  colorScheme: ColorMode,
   contrastMode: 'aa' | 'aaa' = 'aa',
 ): ColorInfo[] => {
-  const themeColor = generateThemeColor(color, mode, contrastMode);
+  const themeColor = generateThemeColor(color, colorScheme, contrastMode);
 
   const leoBackgroundColor = new BackgroundColor({
     name: 'backgroundColor',
@@ -146,7 +146,7 @@ export const generateScaleForColor = (
     name: getColorNameFromNumber(15),
   });
 
-  if (mode === 'light') {
+  if (colorScheme === 'light') {
     outputArray[8].hex = color;
   }
 
@@ -189,6 +189,11 @@ export const generateGlobalColors = ({ contrastMode = 'aa' }: GlobalGenType): Re
   };
 };
 
+type GeneratedColorTheme = {
+  main: Record<string, ThemeInfo>;
+  support: Record<string, ThemeInfo>;
+  neutral: ThemeInfo;
+};
 /**
  * This function generates a complete theme for a set of colors.
  *
@@ -196,19 +201,15 @@ export const generateGlobalColors = ({ contrastMode = 'aa' }: GlobalGenType): Re
  * @param contrastMode The contrast mode to use
  * @returns
  */
-export const generateColorTheme = ({ colors, contrastMode = 'aa' }: ThemeGenType): Record<ThemeColors, ThemeInfo> => {
-  const accentTheme = generateThemeForColor(colors.accent, contrastMode);
-  const neutralTheme = generateThemeForColor(colors.neutral, contrastMode);
-  const brand1Theme = generateThemeForColor(colors.brand1, contrastMode);
-  const brand2Theme = generateThemeForColor(colors.brand2, contrastMode);
-  const brand3Theme = generateThemeForColor(colors.brand3, contrastMode);
+export const generateColorTheme = ({ colors, contrastMode = 'aa' }: ThemeGenType): GeneratedColorTheme => {
+  const main = R.map((color) => generateThemeForColor(color, contrastMode), colors.main);
+  const support = R.map((color) => generateThemeForColor(color, contrastMode), colors.support);
+  const neutral = generateThemeForColor(colors.neutral, contrastMode);
 
   return {
-    accent: accentTheme,
-    neutral: neutralTheme,
-    brand1: brand1Theme,
-    brand2: brand2Theme,
-    brand3: brand3Theme,
+    main,
+    support,
+    neutral,
   };
 };
 

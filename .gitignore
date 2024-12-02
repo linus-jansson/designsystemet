@@ -2,6 +2,7 @@
 dist
 ignore
 tsc-build
+*.tsbuildinfo
 
 # Yarn stuff; we're not using PnP/Zero installs
 .pnp.*
@@ -38,3 +39,8 @@ next-env.d.ts
 
 # jest/vitest test reports
 test-report.xml
+
+packages/cli/test-tokens-create
+packages/cli/test-tokens-build
+
+.turbo/

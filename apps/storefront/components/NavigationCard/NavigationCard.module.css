@@ -41,27 +41,37 @@
 }
 
 .red {
-  background-color: var(--ds-color-brand1-5);
+  background-color: var(--ds-color-brand1-surface-active);
   color: var(--ds-color-brand1-text-default);
 }
 
 .blue {
-  background-color: var(--ds-color-brand3-4);
+  background-color: var(--ds-color-brand3-surface-hover);
   color: var(--ds-color-brand3-text-default);
 }
 
 .yellow {
-  background-color: var(--ds-color-brand2-4);
+  background-color: var(--ds-color-brand2-surface-hover);
   color: var(--ds-color-brand2-text-default);
 }
 
 .grey {
-  background-color: var(--ds-color-neutral-background-subtle);
+  background-color: var(--ds-color-neutral-background-default);
   box-shadow: none;
+
+  [data-color-scheme='dark'] &,
+  [data-color-scheme='auto'] & {
+    background-color: var(--ds-color-neutral-surface-default);
+  }
 }
 
 .white {
   background-color: var(--ds-color-neutral-background-default);
+
+  [data-color-scheme='dark'] &,
+  [data-color-scheme='auto'] & {
+    background-color: var(--ds-color-neutral-surface-default);
+  }
 }
 
 .title {

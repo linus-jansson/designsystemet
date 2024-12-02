@@ -1,26 +1,25 @@
 import * as R from 'ramda';
 import type { TransformedToken } from 'style-dictionary';
 import type { Format } from 'style-dictionary/types';
-import { createPropertyFormatter, fileHeader, getReferences, usesReferences } from 'style-dictionary/utils';
+import { createPropertyFormatter, fileHeader, usesReferences } from 'style-dictionary/utils';
 
-import type { IsCalculatedToken } from '../configs.js';
-import { prefix } from '../configs.js';
-import { getValue, typeEquals } from '../utils/utils.js';
+import { type IsCalculatedToken, colorCategories } from '../types.js';
+import { getValue, isColorCategoryToken, isGlobalColorToken, isSemanticToken } from '../utils/utils.js';
 
-const prefersColorScheme = (mode: string, content: string) => `
-@media (prefers-color-scheme: ${mode}) {
-  [data-ds-color-mode="auto"] ${content}
+const prefersColorScheme = (colorScheme: string, content: string) => `
+@media (prefers-color-scheme: ${colorScheme}) {
+  [data-color-scheme="auto"] ${content}
 }
 `;
 
-export const colormode: Format = {
-  name: 'ds/css-colormode',
+const colorScheme: Format = {
+  name: 'ds/css-colorscheme',
   format: async ({ dictionary, file, options, platform }) => {
     const { allTokens } = dictionary;
     const { outputReferences, usesDtcg } = options;
-    const { selector, mode, layer } = platform;
+    const { selector, colorScheme, layer } = platform;
 
-    const mode_ = mode as string;
+    const colorScheme_ = colorScheme as string;
 
     const header = await fileHeader({ file });
 
@@ -31,11 +30,26 @@ export const colormode: Format = {
       usesDtcg,
     });
 
-    const colorSchemeProperty = mode_ === 'dark' || mode_ === 'light' ? `\n  color-scheme: ${mode_};\n` : '';
+    const colorSchemeProperty =
+      colorScheme_ === 'dark' || colorScheme_ === 'light' ? `\n  color-scheme: ${colorScheme_};\n` : '';
 
-    const formattedTokens = dictionary.allTokens.map(format).join('\n');
+    const filteredAllTokens = allTokens.filter(
+      R.allPass([
+        R.anyPass([
+          // Include semantic tokens in the output
+          isSemanticToken,
+          // Include global color tokens
+          isGlobalColorToken,
+        ]),
+        // Don't include color category tokens -- they are exported separately
+        (t) => !isColorCategoryToken(t),
+      ]),
+    );
+    const formattedTokens = filteredAllTokens.map(format).join('\n');
     const content = `{\n${formattedTokens}\n${colorSchemeProperty}}\n`;
-    const autoSelectorContent = ['light', 'dark'].includes(mode_) ? prefersColorScheme(mode_, content) : '';
+    const autoSelectorContent = ['light', 'dark'].includes(colorScheme_)
+      ? prefersColorScheme(colorScheme_, content)
+      : '';
     const body = R.isNotNil(layer)
       ? `@layer ${layer} {\n${selector} ${content} ${autoSelectorContent}\n}\n`
       : `${selector} ${content} ${autoSelectorContent}\n`;
@@ -44,9 +58,47 @@ export const colormode: Format = {
   },
 };
 
+declare module 'style-dictionary/types' {
+  export interface LocalOptions {
+    replaceCategoryWith?: string;
+  }
+}
+
+const colorCategory: Format = {
+  name: 'ds/css-colorcategory',
+  format: async ({ dictionary, file, options, platform }) => {
+    const { outputReferences, usesDtcg, replaceCategoryWith = '' } = options;
+    const { selector, layer } = platform;
+
+    const header = await fileHeader({ file });
+
+    const format = R.compose(
+      createPropertyFormatter({
+        outputReferences,
+        dictionary,
+        format: 'css',
+        usesDtcg,
+      }),
+      (token: TransformedToken) => ({
+        ...token,
+        name: token.name.replace(
+          new RegExp(`-(${colorCategories.main}|${colorCategories.support})-`),
+          replaceCategoryWith ? `-${replaceCategoryWith}-` : '-',
+        ),
+      }),
+    );
+
+    const formattedTokens = dictionary.allTokens.map(format).join('\n');
+    const content = `{\n${formattedTokens}\n}\n`;
+    const body = R.isNotNil(layer) ? `@layer ${layer} {\n${selector} ${content}\n}\n` : `${selector} ${content}\n`;
+
+    return header + body;
+  },
+};
+
 const calculatedVariable = R.pipe(R.split(/:(.*?);/g), (split) => `${split[0]}: calc(${R.trim(split[1])});`);
 
-export const semantic: Format = {
+const semantic: Format = {
   name: 'ds/css-semantic',
   format: async ({ dictionary, file, options, platform }) => {
     const { outputReferences, usesDtcg } = options;
@@ -91,7 +143,7 @@ const typographyFontFamilyPredicate = R.allPass([
   R.pathSatisfies(R.includes('fontFamily'), ['path']),
 ]);
 
-export const typography: Format = {
+const typography: Format = {
   name: 'ds/css-typography',
   format: async ({ dictionary, file, options, platform }) => {
     const { outputReferences, usesDtcg } = options;
@@ -116,3 +168,10 @@ export const typography: Format = {
     return header + body;
   },
 };
+
+export const formats = {
+  colorScheme,
+  colorCategory,
+  semantic,
+  typography,
+} satisfies Record<string, Format>;

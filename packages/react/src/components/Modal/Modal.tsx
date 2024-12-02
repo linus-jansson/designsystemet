@@ -4,27 +4,31 @@ import cl from 'clsx/lite';
 import type { DialogHTMLAttributes } from 'react';
 import { forwardRef, useContext, useEffect, useRef } from 'react';
 
+import type { DefaultProps } from '../../types';
+import type { MergeRight } from '../../utilities';
 import { Button } from '../Button';
-import { Context } from './ModalContext';
+import { Context } from './ModalTriggerContext';
 
-export type ModalProps = {
-  /**
-   * Screen reader label of close button. Set false to hide the close button.
-   * @default 'Lukk dialogvindu'
-   */
-  closeButton?: string | false;
-  /**
-   * Close on backdrop click.
-   * @default false
-   */
-  backdropClose?: boolean;
-  /**
-   * Callback that is called when the modal is closed.
-   * @default undefined
-   */
-  onClose?: () => void;
-  asChild?: boolean;
-} & DialogHTMLAttributes<HTMLDialogElement>;
+export type ModalProps = MergeRight<
+  DefaultProps & DialogHTMLAttributes<HTMLDialogElement>,
+  {
+    /**
+     * Screen reader label of close button. Set false to hide the close button.
+     * @default 'Lukk dialogvindu'
+     */
+    closeButton?: string | false;
+    /**
+     * Close on backdrop click.
+     * @default false
+     */
+    backdropClose?: boolean;
+    /**
+     * Callback that is called when the modal is closed.
+     */
+    onClose?: (event: Event) => void;
+    asChild?: boolean;
+  }
+>;
 
 export const Modal = forwardRef<HTMLDialogElement, ModalProps>(function Modal(
   {
@@ -40,7 +44,7 @@ export const Modal = forwardRef<HTMLDialogElement, ModalProps>(function Modal(
   ref,
 ) {
   const contextRef = useContext(Context);
-  const modalRef = useRef<HTMLDialogElement>(null); // This local ref is used to make sure the modal works without a ModalContext
+  const modalRef = useRef<HTMLDialogElement>(null); // This local ref is used to make sure the modal works without a ModalTriggerContext
   const Component = asChild ? Slot : 'dialog';
   const mergedRefs = useMergeRefs([contextRef, ref, modalRef]);
 
@@ -77,7 +81,7 @@ export const Modal = forwardRef<HTMLDialogElement, ModalProps>(function Modal(
 
   /* handle closing */
   useEffect(() => {
-    const handleClose = () => onClose?.();
+    const handleClose = (event: Event) => onClose?.(event);
 
     modalRef.current?.addEventListener('close', handleClose);
     return () => modalRef.current?.removeEventListener('close', handleClose);
@@ -90,10 +94,9 @@ export const Modal = forwardRef<HTMLDialogElement, ModalProps>(function Modal(
           <Button
             aria-label={closeButton}
             autoFocus
-            color='neutral'
+            data-color='neutral'
             icon
             name='close'
-            size='md'
             type='submit'
             variant='tertiary'
           />

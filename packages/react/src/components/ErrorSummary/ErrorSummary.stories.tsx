@@ -31,7 +31,7 @@ export const Preview: Story = (args) => (
   </ErrorSummary>
 );
 Preview.args = {
-  size: 'md',
+  'data-size': 'md',
 };
 
 export const WithForm: Story = () => (
@@ -45,6 +45,7 @@ export const WithForm: Story = () => (
     <Textfield
       label='Telefon'
       id='telefon'
+      type='tel'
       error='Telefonnummer kan kun inneholde siffer'
     />
 

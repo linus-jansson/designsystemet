@@ -1,6 +1,5 @@
 import { Button, Heading, Link, Paragraph } from '@digdir/designsystemet-react';
 import cl from 'clsx/lite';
-import Image from 'next/image';
 import NextLink from 'next/link';
 import { type ReactNode, forwardRef } from 'react';
 import { Container } from '../';
@@ -27,7 +26,7 @@ const LinkList = (links: LinkListItemProps[]) => {
     <ul className={classes.links}>
       {links.map((item, index) => (
         <li key={index}>
-          <Link href={item.url} color='neutral' className={classes.link}>
+          <Link href={item.url} data-color='neutral' className={classes.link}>
             {item.prefix}
             {item.text}
           </Link>
@@ -50,13 +49,13 @@ export const Footer = forwardRef<HTMLElement, FooterProps>(function Footer(
     <footer
       ref={ref}
       className={cl(classes.footer, className)}
-      data-ds-color-mode='dark'
+      data-color-scheme='dark'
       {...rest}
     >
       <div className={classes.top}>
         <Container className={classes.container}>
           <div>
-            <Heading size='xs' level={2} className={classes.title}>
+            <Heading data-size='xs' level={2} className={classes.title}>
               Lages på tvers av offentlige etater:
             </Heading>
             <div className={classes.logos}>
@@ -65,7 +64,12 @@ export const Footer = forwardRef<HTMLElement, FooterProps>(function Footer(
               <Mattilsynet />
               <Udir className={classes.udir} />
             </div>
-            <Button asChild variant='secondary' color='neutral' size='sm'>
+            <Button
+              asChild
+              variant='secondary'
+              data-color='neutral'
+              data-size='sm'
+            >
               <NextLink
                 href='mailto:designsystem@digdir.no'
                 className={classes.button}
@@ -75,13 +79,13 @@ export const Footer = forwardRef<HTMLElement, FooterProps>(function Footer(
             </Button>
           </div>
           <div>
-            <Heading size='xs' level={2} className={classes.title}>
+            <Heading data-size='xs' level={2} className={classes.title}>
               Om nettstedet
             </Heading>
             {LinkList(centerLinks)}
           </div>
           <div>
-            <Heading size='xs' level={2} className={classes.title}>
+            <Heading data-size='xs' level={2} className={classes.title}>
               Kom i kontakt med oss
             </Heading>
             {LinkList(rightLinks)}
@@ -90,7 +94,9 @@ export const Footer = forwardRef<HTMLElement, FooterProps>(function Footer(
       </div>
       <div className={classes.bottom}>
         <Container>
-          <Paragraph size='sm'>© {getCurrentYear()} Designsystemet</Paragraph>
+          <Paragraph data-size='sm'>
+            © {getCurrentYear()} Designsystemet
+          </Paragraph>
         </Container>
       </div>
     </footer>

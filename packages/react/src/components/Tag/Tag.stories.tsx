@@ -1,4 +1,3 @@
-import { Stack } from '@doc-components';
 import type { Meta, StoryFn, StoryObj } from '@storybook/react';
 
 import type { TagProps } from '.';
@@ -17,25 +16,31 @@ export default {
 export const Preview: Story = {
   args: {
     children: 'New',
-    size: 'md',
-    color: 'neutral',
+    'data-size': 'md',
+    'data-color': 'neutral',
   },
 };
 
-const sizes: TagProps['size'][] = ['sm', 'md', 'lg'];
+const sizes: TagProps['data-size'][] = ['sm', 'md', 'lg'];
 export const Sizes: StoryFn<typeof Tag> = ({ ...rest }): JSX.Element => {
   return (
-    <>
+    <div
+      style={{
+        display: 'flex',
+        alignItems: 'center',
+        gap: 'var(--ds-spacing-2)',
+      }}
+    >
       {sizes.map((size) => (
-        <Tag key={size} size={size} {...rest}>
+        <Tag key={size} data-size={size} {...rest}>
           {size}
         </Tag>
       ))}
-    </>
+    </div>
   );
 };
 
-const colors: TagProps['color'][] = [
+const colors: TagProps['data-color'][] = [
   'neutral',
   'success',
   'warning',
@@ -50,7 +55,7 @@ export const Colors: StoryFn<typeof Tag> = ({ ...rest }): JSX.Element => {
   return (
     <>
       {colors.map((color) => (
-        <Tag key={color} color={color} {...rest}>
+        <Tag key={color} data-color={color} {...rest}>
           {color}
         </Tag>
       ))}
