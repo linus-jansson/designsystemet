@@ -115,6 +115,10 @@
     "11": {
       "$type": "sizing",
       "$value": "60"
+    },
+    "14": {
+      "$type": "sizing",
+      "$value": "80"
     }
   }
 }
