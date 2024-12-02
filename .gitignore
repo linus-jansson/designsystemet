@@ -42,3 +42,5 @@ test-report.xml
 
 packages/cli/test-tokens-create
 packages/cli/test-tokens-build
+
+.turbo/
