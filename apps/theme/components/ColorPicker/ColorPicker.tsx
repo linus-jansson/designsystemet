@@ -45,7 +45,7 @@ export const ColorPicker = ({
     return (
       <div>
         <button
-          popovertarget={popoverId}
+          popoverTarget={popoverId}
           className={cl(
             classes.status,
             'ds-focus',

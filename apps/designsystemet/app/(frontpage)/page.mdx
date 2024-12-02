@@ -1,0 +1,39 @@
+import {
+  EnvelopeClosedIcon,
+  BranchingIcon,
+  PersonChatIcon,
+} from '@navikt/aksel-icons';
+
+import { Section, ImageBanner } from '@components';
+
+export default ({ children }) => <>{children}</>;
+
+export const metadata = {
+  title: 'Välkommen till designsystemet',
+  description:
+  'Här hittar du UI-komponenter, riktlinjer och god praxis för effektiv produktutveckling och enhetliga användarupplevelser.',
+};
+
+<ImageBanner
+  title='En gemensam digital verktygslåda'
+  description='Designsystemet är en gemensam verktygslåda med grundläggande UI-komponenter, riktlinjer och mönster, som du kan använda när du utvecklar digitala tjänster. Designsystemet bidrar till effektiv produktutveckling och enhetliga användarupplevelser.'
+  imgSrc='/img/Toolbox.svg'
+  headingLevel='h2'
+  imgWidth={1195}
+  link={{
+      text: 'Läs mer om designsystemet',
+      href: '/docs/basics/introduction/about',
+  }}
+/>
+
+<style>
+  {`
+header:first-of-type {
+  background-color: transparent;
+}
+
+.ds-logo-image img {
+  width: 85%;
+}
+`}
+</style>

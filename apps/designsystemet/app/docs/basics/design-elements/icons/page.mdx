@@ -1,0 +1,52 @@
+import { TokenIcon } from '@navikt/aksel-icons';
+
+import { MenuPageLayout } from '@layouts';
+
+export const metadata = {
+  title: 'Ikoner',
+  description: 'Hur vi använder ikoner i komponenter',
+};
+
+export default ({ children }) => (
+  <MenuPageLayout
+    content={children}
+    data={{
+      title: 'Ikoner',
+      date : '16 oktober 2024',
+      icon: <TokenIcon />,
+      color: 'red',
+    }}
+  />
+);
+
+## Samarbeta om ikoner!
+
+Nav har skapat ett gediget [set med ikoner](https://aksel.nav.no/ikoner) (800+) som vi rekommenderar att använda och bidra till att vidareutveckla. Att en ikon har samma betydelse i en offentlig kontext som i en annan ser vi bara som en fördel.
+
+Ikonerna stödjer justering i storlek och färgändringar och finns i både stroke- och fill-varianter.
+
+Här hittar du översikten över ikoner: [aksel.nav.no/ikoner](https://aksel.nav.no/ikoner)<br/>
+Här kan du ladda ner ikonpaketet: [cdn.nav.no/aksel/icons](https://cdn.nav.no/aksel/icons/zip/aksel-icons.zip)<br/>
+Här hittar du NPM-paketet: [@navikt/aksel-icons](https://www.npmjs.com/package/@navikt/aksel-icons)<br/>
+Här hittar du ikonerna i Figma: [Core Icons 3](https://www.figma.com/community/file/1214869602572392330/Core-Icons-3)<br/>
+
+För att hålla ikonpaketet i Figma synkroniserat med nya uppdateringar och justeringar som kommer, behöver du en plugin: [Aksel Icon plugin](https://www.figma.com/community/plugin/1221057403873975172).
+
+Installera pluginen, klicka på "Run" och du hämtar de senaste ändringarna. Stort tack till designsystem-teamet på NAV som gjorde detta möjligt! 🙏🏻👏🏻🏅
+
+![Bild](https://user-images.githubusercontent.com/1464915/230187062-b17ecf3a-4910-461f-b6c1-7767af26963c.png)
+
+## Så här bidrar du
+
+Bli med och [bidra här](https://github.com/navikt/aksel/blob/main/%40navikt/aksel-icons/CONTRIBUTING.md)! Följ dessa riktlinjer när du skapar nya ikoner:
+
+- Använd Keyline-mallen som du hittar i Figma-filen under "Assets" [Core Icons 3](https://www.figma.com/community/file/1214869602572392330/Core-Icons-3)<br/>
+- Alla lager (även om det bara är ett) måste grupperas i en grupp, antingen union, subtract, intersect eller exclude.
+- Den översta gruppen ska ha färgen icon.default, alla lager och grupper under detta ska bara använda #262626.
+- Alla lager och grupper ska ställas in på Constraints: scale, scale.
+- För ikonvarianten "Stroke": Ikonen måste endast bestå av linjer, linjerna ska vara 1,5 px, center.
+- För ikonvarianten "Filled": Ikoner där former kan fyllas, ska fyllas.
+
+### Tillgänglighet
+
+Ikonerna ska fungera för alla användare, oavsett situation. Läs mer om [hur du säkerställer tillgänglighet](https://aksel.nav.no/god-praksis/artikler/tilgjengelig-ikonbruk) när du använder ikoner och vilka aria-attribut du bör använda.
