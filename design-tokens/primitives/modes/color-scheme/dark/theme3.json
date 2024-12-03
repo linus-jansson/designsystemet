@@ -309,6 +309,68 @@
         "$type": "color",
         "$value": "#f9fafa"
       }
+    },
+    "brand4": {
+      "1": {
+        "$type": "color",
+        "$value": "#121e1b"
+      },
+      "2": {
+        "$type": "color",
+        "$value": "#162622"
+      },
+      "3": {
+        "$type": "color",
+        "$value": "#1e342f"
+      },
+      "4": {
+        "$type": "color",
+        "$value": "#26423b"
+      },
+      "5": {
+        "$type": "color",
+        "$value": "#2f5148"
+      },
+      "6": {
+        "$type": "color",
+        "$value": "#335a50"
+      },
+      "7": {
+        "$type": "color",
+        "$value": "#45786b"
+      },
+      "8": {
+        "$type": "color",
+        "$value": "#9cc6bb"
+      },
+      "9": {
+        "$type": "color",
+        "$value": "#376056"
+      },
+      "10": {
+        "$type": "color",
+        "$value": "#2c4c44"
+      },
+      "11": {
+        "$type": "color",
+        "$value": "#213933"
+      },
+      "12": {
+        "$type": "color",
+        "$value": "#73ae9f"
+      },
+      "13": {
+        "$type": "color",
+        "$value": "#d3e6e1"
+      },
+      "contrast-1": {
+        "$type": "color",
+        "$value": "#ffffff"
+      },
+      "contrast-2": {
+        "$type": "color",
+        "$value": "#f9fafa"
+      }
     }
   }
 }

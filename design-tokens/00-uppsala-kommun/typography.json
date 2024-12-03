@@ -1,5 +1,53 @@
 {
   "uppsala-kommun": {
+    "1": {
+      "$type": "fontSizes",
+      "$value": "12"
+    },
+    "2": {
+      "$type": "fontSizes",
+      "$value": "14"
+    },
+    "3": {
+      "$type": "fontSizes",
+      "$value": "16"
+    },
+    "4": {
+      "$type": "fontSizes",
+      "$value": "18"
+    },
+    "5": {
+      "$type": "fontSizes",
+      "$value": "20"
+    },
+    "6": {
+      "$type": "fontSizes",
+      "$value": "22"
+    },
+    "7": {
+      "$type": "fontSizes",
+      "$value": "24"
+    },
+    "8": {
+      "$type": "fontSizes",
+      "$value": "28"
+    },
+    "9": {
+      "$type": "fontSizes",
+      "$value": "36"
+    },
+    "10": {
+      "$type": "fontSizes",
+      "$value": "48"
+    },
+    "11": {
+      "$type": "fontSizes",
+      "$value": "60"
+    },
+    "14": {
+      "$type": "fontSizes",
+      "$value": "80"
+    },
     "primary": {
       "$type": "fontFamilies",
       "$value": "Source Sans 3"
@@ -7,9 +55,7 @@
     "secondary": {
       "$type": "fontFamilies",
       "$value": "Source Sans 3"
-    }
-  },
-  "font-weight": {
+    },
     "regular": {
       "$type": "fontWeights",
       "$value": "Regular"
@@ -21,9 +67,7 @@
     "bold": {
       "$type": "fontWeights",
       "$value": "Bold"
-    }
-  },
-  "line-height": {
+    },
     "sm": {
       "$type": "lineHeights",
       "$value": "100%"
@@ -73,56 +117,6 @@
     "9": {
       "$type": "letterSpacing",
       "$value": "1%"
-    }
-  },
-  "font-size": {
-    "1": {
-      "$type": "fontSizes",
-      "$value": "12"
-    },
-    "2": {
-      "$type": "fontSizes",
-      "$value": "14"
-    },
-    "3": {
-      "$type": "fontSizes",
-      "$value": "16"
-    },
-    "4": {
-      "$type": "fontSizes",
-      "$value": "18"
-    },
-    "5": {
-      "$type": "fontSizes",
-      "$value": "20"
-    },
-    "6": {
-      "$type": "fontSizes",
-      "$value": "22"
-    },
-    "7": {
-      "$type": "fontSizes",
-      "$value": "24"
-    },
-    "8": {
-      "$type": "fontSizes",
-      "$value": "28"
-    },
-    "9": {
-      "$type": "fontSizes",
-      "$value": "36"
-    },
-    "10": {
-      "$type": "fontSizes",
-      "$value": "48"
-    },
-    "11": {
-      "$type": "fontSizes",
-      "$value": "60"
-    },
-    "14": {
-      "$type": "fontSizes",
-      "$value": "80"
     }
   }
 }

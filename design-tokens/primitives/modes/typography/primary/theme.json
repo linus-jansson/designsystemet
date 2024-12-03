@@ -2,29 +2,19 @@
   "theme": {
     "main": {
       "$type": "fontFamilies",
-      "$value": "Inter"
+      "$value": "{uppsala-kommun.primary}"
     },
     "bold": {
-      "$extensions": {
-        "studio.tokens": {
-          "modify": {}
-        }
-      },
       "$type": "fontWeights",
-      "$value": "Medium"
+      "$value": "{uppsala-kommun.semi-bold}"
     },
     "extra-bold": {
-      "$extensions": {
-        "studio.tokens": {
-          "modify": {}
-        }
-      },
       "$type": "fontWeights",
-      "$value": "Semi bold"
+      "$value": "{uppsala-kommun.bold}"
     },
     "regular": {
       "$type": "fontWeights",
-      "$value": "Regular"
+      "$value": "{uppsala-kommun.regular}"
     }
   }
 }

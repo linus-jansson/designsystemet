@@ -9,17 +9,17 @@
     "$figmaCollectionId": "VariableCollectionId:36248:20757",
     "$figmaModeId": "36248:0",
     "$figmaVariableReferences": {
-      "font-size.1": "b16053371d400f6e865a57698519b78d6adb8aa6",
-      "font-size.2": "547170dd150be6b3a74de1bc2ee421ba40b9ed9a",
-      "font-size.3": "c7a841c5694c94f85089aa425f0de4010e5fe71d",
-      "font-size.4": "9499f40cb3873ccfa136f943dbf479e1ed0980eb",
-      "font-size.5": "428e13183c9e1c21a4ec5e651e4baba947a38bd9",
-      "font-size.6": "01dce7fd83742c2986baeda3c2202f9345acf5fa",
-      "font-size.7": "54633f9ab840c502b0984cb20888276c2f021360",
-      "font-size.8": "a298f78a4f1ed7171546a06ce6f74196867f462a",
-      "font-size.9": "7f1382abad418b3941b79731e871b641abebbcf7",
-      "font-size.10": "38a0bcc2952ba92e893293eaa1ca024bdc23d0d0",
-      "font-size.11": "347bbb6ecf0d21b6046a55b265e141749f069451"
+      "uppsala-kommun.1": "b16053371d400f6e865a57698519b78d6adb8aa6",
+      "uppsala-kommun.2": "547170dd150be6b3a74de1bc2ee421ba40b9ed9a",
+      "uppsala-kommun.3": "c7a841c5694c94f85089aa425f0de4010e5fe71d",
+      "uppsala-kommun.4": "9499f40cb3873ccfa136f943dbf479e1ed0980eb",
+      "uppsala-kommun.5": "428e13183c9e1c21a4ec5e651e4baba947a38bd9",
+      "uppsala-kommun.6": "01dce7fd83742c2986baeda3c2202f9345acf5fa",
+      "uppsala-kommun.7": "54633f9ab840c502b0984cb20888276c2f021360",
+      "uppsala-kommun.8": "a298f78a4f1ed7171546a06ce6f74196867f462a",
+      "uppsala-kommun.9": "7f1382abad418b3941b79731e871b641abebbcf7",
+      "uppsala-kommun.10": "38a0bcc2952ba92e893293eaa1ca024bdc23d0d0",
+      "uppsala-kommun.11": "347bbb6ecf0d21b6046a55b265e141749f069451"
     },
     "group": "Size"
   },
@@ -33,17 +33,17 @@
     "$figmaCollectionId": "VariableCollectionId:36248:20757",
     "$figmaModeId": "36248:1",
     "$figmaVariableReferences": {
-      "font-size.1": "b16053371d400f6e865a57698519b78d6adb8aa6",
-      "font-size.2": "547170dd150be6b3a74de1bc2ee421ba40b9ed9a",
-      "font-size.3": "c7a841c5694c94f85089aa425f0de4010e5fe71d",
-      "font-size.4": "9499f40cb3873ccfa136f943dbf479e1ed0980eb",
-      "font-size.5": "428e13183c9e1c21a4ec5e651e4baba947a38bd9",
-      "font-size.6": "01dce7fd83742c2986baeda3c2202f9345acf5fa",
-      "font-size.7": "54633f9ab840c502b0984cb20888276c2f021360",
-      "font-size.8": "a298f78a4f1ed7171546a06ce6f74196867f462a",
-      "font-size.9": "7f1382abad418b3941b79731e871b641abebbcf7",
-      "font-size.10": "38a0bcc2952ba92e893293eaa1ca024bdc23d0d0",
-      "font-size.11": "347bbb6ecf0d21b6046a55b265e141749f069451"
+      "uppsala-kommun.1": "b16053371d400f6e865a57698519b78d6adb8aa6",
+      "uppsala-kommun.2": "547170dd150be6b3a74de1bc2ee421ba40b9ed9a",
+      "uppsala-kommun.3": "c7a841c5694c94f85089aa425f0de4010e5fe71d",
+      "uppsala-kommun.4": "9499f40cb3873ccfa136f943dbf479e1ed0980eb",
+      "uppsala-kommun.5": "428e13183c9e1c21a4ec5e651e4baba947a38bd9",
+      "uppsala-kommun.6": "01dce7fd83742c2986baeda3c2202f9345acf5fa",
+      "uppsala-kommun.7": "54633f9ab840c502b0984cb20888276c2f021360",
+      "uppsala-kommun.8": "a298f78a4f1ed7171546a06ce6f74196867f462a",
+      "uppsala-kommun.9": "7f1382abad418b3941b79731e871b641abebbcf7",
+      "uppsala-kommun.10": "38a0bcc2952ba92e893293eaa1ca024bdc23d0d0",
+      "uppsala-kommun.11": "347bbb6ecf0d21b6046a55b265e141749f069451"
     },
     "group": "Size"
   },
@@ -1013,14 +1013,14 @@
       "font.family": "32f399ee0e608727f1c4d02e8ceb892a6c3e79e0",
       "font-weight.medium": "d48aac48a9fecf0dbe2e5c7b68427961007eac36",
       "font-weight.semibold": "d684180ad99ad0b200080b18529a25476554343f",
-      "font-weight.regular": "82250a86efe7517071ff39e79b2579c5b57a6083",
       "border-radius.1": "430e4e34456fbd05b0a5a818a553626419608b2b",
       "border-radius.2": "d5832eb066c8b0a3dc25cded408a4d9f445432e2",
       "border-radius.3": "785c1cfff3d8b21a3a29744f5a0f45f1f3ec0827",
       "border-radius.4": "84a4998341610ba4b0013144a7f14d9d2533cb9d",
       "border-radius.5": "c1d38a59c2eb078642aafd112e1a23cc3107e2b1",
       "border-radius.base": "80b5d08a35a320b9bd2d4ecdbe2ccf0086315b88",
-      "border-radius.scale": "692a8c1f2038457a196ba0e077cdc70c6bad5e77"
+      "border-radius.scale": "692a8c1f2038457a196ba0e077cdc70c6bad5e77",
+      "uppsala-kommun.regular": "82250a86efe7517071ff39e79b2579c5b57a6083"
     },
     "group": "Theme"
   },
@@ -1112,14 +1112,14 @@
       "font.family": "32f399ee0e608727f1c4d02e8ceb892a6c3e79e0",
       "font-weight.medium": "d48aac48a9fecf0dbe2e5c7b68427961007eac36",
       "font-weight.semibold": "d684180ad99ad0b200080b18529a25476554343f",
-      "font-weight.regular": "82250a86efe7517071ff39e79b2579c5b57a6083",
       "border-radius.1": "430e4e34456fbd05b0a5a818a553626419608b2b",
       "border-radius.2": "d5832eb066c8b0a3dc25cded408a4d9f445432e2",
       "border-radius.3": "785c1cfff3d8b21a3a29744f5a0f45f1f3ec0827",
       "border-radius.4": "84a4998341610ba4b0013144a7f14d9d2533cb9d",
       "border-radius.5": "c1d38a59c2eb078642aafd112e1a23cc3107e2b1",
       "border-radius.base": "80b5d08a35a320b9bd2d4ecdbe2ccf0086315b88",
-      "border-radius.scale": "692a8c1f2038457a196ba0e077cdc70c6bad5e77"
+      "border-radius.scale": "692a8c1f2038457a196ba0e077cdc70c6bad5e77",
+      "uppsala-kommun.regular": "82250a86efe7517071ff39e79b2579c5b57a6083"
     },
     "group": "Theme"
   },
@@ -1211,14 +1211,14 @@
       "font.family": "32f399ee0e608727f1c4d02e8ceb892a6c3e79e0",
       "font-weight.medium": "d48aac48a9fecf0dbe2e5c7b68427961007eac36",
       "font-weight.semibold": "d684180ad99ad0b200080b18529a25476554343f",
-      "font-weight.regular": "82250a86efe7517071ff39e79b2579c5b57a6083",
       "border-radius.1": "430e4e34456fbd05b0a5a818a553626419608b2b",
       "border-radius.2": "d5832eb066c8b0a3dc25cded408a4d9f445432e2",
       "border-radius.3": "785c1cfff3d8b21a3a29744f5a0f45f1f3ec0827",
       "border-radius.4": "84a4998341610ba4b0013144a7f14d9d2533cb9d",
       "border-radius.5": "c1d38a59c2eb078642aafd112e1a23cc3107e2b1",
       "border-radius.base": "80b5d08a35a320b9bd2d4ecdbe2ccf0086315b88",
-      "border-radius.scale": "692a8c1f2038457a196ba0e077cdc70c6bad5e77"
+      "border-radius.scale": "692a8c1f2038457a196ba0e077cdc70c6bad5e77",
+      "uppsala-kommun.regular": "82250a86efe7517071ff39e79b2579c5b57a6083"
     },
     "group": "Theme"
   },
@@ -1649,14 +1649,14 @@
       "font.family": "32f399ee0e608727f1c4d02e8ceb892a6c3e79e0",
       "font-weight.medium": "d48aac48a9fecf0dbe2e5c7b68427961007eac36",
       "font-weight.semibold": "d684180ad99ad0b200080b18529a25476554343f",
-      "font-weight.regular": "82250a86efe7517071ff39e79b2579c5b57a6083",
       "border-radius.1": "430e4e34456fbd05b0a5a818a553626419608b2b",
       "border-radius.2": "d5832eb066c8b0a3dc25cded408a4d9f445432e2",
       "border-radius.3": "785c1cfff3d8b21a3a29744f5a0f45f1f3ec0827",
       "border-radius.4": "84a4998341610ba4b0013144a7f14d9d2533cb9d",
       "border-radius.5": "c1d38a59c2eb078642aafd112e1a23cc3107e2b1",
       "border-radius.base": "80b5d08a35a320b9bd2d4ecdbe2ccf0086315b88",
-      "border-radius.scale": "692a8c1f2038457a196ba0e077cdc70c6bad5e77"
+      "border-radius.scale": "692a8c1f2038457a196ba0e077cdc70c6bad5e77",
+      "uppsala-kommun.regular": "82250a86efe7517071ff39e79b2579c5b57a6083"
     },
     "group": "Theme"
   },

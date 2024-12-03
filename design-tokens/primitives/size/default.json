@@ -1,31 +1,16 @@
 {
   "line-height": {
     "sm": {
-      "$extensions": {
-        "studio.tokens": {
-          "modify": {}
-        }
-      },
       "$type": "lineHeights",
-      "$value": "130%"
+      "$value": "{uppsala-kommun.sm}"
     },
     "md": {
-      "$extensions": {
-        "studio.tokens": {
-          "modify": {}
-        }
-      },
       "$type": "lineHeights",
-      "$value": "150%"
+      "$value": "{uppsala-kommun.md}"
     },
     "lg": {
-      "$extensions": {
-        "studio.tokens": {
-          "modify": {}
-        }
-      },
       "$type": "lineHeights",
-      "$value": "170%"
+      "$value": "{uppsala-kommun.lg}"
     }
   },
   "font-size": {
