@@ -1,5 +1,5 @@
 {
-  "uppsala-kommun": {
+  "ua-font-size": {
     "1": {
       "$type": "fontSizes",
       "$value": "12"
@@ -47,7 +47,9 @@
     "14": {
       "$type": "fontSizes",
       "$value": "80"
-    },
+    }
+  },
+  "ua-font-families": {
     "primary": {
       "$type": "fontFamilies",
       "$value": "Source Sans 3"
@@ -55,7 +57,9 @@
     "secondary": {
       "$type": "fontFamilies",
       "$value": "Source Sans 3"
-    },
+    }
+  },
+  "ua-font-weight": {
     "regular": {
       "$type": "fontWeights",
       "$value": "Regular"
@@ -67,7 +71,9 @@
     "bold": {
       "$type": "fontWeights",
       "$value": "Bold"
-    },
+    }
+  },
+  "ua-line-height": {
     "sm": {
       "$type": "lineHeights",
       "$value": "100%"
@@ -81,7 +87,7 @@
       "$value": "130%"
     }
   },
-  "letter-spacing": {
+  "ua-letter-spacing": {
     "1": {
       "$type": "letterSpacing",
       "$value": "-2.5%"
