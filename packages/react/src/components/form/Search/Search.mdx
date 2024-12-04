@@ -1,5 +1,6 @@
 import { Meta, Canvas, Controls, Primary } from '@storybook/blocks';
-
+import { CssVariables } from '@doc-components';
+import css from '@digdir/designsystemet-css/search.css?inline';
 import * as SearchStories from './Search.stories';
 
 <Meta of={SearchStories} />
@@ -9,20 +10,39 @@ import * as SearchStories from './Search.stories';
 <Primary />
 <Controls />
 
+## Så här använder du Search
+
+Du kan själv välja om du vill använda `Search.Clear` och `Search.Button`. Vi rekommenderar att du använder `Search.Clear` för att ge användaren möjlighet att rensa sökningen.  
+Om du inte använder `Search.Button` kommer inmatningsfältet att visa en sökikon.
+
+Du bör lägga till `aria-label` eller `aria-labelledby` om du inte kopplar `Search.Input` till en `Label`.
+
+```tsx
+import { Search } from '@digdir/designsystemet-react';
+
+<Search>
+  <Search.Input aria-label="Sök" />
+  <Search.Clear />
+  <Search.Button />
+</Search>
+```
+
 ## Kontrollerad
 
 <Canvas of={SearchStories.Controlled} />
 
-## Full bredd
+## Varianter
 
-<Canvas of={SearchStories.FullWidth} />
+Du kan ändra `variant` på `Button`, eller ta bort den för att få olika varianter.
 
-## Ikon sökknapp
+<Canvas of={SearchStories.Variants} />
 
-Använd `searchButtonLabel` och `clearButtonLabel` för att sätta innehållet i knapparna på `Search`.
-Om du vill använda enbart en ikon på sökknappen, se till att den har en definierad `title`.
+## Med Label
 
-<Canvas of={SearchStories.OnlyIcon} />
+Om du vill ha en etikett för sökfältet måste du lägga till en `Label`-komponent som kopplas ihop med `Search.Input`.  
+I exemplet har vi använt `Field` för att skapa kopplingen mellan `Label` och `Search.Input`.
+
+<Canvas of={SearchStories.WithLabel} />
 
 ## Formulär
 
@@ -30,6 +50,10 @@ Sökknappen har typen `"submit"` och skickar automatiskt in formuläret.
 
 <Canvas of={SearchStories.Form} />
 
-## Referenser
+## CSS Variabler
+
+<CssVariables css={css} />
+
+## Referanser
 
 - [Den idealiska sökrutan är 27 tecken bred](https://www.smashingmagazine.com/2009/09/10-useful-usability-findings-and-guidelines/#6-the-ideal-search-box-is-27-characters-wide)

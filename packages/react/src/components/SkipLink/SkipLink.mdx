@@ -1,5 +1,6 @@
 import { Meta, Controls, Primary } from '@storybook/blocks';
-
+import { CssVariables } from '@doc-components';
+import css from '@digdir/designsystemet-css/skiplink.css?inline';
 import * as SkipLinkStories from './SkipLink.stories';
 
 <Meta of={SkipLinkStories} />
@@ -54,4 +55,8 @@ Genvägskomponenten är vanligtvis inte synlig förrän ett tryck på tangentbor
 
 Observera att vissa automatiska tester för tillgänglighet kan varna om att genvägen saknar ett landmärke. Denna varning gäller inte genvägar, så du kan ignorera den.
 
-Se till att genvägar beter sig förutsägbart. En genväg med texten "Gå direkt till innehållet" ska flytta användarens fokus till början av innehållet, inte till början av första stycket under rubriken.
+Se till att genvägar beter sig förutsägbart. En genväg med texten "Gå direkt till innehållet" ska flytta användarens fokus till början av innehållet, inte till början av det första stycket under rubriken.
+
+## CSS Variabler
+
+<CssVariables css={css} />

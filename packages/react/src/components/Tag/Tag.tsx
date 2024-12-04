@@ -1,27 +1,20 @@
 import cl from 'clsx/lite';
 import type { HTMLAttributes } from 'react';
 import { forwardRef } from 'react';
+import type { Color } from '../../colors';
+import type { DefaultProps } from '../../types';
+import type { MergeRight } from '../../utilities';
 
-export type TagProps = {
-  /**
-   * Color of the tag
-   * @default neutral
-   */
-  color?:
-    | 'neutral'
-    | 'success'
-    | 'warning'
-    | 'danger'
-    | 'info'
-    | 'brand1'
-    | 'brand2'
-    | 'brand3';
-  /**
-   * Size of the tag
-   * @default md
-   */
-  size?: 'sm' | 'md' | 'lg';
-} & HTMLAttributes<HTMLSpanElement>;
+export type TagProps = MergeRight<
+  DefaultProps & HTMLAttributes<HTMLSpanElement>,
+  {
+    /**
+     * Color of the tag.
+     * @default neutral
+     */
+    'data-color'?: Color;
+  }
+>;
 
 /**
  * Use `Tag` to display a small piece of information.
@@ -29,14 +22,13 @@ export type TagProps = {
  * <Tag color='success'>Success</Tag>
  */
 export const Tag = forwardRef<HTMLSpanElement, TagProps>(function Tag(
-  { size = 'md', color = 'neutral', className, ...rest },
+  { color = 'neutral', className, ...rest },
   ref,
 ) {
   return (
     <span
       className={cl('ds-tag', className)}
       data-color={color}
-      data-size={size}
       ref={ref}
       {...rest}
     />

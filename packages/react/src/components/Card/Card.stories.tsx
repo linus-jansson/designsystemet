@@ -6,13 +6,16 @@ import cat5 from '@assets/img/cats/Cat 5.jpg';
 import { PlusIcon, TrashFillIcon } from '@navikt/aksel-icons';
 import type { Meta, StoryFn } from '@storybook/react';
 
-import { Card } from '.';
-import { Button } from '../Button';
-import { Heading } from '../Heading';
-import { Label } from '../Label';
-import { Paragraph } from '../Paragraph';
-import { Select } from '../form/Select';
-import { Textfield } from '../form/Textfield';
+import {
+  Button,
+  Card,
+  Field,
+  Heading,
+  Label,
+  Paragraph,
+  Select,
+  Textfield,
+} from '../../';
 
 type Story = StoryFn<typeof Card>;
 
@@ -34,31 +37,35 @@ export default {
 
 export const Preview: Story = (args) => (
   <Card {...args} style={{ maxWidth: '320px' }}>
-    <Heading size='sm' level={2}>
-      Kort Neutral
-    </Heading>
+    <Heading>Card Neutral</Heading>
     <Paragraph>
       De flesta som tillhandahåller affärer är mycket bättre på den perfekta
       designern. Att skriva förklarar något lättare skrivbord som påstått
       handlar om detta.
     </Paragraph>
-    <Paragraph size='sm'>Fottext</Paragraph>
+    <Paragraph data-size='sm'>Footer text</Paragraph>
   </Card>
 );
 
 Preview.args = {
-  color: 'neutral',
+  'data-color': 'neutral',
 };
 
 export const Variants: StoryFn<typeof Card> = () => (
   <>
-    <Card color='neutral'>
+    <Card data-color='neutral'>
       <Card.Block>
         <img src={cat1} alt='katt' />
       </Card.Block>
       <Card.Block>
-        <Heading level={2} size='sm'>
-          Kort Neutral
+        <Heading>
+          <a
+            href='https://designsystemet.no'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            Card Neutral
+          </a>
         </Heading>
         <Paragraph>
           De flesta som tillhandahåller affärer är mycket bättre på den perfekta
@@ -66,14 +73,20 @@ export const Variants: StoryFn<typeof Card> = () => (
           handlar om detta.
         </Paragraph>
       </Card.Block>
-    </Card>
-    <Card color='subtle'>
+    </Card >
+    <Card data-color='subtle'>
       <Card.Block>
         <img src={cat2} alt='katt' />
       </Card.Block>
       <Card.Block>
-        <Heading level={2} size='sm'>
-          Kort Subtil
+        <Heading>
+          <a
+            href='https://designsystemet.no'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            Card Subtle
+          </a>
         </Heading>
         <Paragraph>
           De flesta som tillhandahåller affärer är mycket bättre på den perfekta
@@ -81,14 +94,20 @@ export const Variants: StoryFn<typeof Card> = () => (
           handlar om detta.
         </Paragraph>
       </Card.Block>
-    </Card>
-    <Card color='brand1'>
+    </Card >
+    <Card data-color='brand1'>
       <Card.Block>
         <img src={cat3} alt='katter' />
       </Card.Block>
       <Card.Block>
-        <Heading level={2} size='sm'>
-          Kort Första
+        <Heading>
+          <a
+            href='https://designsystemet.no'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            Card First
+          </a>
         </Heading>
         <Paragraph>
           De flesta som tillhandahåller affärer är mycket bättre på den perfekta
@@ -96,14 +115,20 @@ export const Variants: StoryFn<typeof Card> = () => (
           handlar om detta.
         </Paragraph>
       </Card.Block>
-    </Card>
-    <Card color='brand2'>
+    </Card >
+    <Card data-color='brand2'>
       <Card.Block>
         <img src={cat4} alt='katt' />
       </Card.Block>
       <Card.Block>
-        <Heading level={2} size='sm'>
-          Kort Andra
+        <Heading>
+          <a
+            href='https://designsystemet.no'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            Card Second
+          </a>
         </Heading>
         <Paragraph>
           De flesta som tillhandahåller affärer är mycket bättre på den perfekta
@@ -111,14 +136,20 @@ export const Variants: StoryFn<typeof Card> = () => (
           handlar om detta.
         </Paragraph>
       </Card.Block>
-    </Card>
-    <Card color='brand3'>
+    </Card >
+    <Card data-color='brand3'>
       <Card.Block>
         <img src={cat5} alt='katt' />
       </Card.Block>
       <Card.Block>
-        <Heading level={2} size='sm'>
-          Kort Tredje
+        <Heading>
+          <a
+            href='https://designsystemet.no'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            Card Third
+          </a>
         </Heading>
         <Paragraph>
           De flesta som tillhandahåller affärer är mycket bättre på den perfekta
@@ -126,7 +157,7 @@ export const Variants: StoryFn<typeof Card> = () => (
           handlar om detta.
         </Paragraph>
       </Card.Block>
-    </Card>
+    </Card >
   </>
 );
 
@@ -137,37 +168,32 @@ export const Media: Story = () => (
         <img src={cat1} alt='katt' />
       </Card.Block>
       <Card.Block>
-        <Heading level={2} size='sm'>
-          Kort Neutral
-        </Heading>
+        <Heading>Card Neutral</Heading>
         <Paragraph>
           De flesta som tillhandahåller affärer är mycket bättre på den perfekta
           designern. Att skriva förklarar något lättare skrivbord som påstått
           handlar om detta.
         </Paragraph>
-      </Card.Block>
-    </Card>
+      </Card.Block >
+    </Card >
     <Card>
       <Card.Block>
-        <Heading level={2} size='sm'>
-          Kort Neutral
-        </Heading>
+        <Heading>Card Neutral</Heading>
         <Paragraph>
           De flesta som tillhandahåller affärer är mycket bättre på den perfekta
           designern. Att skriva förklarar något lättare skrivbord som påstått
           handlar om detta.
         </Paragraph>
-      </Card.Block>
+      </Card.Block >
       <Card.Block>
         <img src={cat1} alt='katt' />
       </Card.Block>
-    </Card>
+    </Card >
   </>
 );
 
-/* Vet ej om detta ska användas? */
-const Video: Story = () => (
-  <Card color='neutral' style={{ maxWidth: '320px' }}>
+export const Video: Story = () => (
+  <Card data-color='neutral' style={{ maxWidth: '320px' }}>
     <Card.Block>
       <iframe
         data-chromatic='ignore'
@@ -179,7 +205,7 @@ const Video: Story = () => (
       ></iframe>
     </Card.Block>
     <Card.Block>
-      <Heading level={2} size='sm'>
+      <Heading>
         <a
           href='https://www.digdir.no/felleslosninger/30-ar-med-digitalt-innsyn/5015'
           target='_blank'
@@ -221,60 +247,58 @@ export const Composed: Story = () => (
             alignItems: 'center',
           }}
         >
-          <Heading level={2} size='xs'>
-            Roll 1
-          </Heading>
-          <Button variant='secondary' color='danger' size='sm'>
-            <TrashFillIcon aria-hidden fontSize='1.5rem' />
-            Ta bort
+          <Heading>Rolle 1</Heading>
+          <Button variant='secondary' data-color='danger' data-size='sm'>
+            <TrashFillIcon aria-hidden />
+            Fjern
           </Button>
         </div>
+      </Card.Block >
+      <Card.Block>
+        <Field>
+          <Label>Velg rolle</Label>
+          <Select>
+            {options.map(({ value, label }, index) => (
+              <Select.Option key={index} value={value}>
+                {label}
+              </Select.Option>
+            ))}
+          </Select>
+        </Field>
+        <Textfield label='Fødsels- eller d-nummer' />
+        <Textfield label='Etternavn' />
       </Card.Block>
       <Card.Block>
-        <Label htmlFor='my-select'>Välj roll</Label>
-        <Select id='my-select'>
-          {options.map(({ value, label }, index) => (
-            <Select.Option key={index} value={value}>
-              {label}
-            </Select.Option>
-          ))}
-        </Select>
-        <Textfield label='Personnummer' />
-        <Textfield label='Efternamn' />
-      </Card.Block>
-      <Card.Block>
-        <Button variant='secondary' size='sm'>
-          Lägg till roll
-          <PlusIcon aria-hidden fontSize='1.5rem' />
+        <Button variant='secondary' data-size='sm'>
+          Legg til rolle
+          <PlusIcon aria-hidden />
         </Button>
       </Card.Block>
-    </Card>
+    </Card >
     <Card>
       <Card.Block>
         <img src={cat1} alt='katt' />
       </Card.Block>
       <Card.Block>
-        <Heading level={2} size='sm'>
-          Kort Neutral
-        </Heading>
+        <Heading>Card Neutral</Heading>
         <Paragraph>
           De flesta som tillhandahåller affärer är mycket bättre på den perfekta
           designern. Att skriva förklarar något lättare skrivbord som påstått
           handlar om detta.
         </Paragraph>
-      </Card.Block>
-    </Card>
-  </div>
+      </Card.Block >
+    </Card >
+  </div >
 );
 
 export const WithLink: Story = (args) => (
   <>
-    <Card {...args} color='brand1'>
+    <Card {...args} data-color='brand1'>
       <Card.Block>
         <img src={cat5} alt='' />
       </Card.Block>
       <Card.Block>
-        <Heading size='sm' level={2}>
+        <Heading>
           <a
             href='https://designsystemet.no'
             target='_blank'
@@ -288,12 +312,12 @@ export const WithLink: Story = (args) => (
           designern. Att skriva förklarar något lättare skrivbord som påstått
           handlar om detta.
         </Paragraph>
-        <Paragraph size='sm'>Fottext</Paragraph>
-      </Card.Block>
-    </Card>
-    <Card {...args} color='neutral'>
+        <Paragraph data-size='sm'>Footer text</Paragraph>
+      </Card.Block >
+    </Card >
+    <Card {...args} data-color='neutral'>
       <Card.Block>
-        <Heading size='sm' level={2}>
+        <Heading>
           <a
             href='https://designsystemet.no'
             target='_blank'
@@ -307,97 +331,87 @@ export const WithLink: Story = (args) => (
           designern. Att skriva förklarar något lättare skrivbord som påstått
           handlar om detta.
         </Paragraph>
-        <Paragraph size='sm'>Fottext</Paragraph>
-      </Card.Block>
+        <Paragraph data-size='sm'>Footer text</Paragraph>
+      </Card.Block >
       <Card.Block>
         <img src={cat5} alt='' />
       </Card.Block>
-    </Card>
+    </Card >
   </>
 );
 
 export const AsLink: Story = (args) => (
   <>
-    <Card {...args} color='brand1' asChild>
+    <Card {...args} data-color='brand1' asChild>
       <a
         href='https://designsystemet.no'
         target='_blank'
         rel='noopener noreferrer'
       >
         <Card.Block>
-          <Heading size='sm' level={2}>
-            Länk Kort med block
-          </Heading>
-        </Card.Block>
+          <Heading>Link Card with blocks</Heading>
+        </Card.Block >
         <Card.Block>
           <Paragraph>
             De flesta som tillhandahåller affärer är mycket bättre på den
             perfekta designern.
           </Paragraph>
         </Card.Block>
-      </a>
-    </Card>
-    <Card {...args} color='neutral' asChild>
+      </a >
+    </Card >
+    <Card {...args} data-color='neutral' asChild>
       <a
         href='https://designsystemet.no'
         target='_blank'
         rel='noopener noreferrer'
       >
-        <Heading size='sm' level={2}>
-          Länk Kort
-        </Heading>
+        <Heading>Link Card</Heading>
         <Paragraph>
           De flesta som tillhandahåller affärer är mycket bättre på den perfekta
           designern.
         </Paragraph>
-      </a>
-    </Card>
+      </a >
+    </Card >
   </>
 );
 
 export const AsButton: Story = (args) => (
   <>
-    <Card {...args} color='brand1' asChild>
+    <Card {...args} data-color='brand1' asChild>
       <button type='button'>
         <Card.Block>
-          <Heading size='sm' level={2}>
-            Knapp Kort med block
-          </Heading>
-        </Card.Block>
+          <Heading>Button Card with blocks</Heading>
+        </Card.Block >
         <Card.Block>
           <Paragraph>
             De flesta som tillhandahåller affärer är mycket bättre på den
             perfekta designern.
           </Paragraph>
         </Card.Block>
-      </button>
-    </Card>
-    <Card {...args} color='neutral' asChild>
+      </button >
+    </Card >
+    <Card {...args} data-color='neutral' asChild>
       <button type='button'>
-        <Heading size='sm' level={2}>
-          Länk Kort
-        </Heading>
+        <Heading>Link Card</Heading>
         <Paragraph>
           De flesta som tillhandahåller affärer är mycket bättre på den perfekta
           designern.
         </Paragraph>
-      </button>
-    </Card>
+      </button >
+    </Card >
   </>
 );
 
 export const AsGrid: Story = (args) => (
   <Card {...args} style={{ display: 'grid', gridTemplateColumns: '1fr 1fr' }}>
     <Card.Block>
-      <Heading size='sm' level={2}>
-        Knapp Kort med block
-      </Heading>
-    </Card.Block>
+      <Heading>Button Card with blocks</Heading>
+    </Card.Block >
     <Card.Block>
       <Paragraph>
         De flesta som tillhandahåller affärer är mycket bättre på den perfekta
         designern.
       </Paragraph>
     </Card.Block>
-  </Card>
+  </Card >
 );

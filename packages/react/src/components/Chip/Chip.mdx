@@ -1,5 +1,6 @@
 import { Meta, Canvas, Controls, Primary } from '@storybook/blocks';
-
+import { CssVariables } from '@doc-components';
+import css from '@digdir/designsystemet-css/chip.css?inline';
 import * as ChipStories from './Chip.stories';
 
 <Meta of={ChipStories} />
@@ -81,3 +82,7 @@ Chips bör ha så få ord som möjligt, helst bara ett eller två.
 
 ## Tillgänglighet
 Om delar av en sida uppdateras samtidigt som användarna gör något på sidan, måste vi se till att användare med skärmläsare får information om detta. Vi kan använda en `ARIA live region` för det, som kan visa antal träffar eller andra ändringar.
+
+## CSS Variabler
+
+<CssVariables css={css} />

@@ -1,14 +1,11 @@
 import type { CssColor } from '@adobe/leonardo-contrast-colors';
-import { Button, Label, Select, Tooltip } from '@digdir/designsystemet-react';
-import type {
-  ColorError,
-  ContrastMode,
-  ThemeColors,
-} from '@digdir/designsystemet/color';
+import { Button, Tooltip } from '@digdir/designsystemet-react';
+import type { ColorError, ContrastMode } from '@digdir/designsystemet/color';
 import cl from 'clsx/lite';
 import { useState } from 'react';
 
 import { useThemeStore } from '../../store';
+import type { ThemeColors } from '../../types';
 import { ColorPicker } from '../ColorPicker/ColorPicker';
 import { TokenModal } from '../TokenModal/TokenModal';
 
@@ -106,11 +103,11 @@ export const ThemeToolbar = ({
           }}
         />
 
-        <div className={classes.select}>
+        {/* <div className={classes.select}>
           <Label htmlFor='select-contrast'>Kontrastnivå</Label>
           <Select
             id='select-contrast'
-            size='md'
+            data-size='md'
             className={classes.contrastSelect}
             value={contrastMode}
             onChange={(e) => {
@@ -120,12 +117,14 @@ export const ThemeToolbar = ({
             <Select.Option value='aa'>AA</Select.Option>
             <Select.Option value='aaa'>AAA (WIP)</Select.Option>
           </Select>
-        </div>
+        </div> */}
+
+        {/*
         <div className={classes.select}>
           <Label htmlFor='select-border-radius'>Border radius</Label>
           <Select
             id='select-border-radius'
-            size='md'
+            data-size='md'
             value={borderRadius}
             onChange={(e) => onBorderRadiusChanged(e.target.value)}
             style={{
@@ -145,6 +144,7 @@ export const ThemeToolbar = ({
             ))}
           </Select>
         </div>
+        */}
         <Tooltip content={toolTipText} portal={false}>
           <Button
             className={classes.shareBtn}

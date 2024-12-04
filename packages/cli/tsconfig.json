@@ -1,8 +1,9 @@
 {
   "extends": "@ua-designsystem/typescript-config/tsconfig.packages.json",
+  // "extends": "../../tsconfig.base.json",
   "compilerOptions": {
-    "outDir": "./dist/build",
-    "declarationDir": "./dist/types",
+    "rootDir": "./",
+    "outDir": "./dist",
     "composite": false,
     "allowSyntheticDefaultImports": true,
     "emitDeclarationOnly": false,
@@ -14,6 +15,5 @@
     "sourceMap": false,
     "incremental": false
   },
-  "rootDir": "./src",
   "include": ["./src", "./bin/", "./declarations.d.ts"]
 }

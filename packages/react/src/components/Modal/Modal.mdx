@@ -1,5 +1,6 @@
 import { Meta, Primary, Controls, Canvas, ArgTypes } from '@storybook/blocks';
-
+import { CssVariables } from '@doc-components';
+import css from '@digdir/designsystemet-css/modal.css?inline';
 import * as ModalStories from './Modal.stories';
 
 import { Modal } from './';
@@ -20,16 +21,16 @@ Läs [MDN Docs](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog
 ## Så använder du `Modal`
 
 ```tsx
-<Modal.Context>
-  <Modal.Trigger>Öppna Modal</Modal.Trigger>
+<Modal.TriggerContext>
+  <Modal.Trigger>Open Modal</Modal.Trigger>
   <Modal>
     <Modal.Block>
-      <Heading size="xs">Header</Heading>
+      <Heading data-size="xs">Header</Heading>
     </Modal.Block>
     <Modal.Block>Content</Modal.Block>
     <Modal.Block>Footer</Modal.Block>
   </Modal>
-</Modal.Context>
+</Modal.TriggerContext>
 ```
 
 ## Användning med extern trigger
@@ -49,7 +50,7 @@ const modalRef = useRef<HTMLDialogElement>(null);
 
 ### Med användning av `ref`
 
-<Canvas of={ModalStories.WithoutModalContext} />
+<Canvas of={ModalStories.WithoutModalTriggerContext} />
 
 ### Stäng vid klick på backdrop
 
@@ -85,3 +86,7 @@ Använd `overflow: visible` för att låta innehåll sträcka sig utanför modal
 ### `Modal.Block`
 
 <ArgTypes of={Modal.Block} />
+
+## CSS Variabler
+
+<CssVariables css={css} />

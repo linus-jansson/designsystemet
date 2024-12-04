@@ -2,13 +2,15 @@ import { Slot, Slottable } from '@radix-ui/react-slot';
 import cl from 'clsx/lite';
 import { forwardRef } from 'react';
 import type { ButtonHTMLAttributes, InputHTMLAttributes } from 'react';
+import type { Color } from '../../colors';
+import type { DefaultProps } from '../../types';
+import type { MergeRight } from '../../utilities';
+import { Input } from '../form/Input';
 
 type ChipBaseProps = {
-  /**
-   * Size
-   * @default md
+  /** Specify which color palette to use. If left unspecified, the color is inherited from the nearest ancestor with data-color.
    */
-  size?: 'sm' | 'md' | 'lg';
+  'data-color'?: Color;
   /**
    * Change the default rendered element for the one passed as a child, merging their props and behavior.
    * @default false
@@ -18,10 +20,14 @@ type ChipBaseProps = {
 
 export type ChipRemovableProps = ChipButtonProps;
 export type ChipRadioProps = ChipCheckboxProps;
-export type ChipButtonProps = ChipBaseProps &
-  ButtonHTMLAttributes<HTMLButtonElement>;
-export type ChipCheckboxProps = ChipBaseProps &
-  Omit<InputHTMLAttributes<HTMLInputElement>, 'type' | 'size'>;
+export type ChipButtonProps = MergeRight<
+  DefaultProps & ButtonHTMLAttributes<HTMLButtonElement>,
+  ChipBaseProps
+>;
+export type ChipCheckboxProps = MergeRight<
+  DefaultProps & Omit<InputHTMLAttributes<HTMLInputElement>, 'type' | 'size'>,
+  ChipBaseProps
+>;
 
 /**
  * Chip.Button used for interaction
@@ -29,13 +35,12 @@ export type ChipCheckboxProps = ChipBaseProps &
  * <Chip.Button>Click me</Chip.Button>
  */
 export const ChipButton = forwardRef<HTMLButtonElement, ChipButtonProps>(
-  function ChipButton({ asChild, className, size, ...rest }, ref) {
+  function ChipButton({ asChild, className, ...rest }, ref) {
     const Component = asChild ? Slot : 'button';
 
     return (
       <Component
         className={cl('ds-chip', className)}
-        data-size={size}
         type={asChild ? undefined : 'button'}
         ref={ref}
         {...rest}
@@ -62,7 +67,17 @@ export const ChipRemovable = forwardRef<HTMLButtonElement, ChipRemovableProps>(
  * <Chip.Checkbox name="language" value="bokmål">Bokmål</Chip.Checkbox>
  */
 export const ChipCheckbox = forwardRef<HTMLLabelElement, ChipCheckboxProps>(
-  function ChipCheckbox({ asChild, children, className, size, ...rest }, ref) {
+  function ChipCheckbox(
+    {
+      asChild,
+      children,
+      className,
+      'data-size': size,
+      'data-color': color,
+      ...rest
+    },
+    ref,
+  ) {
     const inputType = (rest as { type?: string }).type ?? 'checkbox';
     const Component = asChild ? Slot : 'label';
 
@@ -70,9 +85,10 @@ export const ChipCheckbox = forwardRef<HTMLLabelElement, ChipCheckboxProps>(
       <Component
         className={cl('ds-chip', className)}
         data-size={size}
+        data-color={color}
         ref={ref}
       >
-        <input {...rest} type={inputType} />
+        <Input {...rest} type={inputType} />
         <Slottable>{children}</Slottable>
       </Component>
     );

@@ -1,5 +1,6 @@
 import { Meta, Canvas, Controls, Primary } from '@storybook/blocks';
-
+import { CssVariables } from '@doc-components';
+import css from '@digdir/designsystemet-css/input.css?inline';
 import * as SwitchStories from './Switch.stories';
 
 <Meta of={SwitchStories} />
@@ -14,25 +15,23 @@ Vi använder `Switch` för att ge användarna ett val mellan två alternativ. Br
 ## Så använder du `Switch`
 
 ```tsx
-import { Switch, Fieldset } from '@digdir/designsystemet-react';
+import { Switch } from '@digdir/designsystemet-react';
 
-<Fieldset legend='Profilinställningar'>
-  <Switch>Mörkt läge</Switch>
-</Fieldset>;
+<Switch label="Mørk modus" value="dark" />
 ```
 
 ## Gruppering
 
 Använd [Fieldset](/docs/komponenter-fieldset--docs) för gruppering.
 
-<Canvas of={SwitchStories.FullWidth} />
+<Canvas of={SwitchStories.Group} />
 
 ### Högerjusterad
 
-Använd `position="right"` för att placera `Switch` på höger sida om etiketten om
-du behöver det.
+Bruk `position="end"` til å plassere `Switch` på høyre side av ledeteksten hvis
+du trenger det.
 
-<Canvas of={SwitchStories.FullWidthRight} />
+<Canvas of={SwitchStories.GroupEnd} />
 
 ## Riktlinjer för `Switch`
 
@@ -84,6 +83,10 @@ Om du har en grupp med flera strömbrytare, måste du se till att du är konsekv
 Vi använder `role="switch"` för att informera skärmläsare om att detta är en strömbrytare. Detta gör att skärmläsare kan ge användaren information om att det är en brytare som kan slås av och på.
 Det finns inget behov av att lägga till `aria-checked` eftersom det inte behövs när brytaren är ett input-element med `type="checkbox"`. <sup>1</sup>
 
-### Referenser
+## CSS Variabler
+
+<CssVariables css={css} />
+
+### Referanser
 
 [1. Switch roll](https://www.w3.org/WAI/ARIA/apg/patterns/switch/#:~:text=If%20the%20switch%20element%20is%20an%20HTML%20input%5Btype%3D%22checkbox%22%5D%2C%20it%20uses%20the%20HTML%20checked%20attribute%20instead%20of%20the%20aria%2Dchecked%20property.)

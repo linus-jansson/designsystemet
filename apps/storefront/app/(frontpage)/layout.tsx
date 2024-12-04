@@ -20,7 +20,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
           <Container className={classes.container}>
             <div className={classes.text}>
               <div className={classes.betaTag}>Beta</div>
-              <Heading size='lg'>
+              <Heading data-size='lg'>
                 Designsystemet hjälper dig att skapa bra digitala tjänster
               </Heading>
             </div>

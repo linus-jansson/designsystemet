@@ -1,5 +1,6 @@
 import { Meta, Canvas, Controls, Primary } from '@storybook/blocks';
-
+import { CssVariables } from '@doc-components';
+import css from '@digdir/designsystemet-css/avatar.css?inline';
 import * as AvatarStories from './Avatar.stories';
 
 <Meta of={AvatarStories} />
@@ -62,7 +63,7 @@ Bilden (och andra child-element) får automatiskt `aria-hidden="true"` för att 
 
 ## Komponering
 
-Du kan komponera `Avatar` in i andra komponenter, som `DropdownMenu`, samt använda komponenter som
+Du kan komponera `Avatar` in i andra komponenter, som `Dropdown`, samt använda komponenter som
 `Badge` runt om för att visa status.
 
 <Canvas of={AvatarStories.InDropdown} />
@@ -73,3 +74,7 @@ Lägg länkar eller knappar runt `Avatar` för att göra det klickbart.
 Du måste själv ställa in styling om du ska ha en interaktiv `Avatar`.
 
 <Canvas of={AvatarStories.AsLink} />
+
+## CSS Variabler
+
+<CssVariables css={css} />

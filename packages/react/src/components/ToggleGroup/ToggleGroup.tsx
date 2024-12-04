@@ -2,34 +2,36 @@ import cl from 'clsx/lite';
 import type { HTMLAttributes } from 'react';
 import { createContext, forwardRef, useId, useState } from 'react';
 
+import type { Color } from '../../colors';
+import type { DefaultProps } from '../../types';
+import type { MergeRight } from '../../utilities';
 import { RovingFocusRoot } from '../../utilities/RovingFocus';
-import type { ButtonProps } from '../Button';
 
 export type ToggleGroupContextProps = {
   value?: string;
   defaultValue?: string;
   onChange?: (value: string) => void;
   name?: string;
-  size?: ButtonProps['size'];
 };
 
 export const ToggleGroupContext = createContext<ToggleGroupContextProps>({});
 
-export type ToggleGroupProps = {
-  /** Controlled state for `ToggleGroup` component. */
-  value?: string;
-  /** Default value. */
-  defaultValue?: string;
-  /** Callback with selected `ToggleGroupItem` `value` */
-  onChange?: (value: string) => void;
-  /** Form element name */
-  name?: string;
-  /**
-   * Changes items size and paddings
-   * @default md
-   */
-  size?: ToggleGroupContextProps['size'];
-} & Omit<HTMLAttributes<HTMLDivElement>, 'value' | 'onChange'>;
+export type ToggleGroupProps = MergeRight<
+  DefaultProps & Omit<HTMLAttributes<HTMLDivElement>, 'value' | 'onChange'>,
+  {
+    /** Specify which color palette to use. If left unspecified, the color is inherited from the nearest ancestor with data-color.
+     */
+    'data-color'?: Color;
+    /** Controlled state for `ToggleGroup` component. */
+    value?: string;
+    /** Default value. */
+    defaultValue?: string;
+    /** Callback with selected `ToggleGroupItem` `value` */
+    onChange?: (value: string) => void;
+    /** Form element name */
+    name?: string;
+  }
+>;
 
 /**
  * Display a group of buttons that can be toggled between.
@@ -42,16 +44,7 @@ export type ToggleGroupProps = {
  */
 export const ToggleGroup = forwardRef<HTMLDivElement, ToggleGroupProps>(
   function ToggleGroup(
-    {
-      size = 'md',
-      children,
-      value,
-      defaultValue,
-      onChange,
-      name,
-      className,
-      ...rest
-    },
+    { children, value, defaultValue, onChange, name, className, ...rest },
     ref,
   ) {
     const nameId = useId();
@@ -76,7 +69,6 @@ export const ToggleGroup = forwardRef<HTMLDivElement, ToggleGroupProps>(
           defaultValue,
           name: name ?? `togglegroup-name-${nameId}`,
           onChange: onValueChange,
-          size,
         }}
       >
         <RovingFocusRoot asChild activeValue={value} orientation='ambiguous'>

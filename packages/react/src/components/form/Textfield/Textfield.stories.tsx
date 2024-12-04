@@ -1,7 +1,7 @@
 import type { Meta, StoryFn, StoryObj } from '@storybook/react';
 import { useState } from 'react';
 
-import { Button, Paragraph } from '../..';
+import { Button, Divider, Paragraph } from '../..';
 
 import { Textfield } from '.';
 
@@ -10,6 +10,39 @@ type Story = StoryObj<typeof Textfield>;
 export default {
   title: 'Komponenter/Textfield',
   component: Textfield,
+  argTypes: {
+    multiline: {
+      type: 'boolean',
+    },
+    // Using argType here to exclude values from React.HTMLInputTypeAttribute
+    type: {
+      control: 'select',
+      options: [
+        'checkbox',
+        'date',
+        'datetime-local',
+        'email',
+        'month',
+        'number',
+        'password',
+        'radio',
+        'search',
+        'tel',
+        'text',
+        'time',
+        'url',
+        'week',
+        // 'button',
+        'color',
+        'file',
+        // 'hidden',
+        // 'image',
+        // 'range',
+        // 'reset',
+        // 'submit',
+      ],
+    },
+  },
 } as Meta;
 
 export const Preview: Story = {
@@ -17,57 +50,53 @@ export const Preview: Story = {
     label: 'Label',
     disabled: false,
     readOnly: false,
-    size: 'md',
+    'data-size': 'md',
+    multiline: false,
     description: '',
     error: '',
+    counter: 0,
   },
 };
 
-export const WithCharacterCounter: Story = {
+export const Rows: Story = {
   args: {
     label: 'Label',
-    characterLimit: {
-      maxCount: 5,
-    },
+    multiline: true,
+    rows: 4,
   },
 };
 
-export const HtmlSize: Story = {
-  args: {
-    label: 'Label',
-    htmlSize: 10,
-  },
-};
-
-export const Adornments: Story = {
+export const Affix: Story = {
   args: {
     prefix: 'NOK',
     suffix: 'pr. mnd',
-    size: 'md',
+    label: 'Hvor mange kroner koster det per måned?',
+  },
+};
+
+export const Counter: Story = {
+  args: {
+    counter: 10,
     label: 'Hvor mange kroner koster det per måned?',
   },
 };
 
 export const Controlled: StoryFn<typeof Textfield> = () => {
-  const [value, setValue] = useState<string>();
+  const [value, setValue] = useState<string>('');
   return (
     <>
-      <Paragraph>Du har skrevet inn: {value}</Paragraph>
-      <div
-        style={{
-          display: 'flex',
-          alignItems: 'end',
-          marginTop: 'var(--ds-spacing-2)',
-          gap: 'var(--ds-spacing-2)',
-        }}
-      >
-        <Textfield
-          label='Kontroller meg!'
-          value={value}
-          onChange={(e) => setValue(e.target.value)}
-        />
-        <Button onClick={() => setValue('Kake')}>Jeg vil ha Kake</Button>
-      </div>
+      <Textfield
+        label='Kontroller meg!'
+        value={value}
+        onChange={(e) => setValue(e.target.value)}
+      />
+
+      <Divider style={{ marginTop: 'var(--ds-spacing-4)' }} />
+
+      <Paragraph style={{ margin: 'var(--ds-spacing-2) 0' }}>
+        Du har skrevet inn: {value}
+      </Paragraph>
+      <Button onClick={() => setValue('Kake')}>Jeg vil ha Kake</Button>
     </>
   );
 };

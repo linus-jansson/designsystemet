@@ -24,11 +24,11 @@
 
 .menuItem:hover {
   cursor: pointer;
-  background-color: var(--ds-color-accent-4);
+  background-color: var(--ds-color-accent-surface-hover);
 }
 
 .menuItemActive {
-  background-color: var(--ds-color-accent-3);
+  background-color: var(--ds-color-accent-surface-default);
 }
 
 .menuItem[aria-disabled] {
@@ -58,11 +58,11 @@
 
 .toggle:hover {
   cursor: pointer;
-  background-color: var(--ds-color-accent-4);
+  background-color: var(--ds-color-accent-surface-hover);
 }
 
 .active {
-  background-color: var(--ds-color-accent-3);
+  background-color: var(--ds-color-accent-surface-default);
 }
 
 .toggle img {
@@ -78,10 +78,11 @@
   display: flex;
   gap: 32px;
   box-shadow: var(--ds-shadow-md);
+  padding: var(--ds-spacing-4);
 }
 
-.preview[data-ds-color-mode='dark'],
-.preview[data-ds-color-mode='contrast'] {
+.preview[data-color-scheme='dark'],
+.preview[data-color-scheme='contrast'] {
   --background: var(--neutral-1);
   --foreground: var(--neutral-2);
 }

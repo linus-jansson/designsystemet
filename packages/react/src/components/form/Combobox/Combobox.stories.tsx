@@ -12,6 +12,7 @@ import { Switch } from '../Switch';
 
 import { data } from './data/data';
 
+import { Divider } from '../../Divider';
 import { Combobox } from './index';
 
 export default {
@@ -168,14 +169,13 @@ export const WithDescription: StoryFn<typeof Combobox> = (args) => {
   return (
     <>
       <Switch
+        label='Multiple'
         checked={multiple}
         onChange={(e) => {
           setMultiple(e.target.checked);
           setValue([]);
         }}
-      >
-        Multiple
-      </Switch>
+      />
       <Combobox
         key={multiple ? 'multiple' : 'single'}
         {...args}
@@ -212,25 +212,6 @@ export const Controlled: StoryFn<typeof Combobox> = (args) => {
 
   return (
     <>
-      <Paragraph>Value er: {value.join(', ')}</Paragraph>
-      <Switch
-        checked={multiple}
-        onChange={(e) => {
-          setMultiple(e.target.checked);
-          setValue([]);
-        }}
-      >
-        Multiple
-      </Switch>
-      <Button
-        onClick={() => {
-          setValue(['leikanger']);
-        }}
-        style={{ marginBottom: '1rem' }}
-      >
-        Sett verdi til Leikanger
-      </Button>
-
       <Combobox
         {...args}
         key={multiple ? 'multiple' : 'single'}
@@ -247,6 +228,28 @@ export const Controlled: StoryFn<typeof Combobox> = (args) => {
           </Combobox.Option>
         ))}
       </Combobox>
+
+      <Divider style={{ marginTop: 'var(--ds-spacing-4)' }} />
+
+      <Switch
+        label='Multiple'
+        checked={multiple}
+        onChange={(e) => {
+          setMultiple(e.target.checked);
+          setValue([]);
+        }}
+      />
+
+      <Paragraph style={{ margin: 'var(--ds-spacing-2) 0' }}>
+        Value er: {value.join(', ')}
+      </Paragraph>
+      <Button
+        onClick={() => {
+          setValue(['leikanger']);
+        }}
+      >
+        Sett verdi til Leikanger
+      </Button>
     </>
   );
 };
@@ -315,10 +318,10 @@ export const InModal: StoryFn<typeof Combobox> = (args) => {
   const [value, setValue] = useState<string[]>([]);
 
   return (
-    <Modal.Context>
+    <Modal.TriggerContext>
       <Modal.Trigger>Open Modal</Modal.Trigger>
       <Modal style={{ overflow: 'visible' }}>
-        <Heading size='xs' style={{ marginBottom: 'var(--ds-spacing-2)' }}>
+        <Heading data-size='xs' style={{ marginBottom: 'var(--ds-spacing-2)' }}>
           Combobox i Modal
         </Heading>
         <Combobox
@@ -340,7 +343,7 @@ export const InModal: StoryFn<typeof Combobox> = (args) => {
           ))}
         </Combobox>
       </Modal>
-    </Modal.Context>
+    </Modal.TriggerContext>
   );
 };
 InModal.play = async (ctx) => {
@@ -398,6 +401,9 @@ export const WithChipsOutside: StoryFn<typeof Combobox> = (args) => {
           </Combobox.Option>
         ))}
       </Combobox>
+
+      <Divider />
+
       <Paragraph>Value er: {value.join(', ')}</Paragraph>
     </>
   );
@@ -438,6 +444,9 @@ export const SelectAll: StoryFn<typeof Combobox> = (args) => {
           </Combobox.Option>
         ))}
       </Combobox>
+
+      <Divider />
+
       <Paragraph>Value er: {value.join(', ')}</Paragraph>
     </>
   );
@@ -490,18 +499,6 @@ export const Loading: StoryFn<typeof Combobox> = (args) => {
 
   return (
     <>
-      <Button
-        onClick={() => {
-          setLoading(true);
-          setOptions([]);
-          setValue([]);
-        }}
-        style={{
-          marginBottom: '1rem',
-        }}
-      >
-        Clear Data
-      </Button>
       <Combobox
         {...args}
         value={value}
@@ -518,6 +515,18 @@ export const Loading: StoryFn<typeof Combobox> = (args) => {
           </Combobox.Option>
         ))}
       </Combobox>
+
+      <Divider />
+
+      <Button
+        onClick={() => {
+          setLoading(true);
+          setOptions([]);
+          setValue([]);
+        }}
+      >
+        Clear Data
+      </Button>
     </>
   );
 };
@@ -591,13 +600,15 @@ export const RemoveAllOptions: StoryFn<typeof Combobox> = (args) => {
           );
         })}
       </Combobox>
-      <Switch onChange={(event) => changeAllValues(event.target.checked)}>
-        Remove Values (Selected values remain unchanged as the combobox does not
-        update when options are empty.)
-      </Switch>
-      <Switch onChange={(event) => changeSomeValues(event.target.checked)}>
-        Remove test2 (this works)
-      </Switch>
+      <Switch
+        label='Remove Values (Selected values remain unchanged as the combobox does not
+        update when options are empty.)'
+        onChange={(event) => changeAllValues(event.target.checked)}
+      />
+      <Switch
+        label='Remove test2 (this works)'
+        onChange={(event) => changeSomeValues(event.target.checked)}
+      />
     </>
   );
 };

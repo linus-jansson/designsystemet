@@ -1,5 +1,6 @@
 import { Meta, Canvas, Controls, Primary } from '@storybook/blocks';
-
+import { CssVariables } from '@doc-components';
+import css from '@digdir/designsystemet-css/link.css?inline';
 import * as LinkStories from './Link.stories';
 
 <Meta of={LinkStories} />
@@ -86,3 +87,7 @@ När användaren har besökt en länk tidigare, ändras färgen på länken.
 I Safari blir inte understrykningen på länken tjockare när man har muspekaren över den. För att läsa mer om detta, följ länken nedan:
 
 - https://bugs.webkit.org/show_bug.cgi?id=230083
+
+## CSS Variabler
+
+<CssVariables css={css} />

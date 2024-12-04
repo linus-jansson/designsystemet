@@ -1,5 +1,6 @@
 import { Meta, Controls, Primary, ArgTypes, Canvas } from '@storybook/blocks';
-
+import { CssVariables } from '@doc-components';
+import css from '@digdir/designsystemet-css/error-summary.css?inline';
 import * as ErrorSummaryStories from './ErrorSummary.stories';
 
 import { ErrorSummary } from './';
@@ -97,3 +98,8 @@ Alla punkter i listan är länkar och beter sig som en länk.
 ### `ErrorSummary.Item`
 
 <ArgTypes of={ErrorSummary.Item} />
+
+
+## CSS Variabler
+
+<CssVariables css={css} />

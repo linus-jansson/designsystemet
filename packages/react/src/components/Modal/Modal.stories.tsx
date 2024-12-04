@@ -51,30 +51,35 @@ export default {
 } satisfies Meta;
 
 export const Preview: StoryFn<typeof Modal> = (args) => (
-  <Modal.Context>
-    <Modal.Trigger>Open Modal</Modal.Trigger>
+  <Modal.TriggerContext>
+    <Modal.Trigger
+      data-color={args['data-color']}
+      data-size={args['data-size']}
+    >
+      Open Modal
+    </Modal.Trigger>
     <Modal {...args}>
-      <Heading size='xs' style={{ marginBottom: 'var(--ds-spacing-2)' }}>
+      <Heading style={{ marginBottom: 'var(--ds-spacing-2)' }}>
         Modal header
       </Heading>
       <Paragraph style={{ marginBottom: 'var(--ds-spacing-2)' }}>
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis
         doloremque obcaecati assumenda odio ducimus sunt et.
       </Paragraph>
-      <Paragraph size='sm'>Modal footer</Paragraph>
+      <Paragraph data-size='sm'>Modal footer</Paragraph>
     </Modal>
-  </Modal.Context>
+  </Modal.TriggerContext>
 );
 
-export const WithoutModalContext: StoryFn<typeof Modal> = (args) => {
+export const WithoutModalTriggerContext: StoryFn<typeof Modal> = (args) => {
   const modalRef = useRef<HTMLDialogElement>(null);
 
   return (
     <>
       <Button onClick={() => modalRef.current?.showModal()}>Open Modal</Button>
       <Modal {...args} ref={modalRef}>
-        <Paragraph size='sm'>Modal subtittel</Paragraph>
-        <Heading size='xs' style={{ marginBottom: 'var(--ds-spacing-2)' }}>
+        <Paragraph data-size='sm'>Modal subtittel</Paragraph>
+        <Heading style={{ marginBottom: 'var(--ds-spacing-2)' }}>
           Modal header
         </Heading>
         <Paragraph style={{ marginBottom: 'var(--ds-spacing-2)' }}>
@@ -91,29 +96,27 @@ export const BackdropClose: StoryFn<typeof Modal> = () => {
   const modalRef = useRef<HTMLDialogElement>(null);
 
   return (
-    <Modal.Context>
+    <Modal.TriggerContext>
       <Modal.Trigger>Open Modal</Modal.Trigger>
       <Modal ref={modalRef} backdropClose>
-        <Heading size='xs'>
-          Modal med backdropClose og en veldig lang tittel
-        </Heading>
+        <Heading>Modal med backdropClose og en veldig lang tittel</Heading>
         <Paragraph>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis
           doloremque obcaecati assumenda odio ducimus sunt et.
         </Paragraph>
-        <Paragraph size='sm'>Modal footer</Paragraph>
+        <Paragraph data-size='sm'>Modal footer</Paragraph>
       </Modal>
-    </Modal.Context>
+    </Modal.TriggerContext>
   );
 };
 
 export const WithHeaderAndFooter: StoryFn<typeof Modal> = () => (
-  <Modal.Context>
+  <Modal.TriggerContext>
     <Modal.Trigger>Open Modal</Modal.Trigger>
     <Modal>
       <Modal.Block>
-        <Paragraph size='sm'>Her er det også divider</Paragraph>
-        <Heading size='xs'>Vi kan legge divider under header</Heading>
+        <Paragraph data-size='sm'>Her er det også divider</Paragraph>
+        <Heading>Vi kan legge divider under header</Heading>
       </Modal.Block>
       <Modal.Block>
         <Paragraph style={{ marginBottom: 'var(--ds-spacing-2)' }}>
@@ -141,7 +144,7 @@ export const WithHeaderAndFooter: StoryFn<typeof Modal> = () => (
       </Modal.Block>
       <Modal.Block>Og over footer</Modal.Block>
     </Modal>
-  </Modal.Context>
+  </Modal.TriggerContext>
 );
 
 export const ModalWithForm: StoryFn<typeof Modal> = () => {
@@ -149,10 +152,10 @@ export const ModalWithForm: StoryFn<typeof Modal> = () => {
   const [input, setInput] = useState('');
 
   return (
-    <Modal.Context>
+    <Modal.TriggerContext>
       <Modal.Trigger>Open Modal</Modal.Trigger>
-      <Modal ref={modalRef} onClose={() => setInput('')}>
-        <Heading size='xs' style={{ marginBottom: 'var(--ds-spacing-2)' }}>
+      <Modal ref={modalRef} onClose={() => setInput('')} backdropClose>
+        <Heading style={{ marginBottom: 'var(--ds-spacing-2)' }}>
           Modal med skjema
         </Heading>
         <Textfield
@@ -182,15 +185,15 @@ export const ModalWithForm: StoryFn<typeof Modal> = () => {
           </Button>
         </div>
       </Modal>
-    </Modal.Context>
+    </Modal.TriggerContext>
   );
 };
 
 export const ModalWithMaxWidth: StoryFn<typeof Modal> = () => (
-  <Modal.Context>
+  <Modal.TriggerContext>
     <Modal.Trigger>Open Modal</Modal.Trigger>
     <Modal style={{ maxWidth: 1200 }}>
-      <Heading size='xs' style={{ marginBottom: 'var(--ds-spacing-2)' }}>
+      <Heading style={{ marginBottom: 'var(--ds-spacing-2)' }}>
         Modal med en veldig lang bredde
       </Heading>
       <Paragraph>
@@ -198,7 +201,7 @@ export const ModalWithMaxWidth: StoryFn<typeof Modal> = () => (
         doloremque obcaecati assumenda odio ducimus sunt et.
       </Paragraph>
     </Modal>
-  </Modal.Context>
+  </Modal.TriggerContext>
 );
 
 export const ModalWithCombobox: StoryFn<typeof Modal> = () => {
@@ -206,11 +209,11 @@ export const ModalWithCombobox: StoryFn<typeof Modal> = () => {
 
   return (
     <>
-      <Modal.Context>
+      <Modal.TriggerContext>
         <Modal.Trigger>Open Modal</Modal.Trigger>
         <Modal style={{ overflow: 'visible' }} ref={modalRef}>
           <Modal.Block>
-            <Heading size='xs'>Modal med combobox</Heading>
+            <Heading>Modal med combobox</Heading>
           </Modal.Block>
           <Modal.Block>
             <Combobox portal={false} label='Velg sted' autoFocus>
@@ -234,7 +237,7 @@ export const ModalWithCombobox: StoryFn<typeof Modal> = () => {
             </Button>
           </Modal.Block>
         </Modal>
-      </Modal.Context>
+      </Modal.TriggerContext>
     </>
   );
 };

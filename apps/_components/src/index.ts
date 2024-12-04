@@ -10,3 +10,5 @@ export { Figures } from './Figures';
 export { Figma } from './logos/Figma';
 export { Github } from './logos/Github';
 export { Slack } from './logos/Slack';
+export { Footer } from './Footer/Footer';
+export { Showcase } from './Showcase/Showcase';

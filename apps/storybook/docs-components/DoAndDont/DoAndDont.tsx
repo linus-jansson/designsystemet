@@ -12,13 +12,13 @@ const Wrapper = ({ variant, description, image, alt }: WrapperProps) => {
   return (
     <figure
       className={cl(styles.wrapper, styles[variant])}
-      data-ds-color-mode='light'
+      data-color-scheme='light'
     >
       <div className={styles.header}>
         <div className={styles.icon}>{icon}</div>
         <Heading
           level={2}
-          size='sm'
+          data-size='sm'
           style={{
             margin: 0,
             border: 'none',

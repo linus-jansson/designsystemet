@@ -60,21 +60,19 @@ Blir till:
 
 Alla våra komponenter är klientkomponenter och använder `"use client"`.
 
-Om du vill använda våra komponenter i dina serverkomponenter kan du inte använda dot-notation.
-Detta betyder att du inte kan skriva `<Accordion.Item>`, utan måste skriva `<AccordionItem>`. Anledningen är att servern inte kan hantera något som ligger i en klientkomponent, vilket `Accordion` är.
+Om du vill använda våra komponenter i dina serverkomponenter kan du inte använda punktnotation.  
+Detta innebär att du inte kan skriva `<Details.Summary>`, utan måste skriva `<DetailsSummary>`. Anledningen är att servern inte kan komma åt något som finns i en klientkomponent, vilket `Details` är.
 
 #### I en serverkomponent:
 
 <CodeSnippet language='ts'>
 {`
-import { Accordion, AccordionHeading, AccordionItem, AccordionContent } från '@digdir/designsystemet-react';
+import { Details, DetailsSummary, DetailsContent } from '@digdir/designsystemet-react';
 
-<Accordion>
-  <AccordionItem>
-    <AccordionHeading>...</AccordionHeading>
-    <AccordionContent>...</AccordionContent>
-  </AccordionItem>
-</Accordion>
+<Details>
+  <DetailsSummary>...</DetailsSummary>
+  <DetailsContent>...</DetailsContent>
+</Details>
 `}
 </CodeSnippet>
 
@@ -82,21 +80,20 @@ import { Accordion, AccordionHeading, AccordionItem, AccordionContent } från '@
 
 <CodeSnippet language='ts'>
 {`
-import { Accordion } från '@digdir/designsystemet-react';
+import { Details } from '@digdir/designsystemet-react';
 
-<Accordion>
-  <Accordion.Item>
-    <Accordion.Heading>...</Accordion.Heading>
-    <Accordion.Content>...</Accordion.Content>
-  </Accordion.Item>
-</Accordion>
+<Details>
+  <Details.Summary>...</Details.Summary>
+  <Details.Content>...</Details.Content>
+</Details>
 `}
 </CodeSnippet>
 
-### Komponenter med `.Root`
+### Komponenter med `.TriggerContext`
 
-Vissa komponenter har en `.Root`-komponent, som måste wrapas runt barnkomponenterna. Dessa måste användas för att komponenten ska fungera korrekt.
-Till exempel har `Accordion` en `Accordion`-komponent som måste wrappa runt `Accordion.Item`-komponenterna för att ge rätt funktionalitet.
+Vissa komponenter har en `.TriggerContext`, som kan omsluta komponenten tillsammans med en `.Trigger`.  
+Dessa kan användas för att automatiskt koppla komponenten till en trigger – vanligtvis en knapp.  
+Till exempel har `Modal` en `Modal.TriggerContext`-komponent som kan omsluta `Modal.Trigger` och `Modal`-komponenterna.
 
 <br />
 <br />
@@ -123,7 +120,7 @@ Det gör du genom att lägga din reset i en layer och sedan sortera den layern f
 Vi erbjuder flera data-attribut som kan användas för att ändra temat på komponenterna.
 
 <br />
-#### `data-ds-color-mode`
+#### `data-color-scheme`
 
 Används för att ändra färgläget på komponenterna. Möjliga värden är `light`, `dark` och `auto`.
 Om `auto` är valt kommer färgläget att ändras baserat på användarens preferenser med hjälp av

@@ -26,7 +26,7 @@ export const Normal: Story = {
   args: {
     children: 'Gå til designsystemet',
     href: designsystemetLink,
-    color: 'accent',
+    'data-color': 'accent',
   },
 };
 
@@ -44,8 +44,7 @@ export const InText: StoryFn = (args) => (
 
 export const WithIcon: StoryFn = (args) => (
   <Link href='mailto:designsystem@digdir.no' {...args}>
-    <EnvelopeClosedIcon aria-hidden />
-    Kontakt oss
+    <EnvelopeClosedIcon aria-hidden /> Kontakt oss
   </Link>
 );
 
@@ -65,6 +64,6 @@ export const Neutral: Story = {
   args: {
     children: 'Gå til designsystemet',
     href: designsystemetLink,
-    color: 'neutral',
+    'data-color': 'neutral',
   },
 };

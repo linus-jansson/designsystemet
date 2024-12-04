@@ -1,4 +1,7 @@
 {
   "extends": "@ua-designsystem/typescript-config/tsconfig.packages.json",
+  "compilerOptions": {
+    "types": ["../../packages/theme/brand/colors.d.ts"]
+  },
   "include": [".", "./.storybook/**/*", "../../packages/css/postcss.config.js"]
 }

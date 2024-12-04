@@ -1,5 +1,6 @@
 import { Meta, Controls, Primary, Canvas, ArgTypes } from '@storybook/blocks';
-
+import { CssVariables } from '@doc-components';
+import css from '@digdir/designsystemet-css/pagination.css?inline';
 import * as PaginationStories from './Pagination.stories';
 import { usePagination } from './usePagination';
 
@@ -18,7 +19,7 @@ Observera:
   - Se exempel [Paginering med länkar](/docs/komponenter-pagination--with-anchor).
 
 <Primary />
-<Controls of={PaginationStories.Preview} include={['aria-label', 'asChild', 'size']} />
+<Controls of={PaginationStories.Preview} />
 
 ## Användning
 
@@ -92,4 +93,6 @@ I respons får du objektet:
 
 Alla delkomponenter stöder `asChild` som kan användas för att ändra `Pagination.Button` till länkar (`a`).
 
-<Canvas of={PaginationStories.WithAnchor} />
+## CSS Variabler
+
+<CssVariables css={css} />

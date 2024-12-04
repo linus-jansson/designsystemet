@@ -19,16 +19,16 @@ export default meta;
 export const Preview: Story = (args) => <Alert {...args}></Alert>;
 
 Preview.args = {
-  color: 'info',
-  size: 'md',
+  'data-color': 'info',
+  'data-size': undefined,
   children: 'En beskjed det er viktig at brukeren ser',
 };
 
 export const VariantInfo: Story = (args) => (
-  <Alert {...args} color='info'>
+  <Alert {...args} data-color='info'>
     <Heading
       level={2}
-      size='xs'
+      data-size='xs'
       style={{
         marginBottom: 'var(--ds-spacing-2)',
       }}
@@ -43,10 +43,10 @@ export const VariantInfo: Story = (args) => (
 );
 
 export const VariantSuccess: Story = (args) => (
-  <Alert {...args} color='success'>
+  <Alert {...args} data-color='success'>
     <Heading
       level={2}
-      size='xs'
+      data-size='xs'
       style={{
         marginBottom: 'var(--ds-spacing-2)',
       }}
@@ -61,10 +61,10 @@ export const VariantSuccess: Story = (args) => (
 );
 
 export const VariantWarning: Story = (args) => (
-  <Alert {...args} color='warning'>
+  <Alert {...args} data-color='warning'>
     <Heading
       level={2}
-      size='xs'
+      data-size='xs'
       style={{
         marginBottom: 'var(--ds-spacing-2)',
       }}
@@ -79,10 +79,10 @@ export const VariantWarning: Story = (args) => (
 );
 
 export const VariantDanger: Story = (args) => (
-  <Alert {...args} color='danger'>
+  <Alert {...args} data-color='danger'>
     <Heading
       level={2}
-      size='xs'
+      data-size='xs'
       style={{
         marginBottom: 'var(--ds-spacing-2)',
       }}
@@ -101,7 +101,7 @@ export const MedHeading: Story = (args) => (
   <Alert {...args}>
     <Heading
       level={2}
-      size='xs'
+      data-size='xs'
       style={{
         marginBottom: 'var(--ds-spacing-2)',
       }}
@@ -116,16 +116,16 @@ export const MedHeading: Story = (args) => (
 );
 
 export const MedKunHeading: Story = (args) => (
-  <Alert {...args} color='warning'>
+  <Alert {...args} data-color='warning'>
     <Paragraph> Du har 7 dager igjen på å fullføre søknaden.</Paragraph>
   </Alert>
 );
 
 export const MedLenke: Story = (args) => (
-  <Alert {...args} color='warning'>
+  <Alert {...args} data-color='warning'>
     <Heading
       level={2}
-      size='xs'
+      data-size='xs'
       style={{
         marginBottom: 'var(--ds-spacing-2)',
       }}
@@ -140,10 +140,10 @@ export const MedLenke: Story = (args) => (
 );
 
 export const UtenAria: Story = (args) => (
-  <Alert {...args} color='warning'>
+  <Alert {...args} data-color='warning'>
     <Heading
       level={2}
-      size='xs'
+      data-size='xs'
       style={{
         marginBottom: 'var(--ds-spacing-2)',
       }}
@@ -158,10 +158,10 @@ export const UtenAria: Story = (args) => (
 );
 
 export const MedAria: Story = (args) => (
-  <Alert {...args} color='danger' role='alert'>
+  <Alert {...args} data-color='danger' role='alert'>
     <Heading
       level={2}
-      size='xs'
+      data-size='xs'
       style={{
         marginBottom: 'var(--ds-spacing-2)',
       }}

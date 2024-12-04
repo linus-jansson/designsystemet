@@ -1,5 +1,6 @@
 import { Meta, Primary, Controls, Canvas, ArgTypes } from '@storybook/blocks';
-
+import { CssVariables } from '@doc-components';
+import css from '@digdir/designsystemet-css/list.css?inline';
 import * as ListStories from './List.stories';
 
 <Meta of={ListStories} />
@@ -167,3 +168,7 @@ Listor och tabeller har olika användningsområden. Rätt användning gör upple
 
 - En lista presenterar relaterad information på ett överskådligt sätt.
 - En tabell låter användaren se och jämföra flera grupper av information.
+
+## CSS Variabler
+
+<CssVariables css={css} />

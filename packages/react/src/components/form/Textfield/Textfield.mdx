@@ -1,62 +1,65 @@
 import { Meta, Canvas, Controls, Primary } from '@storybook/blocks';
-
+import { CssVariables } from '@doc-components';
+import css from '@digdir/designsystemet-css/textfield.css?inline';
 import * as TextfieldStories from './Textfield.stories';
 
 <Meta of={TextfieldStories} />
 
 # Textfield
 
-`Textfield` kallas textfält på svenska. Det är ett inmatningsfält som till exempel ger användarna möjlighet att skriva korta texter eller siffror.
+Textfield er en samensatt komponent for [`input`](/docs/komponenter-input--docs) og [`textarea`](/docs/komponenter-textarea--docs). Du bytter mellom de ved å sette `multiline={true/false}`. `Textfield` har også innebygd `label`, `description`, `validationmessage`, `affix` og `counter`.
+<br/>
+
 
 <Primary />
 <Controls />
 
-## Prefix/Suffix
+## Slik bruker du Textfield
 
-Prefix och suffix är användbara för att visa enheter, valuta eller annan information som är relevant för fältet.
-Du ska **inte** använda dessa ensamma, eftersom skärmläsare inte läser upp dem.
-Det är viktigt att samma information som visas i prefixet eller suffixet också inkluderas i etiketten.
+```tsx
+import { Textfield } from '@digdir/designsystemet-react';
 
-<Canvas of={TextfieldStories.Adornments} />
+<Textfield label="Navn" />
+```
+## Eksempler
 
-## Antal tecken
+### Multiline
 
-<Canvas of={TextfieldStories.WithCharacterCounter} />
+Du endrer til `textarea` ved å sette `multiline` til `true`. Da kan brukerne skrive lengre tekster.
 
-## Kontrollerad
+<Canvas of={TextfieldStories.Rows} />
+
+### Prefix/Suffix
+
+Prefixer og suffixer er nyttige for å vise enheter, valuta eller annen informasjon som er relevant for feltet. Disse skal **ikke** brukes alene, da skjermlesere ikke leser dem opp. Det er viktig at samme informasjon som vises i prefixet eller suffixet, også inkluderes i ledeteksten.
+
+<Canvas of={TextfieldStories.Affix} />
+
+### Antall tegn
+
+Bruk `counter` til å begrense antall tegn brukerne kan skrive i feltet.
+
+<Canvas of={TextfieldStories.Counter} />
+
+### Kontrollert
 
 <Canvas of={TextfieldStories.Controlled} />
 
-## Html Size
 
-<Canvas of={TextfieldStories.HtmlSize} />
-
-## Riktlinjer för när du ska använda `Textfield`
-
-Vi använder textfält när vi vill ge användaren möjlighet att skriva text/svar på max. en rad, till exempel namn eller telefonnummer.
-
-Passar för att
-
-- ge möjlighet för korta texter eller svar
-- mata in siffror, till exempel ett telefonnummer
-
-Passar inte för att
-
-- ge längre svar, använd istället `Textarea`
-- mata in formaterad data, som markdown
-  <br />
-
-### Placering av etiketten
-
-Etiketten och eventuell beskrivning ska alltid placeras ovanför textfältet. Då är de lätta att se på små skärmar och hindras inte av eventuella felmeddelanden.
+## Retningslinjer for når du skal bruke `Textfield`
+`Input` er egnet til korte tekster/svar. `Textarea` er egnet til mer utfyllende og lengre svar. 
 
 ### Undvik platshållartexter
 
-Platshållartexter försvinner när användarna skriver i fältet. Det är därför bättre att inkludera tips och viktig information i själva etiketten eller den tillhörande beskrivningen.
+Plassholdertekster (`placeholder`) forsvinner når brukerne skriver i feltet. Det er derfor bedre å inkludere hint og viktig informasjon i selve ledeteksten eller den tilhørende beskrivelsen. Kontrastkravene i WCAG gjelder for `placeholder` også, og da blir teksten så mørk at brukerne kan oppfatte `textfield` som utfylt.
 
 ### Anpassa bredden på textfältet
 
-Anpassa bredden till vad användarna ska skriva in, kort bredd för telefonnummer och bredare för ortnamn. Olika bredd på fälten gör det enklare att navigera i formulär som har många fält.
+Tilpass bredden etter hva brukerne skal skrive inn - kort bredde for telefonnummer og bredere for stedsnavn. Ulik bredde på feltene gjør det lettere å navigere i skjemaer med mange felter.
+
+### Tillat kopier og lim inn
+
+Brukere som skal fylle ut et tekstområde, trenger ofte å kopiere og lime inn informasjon, så denne funksjonen må ikke deaktiveres. Dette gjør det enkelt for brukerne å fylle inn nødvendige opplysninger uten begrensninger.
 
 ### Inmatning och formatering
 
@@ -66,15 +69,24 @@ Anpassa bredden till vad användarna ska skriva in, kort bredd för telefonnumme
 - Se till att användarna kan se inmatning som formateras automatiskt, utan att det stör dem när de fyller i.
 - Använd inte bara versaler eller kursiv text i etiketten. Det är svårare att läsa.
 
-## Text i komponenten
+<br/>
 
-Det ska alltid finnas en etikett på `Textfield`. I speciella fall kan vi dölja etiketten med `hidelabel`. Det kan till exempel vara i tabeller om fältet får sin etikett från tabellhuvudet. Även om vi planerar att dölja etiketten måste vi alltid skriva en etikett som ger mening, eftersom den läses upp av skärmläsare.
+## Tekst i komponenten
+
+Det skal alltid være ledetekst på `textfield`. I spesielle tilfeller kan vi skjule ledeteksten ved å ikke sende inn `label`. Det kan for eksempel være i tabeller, hvis feltet får ledeteksten fra tabelloverskriften. Selv om vi har tenkt å skjule ledeteksten, må vi alltid skrive en ledetekst som gir mening, siden den leses opp av skjermlesere.
+
+<br />
+- Hold ledeteksten kort, unngå at den går over to linjer.
+- Unngå å legge til beskrivelse som ikke er relevant eller meningsfull for brukeren.
+- Unngå å bruke kolon etter `label`.
+
+<br/>
 
 ## Tillgänglighet
 
 ### Använd inte inaktiverade fält
 
-Använd inte inaktiverat läge (disabled state) på textfält. Tänk istället över om du behöver visa fältet överhuvudtaget, eller om du kan skriva ut informationen som ren text eller använda Read Only.
+Ikke bruk deaktivert tilstand (`disabled`) på tekstfelt. Tenk heller over om du trenger å vise feltet i det hele tatt, eller om du heller kan skrive informasjonen ut i ren tekst eller bruke `readonly`.
 
 ### Prefix och suffix
 

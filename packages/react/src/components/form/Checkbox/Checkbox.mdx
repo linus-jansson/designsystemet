@@ -1,16 +1,14 @@
-import { Meta, Canvas, Controls, Primary } from '@storybook/blocks';
-import { Do, Dont, Stack } from '@doc-components';
-
-import * as TableStories from '../../Table/Table.stories';
-
+import { Meta, Canvas, Controls, Primary, ArgTypes } from '@storybook/blocks';
+import { Do, Dont, Stack, CssVariables } from '@doc-components';
+import css from '@digdir/designsystemet-css/input.css?inline';
 import * as CheckboxStories from './Checkbox.stories';
-import * as CheckboxGroupStories from './CheckboxGroup.stories';
+import * as useCheckboxGroupStories from '../../../utilities/hooks/useCheckboxGroup/useCheckboxGroup.stories';
 
 <Meta of={CheckboxStories} />
 
 # Checkbox
 
-Vi använder `Checkbox` (kryssruta) för att ge användarna val där de kan välja ett eller flera alternativ. Användarna kan både välja och avmarkera de val de gör. Använd [`Checkbox.Group`](#checkboxgroup) för att gruppera flera val.
+Vi bruker `Checkbox` (avmerkingsboks) for å gi brukerne valg, der de kan velge ett eller flere alternativer. Brukerne kan både velge og oppheve valgene de gjør. Bruk [`Fieldset`](#fieldset) til å gruppere flere valg.
 
 <Primary />
 <Controls />
@@ -20,12 +18,13 @@ Vi använder `Checkbox` (kryssruta) för att ge användarna val där de kan väl
 ```tsx
 import { Checkbox } from '@digdir/designsystemet-react';
 
-<Checkbox.Group legend='Vad vill din D&D-grupp äta?'>
-  <Checkbox value='elfsalad'>Alvskogens sallad</Checkbox>
-  <Checkbox value='firecakes'>Eldandade riskakor</Checkbox>
-  <Checkbox value='dumplings'>Kyckling-dumplings</Checkbox>
-  <Checkbox value='ribs'>Sembianska honungsglaserade rothè-revben</Checkbox>
-</Checkbox.Group>;
+<Fieldset>
+  <Fieldset.Legend>Skal du reise til noen av disse landene?</Fieldset.Legend>
+  <Checkbox label='Kroatia' value='kroatia' />
+  <Checkbox label='Slovakia' value='slovakia' />
+  <Checkbox label='Hobsyssel' value='hobsyssel' />
+  <Checkbox label='Jeg skal ikke til noen av disse landene' value='ingen' />
+</Fieldset>;
 ```
 
 ## Exempel
@@ -36,34 +35,74 @@ import { Checkbox } from '@digdir/designsystemet-react';
 
 Om användaren ska bekräfta något men inte välja något kan en `checkbox` stå ensam. Till exempel när användaren ska samtycka till villkor.
 
-<Canvas of={CheckboxGroupStories.OneOption} />
+<Canvas of={CheckboxStories.OneOption} />
+
+## `Fieldset` og `useCheckboxGroup`
+
+Bruk `Fieldset` og `useCheckboxGroup` for gruppering av flere valg.
+
+<Canvas of={CheckboxStories.Group} />
+
+Til `useCheckboxGroup` kan du sende inn:
+
+<ArgTypes of={useCheckboxGroupStories.UseCheckboxGroup} />
+
+I respons får du objektet:
+
+```ts
+{
+  getCheckboxProps: (value: string | { allowIndeterminate: true }) => CheckboxProps, // Returnerer props du kan spre på <Checkbox /> eller <input type="checkbox" />
+  validationMessageProps: ValidationMessageProps, // Properties du kan valgfritt spre på ValidationMessage
+  setValue: string[], // Funksjon for å sette checkbox gruppens verdi
+  value: string[], // Nåværende verdi for checkbox gruppen
+}
+```
+
+Eksempel på bruk:
+
+```tsx
+const { getCheckboxProps, validationMessageProps } = useCheckboxGroup({
+  name: 'my-checkbox-group',
+  value: [''],
+  error: 'Du må velge et alternativ',
+});
+
+return (
+  <Fieldset>
+    <Fieldset.Legend>
+      Skal du reise til noen av disse landene?
+    </Fieldset.Legend>
+    <Fieldset.Description>
+      Velg alle landene du skal innom.
+    </Fieldset.Description>
+    <Checkbox label='Alle' {...getCheckboxProps({ allowIndeterminate: true })} />
+    <Checkbox label='Kroatia' {...getCheckboxProps('kroatia')} />
+    <Checkbox label='Slovakia' {...getCheckboxProps('slovakia')} />
+    <Checkbox label='Hobsyssel' {...getCheckboxProps('hobsyssel')} />
+    <ValidationMessage {...validationMessageProps} />
+  </Fieldset>
+);
+```
 
 ### Obestämd
 
 Använd `indeterminate` för att signalera att en eller flera kryssrutor är markerade i gruppen.
 
-<Canvas of={TableStories.WithFormElements} />
-
-### Checkbox.Group
-
-Använd `Checkbox.Group` för att gruppera flera val.
-
-<Canvas of={CheckboxGroupStories.Preview} />
-<Controls of={CheckboxGroupStories.Preview} />
+<Canvas of={CheckboxStories.InTable} />
 
 #### Felmeddelande
 
-Använd `error` på `Checkbox.Group` för att visa ett felmeddelande.
+Bruk `error` på `Fieldset` for å vise feilmelding.
 
-Här måste du använda `Checkbox.Group` för att göra innehållet tillgängligt och aktivera rätt stil.
+Her må du bruke `Fieldset` for å gjøre innholdet tilgjengelig og aktivere riktig stil.
 
-<Canvas of={CheckboxGroupStories.WithError} />
+<Canvas of={CheckboxStories.WithError} />
 
 #### Kontrollerad
 
-Använd `value` på `Checkbox.Group` för att själv kontrollera värdena.
+Bruk `value` på `Checkbox` for å kontrollere verdiene selv.
 
-<Canvas of={CheckboxGroupStories.Controlled} />
+<Canvas of={CheckboxStories.Controlled} />
 
 #### Readonly
 
@@ -71,13 +110,13 @@ Fält med attributet `readonly` ingår i tabbsekvensen. Användarna kan kopiera 
 
 `Readonly`-fält kan vara förvirrande för vissa användare. Alla förstår inte varför de inte kan ändra innehållet i fältet. Vi rekommenderar därför att undvika readonly så långt det går.
 
-<Canvas of={CheckboxGroupStories.ReadOnly} />
+<Canvas of={CheckboxStories.ReadOnly} />
 
 #### Disabled
 
 Undvik inaktiverade tillstånd om du kan. De har låg färgkontrast som är problematisk för vissa användare. `Disabled` kan inte uppfylla kontrastkraven, vilket kan få användaren att tro att elementet är aktivt, försöka klicka på det och inte förstå varför det inte fungerar.
 
-<Canvas of={CheckboxGroupStories.Disabled} />
+<Canvas of={CheckboxStories.Disabled} />
 
 <br />
 
@@ -134,7 +173,7 @@ Användaren ska kunna läsa varje svarsalternativ som en logisk respons på för
 
 Exempel på korrekt logisk sammanhang:
 
-<Canvas of={CheckboxGroupStories.ContentEx1} />
+<Canvas of={CheckboxStories.ContentEx1} />
 
 ### Ge svarsalternativen samma språkliga form
 
@@ -142,11 +181,11 @@ Det innebär att de kan ha antingen fullständiga meningar eller ett ord, men in
 
 **Antingen:**
 
-<Canvas of={CheckboxGroupStories.ContentEx2} />
+<Canvas of={CheckboxStories.ContentEx2} />
 
 **Eller:**
 
-<Canvas of={CheckboxGroupStories.ContentEx3} />
+<Canvas of={CheckboxStories.ContentEx3} />
 
 <br />
 
@@ -158,4 +197,8 @@ Det ska vara möjligt att flytta fokus till `Checkbox` genom att trycka på `Tab
 
 `Checkbox` ska alltid ha en `label`. Om du använder `label` från en annan plats, kom ihåg att använda `aria-label` eller `aria-labelledby` (Se koden nedan).
 
-<Canvas of={CheckboxStories.Single} />
+<Canvas of={CheckboxStories.AriaLabel} />
+
+## CSS Variabler
+
+<CssVariables css={css} />

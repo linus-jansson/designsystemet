@@ -1,4 +1,6 @@
 import { Meta, Canvas, Controls, Primary } from '@storybook/blocks';
+import { CssVariables } from '@doc-components';
+import css from '@digdir/designsystemet-css/card.css?inline';
 import * as CardStories from './Card.stories';
 
 <Meta of={CardStories} />
@@ -99,3 +101,7 @@ Kortet ska kunna stå ensamt utan att vara beroende av omgivande element för ko
 ## Text i komponenten
 
 Undvik långa texter på korten. Tänk noga igenom vad du behöver säga och skriv en kort och precis rubrik, underrubrik och eventuell brödtext.
+
+## CSS Variabler
+
+<CssVariables css={css} />

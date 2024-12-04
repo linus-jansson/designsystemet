@@ -1,19 +1,19 @@
 export const data = [
   {
-    title: 'Accordion',
-    image: 'Accordion.svg',
-    url: 'https://storybook.designsystemet.no/?path=/docs/komponenter-accordion--docs',
+    title: 'Details',
+    image: 'Details.svg',
+    url: 'https://storybook.designsystemet.no/?path=/docs/komponenter-details--docs',
   },
   {
     title: 'Alert',
     image: 'Alert.svg',
     url: 'https://storybook.designsystemet.no/?path=/docs/komponenter-alert--docs',
   },
-  // {
-  //   title: 'Avatar',
-  //   image: 'Avatar.svg',
-  //   url: 'https://storybook.designsystemet.no/?path=/docs/komponenter-avatar--docs',
-  // },
+  {
+    title: 'Avatar',
+    image: 'Avatar.svg',
+    url: 'https://storybook.designsystemet.no/?path=/docs/komponenter-avatar--docs',
+  },
   {
     title: 'Badge',
     image: 'Badge.svg',

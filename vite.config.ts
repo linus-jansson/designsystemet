@@ -21,4 +21,11 @@ export default defineConfig({
       usePolling: true,
     },
   },
+  // Temporary "fix" https://github.com/storybookjs/storybook/issues/28542
+  optimizeDeps: {
+    exclude: [
+      './apps/storybook/node_modules/.cache/storybook',
+      './apps/storybook/docs-components',
+    ],
+  },
 });

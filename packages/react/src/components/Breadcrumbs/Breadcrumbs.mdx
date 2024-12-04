@@ -1,5 +1,6 @@
 import { Meta, Controls, Primary, Canvas } from '@storybook/blocks';
-
+import { CssVariables } from '@doc-components';
+import css from '@digdir/designsystemet-css/breadcrumbs.css?inline';
 import * as BreadcrumbsStories from './Breadcrumbs.stories';
 
 <Meta of={BreadcrumbsStories} />
@@ -76,3 +77,7 @@ huvudinnehållet också ska hoppa över brödsmulestigen.
 
 Om du har lång navigering kan du konfigurera komponenten så att den endast visar den första och sista delen av sökvägen på mobil. 
 Detta sker automatiskt på skärmar under 650px, där vi bara visar länken ner en nivå.
+
+## CSS Variabler
+
+<CssVariables css={css} />

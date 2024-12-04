@@ -1,7 +1,7 @@
 import type { Meta, StoryFn, StoryObj } from '@storybook/react';
 import { useState } from 'react';
 
-import { Button, Label, Paragraph } from '../..';
+import { Button, Divider, Label, Paragraph } from '../..';
 
 import { Textarea } from '.';
 
@@ -33,7 +33,7 @@ export const Preview: Story = {
   args: {
     disabled: false,
     readOnly: false,
-    size: 'md',
+    'data-size': 'md',
     cols: 40,
     id: 'my-textarea',
   },
@@ -45,24 +45,8 @@ export const Preview: Story = {
   ),
 };
 
-// export const WithCharacterCounter: Story = {
-//   args: {
-//     cols: 40,
-//     characterLimit: {
-//       maxCount: 5,
-//     },
-//   },
-//   render: (args) => (
-//     <>
-//       <Label>Label</Label>
-//       <Textarea {...args} />
-//     </>
-//   ),
-// };
-
 export const FullWidth: Story = {
   args: {
-    rows: 10,
     cols: 40,
     id: 'my-textarea',
   },
@@ -82,7 +66,6 @@ export const Controlled: StoryFn<typeof Textarea> = (args) => {
 
   return (
     <>
-      <Paragraph>Du har skrevet inn: {value}</Paragraph>
       <Label htmlFor={args.id}>Kontroller meg!</Label>
       <Textarea
         cols={40}
@@ -90,6 +73,12 @@ export const Controlled: StoryFn<typeof Textarea> = (args) => {
         value={value}
         {...args}
       />
+
+      <Divider style={{ marginTop: 'var(--ds-spacing-4)' }} />
+
+      <Paragraph style={{ margin: 'var(--ds-spacing-2) 0' }}>
+        Du har skrevet inn: {value}
+      </Paragraph>
       <Button onClick={() => setValue('Pizza')}>Jeg vil ha Pizza</Button>
     </>
   );

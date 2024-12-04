@@ -3,27 +3,28 @@ import crypto from 'node:crypto';
 import { type ThemeObject, TokenSetStatus } from '@tokens-studio/types';
 
 import type { ColorMode } from '../../colors/types.js';
-
-import * as R from 'ramda';
+import type { Colors } from '../types.js';
 
 const capitalize = (word: string) => word.charAt(0).toUpperCase() + word.slice(1);
 
 const createHash = (text: string) => crypto.hash('sha1', text);
 
-type ColorModes = Array<ColorMode>;
+type ColorSchemes = Array<ColorMode>;
 
 type ThemeObject_ = ThemeObject & {
   $figmaCollectionId?: string;
   $figmaModeId?: string;
 };
 
-export function generateThemesJson(modes: ColorModes, themes: string[]): ThemeObject_[] {
+export function generateThemesJson(colorSchemes: ColorSchemes, themes: string[], colors: Colors): ThemeObject_[] {
   return [
     ...generateSizeGroup(),
     ...generateThemesGroup(themes),
     ...generateTypographyGroup(themes),
-    ...generateModesGroup(modes, themes),
+    ...generateColorSchemesGroup(colorSchemes, themes),
     generateSemanticGroup(),
+    ...generateColorGroup('main', colors),
+    ...generateColorGroup('support', colors),
   ];
 }
 
@@ -41,7 +42,7 @@ function generateSizeGroup(): ThemeObject_[] {
   ];
 }
 
-const modeDefaults: Record<ColorMode, ThemeObject_> = {
+const colorSchemeDefaults: Record<ColorMode, ThemeObject_> = {
   light: {
     name: 'Light',
     selectedTokenSets: {},
@@ -65,15 +66,15 @@ const modeDefaults: Record<ColorMode, ThemeObject_> = {
   },
 };
 
-function generateModesGroup(modes: Array<ColorMode>, themes: string[]): ThemeObject_[] {
-  return modes.map(
-    (mode): ThemeObject_ => ({
-      ...modeDefaults[mode],
+function generateColorSchemesGroup(colorSchemes: ColorSchemes, themes: string[]): ThemeObject_[] {
+  return colorSchemes.map(
+    (scheme): ThemeObject_ => ({
+      ...colorSchemeDefaults[scheme],
       selectedTokenSets: Object.fromEntries([
-        [`primitives/modes/colors/${mode}/global`, TokenSetStatus.ENABLED],
-        ...themes.map((theme) => [`primitives/modes/colors/${mode}/${theme}`, TokenSetStatus.ENABLED]),
+        [`primitives/modes/color-scheme/${scheme}/global`, TokenSetStatus.ENABLED],
+        ...themes.map((theme) => [`primitives/modes/color-scheme/${scheme}/${theme}`, TokenSetStatus.ENABLED]),
       ]),
-      group: 'Mode',
+      group: 'Color scheme',
     }),
   );
 }
@@ -104,6 +105,19 @@ function generateSemanticGroup(): ThemeObject_ {
     },
     group: 'Semantic',
   };
+}
+
+function generateColorGroup(group: 'main' | 'support', colors: Colors): ThemeObject_[] {
+  return Object.entries(colors[group]).map(
+    ([color]): ThemeObject_ => ({
+      id: createHash(`${group}-${color}`),
+      name: color,
+      selectedTokenSets: {
+        [`semantic/modes/${group}-color/${color}`]: TokenSetStatus.ENABLED,
+      },
+      group: `${capitalize(group)} color`,
+    }),
+  );
 }
 
 function generateTypographyGroup(themes: string[]): ThemeObject_[] {

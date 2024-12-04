@@ -1,13 +1,14 @@
-import { Meta, Canvas, Controls, Primary } from '@storybook/blocks';
-
+import { Meta, Canvas, Controls, Primary, ArgTypes } from '@storybook/blocks';
+import { CssVariables } from '@doc-components';
+import css from '@digdir/designsystemet-css/input.css?inline';
 import * as RadioStories from './Radio.stories';
-import * as RadioGroupStories from './RadioGroup.stories';
+import * as useRadioGroupStories from '../../../utilities/hooks/useRadioGroup/useRadioGroup.stories';
 
 <Meta of={RadioStories} />
 
 # Radio
 
-`Radio` visar användaren en lista med alternativ som de kan välja mellan. Användarna kan växla mellan alternativen men måste välja ett. Använd `Radio.Group` för att gruppera radioknapparna.
+`Radio` viser brukeren en liste med alternativer de kan velge mellom. Brukerne kan bytte mellom alternativene, men må velge ett. Bruk `Radio.Group` for å gruppere alternativknappene.
 
 <Primary />
 <Controls />
@@ -17,9 +18,9 @@ import * as RadioGroupStories from './RadioGroup.stories';
 ```tsx
 import { Radio } from '@digdir/designsystemet-react';
 
-<Radio.Group legend='Är du över 18 år?'>
+<Radio.Group legend='Er du over 18 år?'>
   <Radio value='Ja'>Ja</Radio>
-  <Radio value='Nej'>Nej</Radio>
+  <Radio value='Ne'>Nei</Radio>
 </Radio.Group>;
 ```
 
@@ -31,28 +32,65 @@ import { Radio } from '@digdir/designsystemet-react';
 
 `Radio` ska alltid ha en `label`. När du använder `label` från en annan plats, kom ihåg att använda `aria-label` eller `aria-labelledby`.
 
-<Canvas of={RadioStories.Single} />
+<Canvas of={RadioStories.AriaLabel} />
 
-## `Radio.Group`
+## `Fieldset` og `useRadioGroup`
 
-Använd `Radio.Group` för att gruppera radioknappar.
+Bruk `Radio.Group` for gruppering av alternativknapper.
 
-<Canvas of={RadioGroupStories.Preview} />
-<Controls of={RadioGroupStories.Preview} />
+<Canvas of={RadioStories.Group} />
+
+Til `useRadioGroup` kan du sende inn:
+
+<ArgTypes of={useRadioGroupStories.UseRadioGroup} />
+
+I respons får du objektet:
+
+```ts
+{
+  getRadioProps: (value: string | RadioProps) => RadioProps, // Returnerer props du kan spre på <Radio /> eller <input type="radio" />
+  validationMessageProps: ValidationMessageProps, // Props du valgfritt spre på ValidationMessage for å koble feilmelding til radio gruppen
+  setValue: string, // Funksjon for å sette radio gruppens verdi
+  value: string, // Nåværende verdi for radio gruppen
+}
+```
+
+Eksempel på bruk:
+
+```tsx
+const { getRadioProps, validationMessageProps } = useRadioGroup({
+  name: 'my-radio-group',
+  value: 'sjokolade',
+  error: 'Du må velge et alternativ',
+});
+
+return (
+  <Fieldset>
+    <Fieldset.Legend>Hvilken iskremsmak er best?</Fieldset.Legend>
+    <Fieldset.Description>
+      Velg din favorittsmak blant alternativene.
+    </Fieldset.Description>
+    <Radio label='Vanilje' {...getRadioProps('vanilje')} />
+    <Radio label='Jordbær' {...getRadioProps('jordbær')} />
+    <Radio label='Sjokolade' {...getRadioProps('sjokolade')} />
+    <ValidationMessage {...validationMessageProps} />
+  </Fieldset>
+);
+```
 
 ### Felmeddelande
 
-Använd `error` på `Radio.Group` för att visa ett felmeddelande.
+Bruk `error` på `Radio.Group` for å vise feilmelding.
 
-Här måste vi använda `Radio.Group`, eftersom den aktiverar rätt stil och säkerställer att innehållet har rätt attribut för tillgänglighet.
+Her må vi bruke `Radio.Group`, fordi den aktiverer riktig stil og sørger for at innholdet har de riktige attributtene for tilgjengelighet.
 
-<Canvas of={RadioGroupStories.WithError} />
+<Canvas of={RadioStories.WithError} />
 
 ### Kontrollerad
 
-Använd `value` på `Radio.Group` för att kontrollera värdena själv.
+Bruk `value` på `Radio.Group` for å kontrollere verdiene selv.
 
-<Canvas of={RadioGroupStories.Controlled} />
+<Canvas of={RadioStories.Controlled} />
 
 ### Readonly
 
@@ -60,19 +98,20 @@ Fält med attributet `readonly` ingår i tabbsekvensen. Användarna kan kopiera 
 
 `readonly`-fält kan vara förvirrande för vissa användare. Alla förstår inte varför de inte kan ändra innehållet i fältet. Vi rekommenderar därför att undvika `readonly` så långt det går.
 
-<Canvas of={RadioGroupStories.ReadOnly} />
+<Canvas of={RadioStories.ReadOnly} />
 
 ### Disabled
 
 Undvik inaktiverade tillstånd om möjligt. De har låg färgkontrast vilket är problematiskt för vissa användare. `disabled` kan inte uppfylla kontrastkraven, och användaren kan tro att elementet är aktivt, försöka klicka på det och inte förstå varför det inte fungerar.
 
-<Canvas of={RadioGroupStories.Disabled} />
+<Canvas of={RadioStories.Disabled} />
 
 ### Inline
 
-Använd `inline` för att placera alternativen på samma rad. Rekommenderas endast om du har två alternativ och korta `label`s.
+Bruk `inline` for å plassere alternativene på samme linje. Anbefales kun dersom du har to alternativer og korte `label`s.
+Bruk `inline` for å plassere alternativene på samme linje. Anbefales kun dersom du har to alternativer og korte `labels`.
 
-<Canvas of={RadioGroupStories.Inline} />
+<Canvas of={RadioStories.Inline} />
 
 ## Riktlinjer
 
@@ -117,8 +156,8 @@ Undvik att placera radioknappar bredvid varandra. Det gör det svårare att läs
 
 Notera att vi använder piltangenterna för att välja alternativ i `Radio`-komponenten, inte Tab-tangenten.
 
-- Pil upp/vänster - går till föregående val
-- Pil ner/höger - går till nästa val
-- Mellanslagstangenten - går till första alternativet i en grupp med radioknappar, när gruppen inte har ett förvalt alternativ.
-- Tab - går till hela gruppen med alternativ.
+- Pil opp/venstre - går til forrige valg
+- Pil ned/høyre - går til neste valg
+- Mellomromstasten - går til det første alternativet i en gruppe med alternativknapper, når gruppa ikke har et forhåndsvalgt alternativ.
+- Tab - går til hele gruppa med alternativer.
 ./Group.stories

@@ -9,8 +9,6 @@
 
 <div align="center">
 
----
-
 </div>
 
 ## 📖 About Designsystemet
@@ -19,8 +17,6 @@ Designsystemet is a collection of important design elements, components and patt
 
 Our goal is to create consistent and user-friendly experiences in digital solutions for public services, making them more efficient and reliable.
 
----
-
 ## 🔗 Links
 
 [Storybook](https://storybook.designsystemet.no/) - Preview for React components.
@@ -28,8 +24,6 @@ Our goal is to create consistent and user-friendly experiences in digital soluti
 [Storefront](https://designsystemet.no/) - General documentation about the design system.
 
 [Theme](https://theme.designsystemet.no/) - Theme builder.
-
----
 
 ## 📦 Packages
 
@@ -41,13 +35,6 @@ Our goal is to create consistent and user-friendly experiences in digital soluti
 
 [`@digdir/designsystemet-react`](https://www.npmjs.com/package/@digdir/designsystemet-react) - React implementation of Designsystemet components.
 
-### Deprecated
-
-[`@digdir/design-system-react`](https://www.npmjs.com/package/@digdir/design-system-react) – Replaced by [`@digdir/designsystemet-react`](https://www.npmjs.com/package/@digdir/designsystemet-react). Contains legacy components that are no longer maintained
-
-[`@digdir/design-system-tokens`](https://www.npmjs.com/package/@digdir/design-system-tokens) – Renamed to [`@digdir/designsystemet-theme`](https://www.npmjs.com/package/@digdir/designsystemet-theme)
-
----
 
 ## 🚀 Get started
 
@@ -55,17 +42,25 @@ Follow these steps to get started with the React components.
 
 ### 1. Install the packages
 
-```sh
-npm i @digdir/designsystemet-react @digdir/designsystemet-theme @digdir/designsystemet-css
-```
-
-#### Typescript
-
-If you use Typescript, make sure you have typescript >= 3.8 as `devDependencies`:
+Depending on your needs and technology stack install the relevant packages
 
 ```sh
-npm i typescript --save-dev
+npm i @digdir/designsystemet
+npm i @digdir/designsystemet-css
+npm i @digdir/designsystemet-theme 
+npm i @digdir/designsystemet-react 
 ```
+
+#### 1.1 Custom theme
+
+
+You can create your own theme to use with the Designsystemet packages by going to our [theme-builder](https://theme.designsystemet.no/).
+
+Designsystemet theming is defined using [design-tokens](https://www.uxpin.com/studio/blog/what-are-design-tokens). 
+This is done so that you can use [Token Studio](https://tokens.studio/) to sync your theme in code with [Designsystemet Figma UI kit](https://www.figma.com/community/file/1322138390374166141/designsystemet-core-ui-kit), in addition to provide future flexibility.
+
+Run `npx @digdir/designsystemet tokens build` to build CSS files for your custom theme (from the design-tokens).
+Using your own built CSS theme file you can skip using the `@digdir/designsystemet-theme` package.
 
 ### 2. Font
 
@@ -112,13 +107,70 @@ import { Button } from '@digdir/designsystemet-react';
 
 `@digdir/designsystemet-theme` and `@digdir/designsystemet-css` only needs to be imported once.
 
----
+### 4. Add TypeScript types for colors
+
+Because color names depend on which theme is being used, you have to add the following to your `tsconfig.json` to
+use all your colors in the components which have a `data-color` prop:
+
+#### When using `@digdir/designsystemet-theme`
+
+```jsonc
+{
+  // ...other settings
+  "compilerOptions": {
+    // ...other compilerOptions
+    "types": [
+      // ...other types
+      "@digdir/designsystemet-theme/colors.d.ts"
+      ]
+  },
+}
+```
+
+#### When using a custom theme
+The CLI `designsystemet tokens build` command will output a `colors.d.ts` file to your chosen output directory.
+In the example, replace `<your-path>` with the actual path you used when running the command.
+
+```jsonc
+{
+  // ...other settings
+  "compilerOptions": {
+    // ...other compilerOptions
+    "types": [
+      // ...other types
+      "<your-path>/colors.d.ts"
+      ]
+  },
+}
+```
+
+### 5. Add editor hints for data-color & data-size on HTML elements (optional)
+
+You may want editor hints for `data-color` and `data-size` attributes on HTML elements
+like `<span>` or `<div>`, since these attributes can affect components nested within
+these elements.
+
+This requires augmenting React's built-in types, and is therefore opt-in. If you want this,
+add the following to your `tsconfig.json`:
+
+```jsonc
+{
+  // ...other settings
+  "compilerOptions": {
+    // ...other compilerOptions
+    "types": [
+      // ...other types
+      "@digdir/designsystemet-react/react-types.d.ts"
+      ]
+  },
+}
+```
+
+
 
 ## 🫶 Contributing
 
 Learn how you can contribute to this project by reading our [Code of Conduct](./CODE_OF_CONDUCT.md) and [Contributing Guide](./CONTRIBUTING.md).
-
----
 
 ## 💪 Contributors
 
@@ -128,8 +180,9 @@ We are lucky to have a great group of people who help with the design system.
   <img src="https://contrib.rocks/image?repo=digdir/designsystem" />
 </a>
 
----
+<br />
+<br />
 
-## 📃 License
+<a href="https://www.chromatic.com/"><img src="https://user-images.githubusercontent.com/321738/84662277-e3db4f80-af1b-11ea-88f5-91d67a5e59f6.png" width="153" height="30" alt="Chromatic" /></a>
 
-Designsystemet is [MIT licensed](./LICENSE).
+Thanks to [Chromatic](https://www.chromatic.com/) for providing the visual testing platform that helps us review UI changes and catch visual regressions.

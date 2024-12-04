@@ -2,43 +2,50 @@ import { Slot } from '@radix-ui/react-slot';
 import cl from 'clsx/lite';
 import { Fragment, forwardRef } from 'react';
 import type { HTMLAttributes, ReactNode } from 'react';
+import type { Color } from '../../colors';
+import type { DefaultProps, Size } from '../../types';
+import type { MergeRight } from '../../utilities';
 
-export type AvatarProps = {
-  /**
-   * The name of the person the avatar represents.
-   */
-  'aria-label': string;
-  /**
-   * The color of the avatar.
-   *
-   * @default 'accent'
-   */
-  color?: 'accent' | 'neutral' | 'brand1' | 'brand2' | 'brand3';
-  /**
-   * The size of the avatar.
-   *
-   * @default 'md'
-   */
-  size?: 'xs' | 'sm' | 'md' | 'lg';
-  /**
-   * The shape of the avatar.
-   *
-   * @default 'circle'
-   */
-  variant?: 'circle' | 'square';
-  /**
-   * Image, icon or initials to display inside the avatar.
-   *
-   * Gets `aria-hidden="true"`
-   */
-  children?: ReactNode;
-} & Omit<HTMLAttributes<HTMLSpanElement>, 'aria-label'>;
+export type AvatarProps = MergeRight<
+  DefaultProps & HTMLAttributes<HTMLSpanElement>,
+  {
+    /**
+     * The name of the person the avatar represents.
+     */
+    'aria-label': string;
+    /**
+     * The color of the avatar.
+     * @default accent
+     */
+    'data-color'?: Color;
+    /**
+     * The size of the avatar.
+     */
+    'data-size'?: 'xs' | Size;
+    /**
+     * The shape of the avatar.
+     *
+     * @default 'circle'
+     */
+    variant?: 'circle' | 'square';
+    /**
+     * Initials to display inside the avatar.
+     */
+    initials?: string;
+    /**
+     * Image, icon or initials to display inside the avatar.
+     *
+     * Gets `aria-hidden="true"`
+     */
+    children?: ReactNode;
+  }
+>;
 
 /**
  * Avatars are used to represent people or entities.
  *
  * @example
- * <Avatar aria-label="John Doe">JD</Avatar>
+ * <Avatar aria-label="John Doe" initials="JD" />
  *
  * @example
  * <Avatar aria-label="John Doe">
@@ -53,29 +60,28 @@ export type AvatarProps = {
 export const Avatar = forwardRef<HTMLSpanElement, AvatarProps>(function Avatar(
   {
     'aria-label': ariaLabel,
-    color = 'accent',
-    size = 'md',
     variant = 'circle',
     className,
     children,
+    initials,
     ...rest
   },
   ref,
 ) {
-  const Component = children && typeof children !== 'string' ? Slot : Fragment;
+  const useSlot = children && typeof children !== 'string';
+  const Component = useSlot ? Slot : Fragment;
 
   return (
     <span
       ref={ref}
       className={cl('ds-avatar', className)}
       data-variant={variant}
-      data-color={color}
-      data-size={size}
+      data-initials={initials}
       role='img'
       aria-label={ariaLabel}
       {...rest}
     >
-      <Component {...(children ? { 'aria-hidden': true } : {})}>
+      <Component {...(useSlot ? { 'aria-hidden': true } : {})}>
         {children}
       </Component>
     </span>

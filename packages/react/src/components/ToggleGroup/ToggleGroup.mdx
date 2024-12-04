@@ -1,5 +1,6 @@
 import { Meta, Canvas, Controls, Primary } from '@storybook/blocks';
-
+import { CssVariables } from '@doc-components';
+import css from '@digdir/designsystemet-css/togglegroup.css?inline';
 import * as ToggleGroupStories from './ToggleGroup.stories';
 
 <Meta of={ToggleGroupStories} />
@@ -96,3 +97,7 @@ Vi använder `roving tabindex` för att hantera fokusförflyttning mellan knappa
 - `Pil höger` Flyttar fokus till nästa knapp i gruppen.
 - `Home` Går till första knappen i gruppen.
 - `End` Går till sista knappen i gruppen.
+
+## CSS Variabler
+
+<CssVariables css={css} />

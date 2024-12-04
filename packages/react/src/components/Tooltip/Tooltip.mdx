@@ -1,13 +1,38 @@
 import { Meta, Canvas, Controls, Primary } from '@storybook/blocks';
-
+import { CssVariables } from '@doc-components';
+import css from '@digdir/designsystemet-css/tooltip.css?inline';
 import * as TooltipStories from './Tooltip.stories.tsx';
 
 <Meta of={TooltipStories} />
 
 # Tooltip
 
+`Tooltip` brukes for å vise korte forklaringer til brukeren. 
+
 <Primary />
 <Controls />
+
+## Så här använder du `Tooltip`
+
+Du kan antingen skicka in en `string` eller ett element som `children`. Om du skickar in en `string`, kommer den att placeras i ett `<span>`.
+
+```tsx
+import { Tooltip } from '@digdir/designsystemet-react';
+
+// bara string, renderar ett `span`
+<Tooltip content="Visas i tooltip">
+  Trigger
+</Tooltip>
+
+// med element, renderar ditt element
+<Tooltip content="Visas i tooltip">
+  <MyButton>Trigger</MyButton>
+</Tooltip>
+```
+
+## Med `string`
+
+<Canvas of={TooltipStories.WithString} />
 
 ## Placering
 
@@ -20,3 +45,7 @@ import * as TooltipStories from './Tooltip.stories.tsx';
 ## Portal
 
 <Canvas of={TooltipStories.Portal} />
+
+## CSS Variabler
+
+<CssVariables css={css} />

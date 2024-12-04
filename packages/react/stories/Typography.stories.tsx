@@ -12,7 +12,7 @@ export const ExempelText: StoryFn = () => (
   <>
     <Heading
       level={1}
-      size='xl'
+      data-size='xl'
       style={{ marginBottom: 'var(--ds-spacing-2)' }}
     >
       Samordnad registeranmälan (H1)
@@ -27,7 +27,7 @@ export const ExempelText: StoryFn = () => (
 
     <Heading
       level={2}
-      size='lg'
+      data-size='lg'
       style={{ marginBottom: 'var(--ds-spacing-2)' }}
     >
       När ska du använda blanketten? (H2)
@@ -42,7 +42,7 @@ export const ExempelText: StoryFn = () => (
 
     <Heading
       level={3}
-      size='md'
+      data-size='md'
       style={{ marginBottom: 'var(--ds-spacing-2)' }}
     >
       Signering (H3)
@@ -56,7 +56,7 @@ export const ExempelText: StoryFn = () => (
 
     <Heading
       level={4}
-      size='sm'
+      data-size='sm'
       style={{ marginBottom: 'var(--ds-spacing-2)' }}
     >
       Krav på roll för signering (H4)
@@ -71,7 +71,7 @@ export const ExempelText: StoryFn = () => (
 
     <Heading
       level={5}
-      size='xs'
+      data-size='xs'
       style={{ marginBottom: 'var(--ds-spacing-2)' }}
     >
       Sekretess (H5)
@@ -84,11 +84,11 @@ export const ExempelText: StoryFn = () => (
   </>
 );
 
-export const ExempleTextDark: StoryFn = () => (
-  <div data-ds-color-mode='dark'>
+export const EksempelTekstDark: StoryFn = () => (
+  <div data-color-scheme='dark'>
     <Heading
       level={1}
-      size='xl'
+      data-size='xl'
       style={{ marginBottom: 'var(--ds-spacing-2)' }}
     >
       Samordnad registeranmälan (H1)
@@ -103,7 +103,7 @@ export const ExempleTextDark: StoryFn = () => (
 
     <Heading
       level={2}
-      size='lg'
+      data-size='lg'
       style={{ marginBottom: 'var(--ds-spacing-2)' }}
     >
       När ska du använda blanketten? (H2)
@@ -118,7 +118,7 @@ export const ExempleTextDark: StoryFn = () => (
 
     <Heading
       level={3}
-      size='md'
+      data-size='md'
       style={{ marginBottom: 'var(--ds-spacing-2)' }}
     >
       Signering (H3)
@@ -132,7 +132,7 @@ export const ExempleTextDark: StoryFn = () => (
 
     <Heading
       level={4}
-      size='sm'
+      data-size='sm'
       style={{ marginBottom: 'var(--ds-spacing-2)' }}
     >
       Krav på roll för signering (H4)
@@ -147,7 +147,7 @@ export const ExempleTextDark: StoryFn = () => (
 
     <Heading
       level={5}
-      size='xs'
+      data-size='xs'
       style={{ marginBottom: 'var(--ds-spacing-2)' }}
     >
       Sekretess (H5)

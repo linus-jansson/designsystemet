@@ -1,5 +1,4 @@
 import { Meta, Canvas, Controls, Primary } from '@storybook/blocks';
-
 import * as SelectStories from './Select.stories';
 
 <Meta of={SelectStories} />
@@ -19,14 +18,16 @@ Till exempel är det inte möjligt att åsidosätta formateringen av alternative
 ## Användning
 
 ```tsx
-import { Select } from '@digdir/designsystemet-react';
+import { Select, Field } from '@digdir/designsystemet-react';
 
-<Label htmlFor='my-select'>Gör ett val</Label>
-<Select id='my-select'>
-  <Select.Option value='1'>Alternativ 1</Select.Option>
-  <Select.Option value='2'>Alternativ 2</Select.Option>
-  <Select.Option value='3'>Alternativ 3</Select.Option>
-</Select>;
+<Field>
+  <Label>Ta et valg</Label>
+  <Select>
+    <Select.Option value='1'>Alternativ 1</Select.Option>
+    <Select.Option value='2'>Alternativ 2</Select.Option>
+    <Select.Option value='3'>Alternativ 3</Select.Option>
+  </Select>
+</Field>
 ```
 
 ## Exempel

@@ -1,5 +1,6 @@
 import { Meta, Canvas, Controls, Primary } from '@storybook/blocks';
-
+import { CssVariables } from '@doc-components';
+import css from '@digdir/designsystemet-css/badge.css?inline';
 import * as BadgeStories from './Badge.stories';
 
 <Meta of={BadgeStories} />
@@ -59,3 +60,7 @@ Du kan använda komponenten inline eller flytande över ett element.
 Du kan använda komponenten inuti eller flytande på en knapp.
 
 <Canvas of={BadgeStories.InButton} />
+
+## CSS Variabler
+
+<CssVariables css={css} />

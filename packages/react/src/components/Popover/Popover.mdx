@@ -1,5 +1,6 @@
 import { Meta, Canvas, Controls, Primary } from '@storybook/blocks';
-
+import { CssVariables } from '@doc-components';
+import css from '@digdir/designsystemet-css/popover.css?inline';
 import * as PopoverStories from './Popover.stories.tsx';
 
 <Meta of={PopoverStories} />
@@ -15,10 +16,10 @@ import * as PopoverStories from './Popover.stories.tsx';
 import { Popover } from '@digdir/designsystemet-react';
 
 // med context
-<Popover.Context>
-  <Popover.Trigger>Utlösare</Popover.Trigger>
-  <Popover>Innehåll</Popover>
-</Popover.Context>
+<Popover.TriggerContext>
+  <Popover.Trigger>Trigger</Popover.Trigger>
+  <Popover>Content</Popover>
+</Popover.TriggerContext>
 
 // utan context med egen utlösare
 <Button popovertarget="my-popover">Utlösare</Button>
@@ -40,6 +41,11 @@ Detta är användbart om du har innehåll som ska stänga `Popover` när du klic
 
 <Canvas of={PopoverStories.Controlled} />
 
+### Automatisk Placering
+
+Standardbeteendet är att `Popover` alltid försöker hålla sig inom viewporten men är förankrad till triggern.  
+`Popover` har en `autoPlacement`-prop som kan användas för att stänga av den automatiska placeringen. Standardvärdet är `true`.
+
 ## Tillgänglighet
 
 Det finns inbyggd tillgänglighet i [Popover APIet](https://developer.mozilla.org/en-US/docs/Web/API/Popover_API) när det gäller öppna/stängda tillstånd och tangentbordsnavigering.
@@ -47,4 +53,8 @@ Det finns inbyggd tillgänglighet i [Popover APIet](https://developer.mozilla.or
 ## React och `popovertarget`
 När du använder `Popover` utan `Popover.Context`, kopplar du själv ihop utlösaren och `Popover`.
 Då används `popovertarget` i små bokstäver, så att alla versioner av React korrekt återger attributet.
-När du använder `@digdir/designsystemet-react` utökar vi `@types/react-dom` för att acceptera detta.
+När du använder `@digdir/designsystemet-react` utökar vi `@types/react-dom` för att tillåta detta.
+
+## CSS Variabler
+
+<CssVariables css={css} />

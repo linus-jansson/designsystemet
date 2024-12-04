@@ -1,5 +1,6 @@
 import { Meta, Canvas, Controls, Primary, ArgTypes } from '@storybook/blocks';
-
+import { CssVariables } from '@doc-components';
+import css from '@digdir/designsystemet-css/dropdown.css?inline';
 import * as DropdownStories from './Dropdown.stories';
 
 import { Dropdown } from './';
@@ -17,7 +18,7 @@ import { Dropdown } from './';
 import { Dropdown } from '@digdir/designsystemet-react';
 
 // med context
-<Dropdown.Context>
+<Dropdown.TriggerContext>
   <Dropdown.Trigger>Trigger</Dropdown.Trigger>
   <Dropdown>
     <Dropdown.Heading>Rubrik</Dropdown.Heading>
@@ -25,7 +26,7 @@ import { Dropdown } from '@digdir/designsystemet-react';
       <Dropdown.Item>Objekt</Dropdown.Item>
     </Dropdown.List>
   </Dropdown>
-</Dropdown.Context>
+</Dropdown.TriggerContext>
 
 // utan context
 <Button popovertarget="my-dropdown">Trigger</Button>
@@ -73,7 +74,11 @@ Triggen är som standard en [Button](/docs/komponenter-button--docs).
 Använd `Dropdown.Trigger` för att aktivera `Dropdown`. Du kan använda `asChild` för att ändra `Dropdown.Trigger`-elementet.
 Om du vill lägga till funktioner som `onClick`, lägg dem på ditt element och använd `asChild` på `Dropdown.Trigger`.
 
-### Referenser
+## CSS Variabler
+
+<CssVariables css={css} />
+
+### Referanser
 
 Vi använder `ul` och `li` taggar i dropdownen, valet är baserat på dessa:
 
