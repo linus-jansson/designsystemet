@@ -2020,5 +2020,15 @@
       "semantic/modes/support-color/brand4": "enabled"
     },
     "group": "Support color"
+  },
+  {
+    "id": "8f457c3f527501ca1d81b859fcfdeededc8f5301",
+    "name": "Primitives",
+    "$figmaStyleReferences": {},
+    "selectedTokenSets": {
+      "00-uppsala-kommun/colors": "enabled",
+      "00-uppsala-kommun/typography": "enabled"
+    },
+    "group": "00 Uppsala kommun"
   }
 ]
