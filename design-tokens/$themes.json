@@ -4,9 +4,7 @@
     "name": "default",
     "$figmaStyleReferences": {},
     "selectedTokenSets": {
-      "primitives/size/default": "enabled",
-      "00-uppsala-kommun/colors": "disabled",
-      "00-uppsala-kommun/typography": "disabled"
+      "primitives/size/default": "enabled"
     },
     "$figmaCollectionId": "VariableCollectionId:12597:389554",
     "$figmaModeId": "12597:19",
@@ -32,9 +30,7 @@
     "name": "compact",
     "$figmaStyleReferences": {},
     "selectedTokenSets": {
-      "primitives/size/compact": "enabled",
-      "00-uppsala-kommun/colors": "disabled",
-      "00-uppsala-kommun/typography": "disabled"
+      "primitives/size/compact": "enabled"
     },
     "$figmaCollectionId": "VariableCollectionId:12597:389554",
     "$figmaModeId": "12597:20",
@@ -63,9 +59,7 @@
       "primitives/modes/color-scheme/light/theme": "enabled",
       "primitives/modes/color-scheme/light/theme2": "enabled",
       "primitives/modes/color-scheme/light/theme3": "enabled",
-      "primitives/modes/color-scheme/light/theme4": "enabled",
-      "00-uppsala-kommun/colors": "disabled",
-      "00-uppsala-kommun/typography": "disabled"
+      "primitives/modes/color-scheme/light/theme4": "enabled"
     },
     "$figmaCollectionId": "VariableCollectionId:12597:389555",
     "$figmaModeId": "12597:21",
@@ -532,9 +526,7 @@
       "primitives/modes/color-scheme/dark/theme": "enabled",
       "primitives/modes/color-scheme/dark/theme2": "enabled",
       "primitives/modes/color-scheme/dark/theme3": "enabled",
-      "primitives/modes/color-scheme/dark/theme4": "enabled",
-      "00-uppsala-kommun/colors": "disabled",
-      "00-uppsala-kommun/typography": "disabled"
+      "primitives/modes/color-scheme/dark/theme4": "enabled"
     },
     "$figmaCollectionId": "VariableCollectionId:12597:389555",
     "$figmaModeId": "12597:22",
@@ -997,12 +989,7 @@
     "name": "primary",
     "$figmaStyleReferences": {},
     "selectedTokenSets": {
-      "primitives/modes/typography/primary/theme": "enabled",
-      "primitives/modes/typography/primary/theme2": "enabled",
-      "primitives/modes/typography/primary/theme3": "enabled",
-      "primitives/modes/typography/primary/theme4": "enabled",
-      "00-uppsala-kommun/colors": "disabled",
-      "00-uppsala-kommun/typography": "disabled"
+      "primitives/modes/typography/primary/theme": "enabled"
     },
     "$figmaCollectionId": "VariableCollectionId:12597:389556",
     "$figmaModeId": "12597:23",
@@ -1031,12 +1018,7 @@
     "name": "secondary",
     "$figmaStyleReferences": {},
     "selectedTokenSets": {
-      "primitives/modes/typography/secondary/theme": "enabled",
-      "primitives/modes/typography/secondary/theme2": "enabled",
-      "primitives/modes/typography/secondary/theme3": "enabled",
-      "primitives/modes/typography/secondary/theme4": "enabled",
-      "00-uppsala-kommun/colors": "disabled",
-      "00-uppsala-kommun/typography": "disabled"
+      "primitives/modes/typography/secondary/theme": "enabled"
     },
     "$figmaCollectionId": "VariableCollectionId:12597:389556",
     "$figmaModeId": "12597:24",
@@ -1065,9 +1047,7 @@
     "name": "digdir",
     "$figmaStyleReferences": {},
     "selectedTokenSets": {
-      "themes/theme": "enabled",
-      "00-uppsala-kommun/colors": "disabled",
-      "00-uppsala-kommun/typography": "disabled"
+      "themes/theme": "enabled"
     },
     "$figmaCollectionId": "VariableCollectionId:36528:61712",
     "$figmaModeId": "36528:0",
@@ -1166,9 +1146,7 @@
     "name": "altinn",
     "$figmaStyleReferences": {},
     "selectedTokenSets": {
-      "themes/theme2": "enabled",
-      "00-uppsala-kommun/colors": "disabled",
-      "00-uppsala-kommun/typography": "disabled"
+      "themes/theme2": "enabled"
     },
     "$figmaCollectionId": "VariableCollectionId:36528:61712",
     "$figmaModeId": "36528:1",
@@ -1267,9 +1245,7 @@
     "name": "uutilsynet",
     "$figmaStyleReferences": {},
     "selectedTokenSets": {
-      "themes/theme3": "enabled",
-      "00-uppsala-kommun/colors": "disabled",
-      "00-uppsala-kommun/typography": "disabled"
+      "themes/theme3": "enabled"
     },
     "$figmaCollectionId": "VariableCollectionId:36528:61712",
     "$figmaModeId": "36528:2",
@@ -1707,9 +1683,7 @@
       "typography.validation-message.xs": "S:529e6d2b64aadcc3edec73830f11e8cf38ba3721,"
     },
     "selectedTokenSets": {
-      "themes/theme4": "enabled",
-      "00-uppsala-kommun/colors": "disabled",
-      "00-uppsala-kommun/typography": "disabled"
+      "themes/theme4": "enabled"
     },
     "$figmaCollectionId": "VariableCollectionId:36528:61712",
     "$figmaModeId": "36528:3",
@@ -1850,9 +1824,7 @@
     "selectedTokenSets": {
       "semantic/style": "enabled",
       "semantic/color": "enabled",
-      "primitives/globals": "source",
-      "00-uppsala-kommun/colors": "disabled",
-      "00-uppsala-kommun/typography": "disabled"
+      "primitives/globals": "source"
     },
     "$figmaCollectionId": "VariableCollectionId:12597:389557",
     "$figmaModeId": "12597:25",
@@ -2065,9 +2037,7 @@
     "name": "accent",
     "$figmaStyleReferences": {},
     "selectedTokenSets": {
-      "semantic/modes/main-color/accent": "enabled",
-      "00-uppsala-kommun/colors": "disabled",
-      "00-uppsala-kommun/typography": "disabled"
+      "semantic/modes/main-color/accent": "enabled"
     },
     "group": "Main color",
     "$figmaCollectionId": "VariableCollectionId:12597:389558",
@@ -2096,9 +2066,7 @@
     "$figmaStyleReferences": {},
     "selectedTokenSets": {
       "semantic/modes/support-color/brand1": "enabled",
-      "themes/theme": "source",
-      "00-uppsala-kommun/colors": "disabled",
-      "00-uppsala-kommun/typography": "disabled"
+      "themes/theme": "source"
     },
     "$figmaCollectionId": "VariableCollectionId:12597:389559",
     "$figmaModeId": "12597:27",
@@ -2127,9 +2095,7 @@
     "$figmaStyleReferences": {},
     "selectedTokenSets": {
       "semantic/modes/support-color/brand2": "enabled",
-      "themes/theme": "source",
-      "00-uppsala-kommun/colors": "disabled",
-      "00-uppsala-kommun/typography": "disabled"
+      "themes/theme": "source"
     },
     "$figmaCollectionId": "VariableCollectionId:12597:389559",
     "$figmaModeId": "12597:28",
@@ -2158,9 +2124,7 @@
     "$figmaStyleReferences": {},
     "selectedTokenSets": {
       "semantic/modes/support-color/brand3": "enabled",
-      "themes/theme": "source",
-      "00-uppsala-kommun/colors": "disabled",
-      "00-uppsala-kommun/typography": "disabled"
+      "themes/theme": "source"
     },
     "$figmaCollectionId": "VariableCollectionId:12597:389559",
     "$figmaModeId": "12597:29",
@@ -2189,9 +2153,7 @@
     "$figmaStyleReferences": {},
     "selectedTokenSets": {
       "semantic/modes/support-color/brand4": "enabled",
-      "themes/theme": "source",
-      "00-uppsala-kommun/colors": "disabled",
-      "00-uppsala-kommun/typography": "disabled"
+      "themes/theme": "source"
     },
     "$figmaCollectionId": "VariableCollectionId:12597:389559",
     "$figmaModeId": "12597:30",
@@ -2367,9 +2329,7 @@
     "name": "uppsala-kommun",
     "$figmaStyleReferences": {},
     "selectedTokenSets": {
-      "themes/theme": "enabled",
-      "00-uppsala-kommun/colors": "disabled",
-      "00-uppsala-kommun/typography": "disabled"
+      "themes/theme": "enabled"
     },
     "group": "Theme",
     "$figmaCollectionId": "VariableCollectionId:12597:389561",
