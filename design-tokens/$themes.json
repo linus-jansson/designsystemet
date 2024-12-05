@@ -997,19 +997,7 @@
       "theme.main": "bf0f60fd47bc8a66c9c69001fefc91e776c4f7ac",
       "theme.bold": "47d80ba7c16141c40a509defb4b5203b4eba7adb",
       "theme.extra-bold": "884685acb12ab9524b30cf8c0633a82a0df0cef1",
-      "theme.regular": "f7aa6f52ae3a18fb86f58e638581cb5eebf3c0e2",
-      "theme2.main": "554ab8424d7297c375270ae44f37e38f0d4fce3b",
-      "theme2.bold": "a3d7b06bf64bda752d7d6351062725bd0f1b8992",
-      "theme2.extra-bold": "3554b85b770f1c4ec7ed574e54ad4e914e9fdf8b",
-      "theme2.regular": "44d200c3f7d264af735d1de5da5edb73fd02eecf",
-      "theme3.main": "612b034e5a02fb3911c6102697bdf5bcbac0db90",
-      "theme3.bold": "d47a9be19e61a6269a4bcc3afdebe556e98f3a4d",
-      "theme3.extra-bold": "8dc8d597a88afbc240a77ace510faa4cc6682511",
-      "theme3.regular": "ae5059316743db8427ec8002dcd65c80b4166c06",
-      "theme4.main": "dd6d29dff7d9193faf2dc194ad21a8a848bb493b",
-      "theme4.bold": "5140af5f3d5b8ce35e7980d327bd1d47afc29ab9",
-      "theme4.extra-bold": "00aedc53d33207996d101e4b50beecdd65e02548",
-      "theme4.regular": "db371b71453f32d5bc9a1edc4d45f90913ed5ec9"
+      "theme.regular": "f7aa6f52ae3a18fb86f58e638581cb5eebf3c0e2"
     },
     "group": "Typography"
   },
@@ -1026,19 +1014,7 @@
       "theme.main": "bf0f60fd47bc8a66c9c69001fefc91e776c4f7ac",
       "theme.bold": "47d80ba7c16141c40a509defb4b5203b4eba7adb",
       "theme.extra-bold": "884685acb12ab9524b30cf8c0633a82a0df0cef1",
-      "theme.regular": "f7aa6f52ae3a18fb86f58e638581cb5eebf3c0e2",
-      "theme2.main": "554ab8424d7297c375270ae44f37e38f0d4fce3b",
-      "theme2.bold": "a3d7b06bf64bda752d7d6351062725bd0f1b8992",
-      "theme2.extra-bold": "3554b85b770f1c4ec7ed574e54ad4e914e9fdf8b",
-      "theme2.regular": "44d200c3f7d264af735d1de5da5edb73fd02eecf",
-      "theme3.main": "612b034e5a02fb3911c6102697bdf5bcbac0db90",
-      "theme3.bold": "d47a9be19e61a6269a4bcc3afdebe556e98f3a4d",
-      "theme3.extra-bold": "8dc8d597a88afbc240a77ace510faa4cc6682511",
-      "theme3.regular": "ae5059316743db8427ec8002dcd65c80b4166c06",
-      "theme4.main": "dd6d29dff7d9193faf2dc194ad21a8a848bb493b",
-      "theme4.bold": "5140af5f3d5b8ce35e7980d327bd1d47afc29ab9",
-      "theme4.extra-bold": "00aedc53d33207996d101e4b50beecdd65e02548",
-      "theme4.regular": "db371b71453f32d5bc9a1edc4d45f90913ed5ec9"
+      "theme.regular": "f7aa6f52ae3a18fb86f58e638581cb5eebf3c0e2"
     },
     "group": "Typography"
   },
