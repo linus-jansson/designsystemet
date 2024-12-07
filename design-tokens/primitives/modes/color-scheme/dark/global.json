@@ -3,55 +3,55 @@
     "blue": {
       "1": {
         "$type": "color",
-        "$value": "#031a3f"
+        "$value": "{functional-colors.blue-functional.875}"
       },
       "2": {
         "$type": "color",
-        "$value": "#032150"
+        "$value": "{functional-colors.blue-functional.800}"
       },
       "3": {
         "$type": "color",
-        "$value": "#052d6c"
+        "$value": "{functional-colors.blue-functional.775}"
       },
       "4": {
         "$type": "color",
-        "$value": "#063988"
+        "$value": "{functional-colors.blue-functional.725}"
       },
       "5": {
         "$type": "color",
-        "$value": "#0745a6"
+        "$value": "{functional-colors.blue-functional.700}"
       },
       "6": {
         "$type": "color",
-        "$value": "#084bb4"
+        "$value": "{functional-colors.blue-functional.650}"
       },
       "7": {
         "$type": "color",
-        "$value": "#276cd6"
+        "$value": "{functional-colors.blue-functional.500}"
       },
       "8": {
         "$type": "color",
-        "$value": "#a3c0ed"
+        "$value": "{functional-colors.blue-functional.250}"
       },
       "9": {
         "$type": "color",
-        "$value": "#5e91e0"
+        "$value": "{functional-colors.blue-functional.400}"
       },
       "10": {
         "$type": "color",
-        "$value": "#3d7ada"
+        "$value": "{functional-colors.blue-functional.450}"
       },
       "11": {
         "$type": "color",
-        "$value": "#1a62d3"
+        "$value": "{functional-colors.blue-functional.550}"
       },
       "12": {
         "$type": "color",
-        "$value": "#79a4e5"
+        "$value": "{functional-colors.blue-functional.300}"
       },
       "13": {
         "$type": "color",
-        "$value": "#d6e3f7"
+        "$value": "{functional-colors.blue-functional.150}"
       },
       "contrast-1": {
         "$type": "color",
@@ -341,7 +341,7 @@
       },
       "8": {
         "$type": "color",
-        "$value": "#dabc4c"
+        "$value": "#FEDD00"
       },
       "9": {
         "$type": "color",
