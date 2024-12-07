@@ -3,55 +3,55 @@
     "accent": {
       "1": {
         "$type": "color",
-        "$value": "#001c36"
+        "$value": "{functional-colors.blue-functional.875}"
       },
       "2": {
         "$type": "color",
-        "$value": "#002545"
+        "$value": "{functional-colors.blue-functional.800}"
       },
       "3": {
         "$type": "color",
-        "$value": "#00315b"
+        "$value": "{functional-colors.blue-functional.775}"
       },
       "4": {
         "$type": "color",
-        "$value": "#013f75"
+        "$value": "{functional-colors.blue-functional.725}"
       },
       "5": {
         "$type": "color",
-        "$value": "#014b8e"
+        "$value": "{functional-colors.blue-functional.700}"
       },
       "6": {
         "$type": "color",
-        "$value": "#01539b"
+        "$value": "{functional-colors.blue-functional.650}"
       },
       "7": {
         "$type": "color",
-        "$value": "#1971c0"
+        "$value": "{functional-colors.blue-functional.500}"
       },
       "8": {
         "$type": "color",
-        "$value": "#9bc2e4"
+        "$value": "{functional-colors.blue-functional.250}"
       },
       "9": {
         "$type": "color",
-        "$value": "#4b90ce"
+        "$value": "{functional-colors.blue-functional.400}"
       },
       "10": {
         "$type": "color",
-        "$value": "#277ac4"
+        "$value": "{functional-colors.blue-functional.450}"
       },
       "11": {
         "$type": "color",
-        "$value": "#0163ba"
+        "$value": "{functional-colors.blue-functional.550}"
       },
       "12": {
         "$type": "color",
-        "$value": "#72a8d9"
+        "$value": "{functional-colors.blue-functional.300}"
       },
       "13": {
         "$type": "color",
-        "$value": "#d1e3f3"
+        "$value": "{functional-colors.blue-functional.150}"
       },
       "contrast-1": {
         "$type": "color",
@@ -59,7 +59,7 @@
       },
       "contrast-2": {
         "$type": "color",
-        "$value": "#0d1823"
+        "$value": "#000000"
       }
     },
     "neutral": {
