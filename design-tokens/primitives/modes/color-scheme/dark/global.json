@@ -189,55 +189,55 @@
     "purple": {
       "1": {
         "$type": "color",
-        "$value": "#251238"
+        "$value": "{brand-colors.uppsala-purple.900}"
       },
       "2": {
         "$type": "color",
-        "$value": "#301748"
+        "$value": "{brand-colors.uppsala-purple.850}"
       },
       "3": {
         "$type": "color",
-        "$value": "#402060"
+        "$value": "{brand-colors.uppsala-purple.775}"
       },
       "4": {
         "$type": "color",
-        "$value": "#52287a"
+        "$value": "{brand-colors.uppsala-purple.750}"
       },
       "5": {
         "$type": "color",
-        "$value": "#643196"
+        "$value": "{brand-colors.uppsala-purple.725}"
       },
       "6": {
         "$type": "color",
-        "$value": "#6b399d"
+        "$value": "{brand-colors.uppsala-purple.650}"
       },
       "7": {
         "$type": "color",
-        "$value": "#865daf"
+        "$value": "{brand-colors.uppsala-purple.550}"
       },
       "8": {
         "$type": "color",
-        "$value": "#c9b7db"
+        "$value": "{brand-colors.uppsala-purple.200}"
       },
       "9": {
         "$type": "color",
-        "$value": "#b39acd"
+        "$value": "{brand-colors.uppsala-purple.350}"
       },
       "10": {
         "$type": "color",
-        "$value": "#a282c1"
+        "$value": "{brand-colors.uppsala-purple.450}"
       },
       "11": {
         "$type": "color",
-        "$value": "#906ab5"
+        "$value": "{brand-colors.uppsala-purple.550}"
       },
       "12": {
         "$type": "color",
-        "$value": "#b298cc"
+        "$value": "{brand-colors.uppsala-purple.275}"
       },
       "13": {
         "$type": "color",
-        "$value": "#e7dfef"
+        "$value": "{brand-colors.uppsala-purple.150}"
       },
       "contrast-1": {
         "$type": "color",
@@ -245,7 +245,7 @@
       },
       "contrast-2": {
         "$type": "color",
-        "$value": "#18141b"
+        "$value": "{brand-colors.uppsala-purple.950}"
       }
     },
     "red": {
