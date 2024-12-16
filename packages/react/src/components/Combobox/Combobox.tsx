@@ -293,7 +293,7 @@ export const ComboboxComponent = forwardRef<HTMLInputElement, ComboboxProps>(
       );
 
       !multiple && setOpen(false);
-      refs.domReference.current?.focus();
+      (refs.domReference.current as HTMLElement)?.focus();
     };
 
     const debouncedHandleSelectOption = useDebounceCallback(
