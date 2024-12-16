@@ -1,0 +1,128 @@
+{
+  "ua-font-size": {
+    "1": {
+      "$type": "fontSizes",
+      "$value": "12"
+    },
+    "2": {
+      "$type": "fontSizes",
+      "$value": "14"
+    },
+    "3": {
+      "$type": "fontSizes",
+      "$value": "16"
+    },
+    "4": {
+      "$type": "fontSizes",
+      "$value": "18"
+    },
+    "5": {
+      "$type": "fontSizes",
+      "$value": "20"
+    },
+    "6": {
+      "$type": "fontSizes",
+      "$value": "22"
+    },
+    "7": {
+      "$type": "fontSizes",
+      "$value": "24"
+    },
+    "8": {
+      "$type": "fontSizes",
+      "$value": "28"
+    },
+    "9": {
+      "$type": "fontSizes",
+      "$value": "36"
+    },
+    "10": {
+      "$type": "fontSizes",
+      "$value": "48"
+    },
+    "11": {
+      "$type": "fontSizes",
+      "$value": "60"
+    },
+    "14": {
+      "$type": "fontSizes",
+      "$value": "80"
+    }
+  },
+  "ua-font-families": {
+    "primary": {
+      "$type": "fontFamilies",
+      "$value": "Source Sans 3"
+    },
+    "secondary": {
+      "$type": "fontFamilies",
+      "$value": "Source Sans 3"
+    }
+  },
+  "ua-font-weight": {
+    "regular": {
+      "$type": "fontWeights",
+      "$value": "Regular"
+    },
+    "semi-bold": {
+      "$type": "fontWeights",
+      "$value": "SemiBold"
+    },
+    "bold": {
+      "$type": "fontWeights",
+      "$value": "Bold"
+    }
+  },
+  "ua-line-height": {
+    "sm": {
+      "$type": "lineHeights",
+      "$value": "100%"
+    },
+    "md": {
+      "$type": "lineHeights",
+      "$value": "115%"
+    },
+    "lg": {
+      "$type": "lineHeights",
+      "$value": "130%"
+    }
+  },
+  "ua-letter-spacing": {
+    "1": {
+      "$type": "letterSpacing",
+      "$value": "-2.5%"
+    },
+    "2": {
+      "$type": "letterSpacing",
+      "$value": "-2%"
+    },
+    "3": {
+      "$type": "letterSpacing",
+      "$value": "-1.5%"
+    },
+    "4": {
+      "$type": "letterSpacing",
+      "$value": "-1%"
+    },
+    "5": {
+      "$type": "letterSpacing",
+      "$value": "-0.9%"
+    },
+    "6": {
+      "$type": "letterSpacing",
+      "$value": "-0.5%"
+    },
+    "7": {
+      "$type": "letterSpacing",
+      "$value": "0"
+    },
+    "8": {
+      "$type": "letterSpacing",
+      "$value": "0.6%"
+    },
+    "9": {
+      "$type": "letterSpacing",
+      "$value": "1%"
+    }
+  }
+}

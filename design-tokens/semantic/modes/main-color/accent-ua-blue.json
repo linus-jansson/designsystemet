@@ -3,63 +3,63 @@
     "main": {
       "background-default": {
         "$type": "color",
-        "$value": "{color.accent.background-default}"
+        "$value": "{color.accent-ua-blue.background-default}"
       },
       "background-subtle": {
         "$type": "color",
-        "$value": "{color.accent.background-subtle}"
+        "$value": "{color.accent-ua-blue.background-subtle}"
       },
       "surface-default": {
         "$type": "color",
-        "$value": "{color.accent.surface-default}"
+        "$value": "{color.accent-ua-blue.surface-default}"
       },
       "surface-hover": {
         "$type": "color",
-        "$value": "{color.accent.surface-hover}"
+        "$value": "{color.accent-ua-blue.surface-hover}"
       },
       "surface-active": {
         "$type": "color",
-        "$value": "{color.accent.surface-active}"
+        "$value": "{color.accent-ua-blue.surface-active}"
       },
       "border-subtle": {
         "$type": "color",
-        "$value": "{color.accent.border-subtle}"
+        "$value": "{color.accent-ua-blue.border-subtle}"
       },
       "border-default": {
         "$type": "color",
-        "$value": "{color.accent.border-default}"
+        "$value": "{color.accent-ua-blue.border-default}"
       },
       "border-strong": {
         "$type": "color",
-        "$value": "{color.accent.border-strong}"
+        "$value": "{color.accent-ua-blue.border-strong}"
       },
       "base-default": {
         "$type": "color",
-        "$value": "{color.accent.base-default}"
+        "$value": "{color.accent-ua-blue.base-default}"
       },
       "base-hover": {
         "$type": "color",
-        "$value": "{color.accent.base-hover}"
+        "$value": "{color.accent-ua-blue.base-hover}"
       },
       "base-active": {
         "$type": "color",
-        "$value": "{color.accent.base-active}"
+        "$value": "{color.accent-ua-blue.base-active}"
       },
       "text-subtle": {
         "$type": "color",
-        "$value": "{color.accent.text-subtle}"
+        "$value": "{color.accent-ua-blue.text-subtle}"
       },
       "text-default": {
         "$type": "color",
-        "$value": "{color.accent.text-default}"
+        "$value": "{color.accent-ua-blue.text-default}"
       },
       "contrast-default": {
         "$type": "color",
-        "$value": "{color.accent.contrast-default}"
+        "$value": "{color.accent-ua-blue.contrast-default}"
       },
       "contrast-subtle": {
         "$type": "color",
-        "$value": "{color.accent.contrast-subtle}"
+        "$value": "{color.accent-ua-blue.contrast-subtle}"
       }
     }
   }
