@@ -19,7 +19,9 @@
       "font-size.8": "78102989f475c7dda2f54e9023179a1724fe5ac5",
       "font-size.9": "8634f3b2c8092346c03510f5066f931284bd26ce",
       "font-size.10": "bb76190680abebdc4207b036b73b1a0956d6dbd7",
-      "font-size.11": "a0fd1d4c319a7a3739667ea1b804b4a98b5d03e5"
+      "font-size.11": "a0fd1d4c319a7a3739667ea1b804b4a98b5d03e5",
+      "letter-spacing.7": "4304db7784ce4e7ff796e628b7bcd5c9fe21d1b0",
+      "font-size.14": "f8dc16e292a26cb758046a90c41d57a0356fde53"
     }
   },
   {
@@ -28,9 +30,10 @@
     "$figmaModeId": "12516:0",
     "name": "testar",
     "selectedTokenSets": {
-      "themes/testar": "enabled"
+      "themes/testar": "enabled",
+      "primitives/modes/typography/primary/testar": "source",
+      "primitives/modes/typography/secondary/testar": "source"
     },
-    "group": "Theme",
     "$figmaVariableReferences": {
       "color.accent-ua-blue.1": "253f9722d5fca6fc2fa27e1c93c69ee5dfb52664",
       "color.accent-ua-blue.2": "1d187c6df98e688221199dad7c54575ff52cf280",
@@ -148,7 +151,9 @@
       "border-radius.5": "a684ec6b5911b147d4d36e9262d0aa86a6060ef8",
       "border-radius.base": "4b14d25fc6a9e81b227df0817ad3109e8cdd5fe7",
       "border-radius.scale": "6cf6bb984bbb674e13c21972f3d7a7d505c0faae"
-    }
+    },
+    "$figmaStyleReferences": {},
+    "group": "Theme"
   },
   {
     "id": "368d753fcac4455f289500eaa42e70dc0a03522f",
