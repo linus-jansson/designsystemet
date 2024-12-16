@@ -127,7 +127,7 @@
     "brand1": {
       "1": {
         "$type": "color",
-        "$value": "#fefefe"
+        "$value": "{brand-colors.uppsala-blue.75}"
       },
       "2": {
         "$type": "color",
@@ -189,7 +189,7 @@
     "brand2": {
       "1": {
         "$type": "color",
-        "$value": "#fefdfe"
+        "$value": "{brand-colors.uppsala-purple.75}"
       },
       "2": {
         "$type": "color",
@@ -251,7 +251,7 @@
     "brand3": {
       "1": {
         "$type": "color",
-        "$value": "#fefefe"
+        "$value": "{brand-colors.uppsala-green.75}"
       },
       "2": {
         "$type": "color",
@@ -313,7 +313,7 @@
     "brand4": {
       "1": {
         "$type": "color",
-        "$value": "#fefefe"
+        "$value": "{brand-colors.uppsala-gray.75}"
       },
       "2": {
         "$type": "color",
