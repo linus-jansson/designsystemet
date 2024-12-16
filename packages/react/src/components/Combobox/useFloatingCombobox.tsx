@@ -1,4 +1,6 @@
 import {
+  type FloatingContext,
+  type UseFloatingReturn,
   autoUpdate,
   flip,
   size as floatingSize,
@@ -18,8 +20,19 @@ import { useComboboxId, useComboboxIdDispatch } from './ComboboxIdContext';
 type UseFloatingComboboxProps = {
   listRef: MutableRefObject<(HTMLElement | null)[]>;
 };
+type UseFloatingComboboxReturn = {
+  open: boolean;
+  setOpen: React.Dispatch<React.SetStateAction<boolean>>;
+  activeIndex: number | null;
+  refs: UseFloatingReturn['refs'];
+  floatingStyles: React.CSSProperties;
+  context: FloatingContext<HTMLElement>;
+  getReferenceProps: ReturnType<typeof useInteractions>['getReferenceProps'];
+  getFloatingProps: ReturnType<typeof useInteractions>['getFloatingProps'];
+  getItemProps: ReturnType<typeof useInteractions>['getItemProps'];
+};
 
-export const useFloatingCombobox = ({ listRef }: UseFloatingComboboxProps) => {
+export const useFloatingCombobox = ({ listRef }: UseFloatingComboboxProps) : UseFloatingComboboxReturn => {
   const [open, setOpen] = useState(false);
 
   const { activeIndex } = useComboboxId();
