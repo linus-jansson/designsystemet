@@ -3,456 +3,456 @@
     "accent-ua-blue": {
       "1": {
         "$type": "color",
-        "$value": "{testar.accent-ua-blue.1}"
+        "$value": "{uppsala-kommun.accent-ua-blue.1}"
       },
       "2": {
         "$type": "color",
-        "$value": "{testar.accent-ua-blue.2}"
+        "$value": "{uppsala-kommun.accent-ua-blue.2}"
       },
       "3": {
         "$type": "color",
-        "$value": "{testar.accent-ua-blue.3}"
+        "$value": "{uppsala-kommun.accent-ua-blue.3}"
       },
       "4": {
         "$type": "color",
-        "$value": "{testar.accent-ua-blue.4}"
+        "$value": "{uppsala-kommun.accent-ua-blue.4}"
       },
       "5": {
         "$type": "color",
-        "$value": "{testar.accent-ua-blue.5}"
+        "$value": "{uppsala-kommun.accent-ua-blue.5}"
       },
       "6": {
         "$type": "color",
-        "$value": "{testar.accent-ua-blue.6}"
+        "$value": "{uppsala-kommun.accent-ua-blue.6}"
       },
       "7": {
         "$type": "color",
-        "$value": "{testar.accent-ua-blue.7}"
+        "$value": "{uppsala-kommun.accent-ua-blue.7}"
       },
       "8": {
         "$type": "color",
-        "$value": "{testar.accent-ua-blue.8}"
+        "$value": "{uppsala-kommun.accent-ua-blue.8}"
       },
       "9": {
         "$type": "color",
-        "$value": "{testar.accent-ua-blue.9}"
+        "$value": "{uppsala-kommun.accent-ua-blue.9}"
       },
       "10": {
         "$type": "color",
-        "$value": "{testar.accent-ua-blue.10}"
+        "$value": "{uppsala-kommun.accent-ua-blue.10}"
       },
       "11": {
         "$type": "color",
-        "$value": "{testar.accent-ua-blue.11}"
+        "$value": "{uppsala-kommun.accent-ua-blue.11}"
       },
       "12": {
         "$type": "color",
-        "$value": "{testar.accent-ua-blue.12}"
+        "$value": "{uppsala-kommun.accent-ua-blue.12}"
       },
       "13": {
         "$type": "color",
-        "$value": "{testar.accent-ua-blue.13}"
+        "$value": "{uppsala-kommun.accent-ua-blue.13}"
       },
       "contrast-1": {
         "$type": "color",
-        "$value": "{testar.accent-ua-blue.contrast-1}"
+        "$value": "{uppsala-kommun.accent-ua-blue.contrast-1}"
       },
       "contrast-2": {
         "$type": "color",
-        "$value": "{testar.accent-ua-blue.contrast-2}"
+        "$value": "{uppsala-kommun.accent-ua-blue.contrast-2}"
       }
     },
     "accent-ua-yellow": {
       "1": {
         "$type": "color",
-        "$value": "{testar.accent-ua-yellow.1}"
+        "$value": "{uppsala-kommun.accent-ua-yellow.1}"
       },
       "2": {
         "$type": "color",
-        "$value": "{testar.accent-ua-yellow.2}"
+        "$value": "{uppsala-kommun.accent-ua-yellow.2}"
       },
       "3": {
         "$type": "color",
-        "$value": "{testar.accent-ua-yellow.3}"
+        "$value": "{uppsala-kommun.accent-ua-yellow.3}"
       },
       "4": {
         "$type": "color",
-        "$value": "{testar.accent-ua-yellow.4}"
+        "$value": "{uppsala-kommun.accent-ua-yellow.4}"
       },
       "5": {
         "$type": "color",
-        "$value": "{testar.accent-ua-yellow.5}"
+        "$value": "{uppsala-kommun.accent-ua-yellow.5}"
       },
       "6": {
         "$type": "color",
-        "$value": "{testar.accent-ua-yellow.6}"
+        "$value": "{uppsala-kommun.accent-ua-yellow.6}"
       },
       "7": {
         "$type": "color",
-        "$value": "{testar.accent-ua-yellow.7}"
+        "$value": "{uppsala-kommun.accent-ua-yellow.7}"
       },
       "8": {
         "$type": "color",
-        "$value": "{testar.accent-ua-yellow.8}"
+        "$value": "{uppsala-kommun.accent-ua-yellow.8}"
       },
       "9": {
         "$type": "color",
-        "$value": "{testar.accent-ua-yellow.9}"
+        "$value": "{uppsala-kommun.accent-ua-yellow.9}"
       },
       "10": {
         "$type": "color",
-        "$value": "{testar.accent-ua-yellow.10}"
+        "$value": "{uppsala-kommun.accent-ua-yellow.10}"
       },
       "11": {
         "$type": "color",
-        "$value": "{testar.accent-ua-yellow.11}"
+        "$value": "{uppsala-kommun.accent-ua-yellow.11}"
       },
       "12": {
         "$type": "color",
-        "$value": "{testar.accent-ua-yellow.12}"
+        "$value": "{uppsala-kommun.accent-ua-yellow.12}"
       },
       "13": {
         "$type": "color",
-        "$value": "{testar.accent-ua-yellow.13}"
+        "$value": "{uppsala-kommun.accent-ua-yellow.13}"
       },
       "contrast-1": {
         "$type": "color",
-        "$value": "{testar.accent-ua-yellow.contrast-1}"
+        "$value": "{uppsala-kommun.accent-ua-yellow.contrast-1}"
       },
       "contrast-2": {
         "$type": "color",
-        "$value": "{testar.accent-ua-yellow.contrast-2}"
+        "$value": "{uppsala-kommun.accent-ua-yellow.contrast-2}"
       }
     },
     "neutral": {
       "1": {
         "$type": "color",
-        "$value": "{testar.neutral.1}"
+        "$value": "{uppsala-kommun.neutral.1}"
       },
       "2": {
         "$type": "color",
-        "$value": "{testar.neutral.2}"
+        "$value": "{uppsala-kommun.neutral.2}"
       },
       "3": {
         "$type": "color",
-        "$value": "{testar.neutral.3}"
+        "$value": "{uppsala-kommun.neutral.3}"
       },
       "4": {
         "$type": "color",
-        "$value": "{testar.neutral.4}"
+        "$value": "{uppsala-kommun.neutral.4}"
       },
       "5": {
         "$type": "color",
-        "$value": "{testar.neutral.5}"
+        "$value": "{uppsala-kommun.neutral.5}"
       },
       "6": {
         "$type": "color",
-        "$value": "{testar.neutral.6}"
+        "$value": "{uppsala-kommun.neutral.6}"
       },
       "7": {
         "$type": "color",
-        "$value": "{testar.neutral.7}"
+        "$value": "{uppsala-kommun.neutral.7}"
       },
       "8": {
         "$type": "color",
-        "$value": "{testar.neutral.8}"
+        "$value": "{uppsala-kommun.neutral.8}"
       },
       "9": {
         "$type": "color",
-        "$value": "{testar.neutral.9}"
+        "$value": "{uppsala-kommun.neutral.9}"
       },
       "10": {
         "$type": "color",
-        "$value": "{testar.neutral.10}"
+        "$value": "{uppsala-kommun.neutral.10}"
       },
       "11": {
         "$type": "color",
-        "$value": "{testar.neutral.11}"
+        "$value": "{uppsala-kommun.neutral.11}"
       },
       "12": {
         "$type": "color",
-        "$value": "{testar.neutral.12}"
+        "$value": "{uppsala-kommun.neutral.12}"
       },
       "13": {
         "$type": "color",
-        "$value": "{testar.neutral.13}"
+        "$value": "{uppsala-kommun.neutral.13}"
       },
       "contrast-1": {
         "$type": "color",
-        "$value": "{testar.neutral.contrast-1}"
+        "$value": "{uppsala-kommun.neutral.contrast-1}"
       },
       "contrast-2": {
         "$type": "color",
-        "$value": "{testar.neutral.contrast-2}"
+        "$value": "{uppsala-kommun.neutral.contrast-2}"
       }
     },
     "brand1": {
       "1": {
         "$type": "color",
-        "$value": "{testar.brand1.1}"
+        "$value": "{uppsala-kommun.brand1.1}"
       },
       "2": {
         "$type": "color",
-        "$value": "{testar.brand1.2}"
+        "$value": "{uppsala-kommun.brand1.2}"
       },
       "3": {
         "$type": "color",
-        "$value": "{testar.brand1.3}"
+        "$value": "{uppsala-kommun.brand1.3}"
       },
       "4": {
         "$type": "color",
-        "$value": "{testar.brand1.4}"
+        "$value": "{uppsala-kommun.brand1.4}"
       },
       "5": {
         "$type": "color",
-        "$value": "{testar.brand1.5}"
+        "$value": "{uppsala-kommun.brand1.5}"
       },
       "6": {
         "$type": "color",
-        "$value": "{testar.brand1.6}"
+        "$value": "{uppsala-kommun.brand1.6}"
       },
       "7": {
         "$type": "color",
-        "$value": "{testar.brand1.7}"
+        "$value": "{uppsala-kommun.brand1.7}"
       },
       "8": {
         "$type": "color",
-        "$value": "{testar.brand1.8}"
+        "$value": "{uppsala-kommun.brand1.8}"
       },
       "9": {
         "$type": "color",
-        "$value": "{testar.brand1.9}"
+        "$value": "{uppsala-kommun.brand1.9}"
       },
       "10": {
         "$type": "color",
-        "$value": "{testar.brand1.10}"
+        "$value": "{uppsala-kommun.brand1.10}"
       },
       "11": {
         "$type": "color",
-        "$value": "{testar.brand1.11}"
+        "$value": "{uppsala-kommun.brand1.11}"
       },
       "12": {
         "$type": "color",
-        "$value": "{testar.brand1.12}"
+        "$value": "{uppsala-kommun.brand1.12}"
       },
       "13": {
         "$type": "color",
-        "$value": "{testar.brand1.13}"
+        "$value": "{uppsala-kommun.brand1.13}"
       },
       "contrast-1": {
         "$type": "color",
-        "$value": "{testar.brand1.contrast-1}"
+        "$value": "{uppsala-kommun.brand1.contrast-1}"
       },
       "contrast-2": {
         "$type": "color",
-        "$value": "{testar.brand1.contrast-2}"
+        "$value": "{uppsala-kommun.brand1.contrast-2}"
       }
     },
     "brand2": {
       "1": {
         "$type": "color",
-        "$value": "{testar.brand2.1}"
+        "$value": "{uppsala-kommun.brand2.1}"
       },
       "2": {
         "$type": "color",
-        "$value": "{testar.brand2.2}"
+        "$value": "{uppsala-kommun.brand2.2}"
       },
       "3": {
         "$type": "color",
-        "$value": "{testar.brand2.3}"
+        "$value": "{uppsala-kommun.brand2.3}"
       },
       "4": {
         "$type": "color",
-        "$value": "{testar.brand2.4}"
+        "$value": "{uppsala-kommun.brand2.4}"
       },
       "5": {
         "$type": "color",
-        "$value": "{testar.brand2.5}"
+        "$value": "{uppsala-kommun.brand2.5}"
       },
       "6": {
         "$type": "color",
-        "$value": "{testar.brand2.6}"
+        "$value": "{uppsala-kommun.brand2.6}"
       },
       "7": {
         "$type": "color",
-        "$value": "{testar.brand2.7}"
+        "$value": "{uppsala-kommun.brand2.7}"
       },
       "8": {
         "$type": "color",
-        "$value": "{testar.brand2.8}"
+        "$value": "{uppsala-kommun.brand2.8}"
       },
       "9": {
         "$type": "color",
-        "$value": "{testar.brand2.9}"
+        "$value": "{uppsala-kommun.brand2.9}"
       },
       "10": {
         "$type": "color",
-        "$value": "{testar.brand2.10}"
+        "$value": "{uppsala-kommun.brand2.10}"
       },
       "11": {
         "$type": "color",
-        "$value": "{testar.brand2.11}"
+        "$value": "{uppsala-kommun.brand2.11}"
       },
       "12": {
         "$type": "color",
-        "$value": "{testar.brand2.12}"
+        "$value": "{uppsala-kommun.brand2.12}"
       },
       "13": {
         "$type": "color",
-        "$value": "{testar.brand2.13}"
+        "$value": "{uppsala-kommun.brand2.13}"
       },
       "contrast-1": {
         "$type": "color",
-        "$value": "{testar.brand2.contrast-1}"
+        "$value": "{uppsala-kommun.brand2.contrast-1}"
       },
       "contrast-2": {
         "$type": "color",
-        "$value": "{testar.brand2.contrast-2}"
+        "$value": "{uppsala-kommun.brand2.contrast-2}"
       }
     },
     "brand3": {
       "1": {
         "$type": "color",
-        "$value": "{testar.brand3.1}"
+        "$value": "{uppsala-kommun.brand3.1}"
       },
       "2": {
         "$type": "color",
-        "$value": "{testar.brand3.2}"
+        "$value": "{uppsala-kommun.brand3.2}"
       },
       "3": {
         "$type": "color",
-        "$value": "{testar.brand3.3}"
+        "$value": "{uppsala-kommun.brand3.3}"
       },
       "4": {
         "$type": "color",
-        "$value": "{testar.brand3.4}"
+        "$value": "{uppsala-kommun.brand3.4}"
       },
       "5": {
         "$type": "color",
-        "$value": "{testar.brand3.5}"
+        "$value": "{uppsala-kommun.brand3.5}"
       },
       "6": {
         "$type": "color",
-        "$value": "{testar.brand3.6}"
+        "$value": "{uppsala-kommun.brand3.6}"
       },
       "7": {
         "$type": "color",
-        "$value": "{testar.brand3.7}"
+        "$value": "{uppsala-kommun.brand3.7}"
       },
       "8": {
         "$type": "color",
-        "$value": "{testar.brand3.8}"
+        "$value": "{uppsala-kommun.brand3.8}"
       },
       "9": {
         "$type": "color",
-        "$value": "{testar.brand3.9}"
+        "$value": "{uppsala-kommun.brand3.9}"
       },
       "10": {
         "$type": "color",
-        "$value": "{testar.brand3.10}"
+        "$value": "{uppsala-kommun.brand3.10}"
       },
       "11": {
         "$type": "color",
-        "$value": "{testar.brand3.11}"
+        "$value": "{uppsala-kommun.brand3.11}"
       },
       "12": {
         "$type": "color",
-        "$value": "{testar.brand3.12}"
+        "$value": "{uppsala-kommun.brand3.12}"
       },
       "13": {
         "$type": "color",
-        "$value": "{testar.brand3.13}"
+        "$value": "{uppsala-kommun.brand3.13}"
       },
       "contrast-1": {
         "$type": "color",
-        "$value": "{testar.brand3.contrast-1}"
+        "$value": "{uppsala-kommun.brand3.contrast-1}"
       },
       "contrast-2": {
         "$type": "color",
-        "$value": "{testar.brand3.contrast-2}"
+        "$value": "{uppsala-kommun.brand3.contrast-2}"
       }
     },
     "brand4": {
       "1": {
         "$type": "color",
-        "$value": "{testar.brand4.1}"
+        "$value": "{uppsala-kommun.brand4.1}"
       },
       "2": {
         "$type": "color",
-        "$value": "{testar.brand4.2}"
+        "$value": "{uppsala-kommun.brand4.2}"
       },
       "3": {
         "$type": "color",
-        "$value": "{testar.brand4.3}"
+        "$value": "{uppsala-kommun.brand4.3}"
       },
       "4": {
         "$type": "color",
-        "$value": "{testar.brand4.4}"
+        "$value": "{uppsala-kommun.brand4.4}"
       },
       "5": {
         "$type": "color",
-        "$value": "{testar.brand4.5}"
+        "$value": "{uppsala-kommun.brand4.5}"
       },
       "6": {
         "$type": "color",
-        "$value": "{testar.brand4.6}"
+        "$value": "{uppsala-kommun.brand4.6}"
       },
       "7": {
         "$type": "color",
-        "$value": "{testar.brand4.7}"
+        "$value": "{uppsala-kommun.brand4.7}"
       },
       "8": {
         "$type": "color",
-        "$value": "{testar.brand4.8}"
+        "$value": "{uppsala-kommun.brand4.8}"
       },
       "9": {
         "$type": "color",
-        "$value": "{testar.brand4.9}"
+        "$value": "{uppsala-kommun.brand4.9}"
       },
       "10": {
         "$type": "color",
-        "$value": "{testar.brand4.10}"
+        "$value": "{uppsala-kommun.brand4.10}"
       },
       "11": {
         "$type": "color",
-        "$value": "{testar.brand4.11}"
+        "$value": "{uppsala-kommun.brand4.11}"
       },
       "12": {
         "$type": "color",
-        "$value": "{testar.brand4.12}"
+        "$value": "{uppsala-kommun.brand4.12}"
       },
       "13": {
         "$type": "color",
-        "$value": "{testar.brand4.13}"
+        "$value": "{uppsala-kommun.brand4.13}"
       },
       "contrast-1": {
         "$type": "color",
-        "$value": "{testar.brand4.contrast-1}"
+        "$value": "{uppsala-kommun.brand4.contrast-1}"
       },
       "contrast-2": {
         "$type": "color",
-        "$value": "{testar.brand4.contrast-2}"
+        "$value": "{uppsala-kommun.brand4.contrast-2}"
       }
     }
   },
   "font": {
     "family": {
       "$type": "fontFamilies",
-      "$value": "{testar.main}"
+      "$value": "{uppsala-kommun.main}"
     }
   },
   "font-weight": {
     "medium": {
       "$type": "fontWeights",
-      "$value": "{testar.bold}"
+      "$value": "{uppsala-kommun.bold}"
     },
     "semibold": {
       "$type": "fontWeights",
-      "$value": "{testar.extra-bold}"
+      "$value": "{uppsala-kommun.extra-bold}"
     },
     "regular": {
       "$type": "fontWeights",
-      "$value": "{testar.regular}"
+      "$value": "{uppsala-kommun.regular}"
     }
   },
   "border-radius": {

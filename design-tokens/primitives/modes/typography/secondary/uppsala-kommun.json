@@ -1,8 +1,8 @@
 {
-  "testar": {
+  "uppsala-kommun": {
     "main": {
       "$type": "fontFamilies",
-      "$value": "{ua-font-families.primary}"
+      "$value": "{ua-font-families.secondary}"
     },
     "bold": {
       "$type": "fontWeights",
