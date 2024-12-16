@@ -3,11 +3,11 @@
     "accent-ua-blue": {
       "1": {
         "$type": "color",
-        "$value": "#031a3d"
+        "$value": "{functional-colors.blue-functional.925}"
       },
       "2": {
         "$type": "color",
-        "$value": "#042150"
+        "$value": "{functional-colors.blue-functional.900}"
       },
       "3": {
         "$type": "color",
@@ -131,7 +131,7 @@
       },
       "2": {
         "$type": "color",
-        "$value": "#221f43"
+        "$value": "{brand-colors.uppsala-blue.900}"
       },
       "3": {
         "$type": "color",
@@ -193,7 +193,7 @@
       },
       "2": {
         "$type": "color",
-        "$value": "#371542"
+        "$value": "{brand-colors.uppsala-purple.900}"
       },
       "3": {
         "$type": "color",
@@ -255,7 +255,7 @@
       },
       "2": {
         "$type": "color",
-        "$value": "#0b272a"
+        "$value": "{brand-colors.uppsala-green.900}"
       },
       "3": {
         "$type": "color",
@@ -317,7 +317,7 @@
       },
       "2": {
         "$type": "color",
-        "$value": "#1f242b"
+        "$value": "{brand-colors.uppsala-gray.900}"
       },
       "3": {
         "$type": "color",
